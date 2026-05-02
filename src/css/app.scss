@@ -1,0 +1,152 @@
+// app global css in SCSS form
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+.card-item-list-page {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  gap: 10px 10px;
+}
+
+.card-item {
+  flex: 0 0 auto;
+}
+
+.card-item-content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.filter-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.filter-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.filter-label {
+  min-width: 80px;
+  padding-top: 24px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.filter-group {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 300px;
+  flex: 1;
+}
+
+.filter-item-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+}
+
+.filter-section-title {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.filter-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 160px;
+}
+
+.filter-block > span {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.filter-block .q-field {
+  width: 100%;
+}
+
+.result-count {
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  font-size: 14px;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .filter-toolbar {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .filter-row {
+    flex-direction: column;
+  }
+
+  .filter-label {
+    padding-top: 0;
+    min-width: auto;
+  }
+
+  .filter-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filter-item {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .filter-block {
+    width: 100%;
+  }
+
+  .card-item {
+    width: 100%;
+  }
+
+  .card-item-content {
+    width: 100%;
+    align-items: flex-start;
+  }
+}
