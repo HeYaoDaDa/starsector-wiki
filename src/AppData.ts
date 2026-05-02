@@ -446,7 +446,7 @@ class AppData {
       const jsonArray: WikiJsonObject[] = response.data;
       //load data
       for (const jsonObject of jsonArray) {
-        if ('jsonType' in jsonObject) {
+        if (jsonObject && 'jsonType' in jsonObject) {
           if (jsonObject.jsonType === 'SHIP') {
             const ship = Ship.deserialize(jsonObject);
             this.shipMap.set(ship.id, ship);
