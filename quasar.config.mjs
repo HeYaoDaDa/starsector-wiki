@@ -8,9 +8,9 @@
 // Configuration for your app
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js
 
-const { configure } = require('quasar/wrappers');
+import { configure } from 'quasar/wrappers';
 
-module.exports = configure(function (/* ctx */) {
+export default configure(function (/* ctx */) {
   return {
     // https://v2.quasar.dev/quasar-cli-vite/prefetch-feature
     // preFetch: true,
@@ -70,9 +70,10 @@ module.exports = configure(function (/* ctx */) {
             vueTsc: {
               tsconfigPath: 'tsconfig.vue-tsc.json',
             },
-            eslint: {
-              lintCommand: 'eslint "./**/*.{js,ts,mjs,cjs,vue}"',
-            },
+            // eslint disabled until ESLint upgraded to v9+ (flat config)
+            // eslint: {
+            //   lintCommand: 'eslint "./**/*.{js,ts,mjs,cjs,vue}"',
+            // },
           },
           { server: false },
         ],
