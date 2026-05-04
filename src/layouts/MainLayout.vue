@@ -75,6 +75,13 @@ function goBack() {
         <q-item clickable :to="{ name: 'persons' }">
           <q-item-section> 人物 </q-item-section>
         </q-item>
+        <q-separator />
+        <q-item clickable tag="a" href="https://github.com/HeYaoDaDa/starsector-wiki" target="_blank">
+          <q-item-section> GitHub 仓库 </q-item-section>
+          <q-item-section side>
+            <q-icon name="open_in_new" size="xs" />
+          </q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 

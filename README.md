@@ -31,7 +31,7 @@
        ↓
    public/graphics/*
        ↓
-5. yarn && quasar dev
+5. pnpm install && pnpm quasar dev
 ```
 
 ### 1. 安装 Mod
@@ -64,8 +64,8 @@ python3 tools/splitlog/moveImg.py /opt/starsector
 ### 5. 启动前端
 
 ```bash
-yarn
-quasar dev
+pnpm install
+pnpm quasar dev
 ```
 
 访问本地开发服务器查看 Wiki。
