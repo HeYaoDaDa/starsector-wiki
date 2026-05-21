@@ -5,9 +5,7 @@ import {
   HullSize,
   ShieldType,
   WeaponSize,
-  WeaponSizeDisplay,
   WeaponType,
-  WeaponTypeDisplay,
 } from '../conts';
 import { ShipSystem } from './shipSystem';
 import { Faction } from './Faction';
@@ -180,8 +178,8 @@ export class Ship {
     return this.allWeaponSlots.length === 0;
   }
 
-  getDisplayName(): string {
-    let result = this.name + '-级';
+  getDisplayName(t: (key: string) => string): string {
+    let result = this.name + t('ship.nameSuffix');
     if (!this.emptyHullVariant) {
       result += ' ' + this.variantName;
     }
@@ -212,12 +210,12 @@ export class Ship {
     return appData.getShipSystemById(this.shipSystemId);
   }
 
-  getSystemDescription(): string {
+  getSystemDescription(t: (key: string) => string): string {
     const system = appData.getShipSystemById(this.shipSystemId);
     if (system == undefined) {
       return '';
     } else {
-      return `${system.shortDescription}\n\n系统激活:${this.systemFluxPerUse}, 系统维持(幅能/每秒):${this.systemFluxPerSecond}, 次数:${this.systemMaxUses}, 恢复速度(秒):${this.systemRegen}, 冷却(秒):${this.systemCooldown}`;
+      return `${system.shortDescription}\n\n${t('ship.systemActive')}:${this.systemFluxPerUse}, ${t('ship.systemSustained')}:${this.systemFluxPerSecond}, ${t('ship.systemCharges')}:${this.systemMaxUses}, ${t('ship.systemRegen')}:${this.systemRegen}, ${t('ship.systemCooldown')}:${this.systemCooldown}`;
     }
   }
 
@@ -229,16 +227,16 @@ export class Ship {
     return appData.getShipSystemById(this.shipDefenseId);
   }
 
-  getDefenseDescription(): string {
+  getDefenseDescription(t: (key: string) => string): string {
     const system = appData.getShipSystemById(this.shipDefenseId);
     if (system == undefined) {
       return '';
     } else {
-      return `${system.shortDescription}\n\n系统激活:${this.systemFluxPerUse}, 系统维持(幅能/每秒):${this.systemFluxPerSecond}, 次数:${this.systemMaxUses}, 恢复速度(秒):${this.systemRegen}, 冷却(秒):${this.systemCooldown}`;
+      return `${system.shortDescription}\n\n${t('ship.systemActive')}:${this.systemFluxPerUse}, ${t('ship.systemSustained')}:${this.systemFluxPerSecond}, ${t('ship.systemCharges')}:${this.systemMaxUses}, ${t('ship.systemRegen')}:${this.systemRegen}, ${t('ship.systemCooldown')}:${this.systemCooldown}`;
     }
   }
 
-  getSlotDescription(): string {
+  getSlotDescription(t: (key: string) => string): string {
     const map = new Map<WeaponType, Map<WeaponSize, number>>();
     this.allWeaponSlots.forEach((weaponSlot) => {
       if (weaponSlot.weaponSlot) {
@@ -254,9 +252,7 @@ export class Ship {
     map.forEach((sizeMap, weaponType) => {
       sizeMap.forEach((count, weaponSize) => {
         weaponSlotStrs.push(
-          `${count}x ${WeaponSizeDisplay.get(
-            weaponSize
-          )}${WeaponTypeDisplay.get(weaponType)}`
+          `${count}x ${t('weaponSize.' + weaponSize.toLowerCase())}${t('weaponType.' + weaponType.toLowerCase())}`
         );
       });
     });

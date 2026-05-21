@@ -48,19 +48,19 @@ const faction = computed(() => {
 
       <div style="column-count: 1">
         <div style="display: grid; grid-template-columns: 1fr 6fr">
-          <div>名称</div>
+          <div>{{ $t('faction.name') }}</div>
           <div>{{ faction.displayNameLong }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 6fr">
-          <div>人名前缀</div>
+          <div>{{ $t('faction.personNamePrefix') }}</div>
           <div>{{ faction.personNamePrefix }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 6fr">
-          <div>船名前缀</div>
+          <div>{{ $t('faction.shipNamePrefix') }}</div>
           <div>{{ faction.shipNamePrefix }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 6fr">
-          <div>势力关系</div>
+          <div>{{ $t('faction.relationship') }}</div>
           <div>
             <q-btn
               v-for="[
@@ -84,20 +84,20 @@ const faction = computed(() => {
       <br /><br />
 
       <template v-if="faction.planets.length > 0">
-        <h4>殖民地</h4>
+        <h4>{{ $t('faction.colonies') }}</h4>
         <PlanetsDiv :planet-values="faction.planets" />
       </template>
 
       <br /><br />
 
       <template v-if="faction.persons.length > 0">
-        <h4>人物</h4>
+        <h4>{{ $t('faction.persons') }}</h4>
         <PersonsDiv :person-values="faction.persons" />
       </template>
 
       <br /><br />
       <template v-if="faction.knownShipIds.length > 0">
-        <h4>船体</h4>
+        <h4>{{ $t('faction.ships') }}</h4>
         <ShipsDiv
           :ships="
             appData.getShipsByIds(
@@ -109,7 +109,7 @@ const faction = computed(() => {
 
       <br /><br />
       <template v-if="faction.knownFighterIds.length > 0">
-        <h4>飞机</h4>
+        <h4>{{ $t('faction.fighters') }}</h4>
         <ShipsDiv
           :ships="
             appData.getShipsByIds(
@@ -121,13 +121,13 @@ const faction = computed(() => {
 
       <br /><br />
       <template v-if="faction.knownWeaponIds.length > 0">
-        <h4>武器</h4>
+        <h4>{{ $t('faction.weapons') }}</h4>
         <WeaponsDiv :weaponValues="faction.knownWeaponIds" />
       </template>
 
       <br /><br />
       <template v-if="faction.knownHullModIds.length > 0">
-        <h4>船体插件</h4>
+        <h4>{{ $t('faction.hullMods') }}</h4>
         <ShipModsDiv :shipModValues="faction.knownHullModIds" />
       </template>
 

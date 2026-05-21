@@ -43,27 +43,27 @@ const specialItem = computed(() => {
 
       <div style="column-count: 2">
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>制造商</div>
+          <div>{{ $t('specialItem.manufacturer') }}</div>
           <div>{{ specialItem.manufacturer }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>可堆叠数量</div>
+          <div>{{ $t('specialItem.stackSize') }}</div>
           <div>{{ specialItem.stackSize }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>顺序</div>
+          <div>{{ $t('specialItem.order') }}</div>
           <div>{{ specialItem.order }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>货舱空间</div>
+          <div>{{ $t('specialItem.cargoSpace') }}</div>
           <div>{{ specialItem.cargoSpace }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>基础价格</div>
+          <div>{{ $t('specialItem.basePrice') }}</div>
           <div>{{ specialItem.basePrice }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>罕见</div>
+          <div>{{ $t('specialItem.rarity') }}</div>
           <div>{{ specialItem.rarity }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr">

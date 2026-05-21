@@ -36,11 +36,16 @@ export default route(function (/* { store, ssrContext } */) {
   });
 
   Router.beforeEach(async (to) => {
-    if (
-      to.meta.requireGameData &&
-      ['none', 'loading'].includes(appData.status.value)
-    ) {
-      return '/load';
+    if (to.meta.requireGameData) {
+      if (['none', 'loading'].includes(appData.status.value)) {
+        return '/load';
+      }
+      if (!appData.selectedVersion.value) {
+        return '/load';
+      }
+      // Persist current selections on navigation
+      localStorage.setItem('selectedVersion', appData.selectedVersion.value);
+      localStorage.setItem('selectedLocale', appData.selectedLocale.value);
     }
   });
 

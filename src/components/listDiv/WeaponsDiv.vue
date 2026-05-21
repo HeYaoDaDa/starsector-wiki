@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { appData } from 'src/AppData';
 import { Weapon } from 'src/classes/model/weapon';
-import { compareWeapon } from 'src/classes/utils';
 import { computed, ref } from 'vue';
+import { compareWeapon } from 'src/classes/utils';
 import WeaponSpriteDiv from '../WeaponSpriteDiv.vue';
-import { WeaponSizeDisplay, WeaponTypeDisplay } from 'src/classes/conts';
 import { useQuasar } from 'quasar';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 defineOptions({
   name: 'WeaponsDiv',
@@ -69,7 +71,7 @@ function generateFilterOptions(weapons: Weapon[], selectedFilters: string[], opp
   // 大小选项
   const sizes = Array.from(new Set(allWeapons.value.map((it) => it.size)));
   sizes.forEach((size) => {
-    const label = WeaponSizeDisplay.get(size) ?? size;
+    const label = t('weaponSize.' + size.toLowerCase());
     const filterValue = `size:${size}`;
 
     const count = weapons.filter((w) => w.size === size).length;
@@ -77,9 +79,9 @@ function generateFilterOptions(weapons: Weapon[], selectedFilters: string[], opp
     const isSelectedInOpposite = oppositeFilters && oppositeFilters.includes(filterValue);
 
     options.push({
-      label: `[大小] ${label}(${count})`,
+      label: t('filter.optionFormat', { category: t('filter.label.size'), name: label, count }),
       value: filterValue,
-      chipLabel: `[大小] ${label}`,
+      chipLabel: t('filter.chipFormat', { category: t('filter.label.size'), name: label }),
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
     });
   });
@@ -87,7 +89,7 @@ function generateFilterOptions(weapons: Weapon[], selectedFilters: string[], opp
   // 类型选项
   const types = Array.from(new Set(allWeapons.value.map((it) => it.mountType)));
   types.forEach((type) => {
-    const label = WeaponTypeDisplay.get(type) ?? type;
+    const label = t('weaponType.' + type.toLowerCase());
     const filterValue = `type:${type}`;
 
     const count = weapons.filter((w) => w.mountType === type).length;
@@ -95,9 +97,9 @@ function generateFilterOptions(weapons: Weapon[], selectedFilters: string[], opp
     const isSelectedInOpposite = oppositeFilters && oppositeFilters.includes(filterValue);
 
     options.push({
-      label: `[类型] ${label}(${count})`,
+      label: t('filter.optionFormat', { category: t('filter.label.type'), name: label, count }),
       value: filterValue,
-      chipLabel: `[类型] ${label}`,
+      chipLabel: t('filter.chipFormat', { category: t('filter.label.type'), name: label }),
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
     });
   });
@@ -123,10 +125,10 @@ function matchesFilter(weapon: Weapon, filter: string): boolean {
     <div class="filter-row">
       <div class="filter-group">
         <div class="filter-item">
-          <div class="filter-item-label">包含条件</div>
+          <div class="filter-item-label">{{ $t('filter.include') }}</div>
           <q-select v-model="includeFilters" :options="includeFilterOptions" multiple emit-value map-options use-chips
             dense options-dense :behavior="$q.screen.lt.sm ? 'dialog' : 'menu'" clearable clear-icon="close"
-            placeholder="选择需要包含的条件">
+            :placeholder="$t('filter.includePlaceholder')">
             <template v-slot:selected-item="scope">
               <q-chip removable dense @remove="scope.removeAtIndex(scope.index)" :tabindex="scope.tabindex"
                 color="primary" text-color="white">
@@ -136,10 +138,10 @@ function matchesFilter(weapon: Weapon, filter: string): boolean {
           </q-select>
         </div>
         <div class="filter-item">
-          <div class="filter-item-label">排除条件</div>
+          <div class="filter-item-label">{{ $t('filter.exclude') }}</div>
           <q-select v-model="excludeFilters" :options="excludeFilterOptions" multiple emit-value map-options use-chips
             dense options-dense :behavior="$q.screen.lt.sm ? 'dialog' : 'menu'" clearable clear-icon="close"
-            placeholder="选择需要排除的条件">
+            :placeholder="$t('filter.excludePlaceholder')">
             <template v-slot:selected-item="scope">
               <q-chip removable dense @remove="scope.removeAtIndex(scope.index)" :tabindex="scope.tabindex"
                 color="negative" text-color="white">
@@ -153,7 +155,7 @@ function matchesFilter(weapon: Weapon, filter: string): boolean {
   </div>
 
   <div v-if="!hiddenOptions" class="result-count">
-    共 {{ weapons.length }} 个结果
+    {{ $t('filter.results', { count: weapons.length }) }}
   </div>
 
   <div class="card-item-list-page">

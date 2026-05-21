@@ -1,4 +1,4 @@
-import { ref } from 'vue';
+import { reactive, ref } from 'vue';
 import { Ship, WeaponSlot } from './classes/model/ship';
 import { ShipMod } from './classes/model/shipMod';
 import { ShipSystem } from './classes/model/shipSystem';
@@ -33,24 +33,27 @@ import {
 
 class AppData {
   debug = false;
-  status = ref('none' as 'none' | 'loading' | 'finish' | 'fail');
-  shipMap: Map<string, Ship> = new Map();
-  shipSystemMap: Map<string, ShipSystem> = new Map();
-  shipModMap: Map<string, ShipMod> = new Map();
-  weaponMap: Map<string, Weapon> = new Map();
-  specialItemMap: Map<string, SpecialItem> = new Map();
-  commodityMap: Map<string, Commodity> = new Map();
-  industryMap: Map<string, Industry> = new Map();
-  planetTypeMap: Map<string, PlanetType> = new Map();
-  marketConditionMap: Map<string, MarketCondition> = new Map();
-  subMarketMap: Map<string, SubMarket> = new Map();
-  factionMap: Map<string, Faction> = new Map();
-  starSystemMap: Map<string, StarSystem> = new Map();
-  planetMap: Map<string, Planet> = new Map();
-  personMap: Map<string, Person> = new Map();
+  status = ref('none' as 'none' | 'loading' | 'finish' | 'fail' | 'empty');
+  shipMap: Map<string, Ship> = reactive(new Map());
+  shipSystemMap: Map<string, ShipSystem> = reactive(new Map());
+  shipModMap: Map<string, ShipMod> = reactive(new Map());
+  weaponMap: Map<string, Weapon> = reactive(new Map());
+  specialItemMap: Map<string, SpecialItem> = reactive(new Map());
+  commodityMap: Map<string, Commodity> = reactive(new Map());
+  industryMap: Map<string, Industry> = reactive(new Map());
+  planetTypeMap: Map<string, PlanetType> = reactive(new Map());
+  marketConditionMap: Map<string, MarketCondition> = reactive(new Map());
+  subMarketMap: Map<string, SubMarket> = reactive(new Map());
+  factionMap: Map<string, Faction> = reactive(new Map());
+  starSystemMap: Map<string, StarSystem> = reactive(new Map());
+  planetMap: Map<string, Planet> = reactive(new Map());
+  personMap: Map<string, Person> = reactive(new Map());
   imgMap: Map<string, HTMLImageElement> = new Map();
   weaponCanvasMap: Map<string, CanvasResult> = new Map();
   shipCanvasMap: Map<string, CanvasResult> = new Map();
+  availableVersions: { version: string; locales: string[] }[] = [];
+  selectedVersion = ref<string>(localStorage.getItem('selectedVersion') || '');
+  selectedLocale = ref<string>(localStorage.getItem('selectedLocale') || 'en');
 
   sortdShips(): Ship[] {
     const result: Ship[] = [];
@@ -439,11 +442,59 @@ class AppData {
     return canvasResult;
   }
 
-  async initData() {
+  async fetchManifest(): Promise<boolean> {
+    try {
+      const response = await api.get('data/manifest.json');
+      this.availableVersions = response.data.versions;
+      return true;
+    } catch (error: unknown) {
+      if (error && typeof error === 'object' && 'response' in error) {
+        const axiosError = error as { response?: { status?: number } };
+        if (axiosError.response?.status === 404) {
+          this.status.value = 'empty';
+          return false;
+        }
+      }
+      this.status.value = 'fail';
+      return false;
+    }
+  }
+
+  clearAllMaps(): void {
+    this.shipMap.clear();
+    this.shipSystemMap.clear();
+    this.shipModMap.clear();
+    this.weaponMap.clear();
+    this.specialItemMap.clear();
+    this.commodityMap.clear();
+    this.industryMap.clear();
+    this.planetTypeMap.clear();
+    this.marketConditionMap.clear();
+    this.subMarketMap.clear();
+    this.factionMap.clear();
+    this.starSystemMap.clear();
+    this.planetMap.clear();
+    this.personMap.clear();
+  }
+
+  clearCaches(): void {
+    this.imgMap.clear();
+    this.weaponCanvasMap.clear();
+    this.shipCanvasMap.clear();
+  }
+
+  async initData(version: string, locale: string) {
     this.status.value = 'loading';
     try {
-      const response = await api.get('data/data.json');
+      const response = await api.get(`data/${version}/${locale}/data.json`);
       const jsonArray: WikiJsonObject[] = response.data;
+      if (!Array.isArray(jsonArray)) {
+        this.status.value = 'fail';
+        return;
+      }
+      // Clear old data before loading new
+      this.clearAllMaps();
+      this.clearCaches();
       //load data
       for (const jsonObject of jsonArray) {
         if (jsonObject && 'jsonType' in jsonObject) {
@@ -675,6 +726,13 @@ class AppData {
       this.status.value = 'fail';
       console.error(error);
     }
+  }
+
+  async reloadData(version: string, locale: string) {
+    this.status.value = 'loading';
+    await this.initData(version, locale);
+    localStorage.setItem('selectedVersion', version);
+    localStorage.setItem('selectedLocale', locale);
   }
 }
 

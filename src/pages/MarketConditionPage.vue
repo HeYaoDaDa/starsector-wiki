@@ -44,7 +44,7 @@ const marketCondition = computed(() => {
 
       <div style="column-count: 2">
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>顺序</div>
+          <div>{{ $t('marketCondition.order') }}</div>
           <div>{{ marketCondition.order }}</div>
         </div>
       </div>
@@ -52,7 +52,7 @@ const marketCondition = computed(() => {
       <br /><br />
 
       <template v-if="marketCondition.planets.length > 0">
-        <h4>殖民地</h4>
+        <h4>{{ $t('marketCondition.colonies') }}</h4>
         <PlanetsDiv :planet-values="marketCondition.planets" />
       </template>
 

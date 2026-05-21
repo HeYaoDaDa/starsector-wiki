@@ -53,12 +53,12 @@ const defenseShips = computed(() => {
       <br /><br />
 
       <template v-if="ships.length > 0">
-        <h4>被用于战术系统</h4>
+        <h4>{{ $t('shipSystem.usedByTactical') }}</h4>
         <ShipsDiv :ships="ships" />
       </template>
 
       <template v-if="defenseShips.length > 0">
-        <h4>被用于特殊系统</h4>
+        <h4>{{ $t('shipSystem.usedByDefense') }}</h4>
         <ShipsDiv :ships="defenseShips" />
       </template>
 

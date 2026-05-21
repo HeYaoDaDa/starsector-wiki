@@ -20,11 +20,12 @@
     "quasar": "^2.19.3",
     "reflect-metadata": "^0.2.2",
     "vue": "^3.5.33",
+    "vue-i18n": "9",
     "vue-router": "^4.6.4"
   },
   "devDependencies": {
     "@quasar/app-vite": "^2.6.0",
-    "@types/node": "^25.6.0",
+    "@types/node": "^25.8.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "autoprefixer": "^10.5.0",
@@ -38,7 +39,7 @@
     "vue-tsc": "~2.2.12"
   },
   "engines": {
-    "node": "^25 || ^22 || ^20",
+    "node": "^26 || ^25 || ^22 || ^20",
     "npm": ">= 6.13.4",
     "pnpm": ">= 9"
   },

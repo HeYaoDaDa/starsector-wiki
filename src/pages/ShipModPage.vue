@@ -55,27 +55,27 @@ const variantShips = computed(() => {
 
       <div style="column-count: 1">
         <div style="display: grid; grid-template-columns: 1fr 9fr">
-          <div>设计类型</div>
-          <div>{{ shipMod.manufacturer ?? '通常' }}</div>
+          <div>{{ $t('hullMod.designType') }}</div>
+          <div>{{ shipMod.manufacturer ?? $t('common.generic') }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 9fr">
-          <div>舰船尺寸</div>
-          <div>安装需要点数</div>
+          <div>{{ $t('hullMod.shipSize') }}</div>
+          <div>{{ $t('hullMod.opCost') }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 9fr">
-          <div>护卫舰</div>
+          <div>{{ $t('hullMod.frigate') }}</div>
           <div>{{ shipMod.frigateCost }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 9fr">
-          <div>驱逐舰</div>
+          <div>{{ $t('hullMod.destroyer') }}</div>
           <div>{{ shipMod.destroyerCost }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 9fr">
-          <div>巡洋舰</div>
+          <div>{{ $t('hullMod.cruiser') }}</div>
           <div>{{ shipMod.cruiserCost }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 9fr">
-          <div>主力舰</div>
+          <div>{{ $t('hullMod.capital') }}</div>
           <div>{{ shipMod.capitalCost }}</div>
         </div>
       </div>
@@ -83,21 +83,21 @@ const variantShips = computed(() => {
       <br /><br />
 
       <template v-if="ships.length > 0">
-        <h4>被用于舰船船体</h4>
+        <h4>{{ $t('hullMod.usedByHulls') }}</h4>
         <ShipsDiv :ships="ships" />
       </template>
 
       <br /><br />
 
       <template v-if="variantShips.length > 0">
-        <h4>被用于舰船装配</h4>
+        <h4>{{ $t('hullMod.usedByVariants') }}</h4>
         <ShipsDiv :ships="variantShips" />
       </template>
 
       <br /><br />
 
       <template v-if="shipMod.factions.length > 0">
-        <h4>拥有势力</h4>
+        <h4>{{ $t('hullMod.factions') }}</h4>
         <FactionsDiv :faction-values="shipMod.factions" img="crest" />
       </template>
 

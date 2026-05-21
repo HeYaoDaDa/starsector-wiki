@@ -28,7 +28,7 @@ const allMarketConditions = computed(() =>
   <template v-if="!hiddenOptions"> </template>
 
   <div v-if="!hiddenOptions" class="result-count">
-    共 {{ allMarketConditions.length }} 个结果
+    {{ $t('filter.results', { count: allMarketConditions.length }) }}
   </div>
 
   <div class="card-item-list-page">

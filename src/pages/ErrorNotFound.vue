@@ -11,7 +11,7 @@ defineOptions({
     <div>
       <div style="font-size: 30vh">404</div>
 
-      <div class="text-h2" style="opacity: 0.4">Oops. Nothing here...</div>
+      <div class="text-h2" style="opacity: 0.4">{{ $t('error.notFound') }}</div>
 
       <q-btn
         class="q-mt-xl"
@@ -19,7 +19,7 @@ defineOptions({
         text-color="blue"
         unelevated
         to="/"
-        label="Go Home"
+        :label="$t('error.goHome')"
         no-caps
       />
     </div>

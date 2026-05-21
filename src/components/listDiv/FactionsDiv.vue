@@ -4,6 +4,9 @@ import { Faction } from 'src/classes/model/Faction';
 import { compareFaction } from 'src/classes/utils';
 import { computed, ref } from 'vue';
 import { useQuasar } from 'quasar';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 defineOptions({
   name: 'FactionsDiv',
@@ -24,10 +27,10 @@ const $q = useQuasar();
 const includeFilters = ref<string[]>([]);
 const excludeFilters = ref<string[]>([]);
 
-const rowIsHiddenOptions = [
-  { label: '是', value: 'Y' },
-  { label: '否', value: 'N' },
-];
+const rowIsHiddenOptions = computed(() => [
+  { label: t('common.yes'), value: 'Y' },
+  { label: t('common.no'), value: 'N' },
+]);
 
 const allFactions = computed(() =>
   factionValues
@@ -75,7 +78,7 @@ function generateFilterOptions(factions: Faction[], selectedFilters: string[], o
   }> = [];
 
   // 显示在列表中选项
-  rowIsHiddenOptions.forEach((opt) => {
+  rowIsHiddenOptions.value.forEach((opt) => {
     const filterValue = `isHidden:${opt.value}`;
     const count = opt.value === 'Y'
       ? factions.filter((f) => f.showInIntelTab).length
@@ -84,9 +87,9 @@ function generateFilterOptions(factions: Faction[], selectedFilters: string[], o
     const isSelectedInOpposite = oppositeFilters && oppositeFilters.includes(filterValue);
 
     options.push({
-      label: `[显示在列表中] ${opt.label}(${count})`,
+      label: t('filter.optionFormat', { category: t('filter.label.showInList'), name: opt.label, count }),
       value: filterValue,
-      chipLabel: `[显示在列表中] ${opt.label}`,
+      chipLabel: t('filter.chipFormat', { category: t('filter.label.showInList'), name: opt.label }),
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
     });
   });
@@ -110,10 +113,10 @@ function matchesFilter(faction: Faction, filter: string): boolean {
     <div class="filter-row">
       <div class="filter-group">
         <div class="filter-item">
-          <div class="filter-item-label">包含条件</div>
+          <div class="filter-item-label">{{ $t('filter.include') }}</div>
           <q-select v-model="includeFilters" :options="includeFilterOptions" multiple emit-value map-options use-chips
             dense options-dense :behavior="$q.screen.lt.sm ? 'dialog' : 'menu'" clearable clear-icon="close"
-            placeholder="选择需要包含的条件">
+            :placeholder="$t('filter.includePlaceholder')">
             <template v-slot:selected-item="scope">
               <q-chip removable dense @remove="scope.removeAtIndex(scope.index)" :tabindex="scope.tabindex"
                 color="primary" text-color="white">
@@ -123,10 +126,10 @@ function matchesFilter(faction: Faction, filter: string): boolean {
           </q-select>
         </div>
         <div class="filter-item">
-          <div class="filter-item-label">排除条件</div>
+          <div class="filter-item-label">{{ $t('filter.exclude') }}</div>
           <q-select v-model="excludeFilters" :options="excludeFilterOptions" multiple emit-value map-options use-chips
             dense options-dense :behavior="$q.screen.lt.sm ? 'dialog' : 'menu'" clearable clear-icon="close"
-            placeholder="选择需要排除的条件">
+            :placeholder="$t('filter.excludePlaceholder')">
             <template v-slot:selected-item="scope">
               <q-chip removable dense @remove="scope.removeAtIndex(scope.index)" :tabindex="scope.tabindex"
                 color="negative" text-color="white">
@@ -140,7 +143,7 @@ function matchesFilter(faction: Faction, filter: string): boolean {
   </div>
 
   <div v-if="!hiddenOptions" class="result-count">
-    共 {{ factions.length }} 个结果
+    {{ $t('filter.results', { count: factions.length }) }}
   </div>
 
   <div class="card-item-list-page">

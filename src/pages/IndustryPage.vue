@@ -44,23 +44,23 @@ const industry = computed(() => {
 
       <div style="column-count: 2">
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>建造花费</div>
+          <div>{{ $t('industry.buildCost') }}</div>
           <div>{{ industry.cost }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>建造时间</div>
+          <div>{{ $t('industry.buildTime') }}</div>
           <div>{{ industry.buildTime }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>维护费用</div>
+          <div>{{ $t('industry.maintenance') }}</div>
           <div>{{ industry.upkeep }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>收入</div>
+          <div>{{ $t('industry.income') }}</div>
           <div>{{ industry.income }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>顺序</div>
+          <div>{{ $t('industry.order') }}</div>
           <div>{{ industry.order }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr">
@@ -72,7 +72,7 @@ const industry = computed(() => {
       <br /><br />
 
       <template v-if="industry.planets.length > 0">
-        <h4>殖民地</h4>
+        <h4>{{ $t('industry.colonies') }}</h4>
         <PlanetsDiv :planet-values="industry.planets" />
       </template>
 

@@ -80,7 +80,7 @@ const planet = computed(() => {
 
       <br /><br />
 
-      <h4>势力</h4>
+      <h4>{{ $t('planet.faction') }}</h4>
       <q-btn
         class="card-item"
         no-caps
@@ -97,7 +97,7 @@ const planet = computed(() => {
       <br /><br />
 
       <template v-if="planet.persons.length > 0">
-        <h4>人物</h4>
+        <h4>{{ $t('planet.persons') }}</h4>
         <PersonsDiv :person-values="planet.persons" />
       </template>
 
@@ -106,7 +106,7 @@ const planet = computed(() => {
       <template
         v-if="planet.market && planet.market.marketConditionIds.length > 0"
       >
-        <h4>特性</h4>
+        <h4>{{ $t('planet.conditions') }}</h4>
         <MarketConditionsDiv
           :marketConditionValues="planet.market.marketConditionIds"
         />
@@ -115,7 +115,7 @@ const planet = computed(() => {
       <br /><br />
 
       <template v-if="planet.market && planet.market.industryIds.length > 0">
-        <h4>产业</h4>
+        <h4>{{ $t('planet.industries') }}</h4>
         <IndustriesDiv :industryValues="planet.market.industryIds" />
       </template>
 

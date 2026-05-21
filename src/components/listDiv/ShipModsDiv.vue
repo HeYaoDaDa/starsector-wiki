@@ -4,6 +4,9 @@ import { compareShipMod } from 'src/classes/utils';
 import { computed, ref } from 'vue';
 import { ShipMod } from 'src/classes/model/shipMod';
 import { useQuasar } from 'quasar';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 defineOptions({
   name: 'ShipModsDiv',
@@ -18,20 +21,11 @@ const $q = useQuasar();
 
 const includeFilters = ref<string[]>([]);
 const excludeFilters = ref<string[]>([]);
-const rowTypeOptions = [
-  {
-    label: '普通',
-    value: 'normal',
-  },
-  {
-    label: 'D插件',
-    value: 'dmod',
-  },
-  {
-    label: '隐藏',
-    value: 'hidden',
-  },
-];
+const rowTypeOptions = computed(() => [
+  { label: t('filter.type.normal'), value: 'normal' },
+  { label: t('filter.type.dMod'), value: 'dmod' },
+  { label: t('filter.type.hidden'), value: 'hidden' },
+]);
 
 const allShipMods = computed(() =>
   shipModValues
@@ -79,7 +73,7 @@ function generateFilterOptions(shipMods: ShipMod[], selectedFilters: string[], o
   }> = [];
 
   // 类型选项
-  rowTypeOptions.forEach((opt) => {
+  rowTypeOptions.value.forEach((opt) => {
     const filterValue = `type:${opt.value}`;
 
     let count = 0;
@@ -95,9 +89,9 @@ function generateFilterOptions(shipMods: ShipMod[], selectedFilters: string[], o
     const isSelectedInOpposite = oppositeFilters && oppositeFilters.includes(filterValue);
 
     options.push({
-      label: `[类型] ${opt.label}(${count})`,
+      label: t('filter.optionFormat', { category: t('filter.label.type'), name: opt.label, count }),
       value: filterValue,
-      chipLabel: `[类型] ${opt.label}`,
+      chipLabel: t('filter.chipFormat', { category: t('filter.label.type'), name: opt.label }),
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
     });
   });
@@ -117,9 +111,9 @@ function generateFilterOptions(shipMods: ShipMod[], selectedFilters: string[], o
     const isSelectedInOpposite = oppositeFilters && oppositeFilters.includes(filterValue);
 
     options.push({
-      label: `[UI标签] ${tag}(${count})`,
+      label: t('filter.optionFormat', { category: t('filter.label.uiTag'), name: tag, count }),
       value: filterValue,
-      chipLabel: `[UI标签] ${tag}`,
+      chipLabel: t('filter.chipFormat', { category: t('filter.label.uiTag'), name: tag }),
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
     });
   });
@@ -134,7 +128,7 @@ function generateFilterOptions(shipMods: ShipMod[], selectedFilters: string[], o
   });
 
   manufacturers.forEach((manufacturer) => {
-    const label = manufacturer && manufacturer.length > 0 ? manufacturer : '未知';
+    const label = manufacturer && manufacturer.length > 0 ? manufacturer : t('common.unknown');
     const filterValue = `manufacturer:${manufacturer ?? 'null'}`;
 
     const count = shipMods.filter((m) => (m.manufacturer ?? null) === manufacturer).length;
@@ -142,9 +136,9 @@ function generateFilterOptions(shipMods: ShipMod[], selectedFilters: string[], o
     const isSelectedInOpposite = oppositeFilters && oppositeFilters.includes(filterValue);
 
     options.push({
-      label: `[设计类型] ${label}(${count})`,
+      label: t('filter.optionFormat', { category: t('filter.label.designType'), name: label, count }),
       value: filterValue,
-      chipLabel: `[设计类型] ${label}`,
+      chipLabel: t('filter.chipFormat', { category: t('filter.label.designType'), name: label }),
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
     });
   });
@@ -175,10 +169,10 @@ function matchesFilter(shipMod: ShipMod, filter: string): boolean {
     <div class="filter-row">
       <div class="filter-group">
         <div class="filter-item">
-          <div class="filter-item-label">包含条件</div>
+          <div class="filter-item-label">{{ $t('filter.include') }}</div>
           <q-select v-model="includeFilters" :options="includeFilterOptions" multiple emit-value map-options use-chips
             dense options-dense :behavior="$q.screen.lt.sm ? 'dialog' : 'menu'" clearable clear-icon="close"
-            placeholder="选择需要包含的条件">
+            :placeholder="$t('filter.includePlaceholder')">
             <template v-slot:selected-item="scope">
               <q-chip removable dense @remove="scope.removeAtIndex(scope.index)" :tabindex="scope.tabindex"
                 color="primary" text-color="white">
@@ -188,10 +182,10 @@ function matchesFilter(shipMod: ShipMod, filter: string): boolean {
           </q-select>
         </div>
         <div class="filter-item">
-          <div class="filter-item-label">排除条件</div>
+          <div class="filter-item-label">{{ $t('filter.exclude') }}</div>
           <q-select v-model="excludeFilters" :options="excludeFilterOptions" multiple emit-value map-options use-chips
             dense options-dense :behavior="$q.screen.lt.sm ? 'dialog' : 'menu'" clearable clear-icon="close"
-            placeholder="选择需要排除的条件">
+            :placeholder="$t('filter.excludePlaceholder')">
             <template v-slot:selected-item="scope">
               <q-chip removable dense @remove="scope.removeAtIndex(scope.index)" :tabindex="scope.tabindex"
                 color="negative" text-color="white">
@@ -205,7 +199,7 @@ function matchesFilter(shipMod: ShipMod, filter: string): boolean {
   </div>
 
   <div v-if="!hiddenOptions" class="result-count">
-    共 {{ shipMods.length }} 个结果
+    {{ $t('filter.results', { count: shipMods.length }) }}
   </div>
 
   <div class="card-item-list-page">

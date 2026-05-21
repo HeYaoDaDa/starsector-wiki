@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { HullSizeDisplay } from 'src/classes/conts';
 import { Ship } from 'src/classes/model/ship';
 import ShipSpriteDiv from './ShipSpriteDiv.vue';
 import { computed, ref } from 'vue';
 import { appData } from 'src/AppData';
 import { compareShip } from 'src/classes/utils';
 import { useQuasar } from 'quasar';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 defineOptions({
   name: 'ShipsDiv',
@@ -20,20 +22,11 @@ const $q = useQuasar();
 
 const includeFilters = ref<string[]>(['type:normal']);
 const excludeFilters = ref<string[]>([]);
-const rowTypeOptions = [
-  {
-    label: '普通',
-    value: 'normal',
-  },
-  {
-    label: '空间站',
-    value: 'station',
-  },
-  {
-    label: '模块',
-    value: 'module',
-  },
-];
+const rowTypeOptions = computed(() => [
+  { label: t('filter.type.normal'), value: 'normal' },
+  { label: t('filter.type.station'), value: 'station' },
+  { label: t('filter.type.module'), value: 'module' },
+]);
 
 const allShips = computed(() =>
   ships
@@ -85,7 +78,7 @@ function generateFilterOptions(ships: Ship[], selectedFilters: string[], opposit
   }> = [];
 
   // 类型选项
-  rowTypeOptions.forEach((opt) => {
+  rowTypeOptions.value.forEach((opt) => {
     const filterValue = `type:${opt.value}`;
 
     // 计算符合这个条件的船只数量
@@ -99,9 +92,9 @@ function generateFilterOptions(ships: Ship[], selectedFilters: string[], opposit
     const isSelectedInOpposite = oppositeFilters && oppositeFilters.includes(filterValue);
 
     options.push({
-      label: `[类型] ${opt.label}(${count})`,
+      label: t('filter.optionFormat', { category: t('filter.label.type'), name: opt.label, count }),
       value: filterValue,
-      chipLabel: `[类型] ${opt.label}`,
+      chipLabel: t('filter.chipFormat', { category: t('filter.label.type'), name: opt.label }),
       // 禁用条件：(未被当前选中且数量为0) 或 (被对面选中)
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
     });
@@ -110,7 +103,7 @@ function generateFilterOptions(ships: Ship[], selectedFilters: string[], opposit
   // 大小选项
   const sizes = Array.from(new Set(allShips.value.map((it) => it.size)));
   sizes.forEach((size) => {
-    const label = HullSizeDisplay.get(size) ?? size;
+    const label = t('size.' + size.toLowerCase());
     const filterValue = `size:${size}`;
 
     const count = ships.filter((s) => s.size === size).length;
@@ -118,9 +111,9 @@ function generateFilterOptions(ships: Ship[], selectedFilters: string[], opposit
     const isSelectedInOpposite = oppositeFilters && oppositeFilters.includes(filterValue);
 
     options.push({
-      label: `[大小] ${label}(${count})`,
+      label: t('filter.optionFormat', { category: t('filter.label.size'), name: label, count }),
       value: filterValue,
-      chipLabel: `[大小] ${label}`,
+      chipLabel: t('filter.chipFormat', { category: t('filter.label.size'), name: label }),
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
     });
   });
@@ -135,7 +128,7 @@ function generateFilterOptions(ships: Ship[], selectedFilters: string[], opposit
   });
 
   manufacturers.forEach((manufacturer) => {
-    const label = manufacturer && manufacturer.length > 0 ? manufacturer : '未知';
+    const label = manufacturer && manufacturer.length > 0 ? manufacturer : t('common.unknown');
     const filterValue = `manufacturer:${manufacturer ?? 'null'}`;
 
     const count = ships.filter((s) => (s.manufacturer ?? null) === manufacturer).length;
@@ -143,9 +136,9 @@ function generateFilterOptions(ships: Ship[], selectedFilters: string[], opposit
     const isSelectedInOpposite = oppositeFilters && oppositeFilters.includes(filterValue);
 
     options.push({
-      label: `[设计类型] ${label}(${count})`,
+      label: t('filter.optionFormat', { category: t('filter.label.designType'), name: label, count }),
       value: filterValue,
-      chipLabel: `[设计类型] ${label}`,
+      chipLabel: t('filter.chipFormat', { category: t('filter.label.designType'), name: label }),
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
     });
   });
@@ -178,10 +171,10 @@ function matchesFilter(ship: Ship, filter: string): boolean {
     <div class="filter-row">
       <div class="filter-group">
         <div class="filter-item">
-          <div class="filter-item-label">包含条件</div>
+          <div class="filter-item-label">{{ $t('filter.include') }}</div>
           <q-select v-model="includeFilters" :options="includeFilterOptions" multiple emit-value map-options use-chips
             dense options-dense :behavior="$q.screen.lt.sm ? 'dialog' : 'menu'" clearable clear-icon="close"
-            placeholder="选择需要包含的条件">
+            :placeholder="$t('filter.includePlaceholder')">
             <template v-slot:selected-item="scope">
               <q-chip removable dense @remove="scope.removeAtIndex(scope.index)" :tabindex="scope.tabindex"
                 color="primary" text-color="white">
@@ -191,10 +184,10 @@ function matchesFilter(ship: Ship, filter: string): boolean {
           </q-select>
         </div>
         <div class="filter-item">
-          <div class="filter-item-label">排除条件</div>
+          <div class="filter-item-label">{{ $t('filter.exclude') }}</div>
           <q-select v-model="excludeFilters" :options="excludeFilterOptions" multiple emit-value map-options use-chips
             dense options-dense :behavior="$q.screen.lt.sm ? 'dialog' : 'menu'" clearable clear-icon="close"
-            placeholder="选择需要排除的条件">
+            :placeholder="$t('filter.excludePlaceholder')">
             <template v-slot:selected-item="scope">
               <q-chip removable dense @remove="scope.removeAtIndex(scope.index)" :tabindex="scope.tabindex"
                 color="negative" text-color="white">
@@ -208,7 +201,7 @@ function matchesFilter(ship: Ship, filter: string): boolean {
   </div>
 
   <div v-if="!hiddenOptions" class="result-count">
-    共 {{ finalShips.length }} 个结果
+    {{ $t('filter.results', { count: finalShips.length }) }}
   </div>
 
   <div class="card-item-list-page">
@@ -216,7 +209,7 @@ function matchesFilter(ship: Ship, filter: string): boolean {
       :to="{ name: 'ship', params: { id: ship.id } }">
       <div class="card-item-content">
         <ShipSpriteDiv :ship="ship" />
-        <span> {{ ship.getDisplayName() }} </span>
+              <span> {{ ship.getDisplayName(t) }} </span>
       </div>
     </q-btn>
   </div>

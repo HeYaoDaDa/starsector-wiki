@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ShieldTypeDisplay } from 'src/classes/conts';
 import MutableStatDiv from 'src/components/MutableStatDiv.vue';
 import ShipsDiv from 'src/components/ShipsDiv.vue';
 import { appData } from 'src/AppData';
@@ -28,11 +27,11 @@ const variants = computed(() =>
 <template>
   <q-page padding>
     <template v-if="ship === undefined">
-      <h2>Ship id:{{ id }} not found.</h2>
+      <h2>{{ $t('common.notFound', { name: 'Ship', id: id }) }}</h2>
     </template>
     <template v-else>
       <h4>
-        {{ ship.getDisplayName() }}
+        {{ ship.getDisplayName($t) }}
       </h4>
 
       <div style="display: grid; grid-template-columns: 3fr 1fr; gap: 10px">
@@ -56,75 +55,75 @@ const variants = computed(() =>
         </colgroup>
         <thead>
           <tr>
-            <th colspan="4" style="text-align: center">后勤数据</th>
-            <th colspan="2" style="text-align: center">战斗性能</th>
+            <th colspan="4" style="text-align: center">{{ $t('ship.logistics') }}</th>
+            <th colspan="2" style="text-align: center">{{ $t('ship.combat') }}</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>作战后消耗的战备值(CR)</td>
+            <td>{{ $t('ship.crCost') }}</td>
             <td style="text-align: right">{{ ship.crToDeploy }}%</td>
-            <td>维护消耗(补给/月)</td>
+            <td>{{ $t('ship.suppliesPerMonth') }}</td>
             <td style="text-align: right">
               <MutableStatDiv
                 :stat="ship.suppliesPerMonth"
                 :add-is-good="false"
               />
             </td>
-            <td>结构值</td>
+            <td>{{ $t('ship.hull') }}</td>
             <td style="text-align: right">
               <MutableStatDiv :stat="ship.hitPoints" />
             </td>
           </tr>
           <tr>
-            <td>战备值(CR)恢复速率(每天)</td>
+            <td>{{ $t('ship.crRecovery') }}</td>
             <td style="text-align: right">
               <MutableStatDiv :stat="ship.repairPercentPerDay" />%
             </td>
-            <td>载货量</td>
+            <td>{{ $t('ship.cargo') }}</td>
             <td style="text-align: right">
               <MutableStatDiv :stat="ship.cargo" />
             </td>
-            <td>装甲值</td>
+            <td>{{ $t('ship.armor') }}</td>
             <td style="text-align: right">
               <MutableStatDiv :stat="ship.armorRating" />
             </td>
           </tr>
           <tr>
-            <td>部署成本(补给)</td>
+            <td>{{ $t('ship.deployCost') }}</td>
             <td style="text-align: right">
               <MutableStatDiv
                 :stat="ship.suppliesToRecover"
                 :add-is-good="false"
               />
             </td>
-            <td>最大载员</td>
+            <td>{{ $t('ship.maxCrew') }}</td>
             <td style="text-align: right">
               <MutableStatDiv :stat="ship.maxCrew" />
             </td>
-            <td>防御方式</td>
+            <td>{{ $t('ship.defenseType') }}</td>
             <td style="text-align: right">
-              {{ ShieldTypeDisplay.get(ship.shieldType) }}
+              {{ $t('shield.' + ship.shieldType.toLowerCase()) }}
             </td>
           </tr>
           <tr>
-            <td>部署点</td>
+            <td>{{ $t('ship.ordnancePoints') }}</td>
             <td style="text-align: right">
               <MutableStatDiv
                 :stat="ship.suppliesToRecover"
                 :add-is-good="false"
               />
             </td>
-            <td>必要船员</td>
+            <td>{{ $t('ship.minCrew') }}</td>
             <td style="text-align: right">
               <MutableStatDiv :stat="ship.minCrew" :add-is-good="false" />
             </td>
             <td>
               {{
                 ship.hasShield()
-                  ? '护盾角度'
+                  ? $t('ship.shieldAngle')
                   : ship.hasPhase()
-                  ? '相位线圈激活'
+                  ? $t('ship.phaseActivation')
                   : ''
               }}
             </td>
@@ -138,20 +137,20 @@ const variants = computed(() =>
             </td>
           </tr>
           <tr>
-            <td>峰值时间(秒)</td>
+            <td>{{ $t('ship.peakTime') }}</td>
             <td style="text-align: right">
               <MutableStatDiv :stat="ship.noCRLossSeconds" />
             </td>
-            <td>燃料容量</td>
+            <td>{{ $t('ship.fuelCapacity') }}</td>
             <td style="text-align: right">
               <MutableStatDiv :stat="ship.fuel" />
             </td>
             <td>
               {{
                 ship.hasShield()
-                  ? '护盾维持(幅能/秒)'
+                  ? $t('ship.shieldUpkeep')
                   : ship.hasPhase()
-                  ? '相位线圈维持(幅能/秒)'
+                  ? $t('ship.phaseUpkeep')
                   : ''
               }}
             </td>
@@ -171,12 +170,12 @@ const variants = computed(() =>
           <tr>
             <td></td>
             <td style="text-align: right"></td>
-            <td>最大宇宙航速</td>
+            <td>{{ $t('ship.maxBurn') }}</td>
             <td style="text-align: right">
               <MutableStatDiv :stat="ship.maxBurn" />
             </td>
             <td>
-              {{ ship.hasShield() ? '护盾效率(幅能/伤害)' : '' }}
+              {{ ship.hasShield() ? $t('ship.shieldEfficiency') : '' }}
             </td>
             <td style="text-align: right">
               <MutableStatDiv
@@ -189,11 +188,11 @@ const variants = computed(() =>
           <tr>
             <td></td>
             <td style="text-align: right"></td>
-            <td>燃料消耗(光年)</td>
+            <td>{{ $t('ship.fuelPerLY') }}</td>
             <td style="text-align: right">
               <MutableStatDiv :stat="ship.fuelPerLY" :add-is-good="false" />
             </td>
-            <td>幅能容量</td>
+            <td>{{ $t('ship.fluxCapacity') }}</td>
             <td style="text-align: right">
               <MutableStatDiv :stat="ship.fluxCapacity" />
             </td>
@@ -203,19 +202,19 @@ const variants = computed(() =>
             <td style="text-align: right"></td>
             <td></td>
             <td style="text-align: right"></td>
-            <td>幅能耗散</td>
+            <td>{{ $t('ship.fluxDissipation') }}</td>
             <td style="text-align: right">
               <MutableStatDiv :stat="ship.fluxDissipation" />
             </td>
           </tr>
           <tr>
-            <td>装配点数</td>
+            <td>{{ $t('ship.opPoints') }}</td>
             <td style="text-align: right">{{ ship.ordnancePoints }}</td>
-            <td>被侦察范围</td>
+            <td>{{ $t('ship.sensorProfile') }}</td>
             <td style="text-align: right">
               <MutableStatDiv :stat="ship.sensorProfile" :add-is-good="false" />
             </td>
-            <td>最高航速</td>
+            <td>{{ $t('ship.maxSpeed') }}</td>
             <td style="text-align: right">
               <MutableStatDiv :stat="ship.maxSpeed" />
             </td>
@@ -223,7 +222,7 @@ const variants = computed(() =>
           <tr>
             <td></td>
             <td></td>
-            <td>探测范围</td>
+            <td>{{ $t('ship.sensorStrength') }}</td>
             <td style="text-align: right">
               <MutableStatDiv :stat="ship.sensorStrength" />
             </td>
@@ -231,7 +230,7 @@ const variants = computed(() =>
             <td style="text-align: right"></td>
           </tr>
           <tr>
-            <td>战术系统</td>
+            <td>{{ $t('ship.tacticalSystem') }}</td>
             <td colspan="5">
               <router-link
                 v-if="ship.getSystem()"
@@ -247,11 +246,11 @@ const variants = computed(() =>
           <tr v-if="ship.hasSystem()">
             <td></td>
             <td colspan="5" style="white-space: pre-wrap">
-              {{ ship.getSystemDescription() }}
+              {{ ship.getSystemDescription($t) }}
             </td>
           </tr>
           <tr>
-            <td>特殊系统</td>
+            <td>{{ $t('ship.specialSystem') }}</td>
             <td colspan="5">
               <router-link
                 v-if="ship.getDefense()"
@@ -259,22 +258,22 @@ const variants = computed(() =>
                   name: 'ship_system',
                   params: { id: ship?.shipDefenseId },
                 }"
-                >{{ ship.getDefense()?.name ?? '无' }}</router-link
+                >{{ ship.getDefense()?.name ?? $t('common.none') }}</router-link
               >
             </td>
           </tr>
           <tr v-if="ship.hasDefense()">
             <td></td>
             <td colspan="5" style="white-space: pre-wrap">
-              {{ ship.getDefenseDescription() }}
+              {{ ship.getDefenseDescription($t) }}
             </td>
           </tr>
           <tr>
-            <td>安装槽位:</td>
-            <td colspan="5">{{ ship.getSlotDescription() }}</td>
+            <td>{{ $t('ship.slots') }}</td>
+            <td colspan="5">{{ ship.getSlotDescription($t) }}</td>
           </tr>
           <tr>
-            <td>军备详情:</td>
+            <td>{{ $t('ship.armament') }}</td>
             <td colspan="5">
               <span
                 style="margin-right: 10px"
@@ -293,7 +292,7 @@ const variants = computed(() =>
             </td>
           </tr>
           <tr>
-            <td>船体插槽:</td>
+            <td>{{ $t('ship.hullMods') }}</td>
             <td colspan="5">
               <span
                 style="margin-right: 10px"
@@ -316,7 +315,7 @@ const variants = computed(() =>
       <br />
       <div style="column-count: 2">
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>价值</div>
+          <div>{{ $t('ship.value') }}</div>
           <div>{{ ship.baseValue }}</div>
         </div>
       </div>
@@ -324,21 +323,21 @@ const variants = computed(() =>
       <br /><br />
 
       <template v-if="skins.length > 0">
-        <h4>变体船</h4>
+        <h4>{{ $t('ship.skins') }}</h4>
         <ShipsDiv :ships="skins" />
       </template>
 
       <br /><br />
 
       <template v-if="variants.length > 0">
-        <h4>装配</h4>
+        <h4>{{ $t('ship.variants') }}</h4>
         <ShipsDiv :ships="variants" />
       </template>
 
       <br /><br />
 
       <template v-if="ship.factions.length > 0">
-        <h4>拥有势力</h4>
+        <h4>{{ $t('ship.factions') }}</h4>
         <FactionsDiv :faction-values="ship.factions" img="crest" />
       </template>
 

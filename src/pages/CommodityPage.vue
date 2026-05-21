@@ -43,19 +43,19 @@ const commodity = computed(() => {
 
       <div style="column-count: 2">
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>可堆叠数量</div>
+          <div>{{ $t('commodity.stackSize') }}</div>
           <div>{{ commodity.stackSize }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>顺序</div>
+          <div>{{ $t('commodity.order') }}</div>
           <div>{{ commodity.order }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>货舱空间</div>
+          <div>{{ $t('commodity.cargoSpace') }}</div>
           <div>{{ commodity.cargoSpace }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr">
-          <div>基础价格</div>
+          <div>{{ $t('commodity.basePrice') }}</div>
           <div>{{ commodity.basePrice }}</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr">

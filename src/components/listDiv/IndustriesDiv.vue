@@ -27,7 +27,7 @@ const finalIndustries = computed(() => allIndustries.value);
   <template v-if="!hiddenOptions"> </template>
 
   <div v-if="!hiddenOptions" class="result-count">
-    共 {{ finalIndustries.length }} 个结果
+    {{ $t('filter.results', { count: finalIndustries.length }) }}
   </div>
 
   <div class="card-item-list-page">

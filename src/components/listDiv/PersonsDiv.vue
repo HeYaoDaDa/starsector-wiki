@@ -4,6 +4,9 @@ import { Person } from 'src/classes/model/Person';
 import { comparePerson } from 'src/classes/utils';
 import { computed, ref } from 'vue';
 import { useQuasar } from 'quasar';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 defineOptions({
   name: 'PersonsDiv',
@@ -20,14 +23,14 @@ const $q = useQuasar();
 const includeFilters = ref<string[]>([]);
 const excludeFilters = ref<string[]>([]);
 
-const rowIsDefaultOptions = [
-  { label: '是', value: 'Y' },
-  { label: '否', value: 'N' },
-];
-const rowIsAiOptions = [
-  { label: '是', value: 'Y' },
-  { label: '否', value: 'N' },
-];
+const rowIsDefaultOptions = computed(() => [
+  { label: t('common.yes'), value: 'Y' },
+  { label: t('common.no'), value: 'N' },
+]);
+const rowIsAiOptions = computed(() => [
+  { label: t('common.yes'), value: 'Y' },
+  { label: t('common.no'), value: 'N' },
+]);
 
 const allPersons = computed(() =>
   planetValues
@@ -91,15 +94,15 @@ function generateFilterOptions(persons: Person[], selectedFilters: string[], opp
     const isSelectedInOpposite = oppositeFilters && oppositeFilters.includes(filterValue);
 
     options.push({
-      label: `[势力] ${faction.name}(${count})`,
+      label: t('filter.optionFormat', { category: t('filter.label.faction'), name: faction.name, count }),
       value: filterValue,
-      chipLabel: `[势力] ${faction.name}`,
+      chipLabel: t('filter.chipFormat', { category: t('filter.label.faction'), name: faction.name }),
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
     });
   });
 
   // 是否为默认选项
-  rowIsDefaultOptions.forEach((opt) => {
+  rowIsDefaultOptions.value.forEach((opt) => {
     const filterValue = `isDefault:${opt.value}`;
     const count = opt.value === 'Y'
       ? persons.filter((p) => p.defaults).length
@@ -108,15 +111,15 @@ function generateFilterOptions(persons: Person[], selectedFilters: string[], opp
     const isSelectedInOpposite = oppositeFilters && oppositeFilters.includes(filterValue);
 
     options.push({
-      label: `[是否为默认] ${opt.label}(${count})`,
+      label: t('filter.optionFormat', { category: t('filter.label.isDefault'), name: opt.label, count }),
       value: filterValue,
-      chipLabel: `[是否为默认] ${opt.label}`,
+      chipLabel: t('filter.chipFormat', { category: t('filter.label.isDefault'), name: opt.label }),
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
     });
   });
 
   // 是否为AI核心选项
-  rowIsAiOptions.forEach((opt) => {
+  rowIsAiOptions.value.forEach((opt) => {
     const filterValue = `isAi:${opt.value}`;
     const count = opt.value === 'Y'
       ? persons.filter((p) => Boolean(p.aiCore)).length
@@ -125,9 +128,9 @@ function generateFilterOptions(persons: Person[], selectedFilters: string[], opp
     const isSelectedInOpposite = oppositeFilters && oppositeFilters.includes(filterValue);
 
     options.push({
-      label: `[是否为AI核心] ${opt.label}(${count})`,
+      label: t('filter.optionFormat', { category: t('filter.label.isAICore'), name: opt.label, count }),
       value: filterValue,
-      chipLabel: `[是否为AI核心] ${opt.label}`,
+      chipLabel: t('filter.chipFormat', { category: t('filter.label.isAICore'), name: opt.label }),
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
     });
   });
@@ -155,10 +158,10 @@ function matchesFilter(person: Person, filter: string): boolean {
     <div class="filter-row">
       <div class="filter-group">
         <div class="filter-item">
-          <div class="filter-item-label">包含条件</div>
+          <div class="filter-item-label">{{ $t('filter.include') }}</div>
           <q-select v-model="includeFilters" :options="includeFilterOptions" multiple emit-value map-options use-chips
             dense options-dense :behavior="$q.screen.lt.sm ? 'dialog' : 'menu'" clearable clear-icon="close"
-            placeholder="选择需要包含的条件">
+            :placeholder="$t('filter.includePlaceholder')">
             <template v-slot:selected-item="scope">
               <q-chip removable dense @remove="scope.removeAtIndex(scope.index)" :tabindex="scope.tabindex"
                 color="primary" text-color="white">
@@ -168,10 +171,10 @@ function matchesFilter(person: Person, filter: string): boolean {
           </q-select>
         </div>
         <div class="filter-item">
-          <div class="filter-item-label">排除条件</div>
+          <div class="filter-item-label">{{ $t('filter.exclude') }}</div>
           <q-select v-model="excludeFilters" :options="excludeFilterOptions" multiple emit-value map-options use-chips
             dense options-dense :behavior="$q.screen.lt.sm ? 'dialog' : 'menu'" clearable clear-icon="close"
-            placeholder="选择需要排除的条件">
+            :placeholder="$t('filter.excludePlaceholder')">
             <template v-slot:selected-item="scope">
               <q-chip removable dense @remove="scope.removeAtIndex(scope.index)" :tabindex="scope.tabindex"
                 color="negative" text-color="white">
@@ -185,7 +188,7 @@ function matchesFilter(person: Person, filter: string): boolean {
   </div>
 
   <div v-if="!hiddenOptions" class="result-count">
-    共 {{ finalPersons.length }} 个结果
+    {{ $t('filter.results', { count: finalPersons.length }) }}
   </div>
 
   <div class="card-item-list-page">

@@ -4,6 +4,9 @@ import { Planet } from 'src/classes/model/Planet';
 import { comparePlanet } from 'src/classes/utils';
 import { computed, ref } from 'vue';
 import { useQuasar } from 'quasar';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 defineOptions({
   name: 'PlanetsDiv',
@@ -82,9 +85,9 @@ function generateFilterOptions(planets: Planet[], selectedFilters: string[], opp
     const isSelectedInOpposite = oppositeFilters && oppositeFilters.includes(filterValue);
 
     options.push({
-      label: `[势力] ${faction.name}(${count})`,
+      label: t('filter.optionFormat', { category: t('filter.label.faction'), name: faction.name, count }),
       value: filterValue,
-      chipLabel: `[势力] ${faction.name}`,
+      chipLabel: t('filter.chipFormat', { category: t('filter.label.faction'), name: faction.name }),
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
     });
   });
@@ -107,9 +110,9 @@ function generateFilterOptions(planets: Planet[], selectedFilters: string[], opp
     const isSelectedInOpposite = oppositeFilters && oppositeFilters.includes(filterValue);
 
     options.push({
-      label: `[殖民地大小] ${size}(${count})`,
+      label: t('filter.optionFormat', { category: t('filter.label.colonySize'), name: size, count }),
       value: filterValue,
-      chipLabel: `[殖民地大小] ${size}`,
+      chipLabel: t('filter.chipFormat', { category: t('filter.label.colonySize'), name: size }),
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
     });
   });
@@ -128,9 +131,9 @@ function generateFilterOptions(planets: Planet[], selectedFilters: string[], opp
     const isSelectedInOpposite = oppositeFilters && oppositeFilters.includes(filterValue);
 
     options.push({
-      label: `[星球类型] ${type.name}(${count})`,
+      label: t('filter.optionFormat', { category: t('filter.label.planetType'), name: type.name, count }),
       value: filterValue,
-      chipLabel: `[星球类型] ${type.name}`,
+      chipLabel: t('filter.chipFormat', { category: t('filter.label.planetType'), name: type.name }),
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
     });
   });
@@ -159,10 +162,10 @@ function matchesFilter(planet: Planet, filter: string): boolean {
     <div class="filter-row">
       <div class="filter-group">
         <div class="filter-item">
-          <div class="filter-item-label">包含条件</div>
+          <div class="filter-item-label">{{ $t('filter.include') }}</div>
           <q-select v-model="includeFilters" :options="includeFilterOptions" multiple emit-value map-options use-chips
             dense options-dense :behavior="$q.screen.lt.sm ? 'dialog' : 'menu'" clearable clear-icon="close"
-            placeholder="选择需要包含的条件">
+            :placeholder="$t('filter.includePlaceholder')">
             <template v-slot:selected-item="scope">
               <q-chip removable dense @remove="scope.removeAtIndex(scope.index)" :tabindex="scope.tabindex"
                 color="primary" text-color="white">
@@ -172,10 +175,10 @@ function matchesFilter(planet: Planet, filter: string): boolean {
           </q-select>
         </div>
         <div class="filter-item">
-          <div class="filter-item-label">排除条件</div>
+          <div class="filter-item-label">{{ $t('filter.exclude') }}</div>
           <q-select v-model="excludeFilters" :options="excludeFilterOptions" multiple emit-value map-options use-chips
             dense options-dense :behavior="$q.screen.lt.sm ? 'dialog' : 'menu'" clearable clear-icon="close"
-            placeholder="选择需要排除的条件">
+            :placeholder="$t('filter.excludePlaceholder')">
             <template v-slot:selected-item="scope">
               <q-chip removable dense @remove="scope.removeAtIndex(scope.index)" :tabindex="scope.tabindex"
                 color="negative" text-color="white">
@@ -189,7 +192,7 @@ function matchesFilter(planet: Planet, filter: string): boolean {
   </div>
 
   <div v-if="!hiddenOptions" class="result-count">
-    共 {{ finalPlanets.length }} 个结果
+    {{ $t('filter.results', { count: finalPlanets.length }) }}
   </div>
 
   <div class="card-item-list-page">

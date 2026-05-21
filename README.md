@@ -15,60 +15,99 @@
 └── package.json        # 前端依赖与脚本
 ```
 
-## 工作流
+## 工作流 / Workflow
+
+0. 将 `mods/StarsectorWikiExporter` 文件夹复制到 Starsector 游戏 `mods/` 目录下，并在游戏启动器中勾选该 Mod
+
+1. 启动 Starsector → 载入存档 → 进入模拟（Simulation）
+
+2. **[多语言 / Multi-Language]** 每种语言需要单独导出：
+   - 将游戏语言切换为目标语言
+   - 重启游戏
+   - 载入存档 → 进入模拟
+   - 按 F8 导出数据
+   - 重复以上步骤，为每种需要的语言（如 en, zh）各导出一次
+
+3. 运行数据提取脚本（支持多版本 + 多语言）：
+   ```bash
+   python3 tools/splitlog/SplitLog.py <游戏根目录路径>
+   ```
+
+4. 复制贴图资源：
+   ```bash
+   python3 tools/splitlog/moveImg.py <游戏根目录路径>
+   ```
+
+5. 启动 Wiki 前端：
+   ```bash
+   pnpm install
+   pnpm quasar dev
+   ```
+
+## 多语言 / Multi-Language
+
+### 数据结构
+
+导出数据按 `版本/语言` 组织在 `public/data/` 目录下：
 
 ```
-1. 安装 WikiExporter Mod → Starsector
-2. 启动游戏 → 模拟战 → 按 F8 → 退出
-       ↓
-   starsector.log 包含导出的 JSON
-       ↓
-3. python3 tools/splitlog/SplitLog.py <game_root>
-       ↓
-   public/data/data.json
-       ↓
-4. python3 tools/splitlog/moveImg.py <game_root>
-       ↓
-   public/graphics/*
-       ↓
-5. pnpm install && pnpm quasar dev
+public/data/
+├── manifest.json          # 版本列表 (自动生成)
+└── {version}/
+    └── {locale}/
+        └── data.json      # 该版本 + 语言的游戏数据
 ```
 
-### 1. 安装 Mod
-
-将 `tools/exporter/` 目录打包或直接放到 Starsector 的 `mods/` 目录下。
-汉化游戏只需要 `data` 和 `graphics` 两个文件夹即可。
-
-### 2. 触发导出
-
-启动游戏（dev 模式），进入**模拟战**，然后按 **F8** 触发数据导出。完成后退出游戏。
-
-游戏日志 `<game_root>/starsector.log` 中将包含所有导出数据。
-
-### 3. 提取数据
-
-```bash
-python3 tools/splitlog/SplitLog.py /opt/starsector
+示例：
+```
+public/data/
+├── manifest.json
+└── 0.97a/
+    ├── en/
+    │   └── data.json      # 0.97a 英文数据
+    └── zh/
+        └── data.json      # 0.97a 中文数据
 ```
 
-从游戏日志中提取 JSON，生成 `public/data/data.json`。
+### 导出流程
 
-### 4. 拷贝贴图
+1. 修改 `tools/exporter/src/exporter/WikiExporterModPlugin.java` 中的 `locale` 常量
+   - `String locale = "en";` → 导出英文
+   - `String locale = "zh";` → 导出中文
+2. 每种语言：切换游戏语言 → 重启 → 进入模拟 → 按 F8
+3. 运行 `SplitLog.py` 一次即可处理所有导出
 
-```bash
-python3 tools/splitlog/moveImg.py /opt/starsector
+### manifest.json
+
+`SplitLog.py` 自动生成 `public/data/manifest.json`，前端通过此文件发现可用的版本和语言：
+
+```json
+{
+  "versions": [
+    { "version": "0.97a", "locales": ["en", "zh"] }
+  ]
+}
 ```
 
-将游戏贴图资源（舰船、武器、势力图标等）复制到 `public/graphics/`。
+## 多版本 / Multi-Version
 
-### 5. 启动前端
+### 版本自动检测
 
-```bash
-pnpm install
-pnpm quasar dev
-```
+- Java 导出器自动从 `Global.getSettings().getVersionString()` 获取版本号
+- 版本号中的特殊字符会被替换为 `_` 以防止路径问题
+- 不同版本的导出数据存放在独立的目录中，互不覆盖
 
-访问本地开发服务器查看 Wiki。
+### 前端版本选择器
+
+- 连接数据后，前端工具栏会显示版本选择下拉菜单
+- 切换版本会自动加载对应版本的游戏数据
+- 版本选择器仅在 manifest.json 中存在多个版本时显示
+
+### SplitLog.py 选择式清除
+
+- 运行 `SplitLog.py` 时，仅清除当前正在导出的 `版本/语言` 目录
+- 其他版本的语言目录保持不变
+- 日志中的旧格式行（`export_data_export_`）会被警告并跳过
 
 ## 技术栈
 
