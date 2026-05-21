@@ -27,7 +27,7 @@ async function triggerLoad() {
     fail.value = true;
     return;
   }
-  const currentLocale = appData.selectedLocale.value || locale.value || 'en';
+  const currentLocale = locale.value || appData.selectedLocale.value || 'en';
   appData.selectedLocale.value = currentLocale;
   await appData.initData(version, currentLocale);
 }

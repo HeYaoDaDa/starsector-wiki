@@ -53,7 +53,7 @@ class AppData {
   shipCanvasMap: Map<string, CanvasResult> = new Map();
   availableVersions: { version: string; locales: string[] }[] = [];
   selectedVersion = ref<string>(localStorage.getItem('selectedVersion') || '');
-  selectedLocale = ref<string>(localStorage.getItem('selectedLocale') || 'en');
+  selectedLocale = ref<string>(localStorage.getItem('locale') || (navigator.language.startsWith('zh') ? 'zh' : 'en'));
 
   sortdShips(): Ship[] {
     const result: Ship[] = [];
@@ -732,7 +732,7 @@ class AppData {
     this.status.value = 'loading';
     await this.initData(version, locale);
     localStorage.setItem('selectedVersion', version);
-    localStorage.setItem('selectedLocale', locale);
+    localStorage.setItem('locale', locale);
   }
 }
 

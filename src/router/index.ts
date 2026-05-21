@@ -45,7 +45,7 @@ export default route(function (/* { store, ssrContext } */) {
       }
       // Persist current selections on navigation
       localStorage.setItem('selectedVersion', appData.selectedVersion.value);
-      localStorage.setItem('selectedLocale', appData.selectedLocale.value);
+      localStorage.setItem('locale', appData.selectedLocale.value);
     }
   });
 
