@@ -38,6 +38,7 @@ export default route(function (/* { store, ssrContext } */) {
   Router.beforeEach(async (to) => {
     if (to.meta.requireGameData) {
       if (['none', 'loading'].includes(appData.status.value)) {
+        sessionStorage.setItem('redirectAfterLoad', to.fullPath);
         return '/load';
       }
       if (!appData.selectedVersion.value) {
@@ -46,6 +47,8 @@ export default route(function (/* { store, ssrContext } */) {
       // Persist current selections on navigation
       localStorage.setItem('selectedVersion', appData.selectedVersion.value);
       localStorage.setItem('locale', appData.selectedLocale.value);
+      // Clear redirect cache on normal navigation after data is loaded
+      sessionStorage.removeItem('redirectAfterLoad');
     }
   });
 

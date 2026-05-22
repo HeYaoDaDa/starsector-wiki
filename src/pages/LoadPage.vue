@@ -36,7 +36,9 @@ watchEffect(() => {
   if ('none' === appData.status.value) {
     triggerLoad();
   } else if ('finish' === appData.status.value) {
-    router.replace('/');
+    const redirectPath = sessionStorage.getItem('redirectAfterLoad') || '/';
+    sessionStorage.removeItem('redirectAfterLoad');
+    router.replace(redirectPath);
   } else if ('fail' === appData.status.value) {
     fail.value = true;
   } else if ('empty' === appData.status.value) {
