@@ -7,7 +7,7 @@
 ```
 ├── src/                # Vue 3 + Quasar 前端
 ├── public/
-│   ├── data/           # SplitLog.py 输出的 JSON 数据
+│   ├── data/           # 按 {version}/{locale} 组织的 JSON 数据
 │   └── graphics/       # moveImg.py 拷贝的游戏贴图
 ├── tools/
 │   ├── exporter/       # WikiExporter Java Mod（游戏内导出）
@@ -17,28 +17,33 @@
 
 ## 工作流 / Workflow
 
-0. 将 `mods/StarsectorWikiExporter` 文件夹复制到 Starsector 游戏 `mods/` 目录下，并在游戏启动器中勾选该 Mod
+### 首次导出
 
-1. 启动 Starsector → 载入存档 → 进入模拟（Simulation）
+1. 将 `tools/exporter/` 目录复制到 Starsector 游戏 `mods/` 目录下，并在游戏启动器中勾选 WikiExporter
 
-2. **[多语言 / Multi-Language]** 每种语言需要单独导出：
-   - 将游戏语言切换为目标语言
-   - 重启游戏
-   - 载入存档 → 进入模拟
-   - 按 F8 导出数据
-   - 重复以上步骤，为每种需要的语言（如 en, zh）各导出一次
+2. 启动 Starsector → 载入存档 → 进入模拟（Simulation）
 
-3. 运行数据提取脚本（支持多版本 + 多语言）：
+3. 按 F8 导出数据（数据会输出到游戏日志 `starsector.log`）
+
+4. 运行数据提取脚本，从日志中提取 JSON 文件：
    ```bash
    python3 tools/splitlog/SplitLog.py <游戏根目录路径>
    ```
+   输出为扁平文件 `public/data/{name}.json`
 
-4. 复制贴图资源：
+5. 将提取的 JSON 文件手动整理为前端所需的目录结构：
+   ```
+   public/data/{version}/{locale}/data.json
+   ```
+
+6. 更新 `public/data/manifest.json`，添加对应的版本和语言条目
+
+7. 复制贴图资源：
    ```bash
    python3 tools/splitlog/moveImg.py <游戏根目录路径>
    ```
 
-5. 启动 Wiki 前端：
+8. 启动 Wiki 前端：
    ```bash
    pnpm install
    pnpm quasar dev
@@ -48,11 +53,11 @@
 
 ### 数据结构
 
-导出数据按 `版本/语言` 组织在 `public/data/` 目录下：
+导出数据按 `版本/语言` 组织在 `public/data/` 目录下（需手动维护）：
 
 ```
 public/data/
-├── manifest.json          # 版本列表 (自动生成)
+├── manifest.json          # 版本列表（手动维护）
 └── {version}/
     └── {locale}/
         └── data.json      # 该版本 + 语言的游戏数据
@@ -71,20 +76,19 @@ public/data/
 
 ### 导出流程
 
-1. 修改 `tools/exporter/src/exporter/WikiExporterModPlugin.java` 中的 `locale` 常量
-   - `String locale = "en";` → 导出英文
-   - `String locale = "zh";` → 导出中文
-2. 每种语言：切换游戏语言 → 重启 → 进入模拟 → 按 F8
-3. 运行 `SplitLog.py` 一次即可处理所有导出
+1. 每种语言：切换游戏语言 → 重启 → 进入模拟 → 按 F8
+2. 运行 `SplitLog.py` 从日志中提取扁平 JSON 文件
+3. 将 JSON 文件手动整理为 `{version}/{locale}/data.json` 格式
+4. 更新 `manifest.json`
 
 ### manifest.json
 
-`SplitLog.py` 自动生成 `public/data/manifest.json`，前端通过此文件发现可用的版本和语言：
+`public/data/manifest.json` 需**手动维护**，前端通过此文件发现可用的版本和语言：
 
 ```json
 {
   "versions": [
-    { "version": "0.97a", "locales": ["en", "zh"] }
+    { "version": "0.98a", "locales": ["en", "zh"] }
   ]
 }
 ```
@@ -103,11 +107,15 @@ public/data/
 - 切换版本会自动加载对应版本的游戏数据
 - 版本选择器仅在 manifest.json 中存在多个版本时显示
 
-### SplitLog.py 选择式清除
+### 说明
 
-- 运行 `SplitLog.py` 时，仅清除当前正在导出的 `版本/语言` 目录
-- 其他版本的语言目录保持不变
-- 日志中的旧格式行（`export_data_export_`）会被警告并跳过
+当前 `SplitLog.py` 仅支持从日志中提取扁平 JSON 文件（`export_<名称>_export_<内容>`），
+**不支持**自动组织 `{version}/{locale}/data.json` 目录结构。
+
+如需更新数据：
+1. 运行 Java 导出器 + SplitLog.py 提取 JSON
+2. 手动将文件放入对应的版本/语言目录下
+3. 更新 `manifest.json`
 
 ## 技术栈
 
