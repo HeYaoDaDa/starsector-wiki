@@ -504,6 +504,20 @@ class AppData {
       // Clear old data before loading new
       this.clearAllMaps();
       this.clearCaches();
+
+      // 加载预计算的 canvas 缓存
+      const cc = await api.get(`data/${version}/${locale}/canvas-cache.json`);
+      const canvasData = cc.data;
+      if (canvasData && canvasData.ships) {
+        for (const [id, cr] of Object.entries(canvasData.ships)) {
+          this.shipCanvasMap.set(id, cr as CanvasResult);
+        }
+      }
+      if (canvasData && canvasData.weapons) {
+        for (const [id, cr] of Object.entries(canvasData.weapons)) {
+          this.weaponCanvasMap.set(id, cr as CanvasResult);
+        }
+      }
       //load data
       for (const jsonObject of jsonArray) {
         if (jsonObject && 'jsonType' in jsonObject) {

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { CanvasResult } from 'src/classes/model/CanvasSprite';
 import { Weapon } from 'src/classes/model/weapon';
-import { computeWeaponSize } from 'src/classes/utils';
 import { computed, ref, watchEffect } from 'vue';
+import { appData } from 'src/AppData';
 
 defineOptions({
   name: 'WeaponSpriteDiv',
@@ -42,8 +42,9 @@ const weaponSprite = computed(() =>
 );
 
 const canvasResult = ref(undefined as CanvasResult | undefined);
-watchEffect(async () => {
-  canvasResult.value = await computeWeaponSize(weapon, isHardPoint);
+watchEffect(() => {
+  const cacheKey = isHardPoint ? weapon.id + '_hard' : weapon.id;
+  canvasResult.value = appData.weaponCanvasMap.get(cacheKey)!;
 });
 </script>
 

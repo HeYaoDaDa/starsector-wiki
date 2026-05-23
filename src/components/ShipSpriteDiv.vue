@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { CanvasResult } from 'src/classes/model/CanvasSprite';
 import { Ship, WeaponSlot } from 'src/classes/model/ship';
-import { computeShipSize } from 'src/classes/utils';
 import { ref, watchEffect } from 'vue';
 import WeaponSpriteDiv from './WeaponSpriteDiv.vue';
 import { Weapon } from 'src/classes/model/weapon';
@@ -98,8 +97,8 @@ async function getModules() {
   modules.value = modules1;
 }
 
-async function getShipCanvas() {
-  canvasResult.value = await computeShipSize(ship);
+function getShipCanvas() {
+  canvasResult.value = appData.shipCanvasMap.get(ship.id)!;
 }
 </script>
 

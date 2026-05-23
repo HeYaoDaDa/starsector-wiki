@@ -49,6 +49,52 @@
    pnpm quasar dev
    ```
 
+## 构建时 Canvas 预计算 / Build-time Canvas Precomputation
+
+为消除运行时加载贴图并计算 Canvas 尺寸的性能开销，构建时会自动预计算所有武器和舰船的
+`CanvasResult`（边界框尺寸），结果写入 `canvas-cache.json`。
+
+### 流程
+
+```bash
+# 手动预计算（prebuild 会自动执行，一般无需手动运行）
+node tools/precompute-canvas.mjs
+
+# 构建（自动触发 prebuild）
+npm run build
+# 或
+pnpm quasar build
+```
+
+### 原理
+
+`tools/precompute-canvas.mjs` 会：
+
+1. 读取 `public/data/manifest.json`，发现所有版本和 locale
+2. 对每个版本，读取 `data.json` 中的武器/舰船数据
+3. 用 `image-size` 库读取对应 PNG 贴图的宽高（仅文件头，微秒级）
+4. 运行与前端相同的 `computeCanvasSprites` 数学计算
+5. 将结果写入所有 locale 的 `canvas-cache.json`
+
+前端 `AppData.initData()` 在加载 `data.json` 后紧接着加载 `canvas-cache.json`，
+直接填入 `shipCanvasMap` / `weaponCanvasMap`。`ShipSpriteDiv` 和 `WeaponSpriteDiv`
+从这些 Map 同步读取缓存，**无需加载贴图、无需数学计算、无需等待 async**。
+
+### 缓存文件
+
+```
+public/data/{version}/{locale}/canvas-cache.json
+```
+
+- 约 70 KB 纯 JSON（gzip 后约 30 KB）
+- 与 locale 无关，所有 locale 共享相同数据
+- 由 `prebuild` 脚本自动生成，应提交到 Git
+
+### 注意
+
+如果 `canvas-cache.json` 不存在，前端将加载失败（显示 "Load Error!"），
+不会回退到运行时计算。务必在构建前执行预计算。
+
 ## 多语言 / Multi-Language
 
 ### 数据结构
