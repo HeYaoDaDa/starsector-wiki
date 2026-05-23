@@ -34,16 +34,16 @@ const variants = computed(() =>
         {{ ship.getDisplayName($t) }}
       </h4>
 
-      <div style="display: grid; grid-template-columns: 3fr 1fr; gap: 10px">
-        <span
-          style="text-align: left; vertical-align: top; white-space: pre-wrap"
-          >{{ ship.description }}</span
-        >
-        <ShipSpriteDiv :ship="ship" />
+      <div class="detail-intro-grid">
+        <span class="detail-description">{{ ship.description }}</span>
+        <div class="detail-sprite-wrapper">
+          <ShipSpriteDiv :ship="ship" />
+        </div>
       </div>
 
       <br /><br />
 
+      <div class="detail-table-wrapper">
       <table>
         <colgroup>
           <col style="width: 21%" />
@@ -311,9 +311,10 @@ const variants = computed(() =>
           </tr>
         </tbody>
       </table>
+      </div>
 
       <br />
-      <div style="column-count: 2">
+      <div class="detail-columns-2">
         <div style="display: grid; grid-template-columns: 1fr 1fr">
           <div>{{ $t('ship.value') }}</div>
           <div>{{ ship.baseValue }}</div>
@@ -349,10 +350,35 @@ const variants = computed(() =>
 </template>
 
 <style lang="scss" scoped>
-table {
+.detail-intro-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 10px;
+}
+
+.detail-description {
+  text-align: left;
+  vertical-align: top;
+  white-space: pre-wrap;
+}
+
+.detail-sprite-wrapper {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.detail-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.detail-table-wrapper table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
+  min-width: 640px;
 }
 
 td {
@@ -365,5 +391,26 @@ th {
 
 img {
   display: block;
+}
+
+.detail-columns-2 {
+  column-count: 2;
+}
+
+// Responsive: mobile
+@media (max-width: 600px) {
+  .detail-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-sprite-wrapper {
+    order: -1;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+  }
+
+  .detail-columns-2 {
+    column-count: 1;
+  }
 }
 </style>

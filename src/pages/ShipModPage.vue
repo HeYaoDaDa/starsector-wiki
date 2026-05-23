@@ -37,23 +37,22 @@ const variantShips = computed(() => {
         {{ shipMod.name }}
       </h4>
 
-      <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 10px">
-        <span
-          style="text-align: left; vertical-align: top; white-space: pre-wrap"
-          >{{ shipMod.description }}</span
-        >
-        <div style="margin: auto">
-          <img
-            style="background-color: black"
-            decoding="async"
-            :src="shipMod.icon"
-          />
+      <div class="detail-intro-grid" style="grid-template-columns: 3fr 2fr">
+        <span class="detail-description">{{ shipMod.description }}</span>
+        <div class="detail-sprite-wrapper">
+          <div style="margin: auto">
+            <img
+              style="background-color: black"
+              decoding="async"
+              :src="shipMod.icon"
+            />
+          </div>
         </div>
       </div>
 
       <br /><br />
 
-      <div style="column-count: 1">
+      <div>
         <div style="display: grid; grid-template-columns: 1fr 9fr">
           <div>{{ $t('hullMod.designType') }}</div>
           <div>{{ shipMod.manufacturer ?? $t('common.generic') }}</div>

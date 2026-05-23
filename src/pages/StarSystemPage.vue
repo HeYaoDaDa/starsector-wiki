@@ -30,27 +30,26 @@ const starSystem = computed(() => {
         {{ starSystem.name }}
       </h4>
 
-      <div style="display: grid; grid-template-columns: 3fr 1fr; gap: 10px">
-        <span
-          style="text-align: left; vertical-align: top; white-space: pre-wrap"
-          >{{
+      <div class="detail-intro-grid" style="grid-template-columns: 3fr 1fr">
+        <span class="detail-description">{{
             starSystem.star.customDescription ??
             starSystem.star.type.description
-          }}</span
-        >
-        <div style="margin: auto">
-          <div
-            :style="{
-              width: 50 + 'px',
-              height: 50 + 'px',
-              backgroundColor: '#' + starSystem.star.type.color,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              maskImage: `url(${starSystem.star.type.iconTexture})`,
-              maskSize: 'cover',
-            }"
-          ></div>
-          <span>{{ starSystem.star.type.name }}</span>
+          }}</span>
+        <div class="detail-sprite-wrapper">
+          <div style="margin: auto">
+            <div
+              :style="{
+                width: 50 + 'px',
+                height: 50 + 'px',
+                backgroundColor: '#' + starSystem.star.type.color,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                maskImage: `url(${starSystem.star.type.iconTexture})`,
+                maskSize: 'cover',
+              }"
+            ></div>
+            <span>{{ starSystem.star.type.name }}</span>
+          </div>
         </div>
       </div>
 

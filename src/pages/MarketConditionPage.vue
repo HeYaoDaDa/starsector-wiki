@@ -30,19 +30,18 @@ const marketCondition = computed(() => {
         {{ marketCondition.name }}
       </h4>
 
-      <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 10px">
-        <span
-          style="text-align: left; vertical-align: top; white-space: pre-wrap"
-          >{{ marketCondition.desc }}</span
-        >
-        <div style="margin: auto">
-          <img decoding="async" :src="marketCondition.icon" />
+      <div class="detail-intro-grid" style="grid-template-columns: 3fr 2fr">
+        <span class="detail-description">{{ marketCondition.desc }}</span>
+        <div class="detail-sprite-wrapper">
+          <div style="margin: auto">
+            <img decoding="async" :src="marketCondition.icon" />
+          </div>
         </div>
       </div>
 
       <br /><br />
 
-      <div style="column-count: 2">
+      <div class="detail-columns-2">
         <div style="display: grid; grid-template-columns: 1fr 1fr">
           <div>{{ $t('marketCondition.order') }}</div>
           <div>{{ marketCondition.order }}</div>

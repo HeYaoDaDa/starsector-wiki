@@ -34,19 +34,18 @@ const faction = computed(() => {
         {{ faction.displayName }}
       </h4>
 
-      <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 10px">
-        <span
-          style="text-align: left; vertical-align: top; white-space: pre-wrap"
-          >{{ faction.description }}</span
-        >
-        <div style="margin: auto">
-          <img decoding="async" :src="faction.logo" />
+      <div class="detail-intro-grid" style="grid-template-columns: 3fr 2fr">
+        <span class="detail-description">{{ faction.description }}</span>
+        <div class="detail-sprite-wrapper">
+          <div style="margin: auto">
+            <img decoding="async" :src="faction.logo" />
+          </div>
         </div>
       </div>
 
       <br /><br />
 
-      <div style="column-count: 1">
+      <div>
         <div style="display: grid; grid-template-columns: 1fr 6fr">
           <div>{{ $t('faction.name') }}</div>
           <div>{{ faction.displayNameLong }}</div>

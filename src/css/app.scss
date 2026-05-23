@@ -112,6 +112,28 @@ a {
   color: #666;
 }
 
+.detail-intro-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.detail-description {
+  text-align: left;
+  vertical-align: top;
+  white-space: pre-wrap;
+}
+
+.detail-sprite-wrapper {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.detail-columns-2 {
+  column-count: 2;
+}
+
 @media (max-width: 600px) {
   .filter-toolbar {
     flex-direction: column;
@@ -148,5 +170,19 @@ a {
   .card-item-content {
     width: 100%;
     align-items: flex-start;
+  }
+
+  .detail-intro-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .detail-sprite-wrapper {
+    order: -1;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+  }
+
+  .detail-columns-2 {
+    column-count: 1;
   }
 }

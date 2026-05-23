@@ -36,17 +36,16 @@ const defenseShips = computed(() => {
         {{ shipSystem.name }}
       </h4>
 
-      <div style="display: grid; grid-template-columns: 3fr 1fr; gap: 10px">
-        <span
-          style="text-align: left; vertical-align: top; white-space: pre-wrap"
-          >{{ shipSystem.description }}</span
-        >
-        <div style="margin: auto">
-          <img
-            style="background-color: black"
-            decoding="async"
-            :src="shipSystem.icon"
-          />
+      <div class="detail-intro-grid" style="grid-template-columns: 3fr 1fr">
+        <span class="detail-description">{{ shipSystem.description }}</span>
+        <div class="detail-sprite-wrapper">
+          <div style="margin: auto">
+            <img
+              style="background-color: black"
+              decoding="async"
+              :src="shipSystem.icon"
+            />
+          </div>
         </div>
       </div>
 

@@ -32,24 +32,23 @@ const planet = computed(() => {
         {{ planet.name }}
       </h4>
 
-      <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 10px">
-        <span
-          style="text-align: left; vertical-align: top; white-space: pre-wrap"
-          >{{ planet.customDescription ?? planet.type.description }}</span
-        >
-        <div style="margin: auto">
-          <div
-            :style="{
-              width: 50 + 'px',
-              height: 50 + 'px',
-              backgroundColor: '#' + planet.type.color,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              maskImage: `url(${planet.type.iconTexture})`,
-              maskSize: 'cover',
-            }"
-          ></div>
-          <span>{{ planet.type.name }}</span>
+      <div class="detail-intro-grid" style="grid-template-columns: 3fr 2fr">
+        <span class="detail-description">{{ planet.customDescription ?? planet.type.description }}</span>
+        <div class="detail-sprite-wrapper">
+          <div style="margin: auto">
+            <div
+              :style="{
+                width: 50 + 'px',
+                height: 50 + 'px',
+                backgroundColor: '#' + planet.type.color,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                maskImage: `url(${planet.type.iconTexture})`,
+                maskSize: 'cover',
+              }"
+            ></div>
+            <span>{{ planet.type.name }}</span>
+          </div>
         </div>
       </div>
 

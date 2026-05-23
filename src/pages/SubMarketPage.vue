@@ -29,18 +29,17 @@ const subMarket = computed(() => {
         {{ subMarket.name }}
       </h4>
 
-      <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 10px">
-        <span
-          style="text-align: left; vertical-align: top; white-space: pre-wrap"
-          >{{ subMarket.desc }}</span
-        >
-        <div style="margin: auto">
-          <img
-            decoding="async"
-            :src="
-              subMarket.icon ? subMarket.icon : 'graphics/factions/storage.png'
-            "
-          />
+      <div class="detail-intro-grid" style="grid-template-columns: 3fr 2fr">
+        <span class="detail-description">{{ subMarket.desc }}</span>
+        <div class="detail-sprite-wrapper">
+          <div style="margin: auto">
+            <img
+              decoding="async"
+              :src="
+                subMarket.icon ? subMarket.icon : 'graphics/factions/storage.png'
+              "
+            />
+          </div>
         </div>
       </div>
 

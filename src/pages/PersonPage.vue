@@ -27,13 +27,12 @@ const person = computed(() => {
     <template v-else>
       <h4>{{ person.firstName }} {{ person.lastName }}</h4>
 
-      <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 10px">
-        <span
-          style="text-align: left; vertical-align: top; white-space: pre-wrap"
-          >{{ person.rank }}</span
-        >
-        <div style="margin: auto">
-          <img decoding="async" :src="person.portraitSprite" />
+      <div class="detail-intro-grid" style="grid-template-columns: 3fr 2fr">
+        <span class="detail-description">{{ person.rank }}</span>
+        <div class="detail-sprite-wrapper">
+          <div style="margin: auto">
+            <img decoding="async" :src="person.portraitSprite" />
+          </div>
         </div>
       </div>
 

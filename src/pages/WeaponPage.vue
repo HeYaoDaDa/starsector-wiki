@@ -38,17 +38,16 @@ const variantShips = computed(() => {
         {{ weapon.name }}
       </h4>
 
-      <div style="display: grid; grid-template-columns: 3fr 1fr; gap: 10px">
-        <span
-          style="text-align: left; vertical-align: top; white-space: pre-wrap"
-          >{{ weapon.description }}</span
-        >
-        <WeaponSpriteDiv :weapon="weapon" />
+      <div class="detail-intro-grid">
+        <span class="detail-description">{{ weapon.description }}</span>
+        <div class="detail-sprite-wrapper">
+          <WeaponSpriteDiv :weapon="weapon" />
+        </div>
       </div>
 
       <br /><br />
 
-      <div style="column-count: 3">
+      <div class="detail-columns-3">
         <div style="display: grid; grid-template-columns: 1fr 1fr">
           <div>{{ $t('weapon.primaryRole') }}</div>
           <div>{{ weapon.primaryRoleStr }}</div>
@@ -179,3 +178,44 @@ const variantShips = computed(() => {
     </template>
   </q-page>
 </template>
+
+<style lang="scss" scoped>
+.detail-intro-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 10px;
+}
+
+.detail-description {
+  text-align: left;
+  vertical-align: top;
+  white-space: pre-wrap;
+}
+
+.detail-sprite-wrapper {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.detail-columns-3 {
+  column-count: 3;
+}
+
+@media (max-width: 600px) {
+  .detail-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-sprite-wrapper {
+    order: -1;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+  }
+
+  .detail-columns-3 {
+    column-count: 1;
+  }
+}
+</style>

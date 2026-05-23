@@ -29,19 +29,18 @@ const specialItem = computed(() => {
         {{ specialItem.name }}
       </h4>
 
-      <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 10px">
-        <span
-          style="text-align: left; vertical-align: top; white-space: pre-wrap"
-          >{{ specialItem.desc }}</span
-        >
-        <div style="margin: auto">
-          <img decoding="async" :src="specialItem.iconName" />
+      <div class="detail-intro-grid" style="grid-template-columns: 3fr 2fr">
+        <span class="detail-description">{{ specialItem.desc }}</span>
+        <div class="detail-sprite-wrapper">
+          <div style="margin: auto">
+            <img decoding="async" :src="specialItem.iconName" />
+          </div>
         </div>
       </div>
 
       <br /><br />
 
-      <div style="column-count: 2">
+      <div class="detail-columns-2">
         <div style="display: grid; grid-template-columns: 1fr 1fr">
           <div>{{ $t('specialItem.manufacturer') }}</div>
           <div>{{ specialItem.manufacturer }}</div>

@@ -29,19 +29,18 @@ const commodity = computed(() => {
         {{ commodity.name }}
       </h4>
 
-      <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 10px">
-        <span
-          style="text-align: left; vertical-align: top; white-space: pre-wrap"
-          >{{ commodity.description }}</span
-        >
-        <div style="margin: auto">
-          <img decoding="async" :src="commodity.iconName" />
+      <div class="detail-intro-grid" style="grid-template-columns: 3fr 2fr">
+        <span class="detail-description">{{ commodity.description }}</span>
+        <div class="detail-sprite-wrapper">
+          <div style="margin: auto">
+            <img decoding="async" :src="commodity.iconName" />
+          </div>
         </div>
       </div>
 
       <br /><br />
 
-      <div style="column-count: 2">
+      <div class="detail-columns-2">
         <div style="display: grid; grid-template-columns: 1fr 1fr">
           <div>{{ $t('commodity.stackSize') }}</div>
           <div>{{ commodity.stackSize }}</div>
