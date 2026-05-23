@@ -34,6 +34,7 @@ import {
 class AppData {
   debug = false;
   status = ref('none' as 'none' | 'loading' | 'finish' | 'fail' | 'empty');
+  loadProgress = ref({ percent: 0, message: '' } as { percent: number; message: string });
   shipMap: Map<string, Ship> = reactive(new Map());
   shipSystemMap: Map<string, ShipSystem> = reactive(new Map());
   shipModMap: Map<string, ShipMod> = reactive(new Map());
@@ -486,7 +487,15 @@ class AppData {
   async initData(version: string, locale: string) {
     this.status.value = 'loading';
     try {
-      const response = await api.get(`data/${version}/${locale}/data.json`);
+      const response = await api.get(`data/${version}/${locale}/data.json`, {
+        onDownloadProgress: (progressEvent) => {
+          if (progressEvent.total) {
+            const pct = Math.round((progressEvent.loaded / progressEvent.total) * 100);
+            this.loadProgress.value.percent = pct;
+          }
+        },
+      });
+      this.loadProgress.value = { percent: 100, message: '' };
       const jsonArray: WikiJsonObject[] = response.data;
       if (!Array.isArray(jsonArray)) {
         this.status.value = 'fail';
