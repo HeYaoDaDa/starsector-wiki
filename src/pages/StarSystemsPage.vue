@@ -22,15 +22,8 @@ const planets = computed(() => {
 </script>
 
 <template>
-  <q-page padding>
-    <div
-      style="
-        width: 1200px;
-        height: 800px;
-        position: relative;
-        background-color: dimgrey;
-      "
-    >
+  <q-page padding class="star-systems-page">
+    <div class="star-map-container">
       <q-btn
         v-for="[planet, starSystem, offset] in planets"
         :key="starSystem.id"
@@ -57,3 +50,17 @@ const planets = computed(() => {
     </div>
   </q-page>
 </template>
+
+<style scoped>
+.star-systems-page {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.star-map-container {
+  width: 1200px;
+  height: 800px;
+  position: relative;
+  background-color: dimgrey;
+}
+</style>

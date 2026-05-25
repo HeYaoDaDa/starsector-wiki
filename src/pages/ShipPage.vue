@@ -106,6 +106,7 @@ const variants = computed(() =>
               {{ $t('shield.' + ship.shieldType.toLowerCase()) }}
             </td>
           </tr>
+          <!-- ordnancePoints(部署点) 与 deployment cost 共用 suppliesToRecover 字段 -->
           <tr>
             <td>{{ $t('ship.ordnancePoints') }}</td>
             <td style="text-align: right">

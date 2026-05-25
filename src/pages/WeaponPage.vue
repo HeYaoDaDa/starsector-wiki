@@ -31,7 +31,7 @@ const variantShips = computed(() => {
 <template>
   <q-page>
     <template v-if="weapon === undefined">
-      <h2>ShipSystem id:{{ id }} not found.</h2>
+      <h2>Weapon id:{{ id }} not found.</h2>
     </template>
     <template v-else>
       <h4>

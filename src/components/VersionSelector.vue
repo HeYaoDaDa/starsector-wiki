@@ -34,7 +34,9 @@ async function onVersionChange(version: string) {
       >
         <q-item-section>
           <q-item-label>{{ v.version }}</q-item-label>
-          <q-item-label caption>{{ v.locales.length }} locale(s)</q-item-label>
+          <q-item-label caption>
+            {{ v.locales.length > 1 ? v.locales.length + ' languages' : v.locales.length + ' language' }}
+          </q-item-label>
         </q-item-section>
       </q-item>
     </q-list>

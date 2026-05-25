@@ -68,9 +68,9 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/SpecialItemPage.vue'),
       },
       {
-        name: 'commodites',
-        path: 'commodites',
-        component: () => import('pages/CommoditesPage.vue'),
+        name: 'commodities',
+        path: 'commodities',
+        component: () => import('pages/CommoditiesPage.vue'),
         meta: { keepAlive: true },
       },
       {

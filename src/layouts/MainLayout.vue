@@ -71,7 +71,7 @@ function goBack() {
         <q-item clickable :to="{ name: 'special_items' }">
           <q-item-section>{{ $t('nav.specialItems') }}</q-item-section>
         </q-item>
-        <q-item clickable :to="{ name: 'commodites' }">
+        <q-item clickable :to="{ name: 'commodities' }">
           <q-item-section>{{ $t('nav.commodities') }}</q-item-section>
         </q-item>
         <q-item clickable :to="{ name: 'industries' }">
