@@ -159,6 +159,8 @@
   "filter.excludePlaceholder": "Select conditions to exclude",
   "filter.optionFormat": "[{category}] {name}({count})",
   "filter.chipFormat": "[{category}] {name}",
+  "filter.noResults": "No results available",
+  "filter.selectedInOther": "Already selected in other filter",
   "filter.type.normal": "Normal",
   "filter.type.station": "Station",
   "filter.type.module": "Module",

@@ -75,6 +75,7 @@ function generateFilterOptions(ships: Ship[], selectedFilters: string[], opposit
     value: string;
     chipLabel: string;
     disable: boolean;
+    count: number;
   }> = [];
 
   // 类型选项
@@ -97,6 +98,7 @@ function generateFilterOptions(ships: Ship[], selectedFilters: string[], opposit
       chipLabel: t('filter.chipFormat', { category: t('filter.label.type'), name: opt.label }),
       // 禁用条件：(未被当前选中且数量为0) 或 (被对面选中)
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
+      count: count,
     });
   });
 
@@ -115,6 +117,7 @@ function generateFilterOptions(ships: Ship[], selectedFilters: string[], opposit
       value: filterValue,
       chipLabel: t('filter.chipFormat', { category: t('filter.label.size'), name: label }),
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
+      count: count,
     });
   });
 
@@ -140,6 +143,7 @@ function generateFilterOptions(ships: Ship[], selectedFilters: string[], opposit
       value: filterValue,
       chipLabel: t('filter.chipFormat', { category: t('filter.label.designType'), name: label }),
       disable: (!isSelected && count === 0) || isSelectedInOpposite,
+      count: count,
     });
   });
 
@@ -163,6 +167,18 @@ function matchesFilter(ship: Ship, filter: string): boolean {
   return false;
 }
 
+function getDisableReason(option: { value: string; disable: boolean; count?: number }): string {
+  if (!option.disable) return '';
+  
+  // 检查是否是因为数量为0而被禁用
+  if (option.count !== undefined && option.count === 0) {
+    return t('filter.noResults');
+  }
+  
+  // 否则是因为在其他条件中被选中
+  return t('filter.selectedInOther');
+}
+
 
 </script>
 
@@ -181,6 +197,16 @@ function matchesFilter(ship: Ship, filter: string): boolean {
                 {{ scope.opt.chipLabel || scope.opt.label }}
               </q-chip>
             </template>
+            <template v-slot:option="scope">
+              <q-item v-bind="scope.itemProps" :class="{ 'filter-option-disabled': scope.opt.disable }">
+                <q-item-section>
+                  <q-item-label>{{ scope.opt.label }}</q-item-label>
+                  <q-item-label v-if="scope.opt.disable" caption class="text-negative">
+                    {{ getDisableReason(scope.opt) }}
+                  </q-item-label>
+                </q-item-section>
+              </q-item>
+            </template>
           </q-select>
         </div>
         <div class="filter-item">
@@ -193,6 +219,16 @@ function matchesFilter(ship: Ship, filter: string): boolean {
                 color="negative" text-color="white">
                 {{ scope.opt.chipLabel || scope.opt.label }}
               </q-chip>
+            </template>
+            <template v-slot:option="scope">
+              <q-item v-bind="scope.itemProps" :class="{ 'filter-option-disabled': scope.opt.disable }">
+                <q-item-section>
+                  <q-item-label>{{ scope.opt.label }}</q-item-label>
+                  <q-item-label v-if="scope.opt.disable" caption class="text-negative">
+                    {{ getDisableReason(scope.opt) }}
+                  </q-item-label>
+                </q-item-section>
+              </q-item>
             </template>
           </q-select>
         </div>

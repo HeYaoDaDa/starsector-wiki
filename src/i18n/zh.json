@@ -159,6 +159,8 @@
   "filter.excludePlaceholder": "选择需要排除的条件",
   "filter.optionFormat": "[{category}] {name}({count})",
   "filter.chipFormat": "[{category}] {name}",
+  "filter.noResults": "无可用结果",
+  "filter.selectedInOther": "已在其他条件中选中",
   "filter.type.normal": "普通",
   "filter.type.station": "空间站",
   "filter.type.module": "模块",

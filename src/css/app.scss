@@ -112,6 +112,48 @@ a {
   color: #666;
 }
 
+// 增强筛选器禁用选项的视觉提示
+.q-item--disabled {
+  opacity: 0.5 !important;
+  color: #999 !important;
+  cursor: not-allowed !important;
+  
+  // 添加禁用图标提示
+  &::after {
+    content: '\e14b'; // Material Icons block
+    font-family: 'Material Icons';
+    font-size: 16px;
+    margin-left: 8px;
+    color: #e53935;
+    vertical-align: middle;
+  }
+}
+
+// 筛选器下拉菜单中的禁用选项样式
+.q-menu .q-item--disabled {
+  background-color: rgba(0, 0, 0, 0.02) !important;
+  
+  .q-item__label {
+    color: #bdbdbd !important;
+  }
+}
+
+// 自定义筛选器禁用选项样式
+.filter-option-disabled {
+  opacity: 0.6;
+  background-color: rgba(0, 0, 0, 0.02);
+  
+  .q-item__label {
+    color: #999;
+  }
+  
+  .q-item__label--caption {
+    color: #e53935 !important;
+    font-size: 11px;
+    font-style: italic;
+  }
+}
+
 .detail-intro-grid {
   display: grid;
   gap: 10px;
