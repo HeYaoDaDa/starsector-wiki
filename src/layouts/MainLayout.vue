@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import VersionSelector from 'src/components/VersionSelector.vue';
@@ -9,6 +9,21 @@ const { locale } = useI18n();
 
 const leftDrawerOpen = ref(false);
 const router = useRouter();
+
+// 添加 Escape 键关闭菜单的功能
+function handleKeydown(event: KeyboardEvent) {
+  if (event.key === 'Escape' && leftDrawerOpen.value) {
+    leftDrawerOpen.value = false;
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('keydown', handleKeydown);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('keydown', handleKeydown);
+});
 
 const langOptions = [
   { label: 'English', value: 'en' },
@@ -53,7 +68,7 @@ function goBack() {
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" bordered>
+    <q-drawer v-model="leftDrawerOpen" bordered overlay>
       <q-list>
         <q-item-label header> {{ $t('nav.categories') }} </q-item-label>
         <q-item clickable :to="{ name: 'ships' }">
