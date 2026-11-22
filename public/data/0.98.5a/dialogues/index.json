@@ -2,6 +2,141 @@
   "version": "0.98.5a",
   "quests": [
     {
+      "id": "a_new_hope",
+      "name": {
+        "en": "A New Hope",
+        "zh": "新的希望"
+      },
+      "summary": {
+        "en": "Help a desperate soul find a new beginning.",
+        "zh": "帮助一个绝望的人寻找新的开始。"
+      },
+      "factionId": null,
+      "icon": "graphics/icons/missions/anh.png",
+      "stageCount": 9,
+      "sceneCount": 44
+    },
+    {
+      "id": "bornanew_files",
+      "name": {
+        "en": "Born Anew: Files of False Idols",
+        "zh": "新生：伪神档案"
+      },
+      "summary": {
+        "en": "The Luddic Church's inner secrets: the Files of False Idols and the man called Ulmus Pond.",
+        "zh": "路德教会的内部秘辛：伪神档案，以及那个被称为 Ulmus Pond 的男人。"
+      },
+      "factionId": null,
+      "icon": "graphics/icons/missions/false_idols.png",
+      "stageCount": 12,
+      "sceneCount": 109
+    },
+    {
+      "id": "contact_missions",
+      "name": {
+        "en": "Contact Missions",
+        "zh": "接触任务合集"
+      },
+      "summary": {
+        "en": "The smaller jobs offered by contacts: security codes, disruptions, extractions, smuggling and the like.",
+        "zh": "接触人提供的中小任务：安全码、破坏行动、营救、走私等等。"
+      },
+      "factionId": null,
+      "icon": "graphics/icons/missions/security_codes.png",
+      "stageCount": 24,
+      "sceneCount": 165
+    },
+    {
+      "id": "luddic_knight_errant",
+      "name": {
+        "en": "Luddic Knight Errant",
+        "zh": "路德游侠骑士"
+      },
+      "summary": {
+        "en": "A knight of the Luddic Church seeks a champion for her cause.",
+        "zh": "一位路德教会的骑士在为她的信仰寻找一位支持者。"
+      },
+      "factionId": null,
+      "icon": "graphics/icons/missions/knight_errant.png",
+      "stageCount": 12,
+      "sceneCount": 409
+    },
+    {
+      "id": "luddic_pilgrims_path",
+      "name": {
+        "en": "Luddic Pilgrim's Path",
+        "zh": "路德朝圣之路"
+      },
+      "summary": {
+        "en": "Escort the pilgrims of the Luddic Church on their sacred path.",
+        "zh": "护送路德教会的朝圣者踏上他们的朝圣之路。"
+      },
+      "factionId": null,
+      "icon": "graphics/icons/missions/pilgrims_path.png",
+      "stageCount": 12,
+      "sceneCount": 444
+    },
+    {
+      "id": "misc_stories",
+      "name": {
+        "en": "Miscellany",
+        "zh": "杂项剧情"
+      },
+      "summary": {
+        "en": "Tutorial guidance, the Historian's tales, and other odds and ends.",
+        "zh": "新手引导、历史学家的讲述，以及其他零散剧情。"
+      },
+      "factionId": null,
+      "icon": null,
+      "stageCount": 3,
+      "sceneCount": 4
+    },
+    {
+      "id": "recover_a_planetkiller",
+      "name": {
+        "en": "Recover a Planetkiller",
+        "zh": "回收行星杀手"
+      },
+      "summary": {
+        "en": "A Hegemony officer wants a piece of forbidden history recovered.",
+        "zh": "一位霸主军官想要回收一段被禁忌的历史。"
+      },
+      "factionId": null,
+      "icon": "graphics/icons/missions/planetkiller.png",
+      "stageCount": 9,
+      "sceneCount": 155
+    },
+    {
+      "id": "sword_of_eventide",
+      "name": {
+        "en": "Sword of Eventide",
+        "zh": "暮光之剑"
+      },
+      "summary": {
+        "en": "An ancient weapon, a dead fleet, and a story that refuses to end.",
+        "zh": "一件古代兵器、一支死去已久的舰队，和一个不肯结束的故事。"
+      },
+      "factionId": null,
+      "icon": "graphics/icons/missions/eventide.png",
+      "stageCount": 12,
+      "sceneCount": 39
+    },
+    {
+      "id": "the_academy_arc",
+      "name": {
+        "en": "The Galatia Academy Arc",
+        "zh": "Galatia 学院主线"
+      },
+      "summary": {
+        "en": "The Galatia Academy storyline: from the tutorial through \"A People's History of Collapse\", finding Coureuse, Project Ziggurat, and At the Gates.",
+        "zh": "Galatia 学院主线：从新手任务到《大崩塌人民史》、寻找 Coureuse、Ziggurat 计划，直至\"群星之门\"。"
+      },
+      "factionId": null,
+      "icon": "graphics/icons/missions/ga_intro.png",
+      "stageCount": 19,
+      "sceneCount": 150
+    },
+    {
       "id": "the_seven_sons",
       "name": {
         "en": "The Seven Sons",
@@ -14,7 +149,7 @@
       "factionId": "sindrian_diktat",
       "icon": "graphics/icons/missions/seven_sons.png",
       "stageCount": 11,
-      "sceneCount": 446
+      "sceneCount": 419
     },
     {
       "id": "the_supreme_executor",
@@ -29,7 +164,7 @@
       "factionId": "sindrian_diktat",
       "icon": "graphics/icons/missions/heir_to_andrada.png",
       "stageCount": 9,
-      "sceneCount": 322
+      "sceneCount": 305
     },
     {
       "id": "the_usurpers",
@@ -44,7 +179,7 @@
       "factionId": "sindrian_diktat",
       "icon": "graphics/icons/missions/the_usurpers.png",
       "stageCount": 10,
-      "sceneCount": 21
+      "sceneCount": 19
     }
   ]
 }

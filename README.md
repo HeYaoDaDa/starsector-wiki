@@ -68,11 +68,14 @@ python3 tools/dialogue/build_quests.py
 - `extract_java.py` —— 双 jar（EN/CN）常量池提取，任务简报官方双语
 - `build_dictionary.py` —— 全库对话词典（14,255 条，懒加载 + 前端全文搜索）
 
-当前收录：
+当前收录（12 个任务包）：
 
-- 篡夺者（The Usurpers）—— 覆盖率已迭代至只剩已知噪声
-- 七子（The Seven Sons）+ 最高元首（The Supreme Executor）—— 自动起草 + 官方简报，
-  覆盖率仍在按 `report_*.md` 持续迭代
+- 篡夺者 / 七子 / 最高元首 —— Askonia 弧线三步曲，覆盖率已迭代收敛
+- Galatia 学院主线 —— 19 个任务（教程后续 → Coureuse → Ziggurat 计划 → 群星之门）
+- 路德朝圣之路 / 路德游侠骑士 / 新生：伪神档案 —— Luddic 三条线
+- 回收行星杀手 / 暮光之剑 / 新的希望 —— 独立故事任务
+- 接触任务合集 —— 24 个中小接触任务（安全码、破坏、营救、走私等）
+- 杂项剧情 —— 教程、历史学家碎碎念等
 - 对话词典（`#/dialogue_dict`）—— rules.csv 全部带文本规则，中英检索
 
 ## 构建时 Canvas 预计算 / Build-time Canvas Precomputation

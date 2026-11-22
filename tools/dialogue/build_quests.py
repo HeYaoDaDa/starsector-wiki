@@ -494,7 +494,11 @@ class QuestBuilder:
             'scenes': scenes_out,
         }
 
-    def _uncovered_rules(self, needle: str) -> List[str]:
+    def _uncovered_rules(self, needles) -> List[str]:
+        if isinstance(needles, str):
+            needles = [needles]
+        needle_res = [re.compile(r'(?<![A-Za-z0-9_])' + re.escape(n) + r'(?![a-z])')
+                      for n in needles]
         ignored = set(self.quest.get('ignoreRules', []))
         patterns = [re.compile(p) for p in self.quest.get('ignoreRulePatterns', [])]
         out = []
@@ -508,7 +512,7 @@ class QuestBuilder:
             blob = ' '.join([r.id, r.trigger, ' '.join(r.conditions),
                              '\n'.join(r.script_lines),
                              ' '.join(o.id + o.label for o in r.options)]).lower()
-            if needle in blob:
+            if any(rx.search(blob) for rx in needle_res):
                 out.append(rid)
         return out
 

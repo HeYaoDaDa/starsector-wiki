@@ -1,0 +1,250 @@
+{
+  "id": "luddic_knight_errant",
+  "gameId": [
+    "lke"
+  ],
+  "name": {
+    "en": "Luddic Knight Errant",
+    "zh": "路德游侠骑士"
+  },
+  "summary": {
+    "en": "A knight of the Luddic Church seeks a champion for her cause.",
+    "zh": "一位路德教会的骑士在为她的信仰寻找一位支持者。"
+  },
+  "factionId": null,
+  "icon": "graphics/icons/missions/knight_errant.png",
+  "stages": [
+    {
+      "id": "BORNANEW",
+      "flag": "$lke_BORNANEW",
+      "briefing": {
+        "en": "Find Bornanew. His last mission was the infiltration of a Pather cell; someone must known something about where he is.",
+        "zh": "袭击了 Mazalot 并且引发了卢德教徒起义"
+      }
+    },
+    {
+      "id": "JASPIS",
+      "flag": "$lke_JASPIS",
+      "briefing": {
+        "en": "You have been told to meet with someone in a spacer bar on the surface of Chalcedon, presumably a recruiter for the Luddic Path.",
+        "zh": "找到 Bornanew。他最后的任务是进入一个 左径分部 作为卧底； 总有人会知道他在那里。"
+      }
+    },
+    {
+      "id": "VIRENS",
+      "flag": "$lke_VIRENS",
+      "briefing": {
+        "en": "A Pather, Sedge, claims that Jethro Bornanew travelled to Mazalot. Find him, or find where he has gone from there.",
+        "zh": "有人告知你去 Chalcedon 的 太空佬酒吧 和某人谈话，有可能是卢德左径的招募员。"
+      }
+    },
+    {
+      "id": "GO_TO_CHALCEDON",
+      "flag": "$lke_GO_TO_CHALCEDON",
+      "briefing": {
+        "en": "Nile Virens runs the Luddic Path on Mazalot. If anyone knows where Bornanew is, it would be him or his organization. He might be persuaded to help by force or diplomacy.",
+        "zh": "一名叫 Sedge 的 左径 声称 Jethro Bornanew 前往了 Mazalot。找到他，或者找到他之后的行踪。"
+      }
+    },
+    {
+      "id": "CONTACT_RECRUITER",
+      "flag": "$lke_CONTACT_RECRUITER",
+      "briefing": {
+        "en": "Nile Virens has provided you with the location of Jethro Bornanew, or so he claims. This consists of coordinates for a location on the surface of Mazalot, outside of a Luddic-majority settlement.",
+        "zh": "Nile Virens 指挥着 Mazalot 上的 左径分子。如果有任何人知道 Bornanew 在哪里，那就是他或者他治下的组织了。要让他开口可以晓之以理或挟之以力。"
+      }
+    },
+    {
+      "id": "GO_TO_MAZALOT",
+      "flag": "$lke_GO_TO_MAZALOT",
+      "briefing": {
+        "en": "Return with Jethro Bornanew to the office of Archcurate Jaspis.",
+        "zh": "联系 Nile Virens "
+      }
+    },
+    {
+      "id": "CONTACT_VIRENS",
+      "flag": "$lke_CONTACT_VIRENS",
+      "briefing": {
+        "en": "Return to the office of Archcurate Jaspis with news of Jethro Bornanew's 'death'.",
+        "zh": "Nile Virens 声称已将 Jethro Bornanew 的位置告知于你。该信息指向 Mazalot 行星上的一个坐标，就在一个卢德教徒主要居民的聚居地之外。"
+      }
+    },
+    {
+      "id": "CONTACT_BORNANEW",
+      "flag": "$lke_CONTACT_BORNANEW",
+      "briefing": {
+        "en": "Return to Gilead with news of Bornanew's 'death'.",
+        "zh": "联络 Jethro Bornanew "
+      }
+    },
+    {
+      "id": "RETURN_TO_GILEAD",
+      "flag": "$lke_RETURN_TO_GILEAD",
+      "briefing": {
+        "en": "",
+        "zh": "把 Jethro Bornanew 带回 大祭司 Jaspis 的办公室。"
+      }
+    },
+    {
+      "id": "RETURN_TO_GILEAD2",
+      "flag": "$lke_RETURN_TO_GILEAD2",
+      "briefing": {
+        "en": "",
+        "zh": "回到 大祭司 Jaspis 的办公室将 Jethro Bornanew 的 '死讯' 告知与她。"
+      }
+    },
+    {
+      "id": "COMPLETED",
+      "flag": "$lke_COMPLETED",
+      "briefing": {
+        "en": "",
+        "zh": "去 Chalcedon 找 Jethro Bornanew"
+      }
+    },
+    {
+      "id": "LARGE",
+      "flag": "$lke_LARGE",
+      "briefing": {
+        "en": "",
+        "zh": "去 Chalcedon 找 Jethro Bornanew"
+      }
+    }
+  ],
+  "characters": [
+    {
+      "id": "dardan_kato",
+      "name": {
+        "en": "dardan_kato",
+        "zh": "dardan_kato"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "jaspis",
+      "name": {
+        "en": "jaspis",
+        "zh": "jaspis"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "virens",
+      "name": {
+        "en": "virens",
+        "zh": "virens"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    }
+  ],
+  "flags": {},
+  "scenes": [
+    {
+      "id": "lke_misc_conv_jaspis",
+      "stage": "lke",
+      "speaker": "jaspis",
+      "title": {
+        "en": "Conversations: jaspis",
+        "zh": "对话：jaspis"
+      },
+      "location": null,
+      "roots": [
+        "r:lkeJaspisMissionOfferOption",
+        "r:lkeJaspisMissionInfoOption",
+        "r:LKEreturnToGileadDeadJaspisOpt",
+        "r:LKEreturnToGileadJaspisOption",
+        "r:lkeJaspisGreeting"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "lke_go_to_chalcedon_mkt_chalcedon",
+      "stage": "GO_TO_CHALCEDON",
+      "speaker": null,
+      "title": {
+        "en": "Market: chalcedon",
+        "zh": "市场：chalcedon"
+      },
+      "location": null,
+      "roots": [
+        "r:lkeChalcedonPWgreetRaid",
+        "r:lkeChalcedonQMgreetRaid",
+        "r:lkeChalcedonAdminGreet"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "lke_contact_recruiter_mkt_chalcedon",
+      "stage": "CONTACT_RECRUITER",
+      "speaker": null,
+      "title": {
+        "en": "Market: chalcedon",
+        "zh": "市场：chalcedon"
+      },
+      "location": null,
+      "roots": [
+        "r:lkeAskChalcedonBarPromptWaiting"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "lke_misc_conv_virens",
+      "stage": "lke",
+      "speaker": "virens",
+      "title": {
+        "en": "Conversations: virens",
+        "zh": "对话：virens"
+      },
+      "location": null,
+      "roots": [
+        "r:lkeVirensCommGreeting"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "lke_misc_orphan_lkevirensraidfinishedb",
+      "stage": "lke",
+      "speaker": null,
+      "title": {
+        "en": "Event: lkevirensraidfinishedb",
+        "zh": "事件：lkevirensraidfinishedb"
+      },
+      "location": null,
+      "roots": [
+        "t:LKEVirensRaidFinishedB"
+      ],
+      "speakerOverrides": {}
+    }
+  ],
+  "excludeRules": [],
+  "ignoreRules": [],
+  "ignoreRulePatterns": [
+    "^DEV",
+    "^dev[A-Z]",
+    "test",
+    "Test",
+    "TEST",
+    "^relLevel",
+    "^flavorText",
+    "^bar_desc",
+    "^sd7s",
+    "^SD7S",
+    "^sdse",
+    "^SDSE",
+    "^sdtu",
+    "^SDTU",
+    "^sdsw",
+    "^SDSW",
+    "^sdr",
+    "^SDR"
+  ]
+}

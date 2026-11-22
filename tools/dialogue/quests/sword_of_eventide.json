@@ -1,0 +1,168 @@
+{
+  "id": "sword_of_eventide",
+  "gameId": [
+    "soe"
+  ],
+  "name": {
+    "en": "Sword of Eventide",
+    "zh": "暮光之剑"
+  },
+  "summary": {
+    "en": "An ancient weapon, a dead fleet, and a story that refuses to end.",
+    "zh": "一件古代兵器、一支死去已久的舰队，和一个不肯结束的故事。"
+  },
+  "factionId": null,
+  "icon": "graphics/icons/missions/eventide.png",
+  "stages": [
+    {
+      "id": "SOE_MUSIC_STATE",
+      "flag": "$soe_SOE_MUSIC_STATE",
+      "briefing": {
+        "en": "Go to Eventide in the Samarra system.",
+        "zh": "去 Samarra 星系内的 Eventide。"
+      }
+    },
+    {
+      "id": "SOE_STATE_PARTY",
+      "flag": "$soe_SOE_STATE_PARTY",
+      "briefing": {
+        "en": "",
+        "zh": "去 Samarra 星系内的 Eventide"
+      }
+    },
+    {
+      "id": "SOE_STATE_PRE_DUEL",
+      "flag": "$soe_SOE_STATE_PRE_DUEL",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "SOE_STATE_DUEL",
+      "flag": "$soe_SOE_STATE_DUEL",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "SOE_STATE_POST_DUEL",
+      "flag": "$soe_SOE_STATE_POST_DUEL",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "PARTY_CHATTER",
+      "flag": "$soe_PARTY_CHATTER",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "PARTY_MUSIC",
+      "flag": "$soe_PARTY_MUSIC",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "DUEL_MUSIC",
+      "flag": "$soe_DUEL_MUSIC",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "MISSION_DAYS",
+      "flag": "$soe_MISSION_DAYS",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "F",
+      "flag": "$soe_F",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "NERIENE_RAO",
+      "flag": "$soe_NERIENE_RAO",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "CASPIAN",
+      "flag": "$soe_CASPIAN",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    }
+  ],
+  "characters": [],
+  "flags": {},
+  "scenes": [
+    {
+      "id": "soe_misc_dock",
+      "stage": "soe",
+      "speaker": null,
+      "title": {
+        "en": "Docked flavor text",
+        "zh": "靠港见闻"
+      },
+      "location": null,
+      "roots": [
+        "r:soeArriveEventide"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "soe_misc_orphan_soeduelfinished",
+      "stage": "soe",
+      "speaker": null,
+      "title": {
+        "en": "Event: soeduelfinished",
+        "zh": "事件：soeduelfinished"
+      },
+      "location": null,
+      "roots": [
+        "t:SOEDuelFinished"
+      ],
+      "speakerOverrides": {}
+    }
+  ],
+  "excludeRules": [],
+  "ignoreRules": [],
+  "ignoreRulePatterns": [
+    "^DEV",
+    "^dev[A-Z]",
+    "test",
+    "Test",
+    "TEST",
+    "^relLevel",
+    "^flavorText",
+    "^bar_desc",
+    "^sd7s",
+    "^SD7S",
+    "^sdse",
+    "^SDSE",
+    "^sdtu",
+    "^SDTU",
+    "^sdsw",
+    "^SDSW",
+    "^sdr",
+    "^SDR"
+  ]
+}

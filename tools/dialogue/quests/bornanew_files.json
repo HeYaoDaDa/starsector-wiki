@@ -1,0 +1,508 @@
+{
+  "id": "bornanew_files",
+  "gameId": [
+    "bffi"
+  ],
+  "name": {
+    "en": "Born Anew: Files of False Idols",
+    "zh": "新生：伪神档案"
+  },
+  "summary": {
+    "en": "The Luddic Church's inner secrets: the Files of False Idols and the man called Ulmus Pond.",
+    "zh": "路德教会的内部秘辛：伪神档案，以及那个被称为 Ulmus Pond 的男人。"
+  },
+  "factionId": null,
+  "icon": "graphics/icons/missions/false_idols.png",
+  "stages": [
+    {
+      "id": "I",
+      "flag": "$bffi_I",
+      "briefing": {
+        "en": "Pick up Jethro Bornanew from Gilead.",
+        "zh": "从 Gilead 接走 Jethro Bornanew。"
+      }
+    },
+    {
+      "id": "BORNANEW",
+      "flag": "$bffi_BORNANEW",
+      "briefing": {
+        "en": "Go to Olinadu and contact Menes Yaribay, the planetary administrator.",
+        "zh": "前往 Olinadu 并与行星管理员 Menes Yaribay 取得联系。"
+      }
+    },
+    {
+      "id": "JASPIS",
+      "flag": "$bffi_JASPIS",
+      "briefing": {
+        "en": "Go to Kazeron and talk to Horus Yaribay about his cousin Menes.",
+        "zh": "前往 Kazeron 与 Horus Yaribay 商讨关于他表亲 Menes 的事宜。"
+      }
+    },
+    {
+      "id": "ULMUS_POND",
+      "flag": "$bffi_ULMUS_POND",
+      "briefing": {
+        "en": "Attend Menes Yaribay's 'gathering' on Olinadu and find a way to steal the false relic.",
+        "zh": "前往 Olinadu 参加 Menes Yaribay 的 '聚会' 并设法窃取那件伪造遗物。"
+      }
+    },
+    {
+      "id": "MENES_YARIBAY",
+      "flag": "$bffi_MENES_YARIBAY",
+      "briefing": {
+        "en": "Attend Menes Yaribay's 'gathering' on Olinadu with Horus Yaribay, the patriarch of Gens Yaribay.",
+        "zh": "与 Yaribay 氏族的族长 Horus Yaribay 一同前往 Olinadu 参加 Menes Yaribay 的 '聚会'。"
+      }
+    },
+    {
+      "id": "HORUS_YARIBAY",
+      "flag": "$bffi_HORUS_YARIBAY",
+      "briefing": {
+        "en": "Attend Menes Yaribay's 'gathering' on Olinadu and acquire the false relic.",
+        "zh": "前往 Olinadu 参加 Menes Yaribay 的 '聚会' 并获取那件伪造遗物。"
+      }
+    },
+    {
+      "id": "CEDRA_KEEPFAITH",
+      "flag": "$bffi_CEDRA_KEEPFAITH",
+      "briefing": {
+        "en": "Bring the false relic to Asher so that a nanoforge engineer in the employ of the Church can examine it.",
+        "zh": "将伪造遗物带去 Asher，以便让一位受雇于教会的纳米锻炉工程师对其进行检查。"
+      }
+    },
+    {
+      "id": "ANY",
+      "flag": "$bffi_ANY",
+      "briefing": {
+        "en": "Go to Olinadu and confront Ulmus Pond to get a confession.",
+        "zh": "前往 Olinadu 与 Ulmus Pond 对质，以获取其供词。"
+      }
+    },
+    {
+      "id": "NOT_ANY",
+      "flag": "$bffi_NOT_ANY",
+      "briefing": {
+        "en": "Go to Chalcedon and use Bornanew's intel to track down where Ulmus Pond is hiding.",
+        "zh": "前往 Chalcedon，利用 Bornanew 提供的情报追踪 Ulmus Pond 的藏身之处。"
+      }
+    },
+    {
+      "id": "PICK_UP_BORNANEW",
+      "flag": "$bffi_PICK_UP_BORNANEW",
+      "briefing": {
+        "en": " and investigate. Find where the glove came from and how it was made. Ensure no more will be created.",
+        "zh": " 并进行调查。查明那只手套的来源与制造方式。确保不会有更多此类物品被制造出来。"
+      }
+    },
+    {
+      "id": "MEET_MENES_YARIBAY",
+      "flag": "$bffi_MEET_MENES_YARIBAY",
+      "briefing": {
+        "en": "Go to the Cathedral of Holy Exodus, on Tartessus, and arrest Subcurate Cedra Keepfaith.",
+        "zh": "前往位于 Tartessus 的 Exodus 神圣大教堂，并逮捕助理祭司 Cedra Keepfaith。"
+      }
+    },
+    {
+      "id": "ATTEND_A_PARTY",
+      "flag": "$bffi_ATTEND_A_PARTY",
+      "briefing": {
+        "en": "Deliver Cedra Keepfaith to the Knights of Ludd on Hesperus to face their justice.",
+        "zh": "将 Cedra Keepfaith 交给 Hesperus 的卢德骑士团，让她接受他们的审判。"
+      }
+    }
+  ],
+  "characters": [
+    {
+      "id": "horus_yaribay",
+      "name": {
+        "en": "horus_yaribay",
+        "zh": "horus_yaribay"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "jaspis",
+      "name": {
+        "en": "jaspis",
+        "zh": "jaspis"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "menes_yaribay",
+      "name": {
+        "en": "menes_yaribay",
+        "zh": "menes_yaribay"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "oak",
+      "name": {
+        "en": "oak",
+        "zh": "oak"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "ulmus_pond",
+      "name": {
+        "en": "ulmus_pond",
+        "zh": "ulmus_pond"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    }
+  ],
+  "flags": {},
+  "scenes": [
+    {
+      "id": "bffi_misc_conv_menes_yaribay",
+      "stage": "bffi",
+      "speaker": "menes_yaribay",
+      "title": {
+        "en": "Conversations: menes_yaribay",
+        "zh": "对话：menes_yaribay"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFImeetMenesStart",
+        "r:BFFImenesPostPartyTalk",
+        "r:MenesYaribayIgnoresYouBecause"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_talk_to_horus_talk_horus_yaribay",
+      "stage": "TALK_TO_HORUS",
+      "speaker": "horus_yaribay",
+      "title": {
+        "en": "Talk: horus_yaribay",
+        "zh": "与 horus_yaribay 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFItalkHorusParty"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_attend_a_party_mkt_olinadu",
+      "stage": "ATTEND_A_PARTY",
+      "speaker": null,
+      "title": {
+        "en": "Market: olinadu",
+        "zh": "市场：olinadu"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFIattendPartyStartOption",
+        "r:BFFIapHorusStartOption"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_talk_to_engineer_talk_menes_yaribay",
+      "stage": "TALK_TO_ENGINEER",
+      "speaker": "menes_yaribay",
+      "title": {
+        "en": "Talk: menes_yaribay",
+        "zh": "与 menes_yaribay 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFImenesPostPartyBought",
+        "r:BFFImenesPostPartyBoughtAgain",
+        "r:BFFImenesPostPartyBoughtOpt"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_talk_to_ulmus_pond_other",
+      "stage": "TALK_TO_ULMUS_POND",
+      "speaker": null,
+      "title": {
+        "en": "talk_to_ulmus_pond_other",
+        "zh": "talk_to_ulmus_pond_other"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFImenesPPtalkOptE"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_talk_to_engineer_other",
+      "stage": "TALK_TO_ENGINEER",
+      "speaker": null,
+      "title": {
+        "en": "talk_to_engineer_other",
+        "zh": "talk_to_engineer_other"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFItalkToEngineerOpt"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_talk_to_ulmus_pond_talk_ulmus_pond",
+      "stage": "TALK_TO_ULMUS_POND",
+      "speaker": "ulmus_pond",
+      "title": {
+        "en": "Talk: ulmus_pond",
+        "zh": "与 ulmus_pond 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFIulmusPondGreeting"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_go_to_chalcedon_other",
+      "stage": "GO_TO_CHALCEDON",
+      "speaker": null,
+      "title": {
+        "en": "go_to_chalcedon_other",
+        "zh": "go_to_chalcedon_other"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFIulmusStartOption"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_investigate_pather_station_other",
+      "stage": "INVESTIGATE_PATHER_STATION",
+      "speaker": null,
+      "title": {
+        "en": "investigate_pather_station_other",
+        "zh": "investigate_pather_station_other"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFIstationApproach",
+        "r:BFFIpatherStationDefeated",
+        "r:BFFIaddStationRaidOption"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_investigate_pather_station_ent_bffi_patherStationTarget",
+      "stage": "INVESTIGATE_PATHER_STATION",
+      "speaker": null,
+      "title": {
+        "en": "Fleet encounter",
+        "zh": "舰队遭遇"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFIpatherStationTalkBuyer",
+        "r:BFFIpatherStationTalkConfront",
+        "r:BFFIpatherStationTalkFaithful",
+        "r:BFFIpatherStationTalkIgnore"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_arrest_the_curate_other",
+      "stage": "ARREST_THE_CURATE",
+      "speaker": null,
+      "title": {
+        "en": "arrest_the_curate_other",
+        "zh": "arrest_the_curate_other"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFIarrestOptionDev",
+        "r:BFFIarrestOptionDev2",
+        "r:BFFIarrestOption"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_deliver_keepfaith_talk_oak",
+      "stage": "DELIVER_KEEPFAITH",
+      "speaker": "oak",
+      "title": {
+        "en": "Talk: oak",
+        "zh": "与 oak 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFIdeliverOakOption"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_return_to_hesperus_early_talk_oak",
+      "stage": "RETURN_TO_HESPERUS_EARLY",
+      "speaker": "oak",
+      "title": {
+        "en": "Talk: oak",
+        "zh": "与 oak 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFIoakDestroyedEarly"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_go_to_hesperus_talk_oak",
+      "stage": "GO_TO_HESPERUS",
+      "speaker": "oak",
+      "title": {
+        "en": "Talk: oak",
+        "zh": "与 oak 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFIoakKeepfaithEscape",
+        "r:BFFIoakBornanewDead",
+        "r:BFFIoakBornanewDeadEscaped",
+        "r:BFFIoakBornanewDeadEscapedB"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_return_to_hesperus_early_other",
+      "stage": "RETURN_TO_HESPERUS_EARLY",
+      "speaker": null,
+      "title": {
+        "en": "return_to_hesperus_early_other",
+        "zh": "return_to_hesperus_early_other"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFIdeliverOakRespNoKF"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_deliver_keepfaith_other",
+      "stage": "DELIVER_KEEPFAITH",
+      "speaker": null,
+      "title": {
+        "en": "deliver_keepfaith_other",
+        "zh": "deliver_keepfaith_other"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFIdeliverOptionKeepfaith"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_return_to_hesperus_early_mkt_hesperus",
+      "stage": "RETURN_TO_HESPERUS_EARLY",
+      "speaker": null,
+      "title": {
+        "en": "Market: hesperus",
+        "zh": "市场：hesperus"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFIdeliverOptionReturnEarly"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_go_to_hesperus_mkt_hesperus",
+      "stage": "GO_TO_HESPERUS",
+      "speaker": null,
+      "title": {
+        "en": "Market: hesperus",
+        "zh": "市场：hesperus"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFIdeliverOptionBornAliveEscaped",
+        "r:BFFIdeliverOptionBornDeadEscaped",
+        "r:BFFIdeliverOptionBornDeadCaptured",
+        "r:BFFIdeliverOptionBornDeadNoPris"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_misc_conv_jaspis",
+      "stage": "bffi",
+      "speaker": "jaspis",
+      "title": {
+        "en": "Conversations: jaspis",
+        "zh": "对话：jaspis"
+      },
+      "location": null,
+      "roots": [
+        "r:BFFIaskJaspisOpt"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_misc_mkt_olinadu",
+      "stage": "bffi",
+      "speaker": null,
+      "title": {
+        "en": "Market: olinadu",
+        "zh": "市场：olinadu"
+      },
+      "location": null,
+      "roots": [
+        "r:MenesPettyRevenge"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "bffi_misc_orphan_bffipatherstationraiddes",
+      "stage": "bffi",
+      "speaker": null,
+      "title": {
+        "en": "Event: bffipatherstationraiddes",
+        "zh": "事件：bffipatherstationraiddes"
+      },
+      "location": null,
+      "roots": [
+        "t:BFFIpatherStationRaidDescription"
+      ],
+      "speakerOverrides": {}
+    }
+  ],
+  "excludeRules": [],
+  "ignoreRules": [],
+  "ignoreRulePatterns": [
+    "^DEV",
+    "^dev[A-Z]",
+    "test",
+    "Test",
+    "TEST",
+    "^relLevel",
+    "^flavorText",
+    "^bar_desc",
+    "^sd7s",
+    "^SD7S",
+    "^sdse",
+    "^SDSE",
+    "^sdtu",
+    "^SDTU",
+    "^sdsw",
+    "^SDSW",
+    "^sdr",
+    "^SDR"
+  ]
+}

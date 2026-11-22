@@ -1,0 +1,846 @@
+{
+  "id": "the_academy_arc",
+  "gameId": [
+    "gaIntro",
+    "gaIntro2",
+    "gaData",
+    "gaDA",
+    "gaCO",
+    "gaProbe",
+    "gaVIP",
+    "gaOp",
+    "gaBA",
+    "gaRR",
+    "gaTJ",
+    "gaTTS",
+    "gaTTB",
+    "gaFC",
+    "gaPZ",
+    "gaRH",
+    "gaKA",
+    "gaATG",
+    "gaDHO",
+    "zgr"
+  ],
+  "name": {
+    "en": "The Galatia Academy Arc",
+    "zh": "Galatia 学院主线"
+  },
+  "summary": {
+    "en": "The Galatia Academy storyline: from the tutorial through \"A People's History of Collapse\", finding Coureuse, Project Ziggurat, and At the Gates.",
+    "zh": "Galatia 学院主线：从新手任务到《大崩塌人民史》、寻找 Coureuse、Ziggurat 计划，直至\"群星之门\"。"
+  },
+  "factionId": null,
+  "icon": "graphics/icons/missions/ga_intro.png",
+  "stages": [
+    {
+      "id": "gaIntro",
+      "flag": "$gaIntro_ref",
+      "briefing": {
+        "en": "",
+        "zh": "前往 Galatia 学院，并与新任院长 "
+      }
+    },
+    {
+      "id": "gaIntro2",
+      "flag": "$gaIntro2_ref",
+      "briefing": {
+        "en": "Return the data core to Academician Sebestyen. He'll get you your reward.",
+        "zh": "将数据核心交还给 Sebestyen 院士，并领取你的报酬。"
+      }
+    },
+    {
+      "id": "gaData",
+      "flag": "$gaData_ref",
+      "briefing": {
+        "en": "marines will be needed to perform the recovery.",
+        "zh": "，并从废墟中找到 "
+      }
+    },
+    {
+      "id": "gaDA",
+      "flag": "$gaDA_ref",
+      "briefing": {
+        "en": " 'Autonomous weapon systems' may pose a danger.",
+        "zh": "一个独特的超导结构元件"
+      }
+    },
+    {
+      "id": "gaCO",
+      "flag": "$gaCO_ref",
+      "briefing": {
+        "en": " Avoid the black hole located in-system.",
+        "zh": " 避开位于星系中的黑洞。"
+      }
+    },
+    {
+      "id": "gaProbe",
+      "flag": "$gaProbe_ref",
+      "briefing": {
+        "en": "Go to the nearest jump-point and retrieve the instrument package from scavengers before they leave the system.",
+        "zh": "从探测器中打捞仪器套件，目标 "
+      }
+    },
+    {
+      "id": "gaVIP",
+      "flag": "$gaVIP_ref",
+      "briefing": {
+        "en": " is kin to Kanta herself.",
+        "zh": "步入 '卢德之路'"
+      }
+    },
+    {
+      "id": "gaOp",
+      "flag": "$gaOp_ref",
+      "briefing": {
+        "en": ", and drop off a small team of scientists at an outpost located there.",
+        "zh": "，并将一小队科学家送到 位于那里的 一个前哨站中。"
+      }
+    },
+    {
+      "id": "gaBA",
+      "flag": "$gaBA_ref",
+      "briefing": {
+        "en": "",
+        "zh": "一个独特的可再生结构元件"
+      }
+    },
+    {
+      "id": "gaRR",
+      "flag": "$gaRR_ref",
+      "briefing": {
+        "en": "",
+        "zh": "Galatia 学院"
+      }
+    },
+    {
+      "id": "gaTJ",
+      "flag": "$gaTJ_ref",
+      "briefing": {
+        "en": ", and contact the 'researcher' at the Tri-Tachyon black research site located there.",
+        "zh": "，与位于速子 黑色研究基地 中的 '研究员' 联系。"
+      }
+    },
+    {
+      "id": "gaTTS",
+      "flag": "$gaTTS_ref",
+      "briefing": {
+        "en": "",
+        "zh": "联系 Galatia 学院的院士 "
+      }
+    },
+    {
+      "id": "gaTTB",
+      "flag": "$gaTTB_ref",
+      "briefing": {
+        "en": "",
+        "zh": "联系 Galatia 学院的院长 "
+      }
+    },
+    {
+      "id": "gaFC",
+      "flag": "$gaFC_ref",
+      "briefing": {
+        "en": "You've found Academician Scylla Coureuse and brought her out of hiding to return her to work on Baird's secret project at the Galatia Academy.",
+        "zh": "寻找 Coureuse"
+      }
+    },
+    {
+      "id": "gaPZ",
+      "flag": "$gaPZ_ref",
+      "briefing": {
+        "en": "Get a lead on the whereabouts of Kelise Astraia, who is associated with a secret Tri-Tachyon research base called \"Alpha Site\".",
+        "zh": "找到 Kelise Astraia 的下落，此人和被称为 \"阿尔法研究站\" 的 速子科技 秘密研究基地有关系。"
+      }
+    },
+    {
+      "id": "gaRH",
+      "flag": "$gaRH_ref",
+      "briefing": {
+        "en": "She is sentimental about the ship - her first independent command - and is willing to pay a large sum for its return.",
+        "zh": "将 ISS Hamatsu 号还给 "
+      }
+    },
+    {
+      "id": "gaKA",
+      "flag": "$gaKA_ref",
+      "briefing": {
+        "en": "You've recovered the data archive of the Academy's previous Provost, Tomas Kallichore, which contains the results of failed gate activation experiments.",
+        "zh": "Kallichore 的档案"
+      }
+    },
+    {
+      "id": "gaATG",
+      "flag": "$gaATG_ref",
+      "briefing": {
+        "en": "Contact Horus Yaribay to get envoy credentials so you can contact High Hegemon Daud.",
+        "zh": "联系 Horus Yaribay，来获得特使凭证，这样你就可以联系至高霸主 Daud 了。"
+      }
+    },
+    {
+      "id": "gaDHO",
+      "flag": "$gaDHO_ref",
+      "briefing": {
+        "en": "Go directly to the coordinates held in the array's data.",
+        "zh": "直接前往阵列数据中记录的坐标。"
+      }
+    }
+  ],
+  "characters": [
+    {
+      "id": "glamor_rotanev",
+      "name": {
+        "en": "glamor_rotanev",
+        "zh": "glamor_rotanev"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    }
+  ],
+  "flags": {},
+  "scenes": [
+    {
+      "id": "gaProbe_go_to_probe_ent_gaProbe_scavenger",
+      "stage": "GO_TO_PROBE",
+      "speaker": null,
+      "title": {
+        "en": "Fleet encounter",
+        "zh": "舰队遭遇"
+      },
+      "location": null,
+      "roots": [
+        "r:gaProbeScavCommBefore"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaProbe_find_scavenger_ent_gaProbe_scavenger",
+      "stage": "FIND_SCAVENGER",
+      "speaker": null,
+      "title": {
+        "en": "Fleet encounter",
+        "zh": "舰队遭遇"
+      },
+      "location": null,
+      "roots": [
+        "r:gaProbeScavCommAfter"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaFC_investigate_fikenhild_talk_baird",
+      "stage": "INVESTIGATE_FIKENHILD",
+      "speaker": "baird",
+      "title": {
+        "en": "Talk: baird",
+        "zh": "与 baird 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:GAFCBairdGreeting_INVESTIGATE_FIKENHILD"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaFC_follow_the_experiments_talk_baird",
+      "stage": "FOLLOW_THE_EXPERIMENTS",
+      "speaker": "baird",
+      "title": {
+        "en": "Talk: baird",
+        "zh": "与 baird 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:GAFCBairdGreeting_FOLLOW_THE_EXPERIMENTS"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaFC_investigate_fikenhild_talk_siyavong",
+      "stage": "INVESTIGATE_FIKENHILD",
+      "speaker": "siyavong",
+      "title": {
+        "en": "Talk: siyavong",
+        "zh": "与 siyavong 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaFCsiyavongGreeting"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaFC_follow_the_experiments_other",
+      "stage": "FOLLOW_THE_EXPERIMENTS",
+      "speaker": null,
+      "title": {
+        "en": "follow_the_experiments_other",
+        "zh": "follow_the_experiments_other"
+      },
+      "location": null,
+      "roots": [
+        "r:gaFCScavengerDefeated"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaFC_follow_the_experiments_ent_gaFCProbe_scavengerPermanentFlag",
+      "stage": "FOLLOW_THE_EXPERIMENTS",
+      "speaker": null,
+      "title": {
+        "en": "Fleet encounter",
+        "zh": "舰队遭遇"
+      },
+      "location": null,
+      "roots": [
+        "r:gaFCScavengerGreeting"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaFC_search_isirah_talk_baird",
+      "stage": "SEARCH_ISIRAH",
+      "speaker": "baird",
+      "title": {
+        "en": "Talk: baird",
+        "zh": "与 baird 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaFCBaird_SEARCH_ISIRAH"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaFC_search_isirah_mkt_station_kapteyn",
+      "stage": "SEARCH_ISIRAH",
+      "speaker": null,
+      "title": {
+        "en": "Market: station_kapteyn",
+        "zh": "市场：station_kapteyn"
+      },
+      "location": null,
+      "roots": [
+        "r:gaFCKapteynBotherAdministrator"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaFC_search_isirah_other",
+      "stage": "SEARCH_ISIRAH",
+      "speaker": null,
+      "title": {
+        "en": "search_isirah_other",
+        "zh": "search_isirah_other"
+      },
+      "location": null,
+      "roots": [
+        "r:RHannanGreetingRealGAFCnope",
+        "r:RHannanMsgGAFC"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaPZ_get_kelise_lead_talk_gargoyle",
+      "stage": "GET_KELISE_LEAD",
+      "speaker": "gargoyle",
+      "title": {
+        "en": "Talk: gargoyle",
+        "zh": "与 gargoyle 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaPZAskGargoyleKelise",
+        "r:gaPZAskGargoyleZig"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaPZ_get_kelise_lead_talk_arroyo",
+      "stage": "GET_KELISE_LEAD",
+      "speaker": "arroyo",
+      "title": {
+        "en": "Talk: arroyo",
+        "zh": "与 arroyo 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaPZAskArroyoKelise"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaPZ_sell_blackmail_material_other",
+      "stage": "SELL_BLACKMAIL_MATERIAL",
+      "speaker": null,
+      "title": {
+        "en": "sell_blackmail_material_other",
+        "zh": "sell_blackmail_material_other"
+      },
+      "location": null,
+      "roots": [
+        "r:gaPZSellBlackmailOptionA",
+        "r:gaPZSellBlackmailOptionB",
+        "r:gaPZSellBlackmailOptionC"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaPZ_sold_blackmail_material_talk_arroyo",
+      "stage": "SOLD_BLACKMAIL_MATERIAL",
+      "speaker": "arroyo",
+      "title": {
+        "en": "Talk: arroyo",
+        "zh": "与 arroyo 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaPZReturnToArroyo"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaPZ_get_kelise_lead_other",
+      "stage": "GET_KELISE_LEAD",
+      "speaker": null,
+      "title": {
+        "en": "get_kelise_lead_other",
+        "zh": "get_kelise_lead_other"
+      },
+      "location": null,
+      "roots": [
+        "r:gaPZTalkCulannAdmin"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaPZ_talk_to_callisto_talk_ibrahim",
+      "stage": "TALK_TO_CALLISTO",
+      "speaker": "ibrahim",
+      "title": {
+        "en": "Talk: ibrahim",
+        "zh": "与 ibrahim 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaPZCallistoTalk"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaPZ_go_to_relay_system_talk_baird",
+      "stage": "GO_TO_RELAY_SYSTEM",
+      "speaker": "baird",
+      "title": {
+        "en": "Talk: baird",
+        "zh": "与 baird 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaPZ_tellBairdAstraia",
+        "r:gaPZ_bairdHurryUp"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaPZ_go_to_relay_system_talk_coureuse",
+      "stage": "GO_TO_RELAY_SYSTEM",
+      "speaker": "coureuse",
+      "title": {
+        "en": "Talk: coureuse",
+        "zh": "与 coureuse 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaPZ_tellCoureuseHamatsu"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaPZ_misc_conv_glamor_rotanev",
+      "stage": "gaPZ",
+      "speaker": "glamor_rotanev",
+      "title": {
+        "en": "Conversations: glamor_rotanev",
+        "zh": "对话：glamor_rotanev"
+      },
+      "location": null,
+      "roots": [
+        "r:ZGRdevGive",
+        "r:ZGRpostGADHOconfrontOpt",
+        "r:ZGRtalkPostGADHOimplyOpt",
+        "r:ZGRtalkPostGADHOreturnOpt",
+        "r:ZGRomkiScanOfferOpt",
+        "r:ZGRtechReturn",
+        "r:ZGRaskQuestions"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaKA_get_hack_hardware_talk_arroyo",
+      "stage": "GET_HACK_HARDWARE",
+      "speaker": "arroyo",
+      "title": {
+        "en": "Talk: arroyo",
+        "zh": "与 arroyo 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:GAKAarroyoGetHackHardware"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaKA_install_hack_talk_arroyo",
+      "stage": "INSTALL_HACK",
+      "speaker": "arroyo",
+      "title": {
+        "en": "Talk: arroyo",
+        "zh": "与 arroyo 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:GAKAarroyoInstallHack"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaKA_get_hack_hardware_talk_gargoyle",
+      "stage": "GET_HACK_HARDWARE",
+      "speaker": "gargoyle",
+      "title": {
+        "en": "Talk: gargoyle",
+        "zh": "与 gargoyle 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:GAKAGargoyleGreeting_GET_HACK_HARDWARE"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaKA_install_hack_talk_gargoyle",
+      "stage": "INSTALL_HACK",
+      "speaker": "gargoyle",
+      "title": {
+        "en": "Talk: gargoyle",
+        "zh": "与 gargoyle 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:GAKAGargoyleGreeting_INSTALL_HACK"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaKA_get_hack_hardware_talk_baird",
+      "stage": "GET_HACK_HARDWARE",
+      "speaker": "baird",
+      "title": {
+        "en": "Talk: baird",
+        "zh": "与 baird 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:GAKABairdGreeting_GET_HACK_HARDWARE"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaKA_install_hack_talk_baird",
+      "stage": "INSTALL_HACK",
+      "speaker": "baird",
+      "title": {
+        "en": "Talk: baird",
+        "zh": "与 baird 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:GAKABairdGreeting_INSTALL_HACK"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaKA_retreive_archive_talk_baird",
+      "stage": "RETREIVE_ARCHIVE",
+      "speaker": "baird",
+      "title": {
+        "en": "Talk: baird",
+        "zh": "与 baird 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:GAKABairdGreeting_RETREIVE_ARCHIVE"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaATG_do_scans_talk_coureuse",
+      "stage": "DO_SCANS",
+      "speaker": "coureuse",
+      "title": {
+        "en": "Talk: coureuse",
+        "zh": "与 coureuse 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaATGreturnSomeScansToCoureuse"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaATG_return_with_deal_and_scans_talk_coureuse",
+      "stage": "RETURN_WITH_DEAL_AND_SCANS",
+      "speaker": "coureuse",
+      "title": {
+        "en": "Talk: coureuse",
+        "zh": "与 coureuse 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaATGreturnScansToCoureuseStart"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaATG_return_with_deal_and_scans_talk_baird",
+      "stage": "RETURN_WITH_DEAL_AND_SCANS",
+      "speaker": "baird",
+      "title": {
+        "en": "Talk: baird",
+        "zh": "与 baird 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaATGtalkToBairdGotScansAndDeal"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaATG_go_to_magec_gate_mkt_kantas_den",
+      "stage": "GO_TO_MAGEC_GATE",
+      "speaker": null,
+      "title": {
+        "en": "Market: kantas_den",
+        "zh": "市场：kantas_den"
+      },
+      "location": null,
+      "roots": [
+        "r:gaATGkantasDenHostileOverride1"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaDHO_visit_elek_talk_station_galatia_academy",
+      "stage": "VISIT_ELEK",
+      "speaker": "station_galatia_academy",
+      "title": {
+        "en": "Talk: station_galatia_academy",
+        "zh": "与 station_galatia_academy 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaDHOvisitElekStart"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaDHO_visit_elek_talk_elek",
+      "stage": "VISIT_ELEK",
+      "speaker": "elek",
+      "title": {
+        "en": "Talk: elek",
+        "zh": "与 elek 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaDHOvisitElekAgain"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaDHO_go_to_array_other",
+      "stage": "GO_TO_ARRAY",
+      "speaker": null,
+      "title": {
+        "en": "go_to_array_other",
+        "zh": "go_to_array_other"
+      },
+      "location": null,
+      "roots": [
+        "r:gaDHOarrayStart"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaDHO_array_then_abyss_other",
+      "stage": "ARRAY_THEN_ABYSS",
+      "speaker": null,
+      "title": {
+        "en": "array_then_abyss_other",
+        "zh": "array_then_abyss_other"
+      },
+      "location": null,
+      "roots": [
+        "r:gaDHO_mk1explore8interrupt2b"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaDHO_abyss_no_elek_other",
+      "stage": "ABYSS_NO_ELEK",
+      "speaker": null,
+      "title": {
+        "en": "abyss_no_elek_other",
+        "zh": "abyss_no_elek_other"
+      },
+      "location": null,
+      "roots": [
+        "r:gaDHO_mk1explore8interruptC",
+        "r:gaDHO_mk1explore8interruptCalt"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaDHO_return_to_elek_talk_elek",
+      "stage": "RETURN_TO_ELEK",
+      "speaker": "elek",
+      "title": {
+        "en": "Talk: elek",
+        "zh": "与 elek 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaDHOendingStart"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaDHO_array_then_elek_talk_elek",
+      "stage": "ARRAY_THEN_ELEK",
+      "speaker": "elek",
+      "title": {
+        "en": "Talk: elek",
+        "zh": "与 elek 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaDHOabyssEndElekStartComms",
+        "r:gaDHOabyssEndElekStartCommsB"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaDHO_return_to_elek_talk_station_galatia_academy",
+      "stage": "RETURN_TO_ELEK",
+      "speaker": "station_galatia_academy",
+      "title": {
+        "en": "Talk: station_galatia_academy",
+        "zh": "与 station_galatia_academy 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaDHOabyssEndElekStart"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaDHO_return_to_elek_other",
+      "stage": "RETURN_TO_ELEK",
+      "speaker": null,
+      "title": {
+        "en": "return_to_elek_other",
+        "zh": "return_to_elek_other"
+      },
+      "location": null,
+      "roots": [
+        "r:gaDHOabyssEndElekIntro",
+        "r:gaDHOabyssEndElekIntro2",
+        "r:gaDHOabyssEndElekAltIntro3"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaDHO_array_then_elek_talk_station_galatia_academy",
+      "stage": "ARRAY_THEN_ELEK",
+      "speaker": "station_galatia_academy",
+      "title": {
+        "en": "Talk: station_galatia_academy",
+        "zh": "与 station_galatia_academy 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaDHOvisitElekStartB"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaDHO_array_then_elek_other",
+      "stage": "ARRAY_THEN_ELEK",
+      "speaker": null,
+      "title": {
+        "en": "array_then_elek_other",
+        "zh": "array_then_elek_other"
+      },
+      "location": null,
+      "roots": [
+        "r:gaDHOvisitElekIntroMetz",
+        "r:gaDHOvisitElekIntroRejected",
+        "r:gaDHOvisitElekIntroArrayFirst"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaDHO_go_to_array_talk_elek",
+      "stage": "GO_TO_ARRAY",
+      "speaker": "elek",
+      "title": {
+        "en": "Talk: elek",
+        "zh": "与 elek 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaDHOtalkElekGoToArray"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "gaDHO_go_to_location_talk_elek",
+      "stage": "GO_TO_LOCATION",
+      "speaker": "elek",
+      "title": {
+        "en": "Talk: elek",
+        "zh": "与 elek 交谈"
+      },
+      "location": null,
+      "roots": [
+        "r:gaDHOtalkElekGoToLocation"
+      ],
+      "speakerOverrides": {}
+    }
+  ],
+  "excludeRules": [],
+  "ignoreRules": [],
+  "ignoreRulePatterns": [
+    "^DEV",
+    "^dev[A-Z]",
+    "test",
+    "Test",
+    "TEST",
+    "^relLevel",
+    "^flavorText",
+    "^bar_desc",
+    "^sd7s",
+    "^SD7S",
+    "^sdse",
+    "^SDSE",
+    "^sdtu",
+    "^SDTU",
+    "^sdsw",
+    "^SDSW",
+    "^sdr",
+    "^SDR"
+  ]
+}

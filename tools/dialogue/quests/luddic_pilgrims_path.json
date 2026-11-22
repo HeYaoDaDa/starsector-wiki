@@ -1,0 +1,218 @@
+{
+  "id": "luddic_pilgrims_path",
+  "gameId": [
+    "lpp"
+  ],
+  "name": {
+    "en": "Luddic Pilgrim's Path",
+    "zh": "路德朝圣之路"
+  },
+  "summary": {
+    "en": "Escort the pilgrims of the Luddic Church on their sacred path.",
+    "zh": "护送路德教会的朝圣者踏上他们的朝圣之路。"
+  },
+  "factionId": null,
+  "icon": "graphics/icons/missions/pilgrims_path.png",
+  "stages": [
+    {
+      "id": "VISITED_SHRINE_JANGALA",
+      "flag": "$lpp_VISITED_SHRINE_JANGALA",
+      "briefing": {
+        "en": "Visit the six shrines of the Pilgrim's Path. The pilgrimage is traditionally completed by returning to Gilead, in the Canaan system.",
+        "zh": "拜访 朝圣者之路 上的六处 圣地。朝圣之道的传统终点是回到 Canaan 星系的 Gilead。"
+      }
+    },
+    {
+      "id": "VISITED_SHRINE_KILLA",
+      "flag": "$lpp_VISITED_SHRINE_KILLA",
+      "briefing": {
+        "en": "Return to the shrine of Gilead in the Canaan system to complete the Pilgrim's Path.",
+        "zh": "回到 Canaan星系 Gilead 上的 圣地 以完成 朝圣者之路。"
+      }
+    },
+    {
+      "id": "VISITED_SHRINE_VOLTURN",
+      "flag": "$lpp_VISITED_SHRINE_VOLTURN",
+      "briefing": {
+        "en": "",
+        "zh": "拜访六处 卢德圣地"
+      }
+    },
+    {
+      "id": "VISITED_SHRINE_CHICOMOZTOC",
+      "flag": "$lpp_VISITED_SHRINE_CHICOMOZTOC",
+      "briefing": {
+        "en": "",
+        "zh": "完成 Canaan星系 Gilead 上的朝圣"
+      }
+    },
+    {
+      "id": "VISITED_SHRINE_GILEAD",
+      "flag": "$lpp_VISITED_SHRINE_GILEAD",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "VISITED_SHRINE_BEHOLDER",
+      "flag": "$lpp_VISITED_SHRINE_BEHOLDER",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "I",
+      "flag": "$lpp_I",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "VISIT_SHRINES",
+      "flag": "$lpp_VISIT_SHRINES",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "COMPLETED",
+      "flag": "$lpp_COMPLETED",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "RETURN_TO_GILEAD",
+      "flag": "$lpp_RETURN_TO_GILEAD",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "Z",
+      "flag": "$lpp_Z",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "J",
+      "flag": "$lpp_J",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    }
+  ],
+  "characters": [
+    {
+      "id": "beholder_station",
+      "name": {
+        "en": "beholder_station",
+        "zh": "beholder_station"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "killa",
+      "name": {
+        "en": "killa",
+        "zh": "killa"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "oak",
+      "name": {
+        "en": "oak",
+        "zh": "oak"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "standfast",
+      "name": {
+        "en": "standfast",
+        "zh": "standfast"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    }
+  ],
+  "flags": {},
+  "scenes": [
+    {
+      "id": "lpp_misc_conv_standfast",
+      "stage": "lpp",
+      "speaker": "standfast",
+      "title": {
+        "en": "Conversations: standfast",
+        "zh": "对话：standfast"
+      },
+      "location": null,
+      "roots": [
+        "r:lppVolturnShrineCandleOpt",
+        "r:standfastShrineLeave"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "lpp_misc_conv_oak",
+      "stage": "lpp",
+      "speaker": "oak",
+      "title": {
+        "en": "Conversations: oak",
+        "zh": "对话：oak"
+      },
+      "location": null,
+      "roots": [
+        "r:lppExcubitorResponseAsk",
+        "r:lppExcubitorResponseWhy",
+        "r:lppExcubitorResponseWhy2",
+        "r:lppExcubitorResponseSevenDays",
+        "r:lppExcubitorResponseRedemption"
+      ],
+      "speakerOverrides": {}
+    }
+  ],
+  "excludeRules": [],
+  "ignoreRules": [],
+  "ignoreRulePatterns": [
+    "^DEV",
+    "^dev[A-Z]",
+    "test",
+    "Test",
+    "TEST",
+    "^relLevel",
+    "^flavorText",
+    "^bar_desc",
+    "^sd7s",
+    "^SD7S",
+    "^sdse",
+    "^SDSE",
+    "^sdtu",
+    "^SDTU",
+    "^sdsw",
+    "^SDSW",
+    "^sdr",
+    "^SDR"
+  ]
+}

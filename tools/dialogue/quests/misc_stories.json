@@ -1,0 +1,84 @@
+{
+  "id": "misc_stories",
+  "gameId": [
+    "tutorial",
+    "historian",
+    "affk"
+  ],
+  "name": {
+    "en": "Miscellany",
+    "zh": "杂项剧情"
+  },
+  "summary": {
+    "en": "Tutorial guidance, the Historian's tales, and other odds and ends.",
+    "zh": "新手引导、历史学家的讲述，以及其他零散剧情。"
+  },
+  "factionId": null,
+  "icon": null,
+  "stages": [
+    {
+      "id": "tutorial",
+      "flag": "$tutorial_ref",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "historian",
+      "flag": "$historian_ref",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "affk",
+      "flag": "$affk_ref",
+      "briefing": {
+        "en": "",
+        "zh": "失去了 Kanta 的保护"
+      }
+    }
+  ],
+  "characters": [],
+  "flags": {},
+  "scenes": [
+    {
+      "id": "affk_misc_orphan_kantafavorcourierhail",
+      "stage": "affk",
+      "speaker": null,
+      "title": {
+        "en": "Event: kantafavorcourierhail",
+        "zh": "事件：kantafavorcourierhail"
+      },
+      "location": null,
+      "roots": [
+        "t:KantaFavorCourierHail"
+      ],
+      "speakerOverrides": {}
+    }
+  ],
+  "excludeRules": [],
+  "ignoreRules": [],
+  "ignoreRulePatterns": [
+    "^DEV",
+    "^dev[A-Z]",
+    "test",
+    "Test",
+    "TEST",
+    "^relLevel",
+    "^flavorText",
+    "^bar_desc",
+    "^sd7s",
+    "^SD7S",
+    "^sdse",
+    "^SDSE",
+    "^sdtu",
+    "^SDTU",
+    "^sdsw",
+    "^SDSW",
+    "^sdr",
+    "^SDR"
+  ]
+}

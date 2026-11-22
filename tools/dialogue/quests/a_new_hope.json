@@ -1,0 +1,130 @@
+{
+  "id": "a_new_hope",
+  "gameId": [
+    "anh"
+  ],
+  "name": {
+    "en": "A New Hope",
+    "zh": "新的希望"
+  },
+  "summary": {
+    "en": "Help a desperate soul find a new beginning.",
+    "zh": "帮助一个绝望的人寻找新的开始。"
+  },
+  "factionId": null,
+  "icon": "graphics/icons/missions/anh.png",
+  "stages": [
+    {
+      "id": "MISSION_DAYS",
+      "flag": "$anh_MISSION_DAYS",
+      "briefing": {
+        "en": "Deliver the mysterious old man, the kid, and their robot to Volturn in the Askonia system. Avoid patrols; they may be wanted by the authorities.",
+        "zh": "把神秘老人，小伙子，以及他们的机器人送到位于 Askonia 星系的 Volturn 行星上。避开巡逻队，你的乘客可能已被通缉。"
+      }
+    },
+    {
+      "id": "F",
+      "flag": "$anh_F",
+      "briefing": {
+        "en": "",
+        "zh": "前往位于 Askonia 星系内的 Volturn"
+      }
+    },
+    {
+      "id": "I",
+      "flag": "$anh_I",
+      "briefing": {
+        "en": "",
+        "zh": "Volturn 之旅"
+      }
+    },
+    {
+      "id": "ROBEDMAN",
+      "flag": "$anh_ROBEDMAN",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "GO_TO_VOLTURN",
+      "flag": "$anh_GO_TO_VOLTURN",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "COMPLETED",
+      "flag": "$anh_COMPLETED",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "SMALL",
+      "flag": "$anh_SMALL",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "DEFAULT",
+      "flag": "$anh_DEFAULT",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "Z",
+      "flag": "$anh_Z",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    }
+  ],
+  "characters": [],
+  "flags": {},
+  "scenes": [
+    {
+      "id": "anh_misc_dock",
+      "stage": "anh",
+      "speaker": null,
+      "title": {
+        "en": "Docked flavor text",
+        "zh": "靠港见闻"
+      },
+      "location": null,
+      "roots": [
+        "r:anhCheckCompletionCont"
+      ],
+      "speakerOverrides": {}
+    }
+  ],
+  "excludeRules": [],
+  "ignoreRules": [],
+  "ignoreRulePatterns": [
+    "^DEV",
+    "^dev[A-Z]",
+    "test",
+    "Test",
+    "TEST",
+    "^relLevel",
+    "^flavorText",
+    "^bar_desc",
+    "^sd7s",
+    "^SD7S",
+    "^sdse",
+    "^SDSE",
+    "^sdtu",
+    "^SDTU",
+    "^sdsw",
+    "^SDSW",
+    "^sdr",
+    "^SDR"
+  ]
+}

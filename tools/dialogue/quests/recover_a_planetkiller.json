@@ -1,0 +1,195 @@
+{
+  "id": "recover_a_planetkiller",
+  "gameId": [
+    "pk"
+  ],
+  "name": {
+    "en": "Recover a Planetkiller",
+    "zh": "回收行星杀手"
+  },
+  "summary": {
+    "en": "A Hegemony officer wants a piece of forbidden history recovered.",
+    "zh": "一位霸主军官想要回收一段被禁忌的历史。"
+  },
+  "factionId": null,
+  "icon": "graphics/icons/missions/planetkiller.png",
+  "stages": [
+    {
+      "id": "PK_NEXUS_KEY",
+      "flag": "$pk_PK_NEXUS_KEY",
+      "briefing": {
+        "en": "Recover information about a Hegemony fleet last seen in a Tri-Tachyon held system during the first AI War, more than a hundred cycles ago. The fleet is rumored to have been carrying a planetkiller weapon.",
+        "zh": "收集关于 一百多星历年前，在 第一次 AI 战争中 消失在 速子科技 控制区域的 霸主 舰队的信息。传言该舰队携带着一枚 行星杀手。"
+      }
+    },
+    {
+      "id": "PK_PLANET_KEY",
+      "flag": "$pk_PK_PLANET_KEY",
+      "briefing": {
+        "en": "You've destroyed a remnant Nexus and recovered information about a Hegemony fleet estimated to be carrying a planetkiller weapon.",
+        "zh": "此信息应该被存在一个 余辉中枢 的数据库中，该中枢位于 "
+      }
+    },
+    {
+      "id": "PK_SYSTEM_KEY",
+      "flag": "$pk_PK_SYSTEM_KEY",
+      "briefing": {
+        "en": ", and implied that the planetkiller weapon could be found there.",
+        "zh": "你已经摧毁了一个余辉中枢，且恢复了某支霸主舰队可能携带着一个行星杀手的数据。"
+      }
+    },
+    {
+      "id": "GO_TO_NEXUS",
+      "flag": "$pk_GO_TO_NEXUS",
+      "briefing": {
+        "en": "Perhaps it brings 'much amusement' to this AI to not provide more detailed instructions.",
+        "zh": "一段日志记录写道一支强大的 余辉秩序 被派出进行追击；最后的超波记录显示其位于 "
+      }
+    },
+    {
+      "id": "RECOVER_PK",
+      "flag": "$pk_RECOVER_PK",
+      "briefing": {
+        "en": "The data banks of the remnant Nexus contained information about the Hegemony fleet rumored to be carrying a planetkiller weapon. ",
+        "zh": "。此日志记录来自一百多星历年前的 第一次 AI 战争 中。"
+      }
+    },
+    {
+      "id": "COMPLETED",
+      "flag": "$pk_COMPLETED",
+      "briefing": {
+        "en": "",
+        "zh": "一个神秘的声音，或许是某种 AI，告知了你 "
+      }
+    },
+    {
+      "id": "FAILED",
+      "flag": "$pk_FAILED",
+      "briefing": {
+        "en": "",
+        "zh": "的地点，并暗示 行星杀手 也可在该处找到。"
+      }
+    },
+    {
+      "id": "Z",
+      "flag": "$pk_Z",
+      "briefing": {
+        "en": "",
+        "zh": "或许这 AI 也是为了 '更加愉悦！' 而没有提供更多具体细节。"
+      }
+    },
+    {
+      "id": "F",
+      "flag": "$pk_F",
+      "briefing": {
+        "en": "",
+        "zh": "余辉中枢的数据库存储了据传携带着行星杀手的 霸主 舰队的相关信息。 "
+      }
+    }
+  ],
+  "characters": [
+    {
+      "id": "arroyo",
+      "name": {
+        "en": "arroyo",
+        "zh": "arroyo"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "rao",
+      "name": {
+        "en": "rao",
+        "zh": "rao"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    }
+  ],
+  "flags": {},
+  "scenes": [
+    {
+      "id": "pk_go_to_nexus_other",
+      "stage": "GO_TO_NEXUS",
+      "speaker": null,
+      "title": {
+        "en": "go_to_nexus_other",
+        "zh": "go_to_nexus_other"
+      },
+      "location": null,
+      "roots": [
+        "r:PKCommRelayOpt"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "pk_misc_conv_arroyo",
+      "stage": "pk",
+      "speaker": "arroyo",
+      "title": {
+        "en": "Conversations: arroyo",
+        "zh": "对话：arroyo"
+      },
+      "location": null,
+      "roots": [
+        "r:PKGiveToArroyo"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "pk_misc_orphan_pknexusdefeated",
+      "stage": "pk",
+      "speaker": null,
+      "title": {
+        "en": "Event: pknexusdefeated",
+        "zh": "事件：pknexusdefeated"
+      },
+      "location": null,
+      "roots": [
+        "t:PKNexusDefeated"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "pk_misc_orphan_pk14thdefeated",
+      "stage": "pk",
+      "speaker": null,
+      "title": {
+        "en": "Event: pk14thdefeated",
+        "zh": "事件：pk14thdefeated"
+      },
+      "location": null,
+      "roots": [
+        "t:PK14thDefeated"
+      ],
+      "speakerOverrides": {}
+    }
+  ],
+  "excludeRules": [],
+  "ignoreRules": [],
+  "ignoreRulePatterns": [
+    "^DEV",
+    "^dev[A-Z]",
+    "test",
+    "Test",
+    "TEST",
+    "^relLevel",
+    "^flavorText",
+    "^bar_desc",
+    "^sd7s",
+    "^SD7S",
+    "^sdse",
+    "^SDSE",
+    "^sdtu",
+    "^SDTU",
+    "^sdsw",
+    "^SDSW",
+    "^sdr",
+    "^SDR"
+  ]
+}

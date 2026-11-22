@@ -1,0 +1,1453 @@
+{
+  "id": "contact_missions",
+  "gameId": [
+    "seco",
+    "dcom",
+    "extr",
+    "smug",
+    "tabo",
+    "ssat",
+    "mcb",
+    "ucb",
+    "hijack",
+    "jabr",
+    "ddro",
+    "sitm",
+    "rdsm",
+    "rsom",
+    "cpm",
+    "cpc",
+    "psb",
+    "sShip",
+    "dhi",
+    "dsp",
+    "cheapCom",
+    "proCom",
+    "hmdf",
+    "locrlf"
+  ],
+  "name": {
+    "en": "Contact Missions",
+    "zh": "接触任务合集"
+  },
+  "summary": {
+    "en": "The smaller jobs offered by contacts: security codes, disruptions, extractions, smuggling and the like.",
+    "zh": "接触人提供的中小任务：安全码、破坏行动、营救、走私等等。"
+  },
+  "factionId": null,
+  "icon": "graphics/icons/missions/security_codes.png",
+  "stages": [
+    {
+      "id": "seco",
+      "flag": "$seco_ref",
+      "briefing": {
+        "en": "You've acquired ground-forces security codes for %s. Having these allows for much better raid planning and will reduce marine casualties by %s.",
+        "zh": "你已获得 %s 地面部队的安全码，这意味着你可更好地制定劫掠计划，从而降低 %s 陆战队员的伤亡。"
+      }
+    },
+    {
+      "id": "dcom",
+      "flag": "$dcom_ref",
+      "briefing": {
+        "en": "",
+        "zh": " 来扰乱其竞争对手。"
+      }
+    },
+    {
+      "id": "extr",
+      "flag": "$extr_ref",
+      "briefing": {
+        "en": "",
+        "zh": "是规模为 %s 的殖民地，其目前的控制方为 "
+      }
+    },
+    {
+      "id": "smug",
+      "flag": "$smug_ref",
+      "briefing": {
+        "en": "The authorities are aware the shipment is incoming and patrols are on high alert.",
+        "zh": "将 %s 单位的 "
+      }
+    },
+    {
+      "id": "tabo",
+      "flag": "$tabo_ref",
+      "briefing": {
+        "en": "",
+        "zh": " 进行一次战术轰炸，而此处位于 "
+      }
+    },
+    {
+      "id": "ssat",
+      "flag": "$ssat_ref",
+      "briefing": {
+        "en": "",
+        "zh": " 的附近部署间谍卫星，而此处位于 "
+      }
+    },
+    {
+      "id": "mcb",
+      "flag": "$mcb_ref",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "ucb",
+      "flag": "$ucb_ref",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "hijack",
+      "flag": "$hijack_ref",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "jabr",
+      "flag": "$jabr_ref",
+      "briefing": {
+        "en": "",
+        "zh": " 的监狱，而此处位于 "
+      }
+    },
+    {
+      "id": "ddro",
+      "flag": "$ddro_ref",
+      "briefing": {
+        "en": "",
+        "zh": "一个似乎已经无法运作的数据芯片"
+      }
+    },
+    {
+      "id": "sitm",
+      "flag": "$sitm_ref",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "rdsm",
+      "flag": "$rdsm_ref",
+      "briefing": {
+        "en": "marines to ensure the job goes smoothly.",
+        "zh": " 遗迹内的数据核心。此地 "
+      }
+    },
+    {
+      "id": "rsom",
+      "flag": "$rsom_ref",
+      "briefing": {
+        "en": " in the hidden outpost there. ",
+        "zh": "，使用识别码绕过其防御系统以劫掠并夺取 "
+      }
+    },
+    {
+      "id": "cpm",
+      "flag": "$cpm_ref",
+      "briefing": {
+        "en": "a colony under your control.",
+        "zh": "你的殖民地需至少生产 %s 单位的 "
+      }
+    },
+    {
+      "id": "cpc",
+      "flag": "$cpc_ref",
+      "briefing": {
+        "en": "This order will not be completed because %s has decivilized.",
+        "zh": " 的仓库还有 %s "
+      }
+    },
+    {
+      "id": "psb",
+      "flag": "$psb_ref",
+      "briefing": {
+        "en": "This bounty is no longer on offer.",
+        "zh": "适用于所有的 %s 舰队 "
+      }
+    },
+    {
+      "id": "sShip",
+      "flag": "$sShip_ref",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "dhi",
+      "flag": "$dhi_ref",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "dsp",
+      "flag": "$dsp_ref",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "cheapCom",
+      "flag": "$cheapCom_ref",
+      "briefing": {
+        "en": "for %s per unit, or %s total.",
+        "zh": " 来收购 %s 单位的 "
+      }
+    },
+    {
+      "id": "proCom",
+      "flag": "$proCom_ref",
+      "briefing": {
+        "en": "",
+        "zh": "把 %s 单位的 "
+      }
+    },
+    {
+      "id": "hmdf",
+      "flag": "$hmdf_ref",
+      "briefing": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "locrlf",
+      "flag": "$locrlf_ref",
+      "briefing": {
+        "en": " for the lost group of Luddic heretics.",
+        "zh": " 以寻找卢德异端的踪迹。"
+      }
+    }
+  ],
+  "characters": [],
+  "flags": {},
+  "scenes": [
+    {
+      "id": "seco_misc_orphan_seco_blurb",
+      "stage": "seco",
+      "speaker": null,
+      "title": {
+        "en": "Event: seco_blurb",
+        "zh": "事件：seco_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:seco_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "seco_misc_orphan_seco_option",
+      "stage": "seco",
+      "speaker": null,
+      "title": {
+        "en": "Event: seco_option",
+        "zh": "事件：seco_option"
+      },
+      "location": null,
+      "roots": [
+        "t:seco_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "seco_misc_orphan_seco_blurbbar",
+      "stage": "seco",
+      "speaker": null,
+      "title": {
+        "en": "Event: seco_blurbbar",
+        "zh": "事件：seco_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:seco_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "seco_misc_orphan_seco_optionbar",
+      "stage": "seco",
+      "speaker": null,
+      "title": {
+        "en": "Event: seco_optionbar",
+        "zh": "事件：seco_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:seco_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "dcom_misc_orphan_dcom_blurb",
+      "stage": "dcom",
+      "speaker": null,
+      "title": {
+        "en": "Event: dcom_blurb",
+        "zh": "事件：dcom_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:dcom_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "dcom_misc_orphan_dcom_option",
+      "stage": "dcom",
+      "speaker": null,
+      "title": {
+        "en": "Event: dcom_option",
+        "zh": "事件：dcom_option"
+      },
+      "location": null,
+      "roots": [
+        "t:dcom_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "dcom_misc_orphan_dcom_blurbbar",
+      "stage": "dcom",
+      "speaker": null,
+      "title": {
+        "en": "Event: dcom_blurbbar",
+        "zh": "事件：dcom_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:dcom_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "dcom_misc_orphan_dcom_optionbar",
+      "stage": "dcom",
+      "speaker": null,
+      "title": {
+        "en": "Event: dcom_optionbar",
+        "zh": "事件：dcom_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:dcom_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "extr_misc_orphan_extr_blurb",
+      "stage": "extr",
+      "speaker": null,
+      "title": {
+        "en": "Event: extr_blurb",
+        "zh": "事件：extr_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:extr_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "extr_misc_orphan_extr_option",
+      "stage": "extr",
+      "speaker": null,
+      "title": {
+        "en": "Event: extr_option",
+        "zh": "事件：extr_option"
+      },
+      "location": null,
+      "roots": [
+        "t:extr_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "extr_misc_orphan_extr_blurbbar",
+      "stage": "extr",
+      "speaker": null,
+      "title": {
+        "en": "Event: extr_blurbbar",
+        "zh": "事件：extr_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:extr_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "extr_misc_orphan_extr_optionbar",
+      "stage": "extr",
+      "speaker": null,
+      "title": {
+        "en": "Event: extr_optionbar",
+        "zh": "事件：extr_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:extr_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "extr_misc_orphan_extrraidfinished",
+      "stage": "extr",
+      "speaker": null,
+      "title": {
+        "en": "Event: extrraidfinished",
+        "zh": "事件：extrraidfinished"
+      },
+      "location": null,
+      "roots": [
+        "t:extrRaidFinished"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "smug_misc_dock",
+      "stage": "smug",
+      "speaker": null,
+      "title": {
+        "en": "Docked flavor text",
+        "zh": "靠港见闻"
+      },
+      "location": null,
+      "roots": [
+        "r:smug_checkCompletion",
+        "r:smug_checkCompletionNotSneaking",
+        "r:smug_notEnough"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "smug_misc_orphan_smug_blurb",
+      "stage": "smug",
+      "speaker": null,
+      "title": {
+        "en": "Event: smug_blurb",
+        "zh": "事件：smug_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:smug_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "smug_misc_orphan_smug_option",
+      "stage": "smug",
+      "speaker": null,
+      "title": {
+        "en": "Event: smug_option",
+        "zh": "事件：smug_option"
+      },
+      "location": null,
+      "roots": [
+        "t:smug_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "smug_misc_orphan_smug_blurbbar",
+      "stage": "smug",
+      "speaker": null,
+      "title": {
+        "en": "Event: smug_blurbbar",
+        "zh": "事件：smug_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:smug_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "smug_misc_orphan_smug_optionbar",
+      "stage": "smug",
+      "speaker": null,
+      "title": {
+        "en": "Event: smug_optionbar",
+        "zh": "事件：smug_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:smug_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "tabo_misc_orphan_tabo_blurb",
+      "stage": "tabo",
+      "speaker": null,
+      "title": {
+        "en": "Event: tabo_blurb",
+        "zh": "事件：tabo_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:tabo_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "tabo_misc_orphan_tabo_option",
+      "stage": "tabo",
+      "speaker": null,
+      "title": {
+        "en": "Event: tabo_option",
+        "zh": "事件：tabo_option"
+      },
+      "location": null,
+      "roots": [
+        "t:tabo_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "tabo_misc_orphan_tabo_blurbbar",
+      "stage": "tabo",
+      "speaker": null,
+      "title": {
+        "en": "Event: tabo_blurbbar",
+        "zh": "事件：tabo_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:tabo_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "tabo_misc_orphan_tabo_optionbar",
+      "stage": "tabo",
+      "speaker": null,
+      "title": {
+        "en": "Event: tabo_optionbar",
+        "zh": "事件：tabo_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:tabo_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "ssat_misc_orphan_ssat_blurb",
+      "stage": "ssat",
+      "speaker": null,
+      "title": {
+        "en": "Event: ssat_blurb",
+        "zh": "事件：ssat_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:ssat_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "ssat_misc_orphan_ssat_option",
+      "stage": "ssat",
+      "speaker": null,
+      "title": {
+        "en": "Event: ssat_option",
+        "zh": "事件：ssat_option"
+      },
+      "location": null,
+      "roots": [
+        "t:ssat_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "ssat_misc_orphan_ssat_blurbbar",
+      "stage": "ssat",
+      "speaker": null,
+      "title": {
+        "en": "Event: ssat_blurbbar",
+        "zh": "事件：ssat_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:ssat_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "ssat_misc_orphan_ssat_optionbar",
+      "stage": "ssat",
+      "speaker": null,
+      "title": {
+        "en": "Event: ssat_optionbar",
+        "zh": "事件：ssat_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:ssat_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "mcb_misc_orphan_mcb_blurb",
+      "stage": "mcb",
+      "speaker": null,
+      "title": {
+        "en": "Event: mcb_blurb",
+        "zh": "事件：mcb_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:mcb_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "mcb_misc_orphan_mcb_option",
+      "stage": "mcb",
+      "speaker": null,
+      "title": {
+        "en": "Event: mcb_option",
+        "zh": "事件：mcb_option"
+      },
+      "location": null,
+      "roots": [
+        "t:mcb_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "mcb_misc_orphan_mcb_blurbbar",
+      "stage": "mcb",
+      "speaker": null,
+      "title": {
+        "en": "Event: mcb_blurbbar",
+        "zh": "事件：mcb_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:mcb_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "mcb_misc_orphan_mcb_optionbar",
+      "stage": "mcb",
+      "speaker": null,
+      "title": {
+        "en": "Event: mcb_optionbar",
+        "zh": "事件：mcb_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:mcb_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "ucb_misc_orphan_ucb_blurb",
+      "stage": "ucb",
+      "speaker": null,
+      "title": {
+        "en": "Event: ucb_blurb",
+        "zh": "事件：ucb_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:ucb_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "ucb_misc_orphan_ucb_option",
+      "stage": "ucb",
+      "speaker": null,
+      "title": {
+        "en": "Event: ucb_option",
+        "zh": "事件：ucb_option"
+      },
+      "location": null,
+      "roots": [
+        "t:ucb_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "ucb_misc_orphan_ucb_blurbbar",
+      "stage": "ucb",
+      "speaker": null,
+      "title": {
+        "en": "Event: ucb_blurbbar",
+        "zh": "事件：ucb_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:ucb_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "ucb_misc_orphan_ucb_optionbar",
+      "stage": "ucb",
+      "speaker": null,
+      "title": {
+        "en": "Event: ucb_optionbar",
+        "zh": "事件：ucb_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:ucb_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "hijack_misc_orphan_hijack_blurb",
+      "stage": "hijack",
+      "speaker": null,
+      "title": {
+        "en": "Event: hijack_blurb",
+        "zh": "事件：hijack_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:hijack_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "hijack_misc_orphan_hijack_option",
+      "stage": "hijack",
+      "speaker": null,
+      "title": {
+        "en": "Event: hijack_option",
+        "zh": "事件：hijack_option"
+      },
+      "location": null,
+      "roots": [
+        "t:hijack_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "hijack_misc_orphan_hijack_blurbbar",
+      "stage": "hijack",
+      "speaker": null,
+      "title": {
+        "en": "Event: hijack_blurbbar",
+        "zh": "事件：hijack_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:hijack_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "hijack_misc_orphan_hijack_optionbar",
+      "stage": "hijack",
+      "speaker": null,
+      "title": {
+        "en": "Event: hijack_optionbar",
+        "zh": "事件：hijack_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:hijack_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "jabr_misc_orphan_jabr_blurb",
+      "stage": "jabr",
+      "speaker": null,
+      "title": {
+        "en": "Event: jabr_blurb",
+        "zh": "事件：jabr_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:jabr_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "jabr_misc_orphan_jabr_option",
+      "stage": "jabr",
+      "speaker": null,
+      "title": {
+        "en": "Event: jabr_option",
+        "zh": "事件：jabr_option"
+      },
+      "location": null,
+      "roots": [
+        "t:jabr_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "jabr_misc_orphan_jabr_blurbbar",
+      "stage": "jabr",
+      "speaker": null,
+      "title": {
+        "en": "Event: jabr_blurbbar",
+        "zh": "事件：jabr_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:jabr_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "jabr_misc_orphan_jabr_optionbar",
+      "stage": "jabr",
+      "speaker": null,
+      "title": {
+        "en": "Event: jabr_optionbar",
+        "zh": "事件：jabr_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:jabr_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "ddro_misc_orphan_ddro_blurb",
+      "stage": "ddro",
+      "speaker": null,
+      "title": {
+        "en": "Event: ddro_blurb",
+        "zh": "事件：ddro_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:ddro_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "ddro_misc_orphan_ddro_option",
+      "stage": "ddro",
+      "speaker": null,
+      "title": {
+        "en": "Event: ddro_option",
+        "zh": "事件：ddro_option"
+      },
+      "location": null,
+      "roots": [
+        "t:ddro_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "ddro_misc_orphan_ddro_blurbbar",
+      "stage": "ddro",
+      "speaker": null,
+      "title": {
+        "en": "Event: ddro_blurbbar",
+        "zh": "事件：ddro_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:ddro_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "ddro_misc_orphan_ddro_optionbar",
+      "stage": "ddro",
+      "speaker": null,
+      "title": {
+        "en": "Event: ddro_optionbar",
+        "zh": "事件：ddro_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:ddro_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "sitm_misc_orphan_sitm_blurb",
+      "stage": "sitm",
+      "speaker": null,
+      "title": {
+        "en": "Event: sitm_blurb",
+        "zh": "事件：sitm_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:sitm_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "sitm_misc_orphan_sitm_option",
+      "stage": "sitm",
+      "speaker": null,
+      "title": {
+        "en": "Event: sitm_option",
+        "zh": "事件：sitm_option"
+      },
+      "location": null,
+      "roots": [
+        "t:sitm_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "sitm_misc_orphan_sitm_blurbbar",
+      "stage": "sitm",
+      "speaker": null,
+      "title": {
+        "en": "Event: sitm_blurbbar",
+        "zh": "事件：sitm_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:sitm_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "sitm_misc_orphan_sitm_optionbar",
+      "stage": "sitm",
+      "speaker": null,
+      "title": {
+        "en": "Event: sitm_optionbar",
+        "zh": "事件：sitm_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:sitm_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "rdsm_return_other",
+      "stage": "RETURN",
+      "speaker": null,
+      "title": {
+        "en": "return_other",
+        "zh": "return_other"
+      },
+      "location": null,
+      "roots": [
+        "r:rdsmreturnToContact"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "rdsm_misc_orphan_rdsm_blurb",
+      "stage": "rdsm",
+      "speaker": null,
+      "title": {
+        "en": "Event: rdsm_blurb",
+        "zh": "事件：rdsm_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:rdsm_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "rdsm_misc_orphan_rdsm_option",
+      "stage": "rdsm",
+      "speaker": null,
+      "title": {
+        "en": "Event: rdsm_option",
+        "zh": "事件：rdsm_option"
+      },
+      "location": null,
+      "roots": [
+        "t:rdsm_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "rdsm_misc_orphan_rdsmraidfinished",
+      "stage": "rdsm",
+      "speaker": null,
+      "title": {
+        "en": "Event: rdsmraidfinished",
+        "zh": "事件：rdsmraidfinished"
+      },
+      "location": null,
+      "roots": [
+        "t:rdsmraidFinished"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "rsom_misc_orphan_rsom_blurb",
+      "stage": "rsom",
+      "speaker": null,
+      "title": {
+        "en": "Event: rsom_blurb",
+        "zh": "事件：rsom_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:rsom_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "rsom_misc_orphan_rsom_option",
+      "stage": "rsom",
+      "speaker": null,
+      "title": {
+        "en": "Event: rsom_option",
+        "zh": "事件：rsom_option"
+      },
+      "location": null,
+      "roots": [
+        "t:rsom_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "cpm_misc_orphan_cpm_blurb",
+      "stage": "cpm",
+      "speaker": null,
+      "title": {
+        "en": "Event: cpm_blurb",
+        "zh": "事件：cpm_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:cpm_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "cpm_misc_orphan_cpm_option",
+      "stage": "cpm",
+      "speaker": null,
+      "title": {
+        "en": "Event: cpm_option",
+        "zh": "事件：cpm_option"
+      },
+      "location": null,
+      "roots": [
+        "t:cpm_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "cpm_misc_orphan_cpm_blurbbar",
+      "stage": "cpm",
+      "speaker": null,
+      "title": {
+        "en": "Event: cpm_blurbbar",
+        "zh": "事件：cpm_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:cpm_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "cpm_misc_orphan_cpm_optionbar",
+      "stage": "cpm",
+      "speaker": null,
+      "title": {
+        "en": "Event: cpm_optionbar",
+        "zh": "事件：cpm_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:cpm_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "cpc_misc_orphan_cpc_blurb",
+      "stage": "cpc",
+      "speaker": null,
+      "title": {
+        "en": "Event: cpc_blurb",
+        "zh": "事件：cpc_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:cpc_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "cpc_misc_orphan_cpc_option",
+      "stage": "cpc",
+      "speaker": null,
+      "title": {
+        "en": "Event: cpc_option",
+        "zh": "事件：cpc_option"
+      },
+      "location": null,
+      "roots": [
+        "t:cpc_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "cpc_misc_orphan_cpc_blurbbar",
+      "stage": "cpc",
+      "speaker": null,
+      "title": {
+        "en": "Event: cpc_blurbbar",
+        "zh": "事件：cpc_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:cpc_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "cpc_misc_orphan_cpc_optionbar",
+      "stage": "cpc",
+      "speaker": null,
+      "title": {
+        "en": "Event: cpc_optionbar",
+        "zh": "事件：cpc_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:cpc_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "psb_misc_orphan_psb_blurb",
+      "stage": "psb",
+      "speaker": null,
+      "title": {
+        "en": "Event: psb_blurb",
+        "zh": "事件：psb_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:psb_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "psb_misc_orphan_psb_option",
+      "stage": "psb",
+      "speaker": null,
+      "title": {
+        "en": "Event: psb_option",
+        "zh": "事件：psb_option"
+      },
+      "location": null,
+      "roots": [
+        "t:psb_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "psb_misc_orphan_psb_blurbbar",
+      "stage": "psb",
+      "speaker": null,
+      "title": {
+        "en": "Event: psb_blurbbar",
+        "zh": "事件：psb_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:psb_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "psb_misc_orphan_psb_optionbar",
+      "stage": "psb",
+      "speaker": null,
+      "title": {
+        "en": "Event: psb_optionbar",
+        "zh": "事件：psb_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:psb_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "dhi_misc_orphan_dhi_blurb",
+      "stage": "dhi",
+      "speaker": null,
+      "title": {
+        "en": "Event: dhi_blurb",
+        "zh": "事件：dhi_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:dhi_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "dhi_misc_orphan_dhi_option",
+      "stage": "dhi",
+      "speaker": null,
+      "title": {
+        "en": "Event: dhi_option",
+        "zh": "事件：dhi_option"
+      },
+      "location": null,
+      "roots": [
+        "t:dhi_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "dhi_misc_orphan_dhi_blurbbar",
+      "stage": "dhi",
+      "speaker": null,
+      "title": {
+        "en": "Event: dhi_blurbbar",
+        "zh": "事件：dhi_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:dhi_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "dhi_misc_orphan_dhi_optionbar",
+      "stage": "dhi",
+      "speaker": null,
+      "title": {
+        "en": "Event: dhi_optionbar",
+        "zh": "事件：dhi_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:dhi_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "dsp_misc_orphan_dsp_blurb",
+      "stage": "dsp",
+      "speaker": null,
+      "title": {
+        "en": "Event: dsp_blurb",
+        "zh": "事件：dsp_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:dsp_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "dsp_misc_orphan_dsp_option",
+      "stage": "dsp",
+      "speaker": null,
+      "title": {
+        "en": "Event: dsp_option",
+        "zh": "事件：dsp_option"
+      },
+      "location": null,
+      "roots": [
+        "t:dsp_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "dsp_misc_orphan_dsp_blurbbar",
+      "stage": "dsp",
+      "speaker": null,
+      "title": {
+        "en": "Event: dsp_blurbbar",
+        "zh": "事件：dsp_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:dsp_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "dsp_misc_orphan_dsp_optionbar",
+      "stage": "dsp",
+      "speaker": null,
+      "title": {
+        "en": "Event: dsp_optionbar",
+        "zh": "事件：dsp_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:dsp_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "hmdf_misc_orphan_hmdf_blurb",
+      "stage": "hmdf",
+      "speaker": null,
+      "title": {
+        "en": "Event: hmdf_blurb",
+        "zh": "事件：hmdf_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:hmdf_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "hmdf_misc_orphan_hmdf_option",
+      "stage": "hmdf",
+      "speaker": null,
+      "title": {
+        "en": "Event: hmdf_option",
+        "zh": "事件：hmdf_option"
+      },
+      "location": null,
+      "roots": [
+        "t:hmdf_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "hmdf_misc_orphan_hmdf_blurbbar",
+      "stage": "hmdf",
+      "speaker": null,
+      "title": {
+        "en": "Event: hmdf_blurbbar",
+        "zh": "事件：hmdf_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:hmdf_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "hmdf_misc_orphan_hmdf_optionbar",
+      "stage": "hmdf",
+      "speaker": null,
+      "title": {
+        "en": "Event: hmdf_optionbar",
+        "zh": "事件：hmdf_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:hmdf_optionBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "locrlf_misc_dock",
+      "stage": "locrlf",
+      "speaker": null,
+      "title": {
+        "en": "Docked flavor text",
+        "zh": "靠港见闻"
+      },
+      "location": null,
+      "roots": [
+        "r:LOCRLoffloadToChurch",
+        "r:LOCRLoffloadToChurchSecular",
+        "r:LOCRLoffloadToPathMarket"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "locrlf_misc_orphan_locrlf_blurb",
+      "stage": "locrlf",
+      "speaker": null,
+      "title": {
+        "en": "Event: locrlf_blurb",
+        "zh": "事件：locrlf_blurb"
+      },
+      "location": null,
+      "roots": [
+        "t:locrlf_blurb"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "locrlf_misc_orphan_locrlf_option",
+      "stage": "locrlf",
+      "speaker": null,
+      "title": {
+        "en": "Event: locrlf_option",
+        "zh": "事件：locrlf_option"
+      },
+      "location": null,
+      "roots": [
+        "t:locrlf_option"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "locrlf_misc_orphan_locrlf_blurbbar",
+      "stage": "locrlf",
+      "speaker": null,
+      "title": {
+        "en": "Event: locrlf_blurbbar",
+        "zh": "事件：locrlf_blurbbar"
+      },
+      "location": null,
+      "roots": [
+        "t:locrlf_blurbBar"
+      ],
+      "speakerOverrides": {}
+    },
+    {
+      "id": "locrlf_misc_orphan_locrlf_optionbar",
+      "stage": "locrlf",
+      "speaker": null,
+      "title": {
+        "en": "Event: locrlf_optionbar",
+        "zh": "事件：locrlf_optionbar"
+      },
+      "location": null,
+      "roots": [
+        "t:locrlf_optionBar"
+      ],
+      "speakerOverrides": {}
+    }
+  ],
+  "excludeRules": [],
+  "ignoreRules": [],
+  "ignoreRulePatterns": [
+    "^DEV",
+    "^dev[A-Z]",
+    "test",
+    "Test",
+    "TEST",
+    "^relLevel",
+    "^flavorText",
+    "^bar_desc",
+    "^sd7s",
+    "^SD7S",
+    "^sdse",
+    "^SDSE",
+    "^sdtu",
+    "^SDTU",
+    "^sdsw",
+    "^SDSW",
+    "^sdr",
+    "^SDR"
+  ]
+}
