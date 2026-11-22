@@ -78,7 +78,8 @@ export interface QuestScene {
   speakerOverrides: Record<string, string>;
   /** 入口步骤 id 列表 */
   entries: string[];
-  steps: Record<string, DialogueStep>;
+  /** 场景包含的步骤 id（内容在 quest.steps 中全局共享） */
+  stepIds: string[];
 }
 
 export interface Quest {
@@ -90,6 +91,8 @@ export interface Quest {
   stages: QuestStage[];
   characters: QuestCharacter[];
   flags: QuestFlagGlossary;
+  /** 全部对话步骤（按 id 全局共享） */
+  steps: Record<string, DialogueStep>;
   scenes: QuestScene[];
 }
 

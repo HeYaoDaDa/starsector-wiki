@@ -14,7 +14,7 @@
       "factionId": "sindrian_diktat",
       "icon": "graphics/icons/missions/seven_sons.png",
       "stageCount": 11,
-      "sceneCount": 38
+      "sceneCount": 446
     },
     {
       "id": "the_supreme_executor",
@@ -29,7 +29,7 @@
       "factionId": "sindrian_diktat",
       "icon": "graphics/icons/missions/heir_to_andrada.png",
       "stageCount": 9,
-      "sceneCount": 20
+      "sceneCount": 322
     },
     {
       "id": "the_usurpers",
@@ -44,7 +44,7 @@
       "factionId": "sindrian_diktat",
       "icon": "graphics/icons/missions/the_usurpers.png",
       "stageCount": 10,
-      "sceneCount": 11
+      "sceneCount": 21
     }
   ]
 }

@@ -102,47 +102,36 @@
   ],
   "characters": [
     {
-      "id": "macario",
+      "id": "17054irkalla",
       "name": {
-        "en": "Dolos Macario",
-        "zh": "Dolos Macario"
+        "en": "17054irkalla",
+        "zh": "17054irkalla"
       },
       "title": {
-        "en": "Chief High Inspector, the 'Spider of Sindria'",
-        "zh": "最高检察长，'辛德里亚之蛛'"
+        "en": "",
+        "zh": ""
       }
     },
     {
-      "id": "rao",
+      "id": "58966elysium",
       "name": {
-        "en": "Orcus Rao",
-        "zh": "Orcus Rao"
+        "en": "58966elysium",
+        "zh": "58966elysium"
       },
       "title": {
-        "en": "Hegemony intelligence officer, Ragnar Complex (Valhalla)",
-        "zh": "霸主情报官，Valhalla 星系 Ragnar Complex"
+        "en": "",
+        "zh": ""
       }
     },
     {
-      "id": "siyavong",
+      "id": "achilles_andrada",
       "name": {
-        "en": "Finlay Siyavong",
-        "zh": "Finlay Siyavong"
+        "en": "Achilles 'Kalian' Andrada",
+        "zh": "Achilles 'Kalian' Andrada"
       },
       "title": {
-        "en": "Special Agent, Hegemony Fleet Intelligence",
-        "zh": "霸主舰队情报部特工"
-      }
-    },
-    {
-      "id": "faro_inesis",
-      "name": {
-        "en": "Faro Inesis",
-        "zh": "Faro Inesis"
-      },
-      "title": {
-        "en": "Tri-Tachyon black-site administrator",
-        "zh": "速子科技黑色站点主管"
+        "en": "Clone-son of Philip Andrada",
+        "zh": "Philip Andrada 的克隆子嗣"
       }
     },
     {
@@ -157,25 +146,36 @@
       }
     },
     {
-      "id": "horus_yaribay",
+      "id": "baird",
       "name": {
-        "en": "Horus Yaribay",
-        "zh": "Horus Yaribay"
+        "en": "Provost Baird",
+        "zh": "Provost Baird"
       },
       "title": {
-        "en": "Persean League official, Kazeron (Thule)",
-        "zh": "英仙座联盟官员，Kazeron（Thule 星系）"
+        "en": "Galatia Academy Provost",
+        "zh": "Galatia 学院院长"
       }
     },
     {
-      "id": "reynard_hannan",
+      "id": "caden",
       "name": {
-        "en": "Reynard Hannan",
-        "zh": "Reynard Hannan"
+        "en": "caden",
+        "zh": "caden"
       },
       "title": {
-        "en": "Persean League magnate, Kazeron (Thule)",
-        "zh": "英仙座联盟巨贾，Kazeron（Thule 星系）"
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "cydonia",
+      "name": {
+        "en": "cydonia",
+        "zh": "cydonia"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
       }
     },
     {
@@ -190,36 +190,14 @@
       }
     },
     {
-      "id": "glamor_rotanev",
+      "id": "faro_inesis",
       "name": {
-        "en": "Zunya Glamor-Rotanev",
-        "zh": "Zunya Glamor-Rotanev"
+        "en": "Faro Inesis",
+        "zh": "Faro Inesis"
       },
       "title": {
-        "en": "Tri-Tachyon Director, Eochu Bres",
-        "zh": "速子科技主管，Eochu Bres"
-      }
-    },
-    {
-      "id": "gargoyle",
-      "name": {
-        "en": "Gargoyle",
-        "zh": "Gargoyle"
-      },
-      "title": {
-        "en": "Notorious hacker",
-        "zh": "知名黑客"
-      }
-    },
-    {
-      "id": "baird",
-      "name": {
-        "en": "Provost Baird",
-        "zh": "Provost Baird"
-      },
-      "title": {
-        "en": "Galatia Academy Provost",
-        "zh": "Galatia 学院院长"
+        "en": "Tri-Tachyon black-site administrator",
+        "zh": "速子科技黑色站点主管"
       }
     },
     {
@@ -234,6 +212,94 @@
       }
     },
     {
+      "id": "gallu_blanc",
+      "name": {
+        "en": "gallu_blanc",
+        "zh": "gallu_blanc"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "gargoyle",
+      "name": {
+        "en": "Gargoyle",
+        "zh": "Gargoyle"
+      },
+      "title": {
+        "en": "Notorious hacker",
+        "zh": "知名黑客"
+      }
+    },
+    {
+      "id": "glamor_rotanev",
+      "name": {
+        "en": "Zunya Glamor-Rotanev",
+        "zh": "Zunya Glamor-Rotanev"
+      },
+      "title": {
+        "en": "Tri-Tachyon Director, Eochu Bres",
+        "zh": "速子科技主管，Eochu Bres"
+      }
+    },
+    {
+      "id": "hector_andrada",
+      "name": {
+        "en": "hector_andrada",
+        "zh": "hector_andrada"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "horus_yaribay",
+      "name": {
+        "en": "Horus Yaribay",
+        "zh": "Horus Yaribay"
+      },
+      "title": {
+        "en": "Persean League official, Kazeron (Thule)",
+        "zh": "英仙座联盟官员，Kazeron（Thule 星系）"
+      }
+    },
+    {
+      "id": "hyder",
+      "name": {
+        "en": "hyder",
+        "zh": "hyder"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "ko_jove",
+      "name": {
+        "en": "ko_jove",
+        "zh": "ko_jove"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "macario",
+      "name": {
+        "en": "Dolos Macario",
+        "zh": "Dolos Macario"
+      },
+      "title": {
+        "en": "Chief High Inspector, the 'Spider of Sindria'",
+        "zh": "最高检察长，'辛德里亚之蛛'"
+      }
+    },
+    {
       "id": "maeus_moroz",
       "name": {
         "en": "Maeus Moroz",
@@ -245,6 +311,61 @@
       }
     },
     {
+      "id": "rao",
+      "name": {
+        "en": "Orcus Rao",
+        "zh": "Orcus Rao"
+      },
+      "title": {
+        "en": "Hegemony intelligence officer, Ragnar Complex (Valhalla)",
+        "zh": "霸主情报官，Valhalla 星系 Ragnar Complex"
+      }
+    },
+    {
+      "id": "reynard_hannan",
+      "name": {
+        "en": "Reynard Hannan",
+        "zh": "Reynard Hannan"
+      },
+      "title": {
+        "en": "Persean League magnate, Kazeron (Thule)",
+        "zh": "英仙座联盟巨贾，Kazeron（Thule 星系）"
+      }
+    },
+    {
+      "id": "sd7s_qaras_agent",
+      "name": {
+        "en": "sd7s_qaras_agent",
+        "zh": "sd7s_qaras_agent"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
+      "id": "siyavong",
+      "name": {
+        "en": "Finlay Siyavong",
+        "zh": "Finlay Siyavong"
+      },
+      "title": {
+        "en": "Special Agent, Hegemony Fleet Intelligence",
+        "zh": "霸主舰队情报部特工"
+      }
+    },
+    {
+      "id": "station_galatia_academy",
+      "name": {
+        "en": "station_galatia_academy",
+        "zh": "station_galatia_academy"
+      },
+      "title": {
+        "en": "",
+        "zh": ""
+      }
+    },
+    {
       "id": "imoinu_kato",
       "name": {
         "en": "Imoinu Kato",
@@ -253,17 +374,6 @@
       "title": {
         "en": "ARC rebel leader on Umbra",
         "zh": "Umbra 的 ARC 反叛军首领"
-      }
-    },
-    {
-      "id": "achilles_andrada",
-      "name": {
-        "en": "Achilles 'Kalian' Andrada",
-        "zh": "Achilles 'Kalian' Andrada"
-      },
-      "title": {
-        "en": "Clone-son of Philip Andrada",
-        "zh": "Philip Andrada 的克隆子嗣"
       }
     }
   ],
@@ -339,19 +449,82 @@
   },
   "scenes": [
     {
-      "id": "start_greet_talk_rao",
+      "id": "misc_other",
       "stage": null,
       "speaker": null,
       "title": {
-        "en": "Quest start: Greetings: rao",
-        "zh": "任务开始：问候：rao"
+        "en": "misc_other",
+        "zh": "misc_other"
+      },
+      "location": null,
+      "roots": [
+        "r:relLevelDiktatSDTU",
+        "r:HyderGreetDefaultTrustPostSTDU",
+        "r:HyderGreetDefaultPostSTDU",
+        "r:HyderGreetDefaultSDPostSTDU"
+      ]
+    },
+    {
+      "id": "misc_conv_rao",
+      "stage": null,
+      "speaker": "rao",
+      "title": {
+        "en": "Conversations: rao",
+        "zh": "对话：rao"
       },
       "location": {
-        "en": "Comm conversation with rao",
-        "zh": "与 rao 的通讯"
+        "en": "Comm / bar conversations with rao",
+        "zh": "与 rao 的通讯 / 交谈"
       },
       "roots": [
-        "r:raoGreetingFastOne"
+        "r:SD7SconfrontRaoAboutKillingOpt",
+        "r:raoGreetingFastOne",
+        "r:raoAskDiktatMerc",
+        "r:RaoLookingForWorkOption",
+        "r:SD7SraoPostFindOption",
+        "r:SD7SraoDiscussFortunaOpt",
+        "r:SD7SherculesToHegemonyOption",
+        "r:SD7SherculesToOrcusOption",
+        "r:SD7SleoToOrcusOption"
+      ]
+    },
+    {
+      "id": "misc_conv_horus_yaribay",
+      "stage": null,
+      "speaker": "horus_yaribay",
+      "title": {
+        "en": "Conversations: horus_yaribay",
+        "zh": "对话：horus_yaribay"
+      },
+      "location": {
+        "en": "Comm / bar conversations with horus_yaribay",
+        "zh": "与 horus_yaribay 的通讯 / 交谈"
+      },
+      "roots": [
+        "r:SD7SyaribayDiscussStartOpt",
+        "r:preSDSEtalkToHorus",
+        "r:SD7ShYaribayAchillesAsk",
+        "r:SD7ShYaribayAchillesAskB",
+        "r:SDRhorusACAdoneAsk"
+      ]
+    },
+    {
+      "id": "misc_conv_faro_inesis",
+      "stage": null,
+      "speaker": "faro_inesis",
+      "title": {
+        "en": "Conversations: faro_inesis",
+        "zh": "对话：faro_inesis"
+      },
+      "location": {
+        "en": "Comm / bar conversations with faro_inesis",
+        "zh": "与 faro_inesis 的通讯 / 交谈"
+      },
+      "roots": [
+        "r:SD7SInesisFromTTcontactOpt",
+        "r:inesisLeoAskOpt",
+        "r:inesisLeonidasOpt",
+        "r:inesisLeonidasOptAgain"
       ]
     },
     {
@@ -371,7 +544,25 @@
       ]
     },
     {
-      "id": "start_talk_macario",
+      "id": "misc_talk_caden",
+      "stage": null,
+      "speaker": "caden",
+      "title": {
+        "en": "Quest start: Talk: caden",
+        "zh": "任务开始：与 caden 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with caden",
+        "zh": "与 caden 的通讯"
+      },
+      "roots": [
+        "r:defaultCadenGreetPostSDTU",
+        "r:defaultCadenGreetPostSDTUcom",
+        "r:defaultCadenGreetPostSDTUbacker"
+      ]
+    },
+    {
+      "id": "misc_talk_macario",
       "stage": null,
       "speaker": "macario",
       "title": {
@@ -387,7 +578,25 @@
       ]
     },
     {
-      "id": "start_talk_siyavong",
+      "id": "misc_conv_ko_jove",
+      "stage": null,
+      "speaker": "ko_jove",
+      "title": {
+        "en": "Conversations: ko_jove",
+        "zh": "对话：ko_jove"
+      },
+      "location": {
+        "en": "Comm / bar conversations with ko_jove",
+        "zh": "与 ko_jove 的通讯 / 交谈"
+      },
+      "roots": [
+        "r:KOjoveSD7SpostAgent",
+        "r:KOjoveSD7SpostAgentSD",
+        "r:SD7SqarasAskJovePermOpt"
+      ]
+    },
+    {
+      "id": "misc_talk_siyavong",
       "stage": null,
       "speaker": "siyavong",
       "title": {
@@ -403,7 +612,7 @@
       ]
     },
     {
-      "id": "start_talk_faro_inesis",
+      "id": "misc_talk_faro_inesis",
       "stage": null,
       "speaker": "faro_inesis",
       "title": {
@@ -419,7 +628,7 @@
       ]
     },
     {
-      "id": "start_talk_rao",
+      "id": "misc_talk_rao",
       "stage": null,
       "speaker": "rao",
       "title": {
@@ -436,7 +645,7 @@
       ]
     },
     {
-      "id": "start_talk_arroyo",
+      "id": "misc_talk_arroyo",
       "stage": null,
       "speaker": "arroyo",
       "title": {
@@ -512,7 +721,8 @@
         "r:SD7SPLVIPoption",
         "r:SD7SPLContactOption",
         "r:SD7SttVIPoption",
-        "r:SD7SttContactOption"
+        "r:SD7SttContactOption",
+        "r:SD7SandradaDecryptBegin2"
       ]
     },
     {
@@ -648,6 +858,25 @@
       ]
     },
     {
+      "id": "misc_conv_siyavong",
+      "stage": null,
+      "speaker": "siyavong",
+      "title": {
+        "en": "Conversations: siyavong",
+        "zh": "对话：siyavong"
+      },
+      "location": {
+        "en": "Comm / bar conversations with siyavong",
+        "zh": "与 siyavong 的通讯 / 交谈"
+      },
+      "roots": [
+        "r:SD7SsiyavongSonsAfter",
+        "r:SD7SleoToSiyavongOption",
+        "r:PostSD7SsiyavongFortunaOpt",
+        "r:PostSDRsiyavongGreetingB"
+      ]
+    },
+    {
       "id": "talk_inesis_talk_faro_inesis",
       "stage": "TALK_INESIS",
       "speaker": "faro_inesis",
@@ -684,6 +913,79 @@
       ]
     },
     {
+      "id": "misc_conv_58966elysium",
+      "stage": null,
+      "speaker": "58966elysium",
+      "title": {
+        "en": "Conversations: 58966elysium",
+        "zh": "对话：58966elysium"
+      },
+      "location": {
+        "en": "Comm / bar conversations with 58966elysium",
+        "zh": "与 58966elysium 的通讯 / 交谈"
+      },
+      "roots": [
+        "r:SD7SelysiumDevOpt",
+        "r:SD7SelysiumDevOpt2",
+        "r:SD7SelysiumOptStart",
+        "r:SD7SelysiumOptLeave"
+      ]
+    },
+    {
+      "id": "misc_talk_58966elysium",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Talk: 58966elysium",
+        "zh": "任务开始：与 58966elysium 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with 58966elysium",
+        "zh": "与 58966elysium 的通讯"
+      },
+      "roots": [
+        "r:SD7SelysiumOpenDialog",
+        "r:SD7SelysiumOpenDialogB",
+        "r:SD7SelysiumOpenDialogC",
+        "r:SD7SelysiumOpenDialogD"
+      ]
+    },
+    {
+      "id": "misc_conv_17054irkalla",
+      "stage": null,
+      "speaker": "17054irkalla",
+      "title": {
+        "en": "Conversations: 17054irkalla",
+        "zh": "对话：17054irkalla"
+      },
+      "location": {
+        "en": "Comm / bar conversations with 17054irkalla",
+        "zh": "与 17054irkalla 的通讯 / 交谈"
+      },
+      "roots": [
+        "r:SD7SirkallaDevOption",
+        "r:SD7SirkallaOptStart",
+        "r:SD7SirkallaOptStartPostVisit",
+        "r:SD7SirkallaOptLeave"
+      ]
+    },
+    {
+      "id": "misc_talk_17054irkalla",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Talk: 17054irkalla",
+        "zh": "任务开始：与 17054irkalla 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with 17054irkalla",
+        "zh": "与 17054irkalla 的通讯"
+      },
+      "roots": [
+        "r:SD7SirkallaOpenInteractionDialog"
+      ]
+    },
+    {
       "id": "find_them_mkt_qaras",
       "stage": "FIND_THEM",
       "speaker": null,
@@ -701,19 +1003,51 @@
       ]
     },
     {
-      "id": "start_greet_talk_sd7s_qaras_agent",
-      "stage": null,
+      "id": "find_them_other",
+      "stage": "FIND_THEM",
       "speaker": null,
       "title": {
-        "en": "Quest start: Greetings: sd7s_qaras_agent",
-        "zh": "任务开始：问候：sd7s_qaras_agent"
+        "en": "find_them_other",
+        "zh": "find_them_other"
+      },
+      "location": null,
+      "roots": [
+        "r:SD7SreturnFromBarInterrupt",
+        "r:SD7SblancCryo2",
+        "r:SD7SblancCryo2askedAlready",
+        "r:SD7SreyAndradaFilesAskSelB"
+      ]
+    },
+    {
+      "id": "misc_conv_sd7s_qaras_agent",
+      "stage": null,
+      "speaker": "sd7s_qaras_agent",
+      "title": {
+        "en": "Conversations: sd7s_qaras_agent",
+        "zh": "对话：sd7s_qaras_agent"
       },
       "location": {
-        "en": "Comm conversation with sd7s_qaras_agent",
-        "zh": "与 sd7s_qaras_agent 的通讯"
+        "en": "Comm / bar conversations with sd7s_qaras_agent",
+        "zh": "与 sd7s_qaras_agent 的通讯 / 交谈"
       },
       "roots": [
         "r:SD7SqarasAgentComms"
+      ]
+    },
+    {
+      "id": "misc_conv_station_galatia_academy",
+      "stage": null,
+      "speaker": "station_galatia_academy",
+      "title": {
+        "en": "Conversations: station_galatia_academy",
+        "zh": "对话：station_galatia_academy"
+      },
+      "location": {
+        "en": "Comm / bar conversations with station_galatia_academy",
+        "zh": "与 station_galatia_academy 的通讯 / 交谈"
+      },
+      "roots": [
+        "r:SD7SgaDevMenuOption"
       ]
     },
     {
@@ -749,16 +1083,16 @@
       ]
     },
     {
-      "id": "start_greet_talk_achilles_andrada",
+      "id": "misc_conv_achilles_andrada",
       "stage": null,
-      "speaker": null,
+      "speaker": "achilles_andrada",
       "title": {
-        "en": "Quest start: Greetings: achilles_andrada",
-        "zh": "任务开始：问候：achilles_andrada"
+        "en": "Conversations: achilles_andrada",
+        "zh": "对话：achilles_andrada"
       },
       "location": {
-        "en": "Comm conversation with achilles_andrada",
-        "zh": "与 achilles_andrada 的通讯"
+        "en": "Comm / bar conversations with achilles_andrada",
+        "zh": "与 achilles_andrada 的通讯 / 交谈"
       },
       "roots": [
         "r:SD7SachillesOpenComms",
@@ -782,16 +1116,16 @@
       ]
     },
     {
-      "id": "start_greet_talk_gallu_blanc",
+      "id": "misc_conv_gallu_blanc",
       "stage": null,
-      "speaker": null,
+      "speaker": "gallu_blanc",
       "title": {
-        "en": "Quest start: Greetings: gallu_blanc",
-        "zh": "任务开始：问候：gallu_blanc"
+        "en": "Conversations: gallu_blanc",
+        "zh": "对话：gallu_blanc"
       },
       "location": {
-        "en": "Comm conversation with gallu_blanc",
-        "zh": "与 gallu_blanc 的通讯"
+        "en": "Comm / bar conversations with gallu_blanc",
+        "zh": "与 gallu_blanc 的通讯 / 交谈"
       },
       "roots": [
         "r:SD7SgalluBlancGreetingAgain"
@@ -840,21 +1174,25 @@
       ]
     },
     {
-      "id": "start_greet_talk_cydonia",
+      "id": "misc_conv_cydonia",
       "stage": null,
-      "speaker": null,
+      "speaker": "cydonia",
       "title": {
-        "en": "Quest start: Greetings: cydonia",
-        "zh": "任务开始：问候：cydonia"
+        "en": "Conversations: cydonia",
+        "zh": "对话：cydonia"
       },
       "location": {
-        "en": "Comm conversation with cydonia",
-        "zh": "与 cydonia 的通讯"
+        "en": "Comm / bar conversations with cydonia",
+        "zh": "与 cydonia 的通讯 / 交谈"
       },
       "roots": [
         "r:SD7ScydoniaGreetingFirst",
         "r:SD7ScydoniaGreetingAgain",
-        "r:SD7ScydoniaGreetingTriedAsk"
+        "r:SD7ScydoniaGreetingTriedAsk",
+        "r:SD7ScydoniaOptConfrontTry",
+        "r:SD7ScydoniaOptConfrontTryAgain",
+        "r:SD7ScydoniaOptRealConfrontFirst",
+        "r:SD7ScydoniaOptRealConfrontAgain"
       ]
     },
     {
@@ -874,16 +1212,16 @@
       ]
     },
     {
-      "id": "start_greet_talk_maeus_moroz",
+      "id": "misc_conv_maeus_moroz",
       "stage": null,
-      "speaker": null,
+      "speaker": "maeus_moroz",
       "title": {
-        "en": "Quest start: Greetings: maeus_moroz",
-        "zh": "任务开始：问候：maeus_moroz"
+        "en": "Conversations: maeus_moroz",
+        "zh": "对话：maeus_moroz"
       },
       "location": {
-        "en": "Comm conversation with maeus_moroz",
-        "zh": "与 maeus_moroz 的通讯"
+        "en": "Comm / bar conversations with maeus_moroz",
+        "zh": "与 maeus_moroz 的通讯 / 交谈"
       },
       "roots": [
         "r:SD7SmorozGreeting",
@@ -922,7 +1260,94 @@
       "roots": [
         "r:SD7SorthrusVIPaskOpt",
         "r:SD7SorthrusVIPaskOptB",
-        "r:SD7SorthrusVIPaskOptAgain"
+        "r:SD7SorthrusVIPaskOptAgain",
+        "r:SD7SmaeusBarShootReturn",
+        "r:SD7SmaeusBarShootReturnShot"
+      ]
+    },
+    {
+      "id": "misc_conv_fortuna_kato",
+      "stage": null,
+      "speaker": "fortuna_kato",
+      "title": {
+        "en": "Conversations: fortuna_kato",
+        "zh": "对话：fortuna_kato"
+      },
+      "location": {
+        "en": "Comm / bar conversations with fortuna_kato",
+        "zh": "与 fortuna_kato 的通讯 / 交谈"
+      },
+      "roots": [
+        "r:PostSD7SfortunaFromHorusOpt",
+        "r:PostSD7SfortunaSupportOpt",
+        "r:PostSD7SfortunaSupportOptMerc"
+      ]
+    },
+    {
+      "id": "misc_conv_hyder",
+      "stage": null,
+      "speaker": "hyder",
+      "title": {
+        "en": "Conversations: hyder",
+        "zh": "对话：hyder"
+      },
+      "location": {
+        "en": "Comm / bar conversations with hyder",
+        "zh": "与 hyder 的通讯 / 交谈"
+      },
+      "roots": [
+        "r:SDSEhyderTalkFilesOpt",
+        "r:SDSEhyderTalkFilesOptAgain",
+        "r:SDSEhyderTalkFilesOptProHector"
+      ]
+    },
+    {
+      "id": "misc_conv_caden",
+      "stage": null,
+      "speaker": "caden",
+      "title": {
+        "en": "Conversations: caden",
+        "zh": "对话：caden"
+      },
+      "location": {
+        "en": "Comm / bar conversations with caden",
+        "zh": "与 caden 的通讯 / 交谈"
+      },
+      "roots": [
+        "r:SDSEcadenOfferIntel",
+        "r:SDSEcadenOfferIntelSetOff"
+      ]
+    },
+    {
+      "id": "misc_dock",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Docked flavor text",
+        "zh": "靠港见闻"
+      },
+      "location": null,
+      "roots": [
+        "r:SDRfortunaMessageEarly",
+        "r:SDRfortunaMessageEarlyMerc"
+      ]
+    },
+    {
+      "id": "misc_conv_reynard_hannan",
+      "stage": null,
+      "speaker": "reynard_hannan",
+      "title": {
+        "en": "Conversations: reynard_hannan",
+        "zh": "对话：reynard_hannan"
+      },
+      "location": {
+        "en": "Comm / bar conversations with reynard_hannan",
+        "zh": "与 reynard_hannan 的通讯 / 交谈"
+      },
+      "roots": [
+        "r:SD7ShannanAndradaFilesBroughtOpt",
+        "r:SD7SreyAndradaFilesDiscussOptB",
+        "r:SD7SreyAndradaFilesFromHorus"
       ]
     },
     {
@@ -943,6 +1368,19 @@
       ]
     },
     {
+      "id": "talk_siyavong_other",
+      "stage": "TALK_SIYAVONG",
+      "speaker": null,
+      "title": {
+        "en": "talk_siyavong_other",
+        "zh": "talk_siyavong_other"
+      },
+      "location": null,
+      "roots": [
+        "r:SD7SreyAndradaFilesAskSelA"
+      ]
+    },
+    {
       "id": "find_them_talk_arroyo",
       "stage": "FIND_THEM",
       "speaker": "arroyo",
@@ -959,19 +1397,175 @@
       ]
     },
     {
-      "id": "start_greet_talk_siyavong",
+      "id": "misc_conv_hector_andrada",
+      "stage": null,
+      "speaker": "hector_andrada",
+      "title": {
+        "en": "Conversations: hector_andrada",
+        "zh": "对话：hector_andrada"
+      },
+      "location": {
+        "en": "Comm / bar conversations with hector_andrada",
+        "zh": "与 hector_andrada 的通讯 / 交谈"
+      },
+      "roots": [
+        "r:SDRhectorBringLeonidas"
+      ]
+    },
+    {
+      "id": "misc_orphan_historianbackstoryblurb",
       "stage": null,
       "speaker": null,
       "title": {
-        "en": "Quest start: Greetings: siyavong",
-        "zh": "任务开始：问候：siyavong"
+        "en": "Event: historianbackstoryblurb",
+        "zh": "事件：historianbackstoryblurb"
       },
-      "location": {
-        "en": "Comm conversation with siyavong",
-        "zh": "与 siyavong 的通讯"
-      },
+      "location": null,
       "roots": [
-        "r:PostSDRsiyavongGreetingB"
+        "t:HistorianBackstoryBlurb"
+      ]
+    },
+    {
+      "id": "misc_orphan_sevensonsandradadecryptb",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Event: sevensonsandradadecryptb",
+        "zh": "事件：sevensonsandradadecryptb"
+      },
+      "location": null,
+      "roots": [
+        "t:SevenSonsAndradaDecryptBegin"
+      ]
+    },
+    {
+      "id": "misc_orphan_sevensonsandradafilebegi",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Event: sevensonsandradafilebegi",
+        "zh": "事件：sevensonsandradafilebegi"
+      },
+      "location": null,
+      "roots": [
+        "t:SevenSonsAndradaFileBegin"
+      ]
+    },
+    {
+      "id": "misc_orphan_sd7selyraidafinished",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Event: sd7selyraidafinished",
+        "zh": "事件：sd7selyraidafinished"
+      },
+      "location": null,
+      "roots": [
+        "t:SD7SelyRaidAFinished"
+      ]
+    },
+    {
+      "id": "misc_orphan_sd7selyraidbfinished",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Event: sd7selyraidbfinished",
+        "zh": "事件：sd7selyraidbfinished"
+      },
+      "location": null,
+      "roots": [
+        "t:SD7SelyRaidBFinished"
+      ]
+    },
+    {
+      "id": "misc_orphan_sd7selyraidafinished2",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Event: sd7selyraidafinished2",
+        "zh": "事件：sd7selyraidafinished2"
+      },
+      "location": null,
+      "roots": [
+        "t:SD7SelyRaidAFinished2"
+      ]
+    },
+    {
+      "id": "misc_orphan_sd7selyraidbfinished2",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Event: sd7selyraidbfinished2",
+        "zh": "事件：sd7selyraidbfinished2"
+      },
+      "location": null,
+      "roots": [
+        "t:SD7SelyRaidBFinished2"
+      ]
+    },
+    {
+      "id": "misc_orphan_sd7selymerchail",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Event: sd7selymerchail",
+        "zh": "事件：sd7selymerchail"
+      },
+      "location": null,
+      "roots": [
+        "t:SD7SelyMercHail"
+      ]
+    },
+    {
+      "id": "misc_orphan_sd7sirkmerchail",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Event: sd7sirkmerchail",
+        "zh": "事件：sd7sirkmerchail"
+      },
+      "location": null,
+      "roots": [
+        "t:SD7SirkMercHail"
+      ]
+    },
+    {
+      "id": "misc_orphan_sd7sqarasraidfinisheda",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Event: sd7sqarasraidfinisheda",
+        "zh": "事件：sd7sqarasraidfinisheda"
+      },
+      "location": null,
+      "roots": [
+        "t:SD7SqarasRaidFinishedA"
+      ]
+    },
+    {
+      "id": "misc_orphan_sd7sqarasraidfinishedb",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Event: sd7sqarasraidfinishedb",
+        "zh": "事件：sd7sqarasraidfinishedb"
+      },
+      "location": null,
+      "roots": [
+        "t:SD7SqarasRaidFinishedB"
+      ]
+    },
+    {
+      "id": "misc_orphan_sd7sqarasagentdefeated",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Event: sd7sqarasagentdefeated",
+        "zh": "事件：sd7sqarasagentdefeated"
+      },
+      "location": null,
+      "roots": [
+        "t:SD7SQarasAgentDefeated"
       ]
     }
   ],
@@ -1000,7 +1594,10 @@
     "^dev[A-Z]",
     "test",
     "Test",
-    "TEST"
+    "TEST",
+    "^relLevel",
+    "^flavorText",
+    "^bar_desc"
   ],
   "icon": "graphics/icons/missions/seven_sons.png"
 }

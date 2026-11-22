@@ -432,21 +432,55 @@ class QuestBuilder:
 
         scenes_out = [self.build_scene(s, root_scene_map) for s in self.quest['scenes']]
 
-        # coverage: quest-referencing rules not consumed by any scene
+        # ---- coverage backstop ----------------------------------------------
+        # 最多两轮：仍未覆盖的带文本/选项规则，自动补场景（孤儿中枢 → t: 根，
+        # 泛型触发器规则 → r: 根），保证任务相关内容不因入口未策展而丢失。
         needle = self.quest['gameId']
-        ignored = set(self.quest.get('ignoreRules', []))
-        patterns = [re.compile(p) for p in self.quest.get('ignoreRulePatterns', [])]
-        for rid in self.order:
-            br = self.idx.rules[rid]
-            r = br.en
-            if rid in ignored or any(p.match(rid) for p in patterns):
-                continue
-            blob = ' '.join([r.id, r.trigger, ' '.join(r.conditions),
-                             '\n'.join(r.script_lines),
-                             ' '.join(o.id + o.label for o in r.options)]).lower()
-            if needle in blob and rid not in self.consumed and not self._is_dev(r):
-                self.report['uncovered_rules'].append(rid)
+        for _round in range(2):
+            uncovered = self._uncovered_rules(needle)
+            if not uncovered:
+                break
+            auto_scenes = []
+            seen_triggers = {s.get('id') for s in scenes_out}
+            for rid in uncovered:
+                br = self.idx.rules[rid]
+                r = br.en
+                if r.trigger not in GENERIC_TRIGGERS:
+                    scene_id = 'auto_' + r.trigger[:28].lower()
+                    if scene_id not in seen_triggers:
+                        seen_triggers.add(scene_id)
+                        auto_scenes.append({
+                            'id': scene_id, 'stage': None, 'speaker': None,
+                            'title': {'en': f'[auto] {r.trigger}',
+                                      'zh': f'[自动] {r.trigger}'},
+                            'location': None,
+                            'roots': ['t:' + r.trigger],
+                        })
+                else:
+                    scene_id = 'auto_rule_' + rid[:40].lower()
+                    if scene_id not in seen_triggers and (r.text or r.options):
+                        seen_triggers.add(scene_id)
+                        auto_scenes.append({
+                            'id': scene_id, 'stage': None, 'speaker': None,
+                            'title': {'en': f'[auto] {rid}', 'zh': f'[自动] {rid}'},
+                            'location': None,
+                            'roots': ['r:' + rid],
+                        })
+            if not auto_scenes:
+                break
+            for asc in auto_scenes:
+                scenes_out.append(self.build_scene(asc, root_scene_map))
 
+        # final coverage for the report
+        self.report['uncovered_rules'] = self._uncovered_rules(needle)
+
+        # ---- normalize: steps are per-quest; scenes keep id lists only --
+        quest_steps: Dict[str, dict] = {}
+        for scene in scenes_out:
+            steps = scene.pop('steps')
+            scene['stepIds'] = list(steps.keys())
+            for sid, st in steps.items():
+                quest_steps.setdefault(sid, st)
         return {
             'id': self.quest['id'],
             'name': self.quest['name'],
@@ -456,8 +490,27 @@ class QuestBuilder:
             'stages': self.quest['stages'],
             'characters': self.quest['characters'],
             'flags': self.quest.get('flags', {}),
+            'steps': quest_steps,
             'scenes': scenes_out,
         }
+
+    def _uncovered_rules(self, needle: str) -> List[str]:
+        ignored = set(self.quest.get('ignoreRules', []))
+        patterns = [re.compile(p) for p in self.quest.get('ignoreRulePatterns', [])]
+        out = []
+        for rid in self.order:
+            br = self.idx.rules[rid]
+            r = br.en
+            if rid in ignored or any(p.match(rid) for p in patterns):
+                continue
+            if rid in self.consumed or self._is_dev(r):
+                continue
+            blob = ' '.join([r.id, r.trigger, ' '.join(r.conditions),
+                             '\n'.join(r.script_lines),
+                             ' '.join(o.id + o.label for o in r.options)]).lower()
+            if needle in blob:
+                out.append(rid)
+        return out
 
 
 # ---------------------------------------------------------------------------
@@ -513,8 +566,8 @@ def main():
         print(f"building quest: {quest['id']} ...")
         builder = QuestBuilder(index, order, quest)
         out = builder.build()
-        n_steps = sum(len(s['steps']) for s in out['scenes'])
-        n_texts = sum(len(st['texts']) for s in out['scenes'] for st in s['steps'].values())
+        n_steps = len(out['steps'])
+        n_texts = sum(len(st['texts']) for st in out['steps'].values())
         print(f"  scenes={len(out['scenes'])} steps={n_steps} texts={n_texts}")
         rep = builder.report
         print(f"  report: uncovered={len(rep['uncovered_rules'])} "

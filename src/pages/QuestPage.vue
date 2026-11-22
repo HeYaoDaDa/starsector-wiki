@@ -63,9 +63,22 @@ const faction = computed(() => {
 
 /** 按任务阶段分组场景；无阶段的场景排在最前 */
 const stageGroups = computed(() => {
+  return curatedGroups.value;
+});
+
+const selectedScene = computed<QuestScene | undefined>(() => {
+  if (!quest.value || !selectedSceneId.value) {
+    return undefined;
+  }
+  return quest.value.scenes.find((s) => s.id === selectedSceneId.value);
+});
+
+/** 策展场景 vs 自动兜底收录场景 */
+const curatedGroups = computed(() => {
   if (!quest.value) {
     return [];
   }
+  const isAuto = (sc: QuestScene) => sc.id.startsWith('auto_');
   const stages = quest.value.stages;
   const groups = stages.map((st) => ({
     stage: st,
@@ -73,6 +86,9 @@ const stageGroups = computed(() => {
   }));
   const ungrouped = { stage: null, scenes: [] as QuestScene[] };
   for (const scene of quest.value.scenes) {
+    if (isAuto(scene)) {
+      continue;
+    }
     if (scene.stage) {
       const group = groups.find((g) => g.stage.id === scene.stage);
       if (group) {
@@ -94,12 +110,11 @@ const stageGroups = computed(() => {
   return out;
 });
 
-const selectedScene = computed<QuestScene | undefined>(() => {
-  if (!quest.value || !selectedSceneId.value) {
-    return undefined;
-  }
-  return quest.value.scenes.find((s) => s.id === selectedSceneId.value);
-});
+const autoScenes = computed<QuestScene[]>(() =>
+  (quest.value?.scenes ?? []).filter((sc) => sc.id.startsWith('auto_'))
+);
+
+const showAuto = ref(false);
 
 function selectScene(sceneId: string) {
   selectedSceneId.value = sceneId;
@@ -198,6 +213,32 @@ function selectScene(sceneId: string) {
                   >
                     {{ primary(scene.location) }}
                   </div>
+                </div>
+              </q-btn>
+            </div>
+          </div>
+
+          <!-- 自动兜底收录的场景（折叠） -->
+          <div v-if="autoScenes.length > 0" class="quest-auto-block">
+            <q-btn
+              dense
+              flat
+              no-caps
+              icon="auto_awesome"
+              :label="$t('quest.autoScenes', { count: autoScenes.length })"
+              @click="showAuto = !showAuto"
+            />
+            <div v-if="showAuto" class="quest-scene-list">
+              <q-btn
+                v-for="scene in autoScenes"
+                :key="scene.id"
+                class="quest-scene-btn quest-scene-btn-auto"
+                no-caps
+                align="left"
+                @click="selectScene(scene.id)"
+              >
+                <div class="quest-scene-content">
+                  <div class="quest-scene-title">{{ primary(scene.title) }}</div>
                 </div>
               </q-btn>
             </div>
@@ -387,5 +428,12 @@ h5 {
 .quest-scene-title-lg {
   font-size: 1.15em;
   font-weight: bold;
+}
+.quest-scene-btn-auto {
+  opacity: 0.75;
+}
+
+.quest-auto-block {
+  margin-top: 10px;
 }
 </style>

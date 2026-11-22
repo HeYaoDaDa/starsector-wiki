@@ -229,6 +229,7 @@
   "quest.effects": "剧情影响",
   "quest.entryConditions": "触发方式",
   "quest.selectEntry": "入口",
+  "quest.autoScenes": "自动收录的场景（{count} 个）—— 完整性兜底",
   "quest.crossScene": "继续于场景：{scene}",
   "quest.stageHint": "阶段：{stage}",
   "quest.dialogPath": "路径",

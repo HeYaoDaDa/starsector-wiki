@@ -39,7 +39,7 @@ const entryStepId = computed(
 const currentStepId = ref<string>(entryStepId.value);
 
 const step = computed<DialogueStep | undefined>(
-  () => props.scene.steps[currentStepId.value]
+  () => props.quest.steps[currentStepId.value]
 );
 
 const atEntry = computed(() => path.value.length === 0);
@@ -102,7 +102,7 @@ function selectEntry(index: number) {
 
 function entryLabel(index: number): string {
   const sid = props.scene.entries[index];
-  const st = props.scene.steps[sid];
+  const st = props.quest.steps[sid];
   if (st && st.texts.length > 0) {
     const text = primary(st.texts[0]);
     return text.replace(/\s+/g, ' ').slice(0, 28) + (text.length > 28 ? '…' : '');

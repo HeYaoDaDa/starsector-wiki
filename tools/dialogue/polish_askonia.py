@@ -24,6 +24,17 @@ def save(name, data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
+def merge_characters(existing, curated):
+    """保留草稿收集到的人物骨架，叠加人工策展的头衔。"""
+    by_id = {c['id']: c for c in existing}
+    for c in curated:
+        if c['id'] in by_id:
+            by_id[c['id']] = c
+        else:
+            by_id[c['id']] = c
+    return list(by_id.values())
+
+
 def icon_for(mission_id):
     path = os.path.expanduser('~/Games/starsector-0985a-en/data/campaign/person_missions.csv')
     with open(path, newline='', encoding='cp1252') as f:
@@ -112,8 +123,7 @@ sd7s['stages'] = [
      'briefing': bi('Mission complete.', '任务完成。')},
 ]
 
-sd7s['characters'] = [
-    {'id': 'macario', 'name': bi('Dolos Macario', 'Dolos Macario'),
+sd7s['characters'] = merge_characters(sd7s['characters'], [    {'id': 'macario', 'name': bi('Dolos Macario', 'Dolos Macario'),
      'title': bi("Chief High Inspector, the 'Spider of Sindria'", "最高检察长，'辛德里亚之蛛'")},
     {'id': 'rao', 'name': bi('Orcus Rao', 'Orcus Rao'),
      'title': bi('Hegemony intelligence officer, Ragnar Complex (Valhalla)', '霸主情报官，Valhalla 星系 Ragnar Complex')},
@@ -143,7 +153,7 @@ sd7s['characters'] = [
      'title': bi('ARC rebel leader on Umbra', 'Umbra 的 ARC 反叛军首领')},
     {'id': 'achilles_andrada', 'name': bi("Achilles 'Kalian' Andrada", "Achilles 'Kalian' Andrada"),
      'title': bi('Clone-son of Philip Andrada', 'Philip Andrada 的克隆子嗣')},
-]
+])
 
 sd7s['flags'] = formulaic_flags('sd7s')
 sd7s['ignoreRulePatterns'] = [
@@ -157,6 +167,7 @@ sd7s['ignoreRules'] = [
     'relLevelDiktatSDTU', 'relLevelDiktatSD7S', 'HyderGreetDefaultSD',
     'sdBarRaid0', 'ZGRacknowledgeDiktatB',
 ]
+sd7s['ignoreRulePatterns'].extend(['^relLevel', '^flavorText', '^bar_desc'])
 save('the_seven_sons.json', sd7s)
 
 # ---------------------------------------------------------- Supreme Executor
@@ -200,7 +211,7 @@ sdse['stages'] = [
 # fix placeholder flag
 sdse['stages'][0]['flag'] = '$sdse_inProgress'
 
-sdse['characters'] = [
+sdse['characters'] = merge_characters(sdse['characters'], [
     {'id': 'macario', 'name': bi('Dolos Macario', 'Dolos Macario'),
      'title': bi("Chief High Inspector, the 'Spider of Sindria'", "最高检察长，'辛德里亚之蛛'")},
     {'id': 'rao', 'name': bi('Orcus Rao', 'Orcus Rao'),
@@ -221,7 +232,7 @@ sdse['characters'] = [
      'title': bi('ARC rebel leader on Umbra', 'Umbra 的 ARC 反叛军首领')},
     {'id': 'achilles_andrada', 'name': bi("Achilles 'Kalian' Andrada", "Achilles 'Kalian' Andrada"),
      'title': bi('Clone-son of Philip Andrada, contender for Supreme Executor', 'Philip Andrada 的克隆子嗣，最高元首之位的角逐者')},
-]
+])
 
 sdse['flags'] = formulaic_flags('sdse')
 sdse['flags'].update({
@@ -238,6 +249,7 @@ sdse['ignoreRulePatterns'] = [
     '^sdsw', '^SDSW', '^PostSDSW', '^postSDSW',
     '^sdr[A-Z]', '^SDR[A-Z]',
     '^DEV', '^dev[A-Z]',
+    '^relLevel', '^flavorText', '^bar_desc', 'test', 'Test', 'TEST',
 ]
 sdse['ignoreRules'] = ['relLevelDiktatSDTU', 'relLevelDiktatSD7S', 'HyderGreetDefaultSD',
                        'sdBarRaid0', 'ZGRacknowledgeDiktatB']
