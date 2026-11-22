@@ -14,7 +14,7 @@
       "flag": "$sdtu_meetRamOnVolturn",
       "briefing": {
         "en": "Meet Yannick Ram at his safehouse on Volturn. He has a plan to save the Sindrian Diktat from itself.",
-        "zh": "去 Volturn 上 Yannick Ram 的安全屋见他。他有一个'把辛达强权从它自己手里拯救出来'的计划。"
+        "zh": "在 Volturn 的安全屋会见 Yannick Ram。他有一个让辛达强权免于自我毁灭的计划。"
       }
     },
     {
@@ -22,7 +22,7 @@
       "flag": "$sdtu_interceptFleet",
       "briefing": {
         "en": "Find and intercept a Sindrian Diktat patrol fleet led by the 'treasonous' officer. It can be found in the Askonia system.",
-        "zh": "找到并拦截由那位'叛国'军官率领的辛达强权巡逻舰队。它就在 Askonia 星系里。"
+        "zh": "找到并拦截由\"叛国\"军官领导的辛达强权巡逻舰队。它就在 Askonia 星系中。"
       }
     },
     {
@@ -30,7 +30,7 @@
       "flag": "$sdtu_meetHyder",
       "briefing": {
         "en": "Use the 'treasonous' officer as leverage to gain access to Deputy Star Marshal Hyder. She can be found in command of the Askonia System Defense Armada, a large warfleet patrolling the Askonia star system.",
-        "zh": "用这位'叛国'军官作为筹码，去见副星际元帅 Hyder。可以在 Askonia 星系巡逻的大型战舰群 —— Askonia 星系防卫舰队的旗舰上找到她。"
+        "zh": "利用\"叛国\"军官作为突破口，接近副星际元帅 Hyder。她指挥着 Askonia 星系防御无敌舰队，这是一支在 Askonia 星系内巡逻的大型舰队。"
       }
     },
     {
@@ -38,7 +38,7 @@
       "flag": "$sdtu_didHyderMeeting",
       "briefing": {
         "en": "Report back to Macario about your conversation with Hyder.",
-        "zh": "回到 Macario 那里，汇报你与 Hyder 的会谈结果。"
+        "zh": "把你跟 Hyder 的谈话汇报给 Macario。"
       }
     },
     {
@@ -46,7 +46,7 @@
       "flag": "$sdtu_extractAgent",
       "briefing": {
         "en": "Extract a known double-agent who, while working for Horacio Caden, has betrayed the Sindrian Diktat. The 'treasonous' double-agent is based on Umbra.",
-        "zh": "提取一名已知的双面特工：此人名义上为 Horacio Caden 效力，实则背叛了辛达强权。这名'叛国'的双面特工据点在 Umbra。"
+        "zh": "解救一名为 Horacio Caden 效力、同时背叛了辛达强权的双面特工。这位\"叛国\"的双面特工位于 Umbra。"
       }
     },
     {
@@ -54,7 +54,7 @@
       "flag": "$sdtu_meetCaden",
       "briefing": {
         "en": "Speak with Guard High Deputy Executor Caden. He can be found in command of the Lion's Guard Grand Armada, a large warfleet patrolling the Askonia star system.",
-        "zh": "与卫队最高副首长 Caden 谈谈。可以在 Askonia 星系巡逻的大型战舰群 —— Lion's Guard 大舰队的旗舰上找到他。"
+        "zh": "利用\"叛国\"特工作为突破口，接近卫队最高副首长 Caden。他指挥着狮心卫队大无敌舰队，这是一支在 Askonia 星系内巡逻的大型舰队。"
       }
     },
     {
@@ -62,7 +62,7 @@
       "flag": "$sdtu_didCadenMeeting",
       "briefing": {
         "en": "Report back to Macario about your conversation with Caden.",
-        "zh": "再次回到 Macario 那里，汇报你与 Caden 的会谈结果。"
+        "zh": "把你跟 Caden 的谈话汇报给 Macario。"
       }
     },
     {
@@ -70,7 +70,7 @@
       "flag": "$sdtu_emergencyIntercept",
       "briefing": {
         "en": "Intercept and assist or capture Macario's agent at the Fringe Jump-point of Askonia.",
-        "zh": "在 Askonia 的边缘跳点拦截 Macario 的特工，并决定协助还是俘虏他。"
+        "zh": "前往 Askonia 的边缘跳跃点拦截并抓捕或协助 Macario 的特工。"
       }
     },
     {
@@ -78,7 +78,7 @@
       "flag": "$sdtu_deliverNews",
       "briefing": {
         "en": "Report back to Macario with news of his agent's demise.",
-        "zh": "把他的特工的死讯带回给 Macario。"
+        "zh": "向 Macario 汇报他的特工已经身亡。"
       }
     },
     {
@@ -101,7 +101,7 @@
       "name": { "en": "Dolos Macario", "zh": "Dolos Macario" },
       "title": {
         "en": "Chief High Inspector, the 'Spider of Sindria'",
-        "zh": "首席督察长，'辛德里亚之蛛'"
+        "zh": "最高检察长，'辛德里亚之蛛'"
       }
     },
     {
@@ -109,7 +109,7 @@
       "name": { "en": "Oxana Hyder", "zh": "Oxana Hyder" },
       "title": {
         "en": "Deputy Star Marshal, Askonia System Defense Armada",
-        "zh": "副星际元帅，Askonia 星系防卫舰队"
+        "zh": "副星际元帅，Askonia 星系防御无敌舰队"
       }
     },
     {
@@ -117,7 +117,7 @@
       "name": { "en": "Horacio Caden", "zh": "Horacio Caden" },
       "title": {
         "en": "Guard High Deputy Executor, Lion's Guard Grand Armada",
-        "zh": "卫队最高副首长，Lion's Guard 大舰队"
+        "zh": "卫队最高副首长，狮心卫队大无敌舰队"
       }
     },
     {
@@ -125,7 +125,7 @@
       "name": { "en": "Imoinu Kato", "zh": "Imoinu Kato" },
       "title": {
         "en": "'Treasonous' double-agent, based on Umbra",
-        "zh": "'叛国'双面特工，据点 Umbra"
+        "zh": "'叛国'双面特工，位于 Umbra"
       }
     },
     {
@@ -149,7 +149,7 @@
     "$global.sdtu_promisedToHelpPatrolLeader": { "en": "Promised to help the patrol leader", "zh": "已承诺帮助巡逻队长" },
     "$global.sdtu_gotPatrolCrewToMutiny": { "en": "Got the patrol crew to mutiny", "zh": "已使巡逻队船员哗变" },
     "$global.sdtu_didPatrolTraitorTransfer": { "en": "Patrol officer handed over for real", "zh": "巡逻队军官已被实际移交" },
-    "$global.sdtu_extractAgent": { "en": "Extract-agent stage unlocked", "zh": "特工提取阶段已解锁" },
+    "$global.sdtu_extractAgent": { "en": "Extract-agent stage unlocked", "zh": "解救特工阶段已解锁" },
     "$global.sdtu_meetCaden": { "en": "Caden meeting unlocked", "zh": "Caden 会谈已解锁" },
     "$global.sdtu_didCadenMeeting": { "en": "Done talking with Caden", "zh": "已完成与 Caden 的会谈" },
     "$global.sdtu_enragedCaden": { "en": "Caden enraged at you", "zh": "Caden 已被激怒" },
@@ -259,7 +259,7 @@
       "id": "umbra_extract",
       "stage": "EXTRACT_AGENT",
       "speaker": "imoinu",
-      "title": { "en": "Extracting the Agent from Umbra", "zh": "从 Umbra 提取特工" },
+      "title": { "en": "Extracting the Agent from Umbra", "zh": "从 Umbra 解救特工" },
       "location": {
         "en": "Umbra, pirate world",
         "zh": "Umbra，海盗星球"
