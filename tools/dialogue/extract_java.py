@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
-"""Extract quest stage data from unobfuscated mission classes in starfarer.api.jar.
+"""Extract quest stage data from mission classes in starfarer.api.jar.
 
 Reads the class constant pool (no decompilation needed) to pull:
 - Stage enum names (TheUsurpers$Stage etc.)
 - Stage briefing / next-step strings
 - Global flags referenced by the mission
 
+With --cn, the same class is read from the CN build's jar and the
+Chinese strings are reported alongside (the official CN localization
+translates newer mission classes in-place).
+
 Usage:
-    python3 extract_java.py <game_root> <mission_class>...
-    python3 extract_java.py ~/Games/starsector-0985a-en askonia.TheUsurpers askonia.SDSevenSons
+    python3 extract_java.py <en_game_root> [<cn_game_root>] <mission_class>...
+    python3 extract_java.py ~/Games/starsector-0985a-en ~/Games/starsector-0985a-cn askonia.TheUsurpers askonia.SDSevenSons
 """
 
 from __future__ import annotations
@@ -103,8 +107,21 @@ def extract_mission(jar_path: str, mission: str) -> dict:
         if re.search(r'[a-z]{3} [a-z]+', s) and s.rstrip().endswith('.'):
             texts.append(s)
     result['texts'] = texts
+    return result
 
-    # also flags from inner stage enum class strings already covered
+
+def extract_mission_cn(jar_path: str, mission: str) -> dict:
+    """Chinese strings from the CN build's class (same class name in api jar)."""
+    z = zipfile.ZipFile(jar_path)
+    result: dict = {'mission': mission, 'stages': [], 'flags': [], 'texts': []}
+    try:
+        strings = read_utf8_constants(z.read(class_path(mission)))
+    except KeyError:
+        return result
+    result['texts'] = [
+        s for s in strings
+        if re.search(r'[\u4e00-\u9fff]', s) and len(s) > 6
+    ]
     return result
 
 
@@ -112,11 +129,18 @@ def main():
     if len(sys.argv) < 3:
         print(__doc__)
         sys.exit(1)
-    game_root = sys.argv[1].rstrip('/')
-    jar = f'{game_root}/starfarer.api.jar'
+    args = [a.rstrip('/') for a in sys.argv[1:]]
+    cn_root = None
+    if args[0].endswith('-cn'):
+        cn_root = args.pop(0)
+    en_root = args.pop(0)
+    jar = f'{en_root}/starfarer.api.jar'
     out = {}
-    for mission in sys.argv[2:]:
-        out[mission] = extract_mission(jar, mission)
+    for mission in args:
+        m = extract_mission(jar, mission)
+        if cn_root:
+            m['cn'] = extract_mission_cn(f'{cn_root}/starfarer.api.jar', mission)
+        out[mission] = m
     print(json.dumps(out, indent=2, ensure_ascii=False))
 
 

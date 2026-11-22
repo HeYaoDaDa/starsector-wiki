@@ -2,6 +2,36 @@
   "version": "0.98.5a",
   "quests": [
     {
+      "id": "the_seven_sons",
+      "name": {
+        "en": "The Seven Sons",
+        "zh": "七子"
+      },
+      "summary": {
+        "en": "With Macario's files in hand, find a way to decrypt the ANDRADA dossier, then hunt down the seven clone-sons of Supreme Executor Philip Andrada - each a potential heir to the Sindrian Diktat.",
+        "zh": "带着 Macario 的文件，设法解密 ANDRADA 档案，再找出最高元首 Philip Andrada 的七名克隆子嗣——每一个都是辛达强权王座的潜在继承人。"
+      },
+      "factionId": "sindrian_diktat",
+      "icon": "graphics/icons/missions/seven_sons.png",
+      "stageCount": 11,
+      "sceneCount": 38
+    },
+    {
+      "id": "the_supreme_executor",
+      "name": {
+        "en": "The Supreme Executor",
+        "zh": "最高元首"
+      },
+      "summary": {
+        "en": "Hector and Achilles Andrada - and their backers - maneuver to declare themselves Supreme Executor of the Sindrian Diktat. Choose a side, or play them all.",
+        "zh": "Hector 与 Achilles Andrada——以及他们背后的支持者——正为登上辛达强权的最高元首之位各显神通。选边站，或者，把每一方都玩弄于股掌之间。"
+      },
+      "factionId": "sindrian_diktat",
+      "icon": "graphics/icons/missions/heir_to_andrada.png",
+      "stageCount": 9,
+      "sceneCount": 20
+    },
+    {
       "id": "the_usurpers",
       "name": {
         "en": "The Usurpers",

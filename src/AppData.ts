@@ -23,6 +23,7 @@ import { SpecialItem } from './classes/model/SpecialItem';
 import {
   Quest,
   QuestIndex,
+  DialogueDictionary,
 } from './classes/model/Quest';
 import {
   compareFaction,
@@ -63,6 +64,8 @@ class AppData {
   questIndex: QuestIndex | null = null;
   questIndexStatus = ref<'none' | 'loading' | 'ok' | 'empty'>('none');
   questMap: Map<string, Quest> = new Map();
+  /** 全库对话词典（懒加载） */
+  dictionary: DialogueDictionary | null = null;
 
   sortdShips(): Ship[] {
     const result: Ship[] = [];
@@ -807,11 +810,31 @@ class AppData {
     }
   }
 
+  /** 加载全库对话词典（类型校验防 SPA 回退 HTML） */
+  async loadDictionary(version: string): Promise<boolean> {
+    if (this.dictionary && this.dictionary.version === version) {
+      return true;
+    }
+    try {
+      const response = await api.get(`data/${version}/dialogues/dictionary.json`);
+      const data = response.data;
+      if (data && typeof data === 'object' && Array.isArray(data.entries)) {
+        this.dictionary = data as DialogueDictionary;
+        return true;
+      }
+    } catch {
+      // 404: 该版本无词典
+    }
+    this.dictionary = null;
+    return false;
+  }
+
   async reloadData(version: string, locale: string) {
     this.status.value = 'loading';
     this.questMap.clear();
     this.questIndex = null;
     this.questIndexStatus.value = 'none';
+    this.dictionary = null;
     await this.initData(version, locale);
     localStorage.setItem('selectedVersion', version);
     localStorage.setItem('locale', locale);

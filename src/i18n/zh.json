@@ -17,6 +17,7 @@
   "nav.planets": "星球",
   "nav.persons": "人物",
   "nav.quests": "任务与对话",
+  "nav.dialogueDict": "对话词典",
   "nav.github": "GitHub 仓库",
 
   "common.none": "无",
@@ -247,5 +248,24 @@
   "cond.repGTE": "对 {faction} 声望 ≥ {level}",
   "cond.repLTE": "对 {faction} 声望 ≤ {level}",
   "cond.hostile": "该势力与你敌对",
-  "cond.encountered": "尚未遭遇过"
+  "cond.encountered": "尚未遭遇过",
+
+  "dict.searchPlaceholder": "搜索规则 ID / 台词（中英） / 选项 ...",
+  "dict.entries": "{count} 条",
+  "dict.noResults": "没有匹配的对话。",
+  "dict.showMore": "显示更多（共 {shown} 条）",
+  "dict.category.all": "全部分类",
+  "dict.cat.usurpers": "篡夺者",
+  "dict.cat.seven_sons": "七子",
+  "dict.cat.supreme_executor": "最高元首",
+  "dict.cat.askonia_misc": "Askonia 其他",
+  "dict.cat.sindrian_misc": "辛达强权杂项",
+  "dict.cat.academy": "Galatia 学院主线",
+  "dict.cat.luddic": "路德教会",
+  "dict.cat.bornanew": "新生文件（Luddic）",
+  "dict.cat.ziggurat": "Ziggurat 弧线",
+  "dict.cat.historian": "历史学家",
+  "dict.cat.abyss": "深渊",
+  "dict.cat.tutorial": "教程",
+  "dict.cat.other": "其他 / 通用"
 }

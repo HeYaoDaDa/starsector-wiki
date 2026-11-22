@@ -62,9 +62,18 @@
 python3 tools/dialogue/build_quests.py
 ```
 
-详见 [tools/dialogue/README.md](tools/dialogue/README.md)。当前收录：
+详见 [tools/dialogue/README.md](tools/dialogue/README.md)。工具链：
 
-- 篡夺者（The Usurpers，0.98a 辛德里亚独裁国任务线）
+- `draft_quest.py` —— 按 `$xxx_stage ==` 条件自动聚类场景草稿（大任务线用）
+- `extract_java.py` —— 双 jar（EN/CN）常量池提取，任务简报官方双语
+- `build_dictionary.py` —— 全库对话词典（14,255 条，懒加载 + 前端全文搜索）
+
+当前收录：
+
+- 篡夺者（The Usurpers）—— 覆盖率已迭代至只剩已知噪声
+- 七子（The Seven Sons）+ 最高元首（The Supreme Executor）—— 自动起草 + 官方简报，
+  覆盖率仍在按 `report_*.md` 持续迭代
+- 对话词典（`#/dialogue_dict`）—— rules.csv 全部带文本规则，中英检索
 
 ## 构建时 Canvas 预计算 / Build-time Canvas Precomputation
 

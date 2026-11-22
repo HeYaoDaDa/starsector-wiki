@@ -1,0 +1,661 @@
+{
+  "id": "the_supreme_executor",
+  "gameId": "sdse",
+  "name": {
+    "en": "The Supreme Executor",
+    "zh": "最高元首"
+  },
+  "summary": {
+    "en": "Hector and Achilles Andrada - and their backers - maneuver to declare themselves Supreme Executor of the Sindrian Diktat. Choose a side, or play them all.",
+    "zh": "Hector 与 Achilles Andrada——以及他们背后的支持者——正为登上辛达强权的最高元首之位各显神通。选边站，或者，把每一方都玩弄于股掌之间。"
+  },
+  "factionId": "sindrian_diktat",
+  "stages": [
+    {
+      "id": "MACARIOS_PLOT",
+      "flag": "$sdse_inProgress",
+      "briefing": {
+        "en": "Dolos Macario has made the first move. You must choose how to respond.",
+        "zh": "Dolos Macario 已经先出手了。你必须决定如何应对。"
+      }
+    },
+    {
+      "id": "TALK_TO_CONTACT",
+      "flag": "$sdse_talkToContact",
+      "briefing": {
+        "en": "Talk to your contact.",
+        "zh": "与你的联系人谈谈。"
+      }
+    },
+    {
+      "id": "TALK_TO_ACHILLES",
+      "flag": "$sdse_talkToAchilles",
+      "briefing": {
+        "en": "Contact Achilles Andrada and tell him you will give him your support.",
+        "zh": "联系 Achilles Andrada，告知你将支持他。"
+      }
+    },
+    {
+      "id": "VISIT_RELAY",
+      "flag": "$sdse_visitRelay",
+      "briefing": {
+        "en": "Go to the comms relay in the Askonia system.",
+        "zh": "前往 Askonia 星系的通讯中继站。"
+      }
+    },
+    {
+      "id": "WAIT_FOR_OPENING",
+      "flag": "$sdse_waitForOpening",
+      "briefing": {
+        "en": "Wait for one of the major players to make a move.",
+        "zh": "等待某位主要角逐者先出手。"
+      }
+    },
+    {
+      "id": "HECTOR_REVEALED",
+      "flag": "$sdse_hectorDeclaredStageAdvance",
+      "briefing": {
+        "en": "Hector has declared himself Supreme Executor with the support of Macario and Caden.",
+        "zh": "在 Macario 与 Caden 的支持下，Hector 已自立为最高元首。"
+      }
+    },
+    {
+      "id": "HECTOR_REVEALED2",
+      "flag": "$sdse_hectorDeclaredStageAdvance2",
+      "briefing": {
+        "en": "Achilles is sure to make his own declaration soon...",
+        "zh": "Achilles 想必很快也会站出来宣布自己的主张..."
+      }
+    },
+    {
+      "id": "ACHILLES_REVEALED",
+      "flag": "$sdse_achillesDeclaredStageAdvance",
+      "briefing": {
+        "en": "Achilles 'Kalian' Andrada, backed by Fortuna Kato, declares himself Supreme Executor.",
+        "zh": "有 Fortuna Kato 撑腰的 Achilles 'Kalian' Andrada 宣布自己为最高元首。"
+      }
+    },
+    {
+      "id": "COMPLETED",
+      "flag": "$sdse_missionCompleted",
+      "briefing": {
+        "en": "Mission complete.",
+        "zh": "任务完成。"
+      }
+    }
+  ],
+  "characters": [
+    {
+      "id": "macario",
+      "name": {
+        "en": "Dolos Macario",
+        "zh": "Dolos Macario"
+      },
+      "title": {
+        "en": "Chief High Inspector, the 'Spider of Sindria'",
+        "zh": "最高检察长，'辛德里亚之蛛'"
+      }
+    },
+    {
+      "id": "rao",
+      "name": {
+        "en": "Orcus Rao",
+        "zh": "Orcus Rao"
+      },
+      "title": {
+        "en": "Hegemony intelligence officer",
+        "zh": "霸主情报官"
+      }
+    },
+    {
+      "id": "siyavong",
+      "name": {
+        "en": "Finlay Siyavong",
+        "zh": "Finlay Siyavong"
+      },
+      "title": {
+        "en": "Special Agent, Hegemony Fleet Intelligence",
+        "zh": "霸主舰队情报部特工"
+      }
+    },
+    {
+      "id": "faro_inesis",
+      "name": {
+        "en": "Faro Inesis",
+        "zh": "Faro Inesis"
+      },
+      "title": {
+        "en": "Tri-Tachyon black-site administrator",
+        "zh": "速子科技黑色站点主管"
+      }
+    },
+    {
+      "id": "arroyo",
+      "name": {
+        "en": "Rayan Arroyo",
+        "zh": "Rayan Arroyo"
+      },
+      "title": {
+        "en": "Free-lance fixer",
+        "zh": "自由掮客"
+      }
+    },
+    {
+      "id": "horus_yaribay",
+      "name": {
+        "en": "Horus Yaribay",
+        "zh": "Horus Yaribay"
+      },
+      "title": {
+        "en": "Persean League official, Kazeron",
+        "zh": "英仙座联盟官员，Kazeron"
+      }
+    },
+    {
+      "id": "reynard_hannan",
+      "name": {
+        "en": "Reynard Hannan",
+        "zh": "Reynard Hannan"
+      },
+      "title": {
+        "en": "Persean League magnate, Kazeron",
+        "zh": "英仙座联盟巨贾，Kazeron"
+      }
+    },
+    {
+      "id": "fortuna_kato",
+      "name": {
+        "en": "Fortuna Kato",
+        "zh": "Fortuna Kato"
+      },
+      "title": {
+        "en": "Persean aristocrat, backer of Achilles",
+        "zh": "英仙系贵族，Achilles 的支持者"
+      }
+    },
+    {
+      "id": "imoinu_kato",
+      "name": {
+        "en": "Imoinu Kato",
+        "zh": "Imoinu Kato"
+      },
+      "title": {
+        "en": "ARC rebel leader on Umbra",
+        "zh": "Umbra 的 ARC 反叛军首领"
+      }
+    },
+    {
+      "id": "achilles_andrada",
+      "name": {
+        "en": "Achilles 'Kalian' Andrada",
+        "zh": "Achilles 'Kalian' Andrada"
+      },
+      "title": {
+        "en": "Clone-son of Philip Andrada, contender for Supreme Executor",
+        "zh": "Philip Andrada 的克隆子嗣，最高元首之位的角逐者"
+      }
+    }
+  ],
+  "flags": {
+    "$sdse_inProgress": {
+      "en": "Mission in progress",
+      "zh": "任务进行中"
+    },
+    "$sdse_missionCompleted": {
+      "en": "Mission completed",
+      "zh": "任务已完成"
+    },
+    "$sdse_missionComplete": {
+      "en": "Mission completed",
+      "zh": "任务已完成"
+    },
+    "$sdse_stage": {
+      "en": "Mission stage variable",
+      "zh": "任务阶段变量"
+    },
+    "$sdse_foundPerseus": {
+      "en": "Location of Perseus confirmed",
+      "zh": "已确认 珀尔修斯 的下落"
+    },
+    "$sdse_foundHercules": {
+      "en": "Location of Hercules confirmed",
+      "zh": "已确认 赫拉克勒斯 的下落"
+    },
+    "$sdse_foundJason": {
+      "en": "Location of Jason confirmed",
+      "zh": "已确认 杰森 的下落"
+    },
+    "$sdse_foundAchilles": {
+      "en": "Location of Achilles confirmed",
+      "zh": "已确认 阿喀琉斯 的下落"
+    },
+    "$sdse_foundHector": {
+      "en": "Location of Hector confirmed",
+      "zh": "已确认 赫克托耳 的下落"
+    },
+    "$sdse_foundLeonidas": {
+      "en": "Location of Leonidas confirmed",
+      "zh": "已确认 列奥尼达 的下落"
+    },
+    "$sdse_foundPericles": {
+      "en": "Location of Pericles confirmed",
+      "zh": "已确认 伯里克利 的下落"
+    },
+    "$sdse_decryptViaGargoyle": {
+      "en": "Files decrypted via Gargoyle",
+      "zh": "已通过 Gargoyle 解密文件"
+    },
+    "$sdse_decryptViaArroyo": {
+      "en": "Files decrypted via Arroyo",
+      "zh": "已通过 Arroyo 解密文件"
+    },
+    "$sdse_decryptViaInesis": {
+      "en": "Files decrypted via Inesis",
+      "zh": "已通过 Inesis 解密文件"
+    },
+    "$sdse_decryptViaSiyavong": {
+      "en": "Files decrypted via Siyavong",
+      "zh": "已通过 Siyavong 解密文件"
+    },
+    "$sdse_decryptViaOrcusRao": {
+      "en": "Files decrypted via Orcus Rao",
+      "zh": "已通过 Orcus Rao 解密文件"
+    },
+    "$sdse_decryptViaOwnAI": {
+      "en": "Files decrypted via your own AI",
+      "zh": "已通过 your own AI 解密文件"
+    },
+    "$sdse_proAchilles": {
+      "en": "Backing Achilles",
+      "zh": "支持 Achilles 阵营"
+    },
+    "$sdse_proHector": {
+      "en": "Backing Hector",
+      "zh": "支持 Hector 阵营"
+    },
+    "$sdse_antiMacario": {
+      "en": "Working against Macario",
+      "zh": "正在对付 Macario"
+    },
+    "$sdse_proKato": {
+      "en": "Backed by the Kato family",
+      "zh": "获得 Kato 家族支持"
+    },
+    "$sdse_backingFortuna": {
+      "en": "Backed by Fortuna Kato",
+      "zh": "获得 Fortuna Kato 支持"
+    },
+    "$sdse_talkFirstMacario": {
+      "en": "Macario contacted first",
+      "zh": "已先行联系 Macario"
+    }
+  },
+  "scenes": [
+    {
+      "id": "start_greet_talk_standfast",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Greetings: standfast",
+        "zh": "任务开始：问候：standfast"
+      },
+      "location": {
+        "en": "Comm conversation with standfast",
+        "zh": "与 standfast 的通讯"
+      },
+      "roots": [
+        "r:SDRgreetingStandfastFromOrcus"
+      ]
+    },
+    {
+      "id": "start_greet_talk_rao",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Greetings: rao",
+        "zh": "任务开始：问候：rao"
+      },
+      "location": {
+        "en": "Comm conversation with rao",
+        "zh": "与 rao 的通讯"
+      },
+      "roots": [
+        "r:defaultRaoGreetingAgreed",
+        "r:raoGreetingFastOne",
+        "r:SDSEtalkToRaoCommission",
+        "r:SDSEtalkToRaoContact",
+        "r:SDRtalkToRaoLate",
+        "r:SDRrao2BriefingGreetPostHec",
+        "r:SDRrao2BriefingGreetPostHecB",
+        "r:SDRrao2BriefingGreetPostHecC",
+        "r:SDRrao2BriefingGreetPostHecD",
+        "r:SDRrao2BriefingGreetPostSDR",
+        "r:PostSDRraoGreeting",
+        "r:PostSDRraoGreetingNoSD",
+        "r:PostSDRraoGreetingCadenPK"
+      ]
+    },
+    {
+      "id": "start_talk_rao",
+      "stage": null,
+      "speaker": "rao",
+      "title": {
+        "en": "Quest start: Talk: rao",
+        "zh": "任务开始：与 rao 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with rao",
+        "zh": "与 rao 的通讯"
+      },
+      "roots": [
+        "r:SD7SraoPostFindOption"
+      ]
+    },
+    {
+      "id": "start_talk_siyavong",
+      "stage": null,
+      "speaker": "siyavong",
+      "title": {
+        "en": "Quest start: Talk: siyavong",
+        "zh": "任务开始：与 siyavong 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with siyavong",
+        "zh": "与 siyavong 的通讯"
+      },
+      "roots": [
+        "r:SD7SsiyavongSonsAfter",
+        "r:PostSD7SsiyavongFortunaOpt"
+      ]
+    },
+    {
+      "id": "start_talk_horus_yaribay",
+      "stage": null,
+      "speaker": "horus_yaribay",
+      "title": {
+        "en": "Quest start: Talk: horus_yaribay",
+        "zh": "任务开始：与 horus_yaribay 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with horus_yaribay",
+        "zh": "与 horus_yaribay 的通讯"
+      },
+      "roots": [
+        "r:preSDSEtalkToHorus"
+      ]
+    },
+    {
+      "id": "talk_to_contact_talk_arroyo",
+      "stage": "TALK_TO_CONTACT",
+      "speaker": "arroyo",
+      "title": {
+        "en": "Talk: arroyo",
+        "zh": "与 arroyo 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with arroyo",
+        "zh": "与 arroyo 的通讯"
+      },
+      "roots": [
+        "r:SDSEtalkArroyo"
+      ]
+    },
+    {
+      "id": "talk_to_contact_talk_faro_inesis",
+      "stage": "TALK_TO_CONTACT",
+      "speaker": "faro_inesis",
+      "title": {
+        "en": "Talk: faro_inesis",
+        "zh": "与 faro_inesis 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with faro_inesis",
+        "zh": "与 faro_inesis 的通讯"
+      },
+      "roots": [
+        "r:SDSEtalkInesis"
+      ]
+    },
+    {
+      "id": "wait_for_opening_talk_siyavong",
+      "stage": "WAIT_FOR_OPENING",
+      "speaker": "siyavong",
+      "title": {
+        "en": "Talk: siyavong",
+        "zh": "与 siyavong 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with siyavong",
+        "zh": "与 siyavong 的通讯"
+      },
+      "roots": [
+        "r:SDSEtalkToSiyavongFromHorus"
+      ]
+    },
+    {
+      "id": "hector_revealed_talk_siyavong",
+      "stage": "HECTOR_REVEALED",
+      "speaker": "siyavong",
+      "title": {
+        "en": "Talk: siyavong",
+        "zh": "与 siyavong 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with siyavong",
+        "zh": "与 siyavong 的通讯"
+      },
+      "roots": [
+        "r:SDSEtalkToSiyavongFromHorusB"
+      ]
+    },
+    {
+      "id": "talk_to_achilles_talk_siyavong",
+      "stage": "TALK_TO_ACHILLES",
+      "speaker": "siyavong",
+      "title": {
+        "en": "Talk: siyavong",
+        "zh": "与 siyavong 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with siyavong",
+        "zh": "与 siyavong 的通讯"
+      },
+      "roots": [
+        "r:SDSEtalkToSiyavongToAchillesOpt"
+      ]
+    },
+    {
+      "id": "talk_to_contact_talk_horus_yaribay",
+      "stage": "TALK_TO_CONTACT",
+      "speaker": "horus_yaribay",
+      "title": {
+        "en": "Talk: horus_yaribay",
+        "zh": "与 horus_yaribay 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with horus_yaribay",
+        "zh": "与 horus_yaribay 的通讯"
+      },
+      "roots": [
+        "r:SDSEtalkToHorus"
+      ]
+    },
+    {
+      "id": "visit_relay_talk_rao",
+      "stage": "VISIT_RELAY",
+      "speaker": "rao",
+      "title": {
+        "en": "Talk: rao",
+        "zh": "与 rao 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with rao",
+        "zh": "与 rao 的通讯"
+      },
+      "roots": [
+        "r:SDSEorcusRemindToRelay"
+      ]
+    },
+    {
+      "id": "start_greet_talk_caden",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Greetings: caden",
+        "zh": "任务开始：问候：caden"
+      },
+      "location": {
+        "en": "Comm conversation with caden",
+        "zh": "与 caden 的通讯"
+      },
+      "roots": [
+        "r:SDSECadenGreetEnraged",
+        "r:SDSECadenGreetBacker",
+        "r:SDSECadenGreetProHector",
+        "r:SDSECadenGreetProMacario",
+        "r:SDSECadenGreetProHectorTalkAlt",
+        "r:SDSECadenGreetProHectorTalkAlt2",
+        "r:SDSECadenGreetPostRelay"
+      ]
+    },
+    {
+      "id": "visit_relay_talk_caden",
+      "stage": "VISIT_RELAY",
+      "speaker": "caden",
+      "title": {
+        "en": "Talk: caden",
+        "zh": "与 caden 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with caden",
+        "zh": "与 caden 的通讯"
+      },
+      "roots": [
+        "r:SDSECadenRelayHint"
+      ]
+    },
+    {
+      "id": "start_greet_talk_achilles_andrada",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Greetings: achilles_andrada",
+        "zh": "任务开始：问候：achilles_andrada"
+      },
+      "location": {
+        "en": "Comm conversation with achilles_andrada",
+        "zh": "与 achilles_andrada 的通讯"
+      },
+      "roots": [
+        "r:AchillesGreetingPreSDR",
+        "r:PostSDRachillesGreetingStartPL"
+      ]
+    },
+    {
+      "id": "visit_relay_talk_achilles_andrada",
+      "stage": "VISIT_RELAY",
+      "speaker": "achilles_andrada",
+      "title": {
+        "en": "Talk: achilles_andrada",
+        "zh": "与 achilles_andrada 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with achilles_andrada",
+        "zh": "与 achilles_andrada 的通讯"
+      },
+      "roots": [
+        "r:AchillesGreetingPreSDRpreRelay"
+      ]
+    },
+    {
+      "id": "start_greet_talk_reynard_hannan",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Greetings: reynard_hannan",
+        "zh": "任务开始：问候：reynard_hannan"
+      },
+      "location": {
+        "en": "Comm conversation with reynard_hannan",
+        "zh": "与 reynard_hannan 的通讯"
+      },
+      "roots": [
+        "r:SDSEreynardOpening"
+      ]
+    },
+    {
+      "id": "start_greet_talk_arroyo",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Greetings: arroyo",
+        "zh": "任务开始：问候：arroyo"
+      },
+      "location": {
+        "en": "Comm conversation with arroyo",
+        "zh": "与 arroyo 的通讯"
+      },
+      "roots": [
+        "r:PostSDRarroyoGreeting"
+      ]
+    },
+    {
+      "id": "start_ent_transponderOffConv",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Fleet encounter",
+        "zh": "任务开始：舰队遭遇"
+      },
+      "location": null,
+      "roots": [
+        "r:SDRraoTOffPatrolOpenComm"
+      ]
+    },
+    {
+      "id": "start_greet_talk_siyavong",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Greetings: siyavong",
+        "zh": "任务开始：问候：siyavong"
+      },
+      "location": {
+        "en": "Comm conversation with siyavong",
+        "zh": "与 siyavong 的通讯"
+      },
+      "roots": [
+        "r:PostSDRsiyavongGreetingA",
+        "r:PostSDRsiyavongGreetingB"
+      ]
+    }
+  ],
+  "excludeRules": [],
+  "ignoreRules": [
+    "relLevelDiktatSDTU",
+    "relLevelDiktatSD7S",
+    "HyderGreetDefaultSD",
+    "sdBarRaid0",
+    "ZGRacknowledgeDiktatB"
+  ],
+  "ignoreRulePatterns": [
+    "^sdtu",
+    "^SDTU",
+    "^PostSDTU",
+    "^postSDTU",
+    "^postSDT",
+    "^sd7s",
+    "^SD7S",
+    "^PostSD7S",
+    "^postSD7S",
+    "^sdsw",
+    "^SDSW",
+    "^PostSDSW",
+    "^postSDSW",
+    "^sdr[A-Z]",
+    "^SDR[A-Z]",
+    "^DEV",
+    "^dev[A-Z]"
+  ],
+  "icon": "graphics/icons/missions/heir_to_andrada.png"
+}

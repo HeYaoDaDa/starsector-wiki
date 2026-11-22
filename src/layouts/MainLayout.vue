@@ -116,6 +116,9 @@ function goBack() {
         <q-item clickable :to="{ name: 'quests' }">
           <q-item-section>{{ $t('nav.quests') }}</q-item-section>
         </q-item>
+        <q-item clickable :to="{ name: 'dialogue_dict' }">
+          <q-item-section>{{ $t('nav.dialogueDict') }}</q-item-section>
+        </q-item>
         <q-separator />
         <q-item clickable tag="a" href="https://github.com/HeYaoDaDa/starsector-wiki" target="_blank">
           <q-item-section>{{ $t('nav.github') }}</q-item-section>

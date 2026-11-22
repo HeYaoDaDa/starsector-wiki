@@ -1,0 +1,1006 @@
+{
+  "id": "the_seven_sons",
+  "gameId": "sd7s",
+  "name": {
+    "en": "The Seven Sons",
+    "zh": "七子"
+  },
+  "summary": {
+    "en": "With Macario's files in hand, find a way to decrypt the ANDRADA dossier, then hunt down the seven clone-sons of Supreme Executor Philip Andrada - each a potential heir to the Sindrian Diktat.",
+    "zh": "带着 Macario 的文件，设法解密 ANDRADA 档案，再找出最高元首 Philip Andrada 的七名克隆子嗣——每一个都是辛达强权王座的潜在继承人。"
+  },
+  "factionId": "sindrian_diktat",
+  "stages": [
+    {
+      "id": "CRACK_FILES",
+      "flag": "$sd7s_decryptedAndradaFiles",
+      "briefing": {
+        "en": "Find a way to decrypt the ANDRADA files.",
+        "zh": "设法解密 ANDRADA 文件。"
+      }
+    },
+    {
+      "id": "TALK_GARGOYLE",
+      "flag": "$sd7s_decryptViaGargoyle",
+      "briefing": {
+        "en": "Take the files to Gargoyle and convince the hacker to decrypt them.",
+        "zh": "把文件带给 Gargoyle，说服这名黑客将其解密。"
+      }
+    },
+    {
+      "id": "TALK_ORCUS",
+      "flag": "$sd7s_decryptViaOrcusRao",
+      "briefing": {
+        "en": "Take the files to Orcus Rao.",
+        "zh": "将文件交给 Orcus Rao。"
+      }
+    },
+    {
+      "id": "TALK_ARROYO",
+      "flag": "$sd7s_decryptViaArroyo",
+      "briefing": {
+        "en": "Take the files to Rayan Arroyo. He'll know how to turn this situation toward his advantage.",
+        "zh": "将文件交给 Rayan Arroyo。他自然知道如何把这场乱局变成自己的进项。"
+      }
+    },
+    {
+      "id": "TALK_INESIS",
+      "flag": "$sd7s_decryptViaInesis",
+      "briefing": {
+        "en": "Take the files to Faro Inesis to see if you can use Tri-Tachyon black-site resources to decrypt them.",
+        "zh": "将文件交给 Faro Inesis，看能否借助速子科技的黑色站点资源将其解密。"
+      }
+    },
+    {
+      "id": "TALK_SIYAVONG",
+      "flag": "$sd7s_decryptViaSiyavong",
+      "briefing": {
+        "en": "Take the files to Special Agent Finlay Siyavong of Fleet Intelligence to see if he can help.",
+        "zh": "将这些文件交给舰队情报部的特工 Finlay Siyavong，看看他是否愿意帮你解密。"
+      }
+    },
+    {
+      "id": "TALK_HORUS_YARIBAY",
+      "flag": "$sd7s_stage",
+      "briefing": {
+        "en": "Take the files to Horus Yaribay, on Kazeron.",
+        "zh": "将文件交给 Kazeron 上的 Horus Yaribay。"
+      }
+    },
+    {
+      "id": "TALK_REYNARD_HANNAN",
+      "flag": "$sd7s_stage",
+      "briefing": {
+        "en": "Take the files to Reynard Hannan, on Kazeron.",
+        "zh": "将文件交给 Kazeron 上的 Reynard Hannan。"
+      }
+    },
+    {
+      "id": "TALK_TO_AI",
+      "flag": "$sd7s_decryptViaOwnAI",
+      "briefing": {
+        "en": "You've decided to use your alpha-core AI administrator's abilities to decrypt the files.",
+        "zh": "你决定动用你的 Alpha 核心 AI 管理员的能力来解密这些文件。"
+      }
+    },
+    {
+      "id": "FIND_THEM",
+      "flag": "$sd7s_findAchilles",
+      "briefing": {
+        "en": "Find the seven clone-sons of Philip Andrada.",
+        "zh": "找到 Philip Andrada 的七名克隆子嗣。"
+      }
+    },
+    {
+      "id": "COMPLETED",
+      "flag": "$sd7s_missionCompleted",
+      "briefing": {
+        "en": "Mission complete.",
+        "zh": "任务完成。"
+      }
+    }
+  ],
+  "characters": [
+    {
+      "id": "macario",
+      "name": {
+        "en": "Dolos Macario",
+        "zh": "Dolos Macario"
+      },
+      "title": {
+        "en": "Chief High Inspector, the 'Spider of Sindria'",
+        "zh": "最高检察长，'辛德里亚之蛛'"
+      }
+    },
+    {
+      "id": "rao",
+      "name": {
+        "en": "Orcus Rao",
+        "zh": "Orcus Rao"
+      },
+      "title": {
+        "en": "Hegemony intelligence officer, Ragnar Complex (Valhalla)",
+        "zh": "霸主情报官，Valhalla 星系 Ragnar Complex"
+      }
+    },
+    {
+      "id": "siyavong",
+      "name": {
+        "en": "Finlay Siyavong",
+        "zh": "Finlay Siyavong"
+      },
+      "title": {
+        "en": "Special Agent, Hegemony Fleet Intelligence",
+        "zh": "霸主舰队情报部特工"
+      }
+    },
+    {
+      "id": "faro_inesis",
+      "name": {
+        "en": "Faro Inesis",
+        "zh": "Faro Inesis"
+      },
+      "title": {
+        "en": "Tri-Tachyon black-site administrator",
+        "zh": "速子科技黑色站点主管"
+      }
+    },
+    {
+      "id": "arroyo",
+      "name": {
+        "en": "Rayan Arroyo",
+        "zh": "Rayan Arroyo"
+      },
+      "title": {
+        "en": "Free-lance fixer",
+        "zh": "自由掮客"
+      }
+    },
+    {
+      "id": "horus_yaribay",
+      "name": {
+        "en": "Horus Yaribay",
+        "zh": "Horus Yaribay"
+      },
+      "title": {
+        "en": "Persean League official, Kazeron (Thule)",
+        "zh": "英仙座联盟官员，Kazeron（Thule 星系）"
+      }
+    },
+    {
+      "id": "reynard_hannan",
+      "name": {
+        "en": "Reynard Hannan",
+        "zh": "Reynard Hannan"
+      },
+      "title": {
+        "en": "Persean League magnate, Kazeron (Thule)",
+        "zh": "英仙座联盟巨贾，Kazeron（Thule 星系）"
+      }
+    },
+    {
+      "id": "daud",
+      "name": {
+        "en": "Baikal Daud",
+        "zh": "Baikal Daud"
+      },
+      "title": {
+        "en": "High Hegemon",
+        "zh": "至高霸主"
+      }
+    },
+    {
+      "id": "glamor_rotanev",
+      "name": {
+        "en": "Zunya Glamor-Rotanev",
+        "zh": "Zunya Glamor-Rotanev"
+      },
+      "title": {
+        "en": "Tri-Tachyon Director, Eochu Bres",
+        "zh": "速子科技主管，Eochu Bres"
+      }
+    },
+    {
+      "id": "gargoyle",
+      "name": {
+        "en": "Gargoyle",
+        "zh": "Gargoyle"
+      },
+      "title": {
+        "en": "Notorious hacker",
+        "zh": "知名黑客"
+      }
+    },
+    {
+      "id": "baird",
+      "name": {
+        "en": "Provost Baird",
+        "zh": "Provost Baird"
+      },
+      "title": {
+        "en": "Galatia Academy Provost",
+        "zh": "Galatia 学院院长"
+      }
+    },
+    {
+      "id": "fortuna_kato",
+      "name": {
+        "en": "Fortuna Kato",
+        "zh": "Fortuna Kato"
+      },
+      "title": {
+        "en": "Persean aristocrat, Kato family matriarch",
+        "zh": "英仙系贵族，Kato 家族主母"
+      }
+    },
+    {
+      "id": "maeus_moroz",
+      "name": {
+        "en": "Maeus Moroz",
+        "zh": "Maeus Moroz"
+      },
+      "title": {
+        "en": "Mercenary commander, adoptive father of Pericles",
+        "zh": "佣兵队长，Pericles 的养父"
+      }
+    },
+    {
+      "id": "imoinu_kato",
+      "name": {
+        "en": "Imoinu Kato",
+        "zh": "Imoinu Kato"
+      },
+      "title": {
+        "en": "ARC rebel leader on Umbra",
+        "zh": "Umbra 的 ARC 反叛军首领"
+      }
+    },
+    {
+      "id": "achilles_andrada",
+      "name": {
+        "en": "Achilles 'Kalian' Andrada",
+        "zh": "Achilles 'Kalian' Andrada"
+      },
+      "title": {
+        "en": "Clone-son of Philip Andrada",
+        "zh": "Philip Andrada 的克隆子嗣"
+      }
+    }
+  ],
+  "flags": {
+    "$sd7s_inProgress": {
+      "en": "Mission in progress",
+      "zh": "任务进行中"
+    },
+    "$sd7s_missionCompleted": {
+      "en": "Mission completed",
+      "zh": "任务已完成"
+    },
+    "$sd7s_missionComplete": {
+      "en": "Mission completed",
+      "zh": "任务已完成"
+    },
+    "$sd7s_stage": {
+      "en": "Mission stage variable",
+      "zh": "任务阶段变量"
+    },
+    "$sd7s_foundPerseus": {
+      "en": "Location of Perseus confirmed",
+      "zh": "已确认 珀尔修斯 的下落"
+    },
+    "$sd7s_foundHercules": {
+      "en": "Location of Hercules confirmed",
+      "zh": "已确认 赫拉克勒斯 的下落"
+    },
+    "$sd7s_foundJason": {
+      "en": "Location of Jason confirmed",
+      "zh": "已确认 杰森 的下落"
+    },
+    "$sd7s_foundAchilles": {
+      "en": "Location of Achilles confirmed",
+      "zh": "已确认 阿喀琉斯 的下落"
+    },
+    "$sd7s_foundHector": {
+      "en": "Location of Hector confirmed",
+      "zh": "已确认 赫克托耳 的下落"
+    },
+    "$sd7s_foundLeonidas": {
+      "en": "Location of Leonidas confirmed",
+      "zh": "已确认 列奥尼达 的下落"
+    },
+    "$sd7s_foundPericles": {
+      "en": "Location of Pericles confirmed",
+      "zh": "已确认 伯里克利 的下落"
+    },
+    "$sd7s_decryptViaGargoyle": {
+      "en": "Files decrypted via Gargoyle",
+      "zh": "已通过 Gargoyle 解密文件"
+    },
+    "$sd7s_decryptViaArroyo": {
+      "en": "Files decrypted via Arroyo",
+      "zh": "已通过 Arroyo 解密文件"
+    },
+    "$sd7s_decryptViaInesis": {
+      "en": "Files decrypted via Inesis",
+      "zh": "已通过 Inesis 解密文件"
+    },
+    "$sd7s_decryptViaSiyavong": {
+      "en": "Files decrypted via Siyavong",
+      "zh": "已通过 Siyavong 解密文件"
+    },
+    "$sd7s_decryptViaOrcusRao": {
+      "en": "Files decrypted via Orcus Rao",
+      "zh": "已通过 Orcus Rao 解密文件"
+    },
+    "$sd7s_decryptViaOwnAI": {
+      "en": "Files decrypted via your own AI",
+      "zh": "已通过 your own AI 解密文件"
+    }
+  },
+  "scenes": [
+    {
+      "id": "start_greet_talk_rao",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Greetings: rao",
+        "zh": "任务开始：问候：rao"
+      },
+      "location": {
+        "en": "Comm conversation with rao",
+        "zh": "与 rao 的通讯"
+      },
+      "roots": [
+        "r:raoGreetingFastOne"
+      ]
+    },
+    {
+      "id": "crack_files_talk_glamor_rotanev",
+      "stage": "CRACK_FILES",
+      "speaker": "glamor_rotanev",
+      "title": {
+        "en": "Talk: glamor_rotanev",
+        "zh": "与 glamor_rotanev 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with glamor_rotanev",
+        "zh": "与 glamor_rotanev 的通讯"
+      },
+      "roots": [
+        "r:SD7SzgrBringFiles"
+      ]
+    },
+    {
+      "id": "start_talk_macario",
+      "stage": null,
+      "speaker": "macario",
+      "title": {
+        "en": "Quest start: Talk: macario",
+        "zh": "任务开始：与 macario 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with macario",
+        "zh": "与 macario 的通讯"
+      },
+      "roots": [
+        "r:postSDTUMacarioGreeting"
+      ]
+    },
+    {
+      "id": "start_talk_siyavong",
+      "stage": null,
+      "speaker": "siyavong",
+      "title": {
+        "en": "Quest start: Talk: siyavong",
+        "zh": "任务开始：与 siyavong 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with siyavong",
+        "zh": "与 siyavong 的通讯"
+      },
+      "roots": [
+        "r:preSD7SstartSiyavong"
+      ]
+    },
+    {
+      "id": "start_talk_faro_inesis",
+      "stage": null,
+      "speaker": "faro_inesis",
+      "title": {
+        "en": "Quest start: Talk: faro_inesis",
+        "zh": "任务开始：与 faro_inesis 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with faro_inesis",
+        "zh": "与 faro_inesis 的通讯"
+      },
+      "roots": [
+        "r:preSD7SstartInesis"
+      ]
+    },
+    {
+      "id": "start_talk_rao",
+      "stage": null,
+      "speaker": "rao",
+      "title": {
+        "en": "Quest start: Talk: rao",
+        "zh": "任务开始：与 rao 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with rao",
+        "zh": "与 rao 的通讯"
+      },
+      "roots": [
+        "r:preSD7SstartOrcus",
+        "r:preSD7SstartOrcusContact"
+      ]
+    },
+    {
+      "id": "start_talk_arroyo",
+      "stage": null,
+      "speaker": "arroyo",
+      "title": {
+        "en": "Quest start: Talk: arroyo",
+        "zh": "任务开始：与 arroyo 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with arroyo",
+        "zh": "与 arroyo 的通讯"
+      },
+      "roots": [
+        "r:preSD7SstartArroyo"
+      ]
+    },
+    {
+      "id": "talk_to_ai_other",
+      "stage": "TALK_TO_AI",
+      "speaker": null,
+      "title": {
+        "en": "talk_to_ai_other",
+        "zh": "talk_to_ai_other"
+      },
+      "location": null,
+      "roots": [
+        "r:SD7SownAIstartOpt"
+      ]
+    },
+    {
+      "id": "talk_gargoyle_talk_gargoyle",
+      "stage": "TALK_GARGOYLE",
+      "speaker": "gargoyle",
+      "title": {
+        "en": "Talk: gargoyle",
+        "zh": "与 gargoyle 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with gargoyle",
+        "zh": "与 gargoyle 的通讯"
+      },
+      "roots": [
+        "r:SD7SgargOption",
+        "r:SD7SgargStart2"
+      ]
+    },
+    {
+      "id": "talk_arroyo_talk_arroyo",
+      "stage": "TALK_ARROYO",
+      "speaker": "arroyo",
+      "title": {
+        "en": "Talk: arroyo",
+        "zh": "与 arroyo 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with arroyo",
+        "zh": "与 arroyo 的通讯"
+      },
+      "roots": [
+        "r:SD7SarroyoOpt"
+      ]
+    },
+    {
+      "id": "crack_files_other",
+      "stage": "CRACK_FILES",
+      "speaker": null,
+      "title": {
+        "en": "crack_files_other",
+        "zh": "crack_files_other"
+      },
+      "location": null,
+      "roots": [
+        "r:SD7ScontactHegOption",
+        "r:SD7ShegVIPoption",
+        "r:SD7SPLVIPoption",
+        "r:SD7SPLContactOption",
+        "r:SD7SttVIPoption",
+        "r:SD7SttContactOption"
+      ]
+    },
+    {
+      "id": "crack_files_talk_daud",
+      "stage": "CRACK_FILES",
+      "speaker": "daud",
+      "title": {
+        "en": "Talk: daud",
+        "zh": "与 daud 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with daud",
+        "zh": "与 daud 的通讯"
+      },
+      "roots": [
+        "r:SD7ScontactDaudOption"
+      ]
+    },
+    {
+      "id": "crack_files_talk_reynard_hannan",
+      "stage": "CRACK_FILES",
+      "speaker": "reynard_hannan",
+      "title": {
+        "en": "Talk: reynard_hannan",
+        "zh": "与 reynard_hannan 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with reynard_hannan",
+        "zh": "与 reynard_hannan 的通讯"
+      },
+      "roots": [
+        "r:SD7SintelReynardOption"
+      ]
+    },
+    {
+      "id": "crack_files_talk_horus_yaribay",
+      "stage": "CRACK_FILES",
+      "speaker": "horus_yaribay",
+      "title": {
+        "en": "Talk: horus_yaribay",
+        "zh": "与 horus_yaribay 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with horus_yaribay",
+        "zh": "与 horus_yaribay 的通讯"
+      },
+      "roots": [
+        "r:SD7SintelHorusOptions"
+      ]
+    },
+    {
+      "id": "talk_siyavong_talk_horus_yaribay",
+      "stage": "TALK_SIYAVONG",
+      "speaker": "horus_yaribay",
+      "title": {
+        "en": "Talk: horus_yaribay",
+        "zh": "与 horus_yaribay 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with horus_yaribay",
+        "zh": "与 horus_yaribay 的通讯"
+      },
+      "roots": [
+        "r:SD7SintelHorusOptionsNoCom"
+      ]
+    },
+    {
+      "id": "talk_orcus_talk_rao",
+      "stage": "TALK_ORCUS",
+      "speaker": "rao",
+      "title": {
+        "en": "Talk: rao",
+        "zh": "与 rao 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with rao",
+        "zh": "与 rao 的通讯"
+      },
+      "roots": [
+        "r:SD7SintelOrcusRaoOption",
+        "r:SD7SintelOrcusRaoWait",
+        "r:SD7SintelOrcusRaoTrigger"
+      ]
+    },
+    {
+      "id": "find_them_talk_rao",
+      "stage": "FIND_THEM",
+      "speaker": "rao",
+      "title": {
+        "en": "Talk: rao",
+        "zh": "与 rao 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with rao",
+        "zh": "与 rao 的通讯"
+      },
+      "roots": [
+        "r:SD7SraoFindOption"
+      ]
+    },
+    {
+      "id": "talk_siyavong_talk_siyavong",
+      "stage": "TALK_SIYAVONG",
+      "speaker": "siyavong",
+      "title": {
+        "en": "Talk: siyavong",
+        "zh": "与 siyavong 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with siyavong",
+        "zh": "与 siyavong 的通讯"
+      },
+      "roots": [
+        "r:SD7SsiyavongGreetingDecrypted",
+        "r:SD7SsiyavongDecryptOpt",
+        "r:SD7SsiyavongDecryptOptDirect"
+      ]
+    },
+    {
+      "id": "find_them_talk_siyavong",
+      "stage": "FIND_THEM",
+      "speaker": "siyavong",
+      "title": {
+        "en": "Talk: siyavong",
+        "zh": "与 siyavong 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with siyavong",
+        "zh": "与 siyavong 的通讯"
+      },
+      "roots": [
+        "r:SD7SsiyavongFindThemOpt"
+      ]
+    },
+    {
+      "id": "talk_inesis_talk_faro_inesis",
+      "stage": "TALK_INESIS",
+      "speaker": "faro_inesis",
+      "title": {
+        "en": "Talk: faro_inesis",
+        "zh": "与 faro_inesis 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with faro_inesis",
+        "zh": "与 faro_inesis 的通讯"
+      },
+      "roots": [
+        "r:SD7SinesisDecryptOpt",
+        "r:SD7SinesisDecryptDirectOpt",
+        "r:SD7SinesisDecryptWait",
+        "r:SD7SinesisTrigger"
+      ]
+    },
+    {
+      "id": "find_them_talk_faro_inesis",
+      "stage": "FIND_THEM",
+      "speaker": "faro_inesis",
+      "title": {
+        "en": "Talk: faro_inesis",
+        "zh": "与 faro_inesis 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with faro_inesis",
+        "zh": "与 faro_inesis 的通讯"
+      },
+      "roots": [
+        "r:SD7SinesisDiscussAndrada",
+        "r:SD7SinesisFindHub"
+      ]
+    },
+    {
+      "id": "find_them_mkt_qaras",
+      "stage": "FIND_THEM",
+      "speaker": null,
+      "title": {
+        "en": "Market: qaras",
+        "zh": "市场：qaras"
+      },
+      "location": {
+        "en": "Docked at qaras",
+        "zh": "靠港 qaras"
+      },
+      "roots": [
+        "r:SD7SqarasVIPjasonOpt",
+        "r:SD7SqarasVIPjasonOpt2"
+      ]
+    },
+    {
+      "id": "start_greet_talk_sd7s_qaras_agent",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Greetings: sd7s_qaras_agent",
+        "zh": "任务开始：问候：sd7s_qaras_agent"
+      },
+      "location": {
+        "en": "Comm conversation with sd7s_qaras_agent",
+        "zh": "与 sd7s_qaras_agent 的通讯"
+      },
+      "roots": [
+        "r:SD7SqarasAgentComms"
+      ]
+    },
+    {
+      "id": "find_them_talk_baird",
+      "stage": "FIND_THEM",
+      "speaker": "baird",
+      "title": {
+        "en": "Talk: baird",
+        "zh": "与 baird 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with baird",
+        "zh": "与 baird 的通讯"
+      },
+      "roots": [
+        "r:SD7SgaTalkToBairdOption"
+      ]
+    },
+    {
+      "id": "find_them_talk_station_galatia_academy",
+      "stage": "FIND_THEM",
+      "speaker": "station_galatia_academy",
+      "title": {
+        "en": "Talk: station_galatia_academy",
+        "zh": "与 station_galatia_academy 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with station_galatia_academy",
+        "zh": "与 station_galatia_academy 的通讯"
+      },
+      "roots": [
+        "r:SD7SgaOption"
+      ]
+    },
+    {
+      "id": "start_greet_talk_achilles_andrada",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Greetings: achilles_andrada",
+        "zh": "任务开始：问候：achilles_andrada"
+      },
+      "location": {
+        "en": "Comm conversation with achilles_andrada",
+        "zh": "与 achilles_andrada 的通讯"
+      },
+      "roots": [
+        "r:SD7SachillesOpenComms",
+        "r:SD7SachillesOpenCommsFirst"
+      ]
+    },
+    {
+      "id": "find_them_mkt_yesod",
+      "stage": "FIND_THEM",
+      "speaker": null,
+      "title": {
+        "en": "Market: yesod",
+        "zh": "市场：yesod"
+      },
+      "location": {
+        "en": "Docked at yesod",
+        "zh": "靠港 yesod"
+      },
+      "roots": [
+        "r:SD7SyesodAskVIPopt"
+      ]
+    },
+    {
+      "id": "start_greet_talk_gallu_blanc",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Greetings: gallu_blanc",
+        "zh": "任务开始：问候：gallu_blanc"
+      },
+      "location": {
+        "en": "Comm conversation with gallu_blanc",
+        "zh": "与 gallu_blanc 的通讯"
+      },
+      "roots": [
+        "r:SD7SgalluBlancGreetingAgain"
+      ]
+    },
+    {
+      "id": "find_them_talk_gallu_blanc",
+      "stage": "FIND_THEM",
+      "speaker": "gallu_blanc",
+      "title": {
+        "en": "Talk: gallu_blanc",
+        "zh": "与 gallu_blanc 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with gallu_blanc",
+        "zh": "与 gallu_blanc 的通讯"
+      },
+      "roots": [
+        "r:SD7SblancAskPerseus",
+        "r:SD7SblancAskPerseusSD",
+        "r:SD7SblancAskCydoniaOpt",
+        "r:SD7SblancJaccuseOpt",
+        "r:SD7SblancSOnarc",
+        "r:SD7SblancPMnarc"
+      ]
+    },
+    {
+      "id": "find_them_mkt_nomios",
+      "stage": "FIND_THEM",
+      "speaker": null,
+      "title": {
+        "en": "Market: nomios",
+        "zh": "市场：nomios"
+      },
+      "location": {
+        "en": "Docked at nomios",
+        "zh": "靠港 nomios"
+      },
+      "roots": [
+        "r:SD7SnomiosPMaskPerseus",
+        "r:SD7SnomiosPMaskCydonia",
+        "r:SD7SnomiosPMaskCydoniaAgain",
+        "r:SD7SnomiosSOapologize",
+        "r:SD7SnomiosSOaskPerseus",
+        "r:SD7SnomiosSOaskCydonia"
+      ]
+    },
+    {
+      "id": "start_greet_talk_cydonia",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Greetings: cydonia",
+        "zh": "任务开始：问候：cydonia"
+      },
+      "location": {
+        "en": "Comm conversation with cydonia",
+        "zh": "与 cydonia 的通讯"
+      },
+      "roots": [
+        "r:SD7ScydoniaGreetingFirst",
+        "r:SD7ScydoniaGreetingAgain",
+        "r:SD7ScydoniaGreetingTriedAsk"
+      ]
+    },
+    {
+      "id": "find_them_mkt_kantas_den",
+      "stage": "FIND_THEM",
+      "speaker": null,
+      "title": {
+        "en": "Market: kantas_den",
+        "zh": "市场：kantas_den"
+      },
+      "location": {
+        "en": "Docked at kantas_den",
+        "zh": "靠港 kantas_den"
+      },
+      "roots": [
+        "r:SD7SkantasDenVIPcydonia"
+      ]
+    },
+    {
+      "id": "start_greet_talk_maeus_moroz",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Greetings: maeus_moroz",
+        "zh": "任务开始：问候：maeus_moroz"
+      },
+      "location": {
+        "en": "Comm conversation with maeus_moroz",
+        "zh": "与 maeus_moroz 的通讯"
+      },
+      "roots": [
+        "r:SD7SmorozGreeting",
+        "r:SDRMorozDuringStandoff",
+        "r:SDRMorozDuringStandoffRogue"
+      ]
+    },
+    {
+      "id": "find_them_talk_maeus_moroz",
+      "stage": "FIND_THEM",
+      "speaker": "maeus_moroz",
+      "title": {
+        "en": "Talk: maeus_moroz",
+        "zh": "与 maeus_moroz 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with maeus_moroz",
+        "zh": "与 maeus_moroz 的通讯"
+      },
+      "roots": [
+        "r:SD7SmorozAsk"
+      ]
+    },
+    {
+      "id": "find_them_mkt_orthrus",
+      "stage": "FIND_THEM",
+      "speaker": null,
+      "title": {
+        "en": "Market: orthrus",
+        "zh": "市场：orthrus"
+      },
+      "location": {
+        "en": "Docked at orthrus",
+        "zh": "靠港 orthrus"
+      },
+      "roots": [
+        "r:SD7SorthrusVIPaskOpt",
+        "r:SD7SorthrusVIPaskOptB",
+        "r:SD7SorthrusVIPaskOptAgain"
+      ]
+    },
+    {
+      "id": "find_them_talk_reynard_hannan",
+      "stage": "FIND_THEM",
+      "speaker": "reynard_hannan",
+      "title": {
+        "en": "Talk: reynard_hannan",
+        "zh": "与 reynard_hannan 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with reynard_hannan",
+        "zh": "与 reynard_hannan 的通讯"
+      },
+      "roots": [
+        "r:SD7SreyAndradaFilesDiscussOptFirst",
+        "r:SD7SreyAndradaFilesDiscussOptPro"
+      ]
+    },
+    {
+      "id": "find_them_talk_arroyo",
+      "stage": "FIND_THEM",
+      "speaker": "arroyo",
+      "title": {
+        "en": "Talk: arroyo",
+        "zh": "与 arroyo 交谈"
+      },
+      "location": {
+        "en": "Comm conversation with arroyo",
+        "zh": "与 arroyo 的通讯"
+      },
+      "roots": [
+        "r:SD7SarroyoAskForAdvice"
+      ]
+    },
+    {
+      "id": "start_greet_talk_siyavong",
+      "stage": null,
+      "speaker": null,
+      "title": {
+        "en": "Quest start: Greetings: siyavong",
+        "zh": "任务开始：问候：siyavong"
+      },
+      "location": {
+        "en": "Comm conversation with siyavong",
+        "zh": "与 siyavong 的通讯"
+      },
+      "roots": [
+        "r:PostSDRsiyavongGreetingB"
+      ]
+    }
+  ],
+  "excludeRules": [],
+  "ignoreRules": [
+    "relLevelDiktatSDTU",
+    "relLevelDiktatSD7S",
+    "HyderGreetDefaultSD",
+    "sdBarRaid0",
+    "ZGRacknowledgeDiktatB"
+  ],
+  "ignoreRulePatterns": [
+    "^sdse",
+    "^SDSE",
+    "^PostSDSE",
+    "^postSDSE",
+    "^sdsw",
+    "^SDSW",
+    "^PostSDSW",
+    "^postSDSW",
+    "^sdr[A-Z]",
+    "^SDR[A-Z]",
+    "^PostSDR",
+    "^postSDR",
+    "^DEV",
+    "^dev[A-Z]",
+    "test",
+    "Test",
+    "TEST"
+  ],
+  "icon": "graphics/icons/missions/seven_sons.png"
+}

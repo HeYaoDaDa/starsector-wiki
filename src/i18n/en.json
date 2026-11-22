@@ -17,6 +17,7 @@
   "nav.planets": "Planets",
   "nav.persons": "Characters",
   "nav.quests": "Quests & Dialogue",
+  "nav.dialogueDict": "Dialogue Dictionary",
   "nav.github": "GitHub Repository",
 
   "common.none": "None",
@@ -247,5 +248,24 @@
   "cond.repGTE": "reputation ≥ {level} ({faction})",
   "cond.repLTE": "reputation ≤ {level} ({faction})",
   "cond.hostile": "this faction is hostile to you",
-  "cond.encountered": "not yet encountered"
+  "cond.encountered": "not yet encountered",
+
+  "dict.searchPlaceholder": "Search rule id / text (zh & en) / option ...",
+  "dict.entries": "{count} entries",
+  "dict.noResults": "No matching dialogue.",
+  "dict.showMore": "Show more ({shown})",
+  "dict.category.all": "All categories",
+  "dict.cat.usurpers": "The Usurpers",
+  "dict.cat.seven_sons": "The Seven Sons",
+  "dict.cat.supreme_executor": "The Supreme Executor",
+  "dict.cat.askonia_misc": "Askonia misc",
+  "dict.cat.sindrian_misc": "Sindrian misc",
+  "dict.cat.academy": "Galatia Academy",
+  "dict.cat.luddic": "Luddic Church",
+  "dict.cat.bornanew": "Born Anew files",
+  "dict.cat.ziggurat": "Ziggurat arc",
+  "dict.cat.historian": "The Historian",
+  "dict.cat.abyss": "The Abyss",
+  "dict.cat.tutorial": "Tutorial",
+  "dict.cat.other": "Other / generic"
 }

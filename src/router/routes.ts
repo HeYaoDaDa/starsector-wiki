@@ -177,6 +177,12 @@ const routes: RouteRecordRaw[] = [
         path: 'quests/:id',
         component: () => import('pages/QuestPage.vue'),
       },
+      {
+        name: 'dialogue_dict',
+        path: 'dialogue_dict',
+        component: () => import('pages/DialogueDictPage.vue'),
+        meta: { keepAlive: true },
+      },
     ],
   },
   {

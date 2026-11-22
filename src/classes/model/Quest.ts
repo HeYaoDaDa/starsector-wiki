@@ -107,3 +107,20 @@ export interface QuestIndex {
   version: string;
   quests: QuestIndexEntry[];
 }
+
+/** 词典条目（build_dictionary.py 生成，字段名压缩） */
+export interface DictionaryEntry {
+  id: string;
+  cat: string;
+  t: string;
+  c: string[];
+  en: string;
+  zh: string;
+  o: { id: string; en: string; zh: string }[];
+}
+
+export interface DialogueDictionary {
+  version: string;
+  count: number;
+  entries: DictionaryEntry[];
+}

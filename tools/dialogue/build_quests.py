@@ -492,7 +492,21 @@ def main():
     out_dir = os.path.join(args.out, args.version, 'dialogues')
     os.makedirs(out_dir, exist_ok=True)
 
-    index_out = {'version': args.version, 'quests': []}
+    # 合并式索引：--quests 部分构建时保留未重建任务的条目
+    index_path = os.path.join(out_dir, 'index.json')
+    index_quests = []
+    if os.path.exists(index_path):
+        try:
+            with open(index_path, encoding='utf-8') as f:
+                prev = json.load(f)
+            index_quests = [
+                q for q in prev.get('quests', [])
+                if q['id'] not in [os.path.splitext(p)[0] for p in packages]
+            ]
+        except (json.JSONDecodeError, OSError):
+            pass
+
+
     for pkg_file in packages:
         with open(os.path.join(quests_dir, pkg_file), encoding='utf-8') as f:
             quest = json.load(f)
@@ -537,7 +551,7 @@ def main():
             for fl in rep['unglossed_flags']:
                 f.write(f"- `{fl}`\n")
 
-        index_out['quests'].append({
+        index_quests.append({
             'id': out['id'],
             'name': out['name'],
             'summary': out['summary'],
@@ -548,9 +562,11 @@ def main():
         })
         print(f"  wrote {os.path.join(out_dir, quest['id'] + '.json')} + {rep_path}")
 
-    with open(os.path.join(out_dir, 'index.json'), 'w', encoding='utf-8') as f:
+
+    index_out = {'version': args.version, 'quests': index_quests}
+    with open(index_path, 'w', encoding='utf-8') as f:
         json.dump(index_out, f, ensure_ascii=False, indent=2)
-    print(f"wrote {os.path.join(out_dir, 'index.json')}")
+    print(f"wrote {index_path}")
 
 
 if __name__ == '__main__':

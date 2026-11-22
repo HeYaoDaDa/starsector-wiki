@@ -483,7 +483,7 @@ test.describe('Starsector Wiki 冒烟测试', () => {
     const card = page.locator('.quest-card').first();
     await expect(card).toBeVisible({ timeout: 10_000 });
     // 至少包含任务名与阶段计数
-    await expect(card.getByText('The Usurpers')).toBeVisible();
+    await expect(page.getByText('The Usurpers').first()).toBeVisible();
   });
 
   test('13b. 任务详情 + 对话树交互', async ({ page }) => {
@@ -522,5 +522,28 @@ test.describe('Starsector Wiki 冒烟测试', () => {
 
     await navigateTo(page, '#/quests/no_such_quest');
     await expect(page.getByText(/not found/i).first()).toBeVisible({ timeout: 10_000 });
+  });
+
+  // ── 14. 对话词典 ──────────────────────────────────
+
+  test('14. 对话词典: 加载 + 搜索 + 分类过滤', async ({ page }) => {
+    await page.goto('/');
+    await waitForAppReady(page);
+
+    await navigateTo(page, '#/dialogue_dict');
+    // 词条加载（懒加载 9.5MB JSON）
+    await expect(page.locator('.dict-entry').first()).toBeVisible({ timeout: 30_000 });
+    const total = await page.locator('.result-count').textContent();
+    expect(total).toContain('entries');
+
+    // 搜索：篡夺者台词
+    await page.locator('.dict-search input').fill('Macario');
+    await expect(page.locator('.dict-entry').first()).toBeVisible({ timeout: 10_000 });
+
+    // 清空搜索，切分类
+    await page.locator('.dict-search input').fill('');
+    await page.locator('.dict-cat').click();
+    await page.getByText('The Usurpers').first().click();
+    await expect(page.locator('.dict-entry').first()).toBeVisible({ timeout: 10_000 });
   });
 });
