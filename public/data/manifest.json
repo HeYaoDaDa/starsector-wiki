@@ -1,6 +1,13 @@
 {
   "versions": [
     {
+      "version": "0.98.5a",
+      "locales": [
+        "en",
+        "zh"
+      ]
+    },
+    {
       "version": "0.98a",
       "locales": [
         "en",
