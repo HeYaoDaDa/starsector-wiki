@@ -1,0 +1,386 @@
+{
+  "id": "the_usurpers",
+  "gameId": "sdtu",
+  "name": { "en": "The Usurpers", "zh": "篡夺者" },
+  "factionId": "sindrian_diktat",
+  "summary": {
+    "en": "A mysterious 'concerned citizen' named Yannick Ram contacts you with a plan to save the Sindrian Diktat from itself — and introduces you to Chief High Inspector Dolos Macario, the 'Spider of Sindria', who has designs on the throne of Supreme Executor Philip Andrada.",
+    "zh": "一位神秘的'忧国之士' Yannick Ram 联系上了你，声称有一个'把辛达强权从它自己手里拯救出来'的计划 —— 并把你引荐给了辛德里亚之蛛、首席督察长 Dolos Macario，一个对最高元首 Philip Andrada 的宝座有所图谋的人。"
+  },
+  "icon": "graphics/icons/missions/the_usurpers.png",
+  "stages": [
+    {
+      "id": "MEET_RAM",
+      "flag": "$sdtu_meetRamOnVolturn",
+      "briefing": {
+        "en": "Meet Yannick Ram at his safehouse on Volturn. He has a plan to save the Sindrian Diktat from itself.",
+        "zh": "去 Volturn 上 Yannick Ram 的安全屋见他。他有一个'把辛达强权从它自己手里拯救出来'的计划。"
+      }
+    },
+    {
+      "id": "INTERCEPT_FLEET",
+      "flag": "$sdtu_interceptFleet",
+      "briefing": {
+        "en": "Find and intercept a Sindrian Diktat patrol fleet led by the 'treasonous' officer. It can be found in the Askonia system.",
+        "zh": "找到并拦截由那位'叛国'军官率领的辛达强权巡逻舰队。它就在 Askonia 星系里。"
+      }
+    },
+    {
+      "id": "MEET_HYDER",
+      "flag": "$sdtu_meetHyder",
+      "briefing": {
+        "en": "Use the 'treasonous' officer as leverage to gain access to Deputy Star Marshal Hyder. She can be found in command of the Askonia System Defense Armada, a large warfleet patrolling the Askonia star system.",
+        "zh": "用这位'叛国'军官作为筹码，去见副星际元帅 Hyder。可以在 Askonia 星系巡逻的大型战舰群 —— Askonia 星系防卫舰队的旗舰上找到她。"
+      }
+    },
+    {
+      "id": "RETURN_TO_MACARIO",
+      "flag": "$sdtu_didHyderMeeting",
+      "briefing": {
+        "en": "Report back to Macario about your conversation with Hyder.",
+        "zh": "回到 Macario 那里，汇报你与 Hyder 的会谈结果。"
+      }
+    },
+    {
+      "id": "EXTRACT_AGENT",
+      "flag": "$sdtu_extractAgent",
+      "briefing": {
+        "en": "Extract a known double-agent who, while working for Horacio Caden, has betrayed the Sindrian Diktat. The 'treasonous' double-agent is based on Umbra.",
+        "zh": "提取一名已知的双面特工：此人名义上为 Horacio Caden 效力，实则背叛了辛达强权。这名'叛国'的双面特工据点在 Umbra。"
+      }
+    },
+    {
+      "id": "MEET_CADEN",
+      "flag": "$sdtu_meetCaden",
+      "briefing": {
+        "en": "Speak with Guard High Deputy Executor Caden. He can be found in command of the Lion's Guard Grand Armada, a large warfleet patrolling the Askonia star system.",
+        "zh": "与卫队最高副首长 Caden 谈谈。可以在 Askonia 星系巡逻的大型战舰群 —— Lion's Guard 大舰队的旗舰上找到他。"
+      }
+    },
+    {
+      "id": "AGAIN_WTH_MACARIO",
+      "flag": "$sdtu_didCadenMeeting",
+      "briefing": {
+        "en": "Report back to Macario about your conversation with Caden.",
+        "zh": "再次回到 Macario 那里，汇报你与 Caden 的会谈结果。"
+      }
+    },
+    {
+      "id": "EMERGENCY_INTERCEPT",
+      "flag": "$sdtu_emergencyIntercept",
+      "briefing": {
+        "en": "Intercept and assist or capture Macario's agent at the Fringe Jump-point of Askonia.",
+        "zh": "在 Askonia 的边缘跳点拦截 Macario 的特工，并决定协助还是俘虏他。"
+      }
+    },
+    {
+      "id": "DELIVER_NEWS",
+      "flag": "$sdtu_deliverNews",
+      "briefing": {
+        "en": "Report back to Macario with news of his agent's demise.",
+        "zh": "把他的特工的死讯带回给 Macario。"
+      }
+    },
+    {
+      "id": "COMPLETED",
+      "flag": "$sdtu_missionCompleted",
+      "briefing": { "en": "Mission complete.", "zh": "任务完成。" }
+    }
+  ],
+  "characters": [
+    {
+      "id": "ram",
+      "name": { "en": "Yannick Ram", "zh": "Yannick Ram" },
+      "title": {
+        "en": "Self-described 'patriot' of the Sindrian Diktat",
+        "zh": "自封的辛达强权'爱国者'"
+      }
+    },
+    {
+      "id": "macario",
+      "name": { "en": "Dolos Macario", "zh": "Dolos Macario" },
+      "title": {
+        "en": "Chief High Inspector, the 'Spider of Sindria'",
+        "zh": "首席督察长，'辛德里亚之蛛'"
+      }
+    },
+    {
+      "id": "hyder",
+      "name": { "en": "Oxana Hyder", "zh": "Oxana Hyder" },
+      "title": {
+        "en": "Deputy Star Marshal, Askonia System Defense Armada",
+        "zh": "副星际元帅，Askonia 星系防卫舰队"
+      }
+    },
+    {
+      "id": "caden",
+      "name": { "en": "Horacio Caden", "zh": "Horacio Caden" },
+      "title": {
+        "en": "Guard High Deputy Executor, Lion's Guard Grand Armada",
+        "zh": "卫队最高副首长，Lion's Guard 大舰队"
+      }
+    },
+    {
+      "id": "imoinu",
+      "name": { "en": "Imoinu Kato", "zh": "Imoinu Kato" },
+      "title": {
+        "en": "'Treasonous' double-agent, based on Umbra",
+        "zh": "'叛国'双面特工，据点 Umbra"
+      }
+    },
+    {
+      "id": "perseus",
+      "name": { "en": "Perseus", "zh": "Perseus" },
+      "title": {
+        "en": "Macario's agent at the Fringe Jump-point of Askonia",
+        "zh": "Macario 的特工，现身于 Askonia 边缘跳点"
+      }
+    }
+  ],
+  "flags": {
+    "$global.sdtu_ramDidProposal": { "en": "Ram made his proposal", "zh": "Ram 已提出提议" },
+    "$global.sdtu_inProgress": { "en": "Mission in progress", "zh": "任务进行中" },
+    "$global.sdtu_missionCompleted": { "en": "Mission completed", "zh": "任务已完成" },
+    "$global.sdtu_meetRamOnVolturn": { "en": "Met Ram on Volturn", "zh": "已在 Volturn 见过 Ram" },
+    "$global.sdtu_interceptFleet": { "en": "Intercept stage unlocked (patrol fleet spawned)", "zh": "拦截阶段已开始（巡逻舰队已生成）" },
+    "$global.sdtu_meetHyder": { "en": "Hyder meeting unlocked", "zh": "Hyder 会谈已解锁" },
+    "$global.sdtu_didHyderMeeting": { "en": "Done talking with Hyder", "zh": "已完成与 Hyder 的会谈" },
+    "$global.sdtu_foughtDiktatPatrol": { "en": "Fought the Diktat patrol", "zh": "已与巡逻舰队交战" },
+    "$global.sdtu_promisedToHelpPatrolLeader": { "en": "Promised to help the patrol leader", "zh": "已承诺帮助巡逻队长" },
+    "$global.sdtu_gotPatrolCrewToMutiny": { "en": "Got the patrol crew to mutiny", "zh": "已使巡逻队船员哗变" },
+    "$global.sdtu_didPatrolTraitorTransfer": { "en": "Patrol officer handed over for real", "zh": "巡逻队军官已被实际移交" },
+    "$global.sdtu_extractAgent": { "en": "Extract-agent stage unlocked", "zh": "特工提取阶段已解锁" },
+    "$global.sdtu_meetCaden": { "en": "Caden meeting unlocked", "zh": "Caden 会谈已解锁" },
+    "$global.sdtu_didCadenMeeting": { "en": "Done talking with Caden", "zh": "已完成与 Caden 的会谈" },
+    "$global.sdtu_enragedCaden": { "en": "Caden enraged at you", "zh": "Caden 已被激怒" },
+    "$global.sdtu_toldCadenPlayerBacksHim": { "en": "Told Caden you back him", "zh": "已告知 Caden 你支持他" },
+    "$global.sdtu_deliverNews": { "en": "Deliver-news stage unlocked", "zh": "传讯阶段已解锁" },
+    "$global.sdtu_emergencyIntercept": { "en": "Emergency intercept happened", "zh": "应急拦截已发生" },
+    "$global.sdtu_completed": { "en": "Mission completed", "zh": "任务已完成" },
+    "$global.didSDBarRaid": { "en": "Experienced the 'Sindrian Diktat bar raid' event", "zh": "已触发'辛达强权酒吧袭击'事件" },
+    "$global.SDTU_barRaidDelay": { "en": "Bar-raid event cooldown active", "zh": "酒吧袭击事件冷却中" },
+    "$entity.sdtu_interceptFleet": { "en": "The 'traitor' patrol fleet (transponder matches Macario's file)", "zh": "'叛国'巡逻舰队（应答器信号与 Macario 的文件相符）" },
+    "$sdtu_merc": { "en": "The mercenary fleet hired by Macario", "zh": "Macario 雇佣的佣兵舰队" },
+    "$sdtuAgentDebris": { "en": "The debris field where the agent died", "zh": "特工遇害处的残骸场" },
+    "$sdtu_antisFleet": { "en": "ARC raider fleet", "zh": "ARC 掠夺者舰队" },
+    "$sdtu_antisRevengeFleet": { "en": "ARC revenge fleet", "zh": "ARC 复仇舰队" },
+    "$global.sdtu_umbraAgentCoop": { "en": "The Umbra agent agreed to cooperate", "zh": "Umbra 特工已同意合作" },
+    "$global.sdtu_resolvedARCagent": { "en": "ARC agent matter resolved", "zh": "ARC 特工事件已了结" },
+    "$global.sdtu_raidedUmbra": { "en": "Raided Umbra for the agent", "zh": "已为特工袭击过 Umbra" },
+    "$global.sdtu_hintedRaoInvolvement": { "en": "Heard Rao's name in connection with this", "zh": "听闻此事与 Rao 有关" },
+    "$liedAboutSDTUagent": { "en": "Lied about the SDTU agent", "zh": "曾就辛达强权特工一事撒谎" },
+    "$madeArrestClaim": { "en": "Made the arrest claim", "zh": "已宣称执行逮捕" },
+    "$sentWarrant": { "en": "Sent the (forged) warrant", "zh": "已出示（伪造的）逮捕令" },
+    "$trust": { "en": "Macario's trust in you", "zh": "Macario 对你的信任度" },
+    "$askedWhatPlan": { "en": "Asked: what plan?", "zh": "已问过：什么计划？" },
+    "$askedForMe": { "en": "Asked: what's in it for me?", "zh": "已问过：我能得到什么？" },
+    "$askedWhyWant": { "en": "Asked: why trust me?", "zh": "已问过：为什么信任我？" },
+    "$askedGazeOut": { "en": "Asked about 'turning gaze outward'", "zh": "已问过'向外看'的含义" },
+    "$askedAndradaKnow": { "en": "Asked if Andrada knows", "zh": "已问过 Andrada 是否知情" },
+    "$askedYouTraitor": { "en": "Called Macario the traitor", "zh": "已反指 Macario 才是叛国者" },
+    "$askedAmbition": { "en": "Asked about Macario's ambition", "zh": "已试探 Macario 的野心" },
+    "$saidAnswerServe": { "en": "Said you live to serve the Diktat", "zh": "已表态愿为辛达强权效力" },
+    "$saidAnswerEarly": { "en": "Gave an early answer to Macario", "zh": "已提前给出了回答" }
+  },
+  "scenes": [
+    {
+      "id": "ram_call",
+      "stage": null,
+      "speaker": "ram",
+      "title": { "en": "An Incoming Transmission", "zh": "一通来电" },
+      "location": {
+        "en": "Any Sindrian Diktat market, shortly after docking",
+        "zh": "任意辛达强权市场，靠港后不久"
+      },
+      "roots": ["r:sdtuStart"]
+    },
+    {
+      "id": "ram_safehouse",
+      "stage": "MEET_RAM",
+      "speaker": "ram",
+      "title": { "en": "The Safehouse on Volturn", "zh": "Volturn 的安全屋" },
+      "location": {
+        "en": "Volturn, Sindrian Diktat — Yannick Ram's safehouse",
+        "zh": "Volturn（辛达强权）—— Yannick Ram 的安全屋"
+      },
+      "speakerOverrides": {
+        "SDTUMacarioIntroHub": "macario",
+        "SDTUMacIntroReasoning": "macario",
+        "SDTUSafehouseWrapHubOpt": "macario",
+        "SDTURamMacarioWeaponCheck": "macario",
+        "SDTURamMacarioResponse": "macario",
+        "SDTURamMacarioWeaponSword": "macario",
+        "SDTURamMacarioWeaponSword2": "macario",
+        "SDTURamMacarioWepDropOpt": "macario"
+      },
+      "roots": ["r:sdtuVolturnMeetRamOption", "r:sdtuRamSafehouse11"]
+    },
+    {
+      "id": "traitor_patrol",
+      "stage": "INTERCEPT_FLEET",
+      "speaker": null,
+      "title": { "en": "The 'Treasonous' Patrol", "zh": "'叛国'巡逻队" },
+      "location": {
+        "en": "The 'traitor' patrol fleet, Askonia system",
+        "zh": "Askonia 星系，'叛国'巡逻舰队"
+      },
+      "roots": [
+        "m:sdtuTraitorPatrolDialog:$entity.sdtu_interceptFleet",
+        "r:sdtuPatrolAgainSaidArrestOpen",
+        "r:sdtuPatrolAgainDidWarrantOpen",
+        "r:sdtuReleaseOfficerOption",
+        "r:sdtuMacarioNeedToInterceptPatrol",
+        "t:sdtuPatrolDefeated"
+      ]
+    },
+    {
+      "id": "hyder_talk",
+      "stage": "MEET_HYDER",
+      "speaker": "hyder",
+      "title": { "en": "Deputy Star Marshal Hyder", "zh": "副星际元帅 Hyder" },
+      "location": {
+        "en": "Oxana Hyder's flagship, via comms",
+        "zh": "Oxana Hyder 的旗舰（通讯）"
+      },
+      "roots": ["r:sdtuHyderAngryGreeting", "r:sdtuMacarioNeedToMeetHyder"]
+    },
+    {
+      "id": "macario_report_hyder",
+      "stage": "RETURN_TO_MACARIO",
+      "speaker": "macario",
+      "title": { "en": "Reporting to Macario", "zh": "向 Macario 汇报" },
+      "location": {
+        "en": "Sindria, via comms",
+        "zh": "Sindria（通讯）"
+      },
+      "roots": ["r:sdtuMacarioPostHyderGreeting", "r:sdtuMacarioPostHyderRetalk"]
+    },
+    {
+      "id": "umbra_extract",
+      "stage": "EXTRACT_AGENT",
+      "speaker": "imoinu",
+      "title": { "en": "Extracting the Agent from Umbra", "zh": "从 Umbra 提取特工" },
+      "location": {
+        "en": "Umbra, pirate world",
+        "zh": "Umbra，海盗星球"
+      },
+      "roots": [
+        "r:sdtuAddUmbraRaidOption",
+        "r:sdtuUmbraVIPoptA",
+        "r:sdtuUmbraVIPoptB",
+        "r:sdtuUmbraImoinuCheck",
+        "r:ImoinuUmbraGreeting",
+        "r:ImoinuUmbraGreetingSDcom",
+        "r:ImoinuKatoUmbraAskWhat",
+        "r:sdtuUmbraReleaseArcAgent",
+        "t:SDTUUmbraRaidFinishedA",
+        "t:SDTUUmbraRaidFinishedB"
+      ]
+    },
+    {
+      "id": "caden_talk",
+      "stage": "MEET_CADEN",
+      "speaker": "caden",
+      "title": { "en": "Guard High Deputy Executor Caden", "zh": "卫队最高副首长 Caden" },
+      "location": {
+        "en": "Horacio Caden's flagship, via comms",
+        "zh": "Horacio Caden 的旗舰（通讯）"
+      },
+      "roots": ["r:sdtuCadenAngryGreeting", "r:sdtuMacarioNeedToTalkCaden"]
+    },
+    {
+      "id": "macario_report_caden",
+      "stage": "AGAIN_WTH_MACARIO",
+      "speaker": "macario",
+      "title": { "en": "Reporting to Macario, Again", "zh": "再次向 Macario 汇报" },
+      "location": {
+        "en": "Sindria, via comms",
+        "zh": "Sindria（通讯）"
+      },
+      "roots": [
+        "r:sdtuMacarioPostCadenGreeting",
+        "r:sdtuMacarioPostCadenGreetingEnraged"
+      ]
+    },
+    {
+      "id": "emergency_intercept",
+      "stage": "EMERGENCY_INTERCEPT",
+      "speaker": null,
+      "title": { "en": "Emergency Intercept at the Fringe Jump-point", "zh": "边缘跳点的应急拦截" },
+      "location": {
+        "en": "Fringe Jump-point of Askonia — mercenary fleet, ARC raiders, debris field",
+        "zh": "Askonia 边缘跳点 —— 佣兵舰队、ARC 掠夺者、残骸场"
+      },
+      "roots": [
+        "r:sdtuMercGreeting",
+        "r:sdtuARCfleetGreetingA",
+        "r:sdtuARCfleetGreetingA2",
+        "r:sdtuARCfleetGreetingB",
+        "r:sdtuARCfleetGreetingB2",
+        "r:sdtuDebrisOpen",
+        "r:sdtuPostCadenPreInterceptTryTalk",
+        "r:sdtuMercGreetingGotDebris",
+        "r:sdtuMercGreetingGotDebrisHeg"
+      ]
+    },
+    {
+      "id": "macario_news_end",
+      "stage": "DELIVER_NEWS",
+      "speaker": "macario",
+      "title": { "en": "News of Perseus", "zh": "Perseus 的死讯" },
+      "location": {
+        "en": "Sindria, Macario's office",
+        "zh": "Sindria，Macario 的办公室"
+      },
+      "roots": ["r:sdtuMacarioNewsEnd"]
+    },
+    {
+      "id": "aftermath",
+      "stage": "COMPLETED",
+      "speaker": null,
+      "title": { "en": "Aftermath", "zh": "余波" },
+      "location": {
+        "en": "Post-mission greetings",
+        "zh": "任务完成后的通讯问候"
+      },
+      "roots": [
+        "r:postSDTUMacarioGreeting",
+        "r:defaultCadenGreetPostSDTU",
+        "r:defaultCadenGreetPostSDTUcom",
+        "r:defaultCadenGreetPostSDTUbacker",
+        "r:HyderGreetDefaultPostSTDU",
+        "r:HyderGreetDefaultTrustPostSTDU",
+        "r:HyderGreetDefaultSDPostSTDU"
+      ]
+    }
+  ],
+  "excludeRules": ["sdOpenDevOptions", "SDdevOptionHub", "SDdevOptionHubHyder"],
+  "ignoreRules": [
+    "relLevelDiktatSDTU",
+    "HyderGreetDefaultSD",
+    "sdBarRaid0",
+    "sdtuStartDev2",
+    "sdtuHyderTalk1DServeHeg",
+    "sdtuHyderTalkRound2start",
+    "sdtuHyderTalk3MacarioA",
+    "sdtuHyderTalk3MacarioB",
+    "sdtuHyderTalk3MacarioC",
+    "sdtuCadenAgentManipulate2",
+    "sdtuNewsEndOnlySix",
+    "sdtuRamSafehouse10-2",
+    "sdtuRamSafehouse10-3",
+    "sdtuMercEncounter",
+    "sdtuMercEncounterGotDebris",
+    "RaoDevOptionHubA",
+    "raoDevOptionHubA2",
+    "RaoPitchTestSDTU",
+    "ZGRacknowledgeDiktatB"
+  ],
+  "ignoreRulePatterns": [
+    "^sd7s", "^SD7S", "^PostSD7S", "^postSD7S",
+    "^sdse", "^SDSE", "^PostSDSE", "^postSDSE",
+    "^sdsw", "^SDSW", "^sdr[A-Z]", "^SDR[A-Z]",
+    "^BFFIulmus", "^bffiUlmus",
+    "^DEV"
+  ]
+}

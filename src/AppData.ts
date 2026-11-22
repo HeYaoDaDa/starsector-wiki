@@ -21,6 +21,10 @@ import { Planet } from './classes/model/Planet';
 import { StarSystem } from './classes/model/StarSystem';
 import { SpecialItem } from './classes/model/SpecialItem';
 import {
+  Quest,
+  QuestIndex,
+} from './classes/model/Quest';
+import {
   compareFaction,
   compareIndustry,
   compareMarketCondition,
@@ -55,6 +59,10 @@ class AppData {
   availableVersions: { version: string; locales: string[] }[] = [];
   selectedVersion = ref<string>(localStorage.getItem('selectedVersion') || '');
   selectedLocale = ref<string>(localStorage.getItem('locale') || (navigator.language.startsWith('zh') ? 'zh' : 'en'));
+  /** 任务对话索引（按版本，双语合并，与 locale 无关） */
+  questIndex: QuestIndex | null = null;
+  questIndexStatus = ref<'none' | 'loading' | 'ok' | 'empty'>('none');
+  questMap: Map<string, Quest> = new Map();
 
   sortdShips(): Ship[] {
     const result: Ship[] = [];
@@ -461,6 +469,54 @@ class AppData {
     }
   }
 
+  /** 加载任务对话索引（缺失/无效时标记为空） */
+  async fetchQuestIndex(version: string): Promise<boolean> {
+    this.questIndexStatus.value = 'loading';
+    try {
+      const response = await api.get(`data/${version}/dialogues/index.json`);
+      const data = response.data;
+      // dev server 对缺失文件返回 SPA 回退的 HTML，需校验类型
+      if (data && typeof data === 'object' && Array.isArray(data.quests)) {
+        this.questIndex = data as QuestIndex;
+        this.questIndexStatus.value = this.questIndex.quests.length > 0 ? 'ok' : 'empty';
+        return true;
+      }
+    } catch {
+      // 404 等
+    }
+    this.questIndex = null;
+    this.questIndexStatus.value = 'empty';
+    return false;
+  }
+
+  /** 加载单个任务的对话数据（带缓存；无效/缺失返回 undefined） */
+  async loadQuest(version: string, id: string): Promise<Quest | undefined> {
+    const cached = this.questMap.get(id);
+    if (cached) {
+      return cached;
+    }
+    try {
+      const response = await api.get(`data/${version}/dialogues/${id}.json`);
+      const data = response.data;
+      // dev server 对缺失文件返回 SPA 回退的 HTML，需校验类型
+      if (data && typeof data === 'object' && data.id === id) {
+        const quest = data as Quest;
+        this.questMap.set(id, quest);
+        return quest;
+      }
+      return undefined;
+    } catch (error: unknown) {
+      if (error && typeof error === 'object' && 'response' in error) {
+        const axiosError = error as { response?: { status?: number } };
+        if (axiosError.response?.status === 404) {
+          return undefined;
+        }
+      }
+      console.error(error);
+      return undefined;
+    }
+  }
+
   clearAllMaps(): void {
     this.shipMap.clear();
     this.shipSystemMap.clear();
@@ -753,6 +809,9 @@ class AppData {
 
   async reloadData(version: string, locale: string) {
     this.status.value = 'loading';
+    this.questMap.clear();
+    this.questIndex = null;
+    this.questIndexStatus.value = 'none';
     await this.initData(version, locale);
     localStorage.setItem('selectedVersion', version);
     localStorage.setItem('locale', locale);

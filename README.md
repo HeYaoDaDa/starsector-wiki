@@ -8,9 +8,11 @@
 ├── src/                # Vue 3 + Quasar 前端
 ├── public/
 │   ├── data/           # 按 {version}/{locale} 组织的 JSON 数据
+│   │   └── {version}/dialogues/   # 任务对话树（双语合并，与 locale 无关）
 │   └── graphics/       # moveImg.py 拷贝的游戏贴图
 ├── tools/
 │   ├── exporter/       # WikiExporter Java Mod（游戏内导出）
+│   ├── dialogue/       # 任务对话解析管线（Python，离线读 rules.csv）
 │   └── splitlog/       # Python 后处理脚本
 └── package.json        # 前端依赖与脚本
 ```
@@ -48,6 +50,21 @@
    pnpm install
    pnpm quasar dev
    ```
+
+## 任务与对话 / Quests & Dialogue
+
+对话数据不走游戏内导出——直接离线解析游戏目录里的 `rules.csv`（中英双语言按规则 ID 对齐），
+产出按"任务 → 阶段 → 场景 → 对话树"组织的 JSON，前端提供交互式对话浏览（中英对照、
+条件标注、分支跳转）。
+
+```bash
+# 读取 ~/Games/starsector-0985a-{en,cn}，生成 public/data/{version}/dialogues/
+python3 tools/dialogue/build_quests.py
+```
+
+详见 [tools/dialogue/README.md](tools/dialogue/README.md)。当前收录：
+
+- 篡夺者（The Usurpers，0.98a 辛德里亚独裁国任务线）
 
 ## 构建时 Canvas 预计算 / Build-time Canvas Precomputation
 
@@ -174,3 +191,5 @@ public/data/
 ## 导出的数据类型
 
 舰船、武器、船体插件、舰船系统、商品、工业设施、行星类型、市场状态、子市场、特殊物品、势力、星系、行星/空间站、人物。
+
+任务对话（篡夺者等，见"任务与对话"一节）。

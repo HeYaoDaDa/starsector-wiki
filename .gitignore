@@ -41,3 +41,7 @@ yarn-error.log*
 # Playwright test artifacts
 test-results/
 playwright-report/
+
+# 任务对话构建报告（可再生的派生产物）
+tools/dialogue/report_*.md
+tools/dialogue/__pycache__/

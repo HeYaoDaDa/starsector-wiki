@@ -166,6 +166,17 @@ const routes: RouteRecordRaw[] = [
         path: 'person/:id',
         component: () => import('pages/PersonPage.vue'),
       },
+      {
+        name: 'quests',
+        path: 'quests',
+        component: () => import('pages/QuestsPage.vue'),
+        meta: { keepAlive: true },
+      },
+      {
+        name: 'quest',
+        path: 'quests/:id',
+        component: () => import('pages/QuestPage.vue'),
+      },
     ],
   },
   {

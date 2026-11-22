@@ -113,6 +113,7 @@ test.describe('Starsector Wiki 冒烟测试', () => {
       'Star Systems',
       'Planets',
       'Characters',
+      'Quests & Dialogue',
     ];
 
     for (const label of navLabels) {
@@ -173,7 +174,7 @@ test.describe('Starsector Wiki 冒烟测试', () => {
     { hash: '#/special_items', name: 'special items' },
   ];
 
-  for (const { hash, name } of LIST_PAGES_CARD_GRID) {
+  for (const { hash } of LIST_PAGES_CARD_GRID) {
     test(`3b. 列表页(卡片网格): ${hash}`, async ({ page }) => {
       await page.goto('/');
       await waitForAppReady(page);
@@ -470,5 +471,56 @@ test.describe('Starsector Wiki 冒烟测试', () => {
       await navigateTo(page, href);
       await expect(page.locator('h4').first()).toBeVisible();
     }
+  });
+
+  // ── 13. 任务对话: 列表 + 详情 + 对话树交互 ──────────
+
+  test('13a. 任务列表页', async ({ page }) => {
+    await page.goto('/');
+    await waitForAppReady(page);
+
+    await navigateTo(page, '#/quests');
+    const card = page.locator('.quest-card').first();
+    await expect(card).toBeVisible({ timeout: 10_000 });
+    // 至少包含任务名与阶段计数
+    await expect(card.getByText('The Usurpers')).toBeVisible();
+  });
+
+  test('13b. 任务详情 + 对话树交互', async ({ page }) => {
+    await page.goto('/');
+    await waitForAppReady(page);
+
+    await navigateTo(page, '#/quests/the_usurpers');
+    // 任务阶段与人物渲染
+    await expect(page.locator('.quest-stage').first()).toBeVisible({ timeout: 10_000 });
+    expect(await page.locator('.quest-stage').count()).toBeGreaterThan(5);
+    expect(await page.locator('.quest-character').count()).toBeGreaterThan(3);
+
+    // 打开第一个对话场景
+    await expect(page.locator('.quest-scene-btn').first()).toBeVisible();
+    await page.locator('.quest-scene-btn').first().click();
+    await expect(page.locator('.quest-dialogue')).toBeVisible({ timeout: 10_000 });
+
+    // 触发条件面板（入口步骤）
+    await expect(page.locator('.dlg-entry-conds').first()).toBeVisible();
+
+    // 点击第一个可用选项，路径芯片应增加
+    const option = page.locator('.dlg-option:not([disabled])').first();
+    await expect(option).toBeVisible();
+    await option.click();
+    const chips = page.locator('.dlg-path .q-chip');
+    await expect(chips.first()).toBeVisible({ timeout: 10_000 });
+    expect(await chips.count()).toBeGreaterThan(0);
+
+    // 点击路径芯片可回溯
+    await chips.first().click();
+  });
+
+  test('13c. 任务详情: 不存在的任务 ID', async ({ page }) => {
+    await page.goto('/');
+    await waitForAppReady(page);
+
+    await navigateTo(page, '#/quests/no_such_quest');
+    await expect(page.getByText(/not found/i).first()).toBeVisible({ timeout: 10_000 });
   });
 });

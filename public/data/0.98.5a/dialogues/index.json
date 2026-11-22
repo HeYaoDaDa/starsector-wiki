@@ -1,0 +1,20 @@
+{
+  "version": "0.98.5a",
+  "quests": [
+    {
+      "id": "the_usurpers",
+      "name": {
+        "en": "The Usurpers",
+        "zh": "篡夺者"
+      },
+      "summary": {
+        "en": "A mysterious 'concerned citizen' named Yannick Ram contacts you with a plan to save the Sindrian Diktat from itself — and introduces you to Chief High Inspector Dolos Macario, the 'Spider of Sindria', who has designs on the throne of Supreme Executor Philip Andrada.",
+        "zh": "一位神秘的'忧国之士' Yannick Ram 联系上了你，声称有一个'把辛达强权从它自己手里拯救出来'的计划 —— 并把你引荐给了辛德里亚之蛛、首席督察长 Dolos Macario，一个对最高元首 Philip Andrada 的宝座有所图谋的人。"
+      },
+      "factionId": "sindrian_diktat",
+      "icon": "graphics/icons/missions/the_usurpers.png",
+      "stageCount": 10,
+      "sceneCount": 11
+    }
+  ]
+}
