@@ -3,14 +3,6 @@
   "gameId": [
     "lke"
   ],
-  "name": {
-    "en": "Luddic Knight Errant",
-    "zh": "路德游侠骑士"
-  },
-  "summary": {
-    "en": "A knight of the Luddic Church seeks a champion for her cause.",
-    "zh": "一位路德教会的骑士在为她的信仰寻找一位支持者。"
-  },
   "factionId": null,
   "icon": "graphics/icons/missions/knight_errant.png",
   "stages": [
@@ -117,10 +109,6 @@
       "name": {
         "en": "dardan_kato",
         "zh": "dardan_kato"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
       }
     },
     {
@@ -128,10 +116,6 @@
       "name": {
         "en": "jaspis",
         "zh": "jaspis"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
       }
     },
     {
@@ -139,24 +123,14 @@
       "name": {
         "en": "virens",
         "zh": "virens"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
       }
     }
   ],
-  "flags": {},
   "scenes": [
     {
       "id": "lke_misc_conv_jaspis",
       "stage": "lke",
       "speaker": "jaspis",
-      "title": {
-        "en": "Conversations: jaspis",
-        "zh": "对话：jaspis"
-      },
-      "location": null,
       "roots": [
         "r:lkeJaspisMissionOfferOption",
         "r:lkeJaspisMissionInfoOption",
@@ -170,11 +144,6 @@
       "id": "lke_go_to_chalcedon_mkt_chalcedon",
       "stage": "GO_TO_CHALCEDON",
       "speaker": null,
-      "title": {
-        "en": "Market: chalcedon",
-        "zh": "市场：chalcedon"
-      },
-      "location": null,
       "roots": [
         "r:lkeChalcedonPWgreetRaid",
         "r:lkeChalcedonQMgreetRaid",
@@ -186,11 +155,6 @@
       "id": "lke_contact_recruiter_mkt_chalcedon",
       "stage": "CONTACT_RECRUITER",
       "speaker": null,
-      "title": {
-        "en": "Market: chalcedon",
-        "zh": "市场：chalcedon"
-      },
-      "location": null,
       "roots": [
         "r:lkeAskChalcedonBarPromptWaiting"
       ],
@@ -200,11 +164,6 @@
       "id": "lke_misc_conv_virens",
       "stage": "lke",
       "speaker": "virens",
-      "title": {
-        "en": "Conversations: virens",
-        "zh": "对话：virens"
-      },
-      "location": null,
       "roots": [
         "r:lkeVirensCommGreeting"
       ],
@@ -214,11 +173,6 @@
       "id": "lke_misc_orphan_lkevirensraidfinishedb",
       "stage": "lke",
       "speaker": null,
-      "title": {
-        "en": "Event: lkevirensraidfinishedb",
-        "zh": "事件：lkevirensraidfinishedb"
-      },
-      "location": null,
       "roots": [
         "t:LKEVirensRaidFinishedB"
       ],
@@ -246,5 +200,9 @@
     "^SDSW",
     "^sdr",
     "^SDR"
-  ]
+  ],
+  "name": {
+    "en": "Knight Errant",
+    "zh": "骑士迷途"
+  }
 }

@@ -2,12 +2,8 @@
   "id": "the_supreme_executor",
   "gameId": "sdse",
   "name": {
-    "en": "The Supreme Executor",
-    "zh": "最高元首"
-  },
-  "summary": {
-    "en": "Hector and Achilles Andrada - and their backers - maneuver to declare themselves Supreme Executor of the Sindrian Diktat. Choose a side, or play them all.",
-    "zh": "Hector 与 Achilles Andrada——以及他们背后的支持者——正为登上辛达强权的最高元首之位各显神通。选边站，或者，把每一方都玩弄于股掌之间。"
+    "en": "Heir to Andrada",
+    "zh": "Andrada 的继承人"
   },
   "factionId": "sindrian_diktat",
   "stages": [
@@ -71,16 +67,16 @@
       "id": "ACHILLES_REVEALED",
       "flag": "$sdse_achillesDeclaredStageAdvance",
       "briefing": {
-        "en": "Achilles 'Kalian' Andrada, backed by Fortuna Kato, declares himself Supreme Executor.",
-        "zh": "有 Fortuna Kato 撑腰的 Achilles 'Kalian' Andrada 宣布自己为最高元首。"
+        "en": "Achilles 'Kalian' Andrada, backed by Fortuna Kato, is sure to make his own declaration soon...",
+        "zh": "有 Fortuna Kato 撑腰的 Achilles 'Kalian' Andrada，想必很快也会站出来宣布自己的主张..."
       }
     },
     {
       "id": "COMPLETED",
       "flag": "$sdse_missionCompleted",
       "briefing": {
-        "en": "Mission complete.",
-        "zh": "任务完成。"
+        "en": "",
+        "zh": ""
       }
     }
   ],
@@ -88,12 +84,12 @@
     {
       "id": "achilles_andrada",
       "name": {
-        "en": "Achilles 'Kalian' Andrada",
-        "zh": "Achilles 'Kalian' Andrada"
+        "en": "achilles_andrada",
+        "zh": "achilles_andrada"
       },
       "title": {
-        "en": "Clone-son of Philip Andrada, contender for Supreme Executor",
-        "zh": "Philip Andrada 的克隆子嗣，最高元首之位的角逐者"
+        "en": "Clone-son of Philip Andrada",
+        "zh": "克隆子嗣"
       }
     },
     {
@@ -101,21 +97,13 @@
       "name": {
         "en": "Rayan Arroyo",
         "zh": "Rayan Arroyo"
-      },
-      "title": {
-        "en": "Free-lance fixer",
-        "zh": "自由掮客"
       }
     },
     {
       "id": "caden",
       "name": {
-        "en": "caden",
-        "zh": "caden"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
+        "en": "Horacio Caden",
+        "zh": "Horacio Caden"
       }
     },
     {
@@ -123,10 +111,6 @@
       "name": {
         "en": "Faro Inesis",
         "zh": "Faro Inesis"
-      },
-      "title": {
-        "en": "Tri-Tachyon black-site administrator",
-        "zh": "速子科技黑色站点主管"
       }
     },
     {
@@ -134,10 +118,6 @@
       "name": {
         "en": "Fortuna Kato",
         "zh": "Fortuna Kato"
-      },
-      "title": {
-        "en": "Persean aristocrat, backer of Achilles",
-        "zh": "英仙系贵族，Achilles 的支持者"
       }
     },
     {
@@ -145,10 +125,6 @@
       "name": {
         "en": "ga_recruiter",
         "zh": "ga_recruiter"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
       }
     },
     {
@@ -156,32 +132,20 @@
       "name": {
         "en": "Horus Yaribay",
         "zh": "Horus Yaribay"
-      },
-      "title": {
-        "en": "Persean League official, Kazeron",
-        "zh": "英仙座联盟官员，Kazeron"
       }
     },
     {
       "id": "hyder",
       "name": {
-        "en": "hyder",
-        "zh": "hyder"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
+        "en": "Oxana Hyder",
+        "zh": "Oxana Hyder"
       }
     },
     {
       "id": "imoinu_kato",
       "name": {
-        "en": "Imoinu Kato",
-        "zh": "Imoinu Kato"
-      },
-      "title": {
-        "en": "ARC rebel leader on Umbra",
-        "zh": "Umbra 的 ARC 反叛军首领"
+        "en": "imoinu_kato",
+        "zh": "imoinu_kato"
       }
     },
     {
@@ -189,10 +153,6 @@
       "name": {
         "en": "ko_jove",
         "zh": "ko_jove"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
       }
     },
     {
@@ -200,10 +160,6 @@
       "name": {
         "en": "nortia",
         "zh": "nortia"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
       }
     },
     {
@@ -211,10 +167,6 @@
       "name": {
         "en": "Orcus Rao",
         "zh": "Orcus Rao"
-      },
-      "title": {
-        "en": "Hegemony intelligence officer",
-        "zh": "霸主情报官"
       }
     },
     {
@@ -222,10 +174,6 @@
       "name": {
         "en": "Reynard Hannan",
         "zh": "Reynard Hannan"
-      },
-      "title": {
-        "en": "Persean League magnate, Kazeron",
-        "zh": "英仙座联盟巨贾，Kazeron"
       }
     },
     {
@@ -233,10 +181,6 @@
       "name": {
         "en": "sindria_relay",
         "zh": "sindria_relay"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
       }
     },
     {
@@ -244,10 +188,6 @@
       "name": {
         "en": "Finlay Siyavong",
         "zh": "Finlay Siyavong"
-      },
-      "title": {
-        "en": "Special Agent, Hegemony Fleet Intelligence",
-        "zh": "霸主舰队情报部特工"
       }
     },
     {
@@ -255,10 +195,6 @@
       "name": {
         "en": "standfast",
         "zh": "standfast"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
       }
     },
     {
@@ -268,115 +204,16 @@
         "zh": "Dolos Macario"
       },
       "title": {
-        "en": "Chief High Inspector, the 'Spider of Sindria'",
-        "zh": "最高检察长，'辛德里亚之蛛'"
+        "en": "Chief High Inspector",
+        "zh": "最高检察长"
       }
     }
   ],
-  "flags": {
-    "$sdse_inProgress": {
-      "en": "Mission in progress",
-      "zh": "任务进行中"
-    },
-    "$sdse_missionCompleted": {
-      "en": "Mission completed",
-      "zh": "任务已完成"
-    },
-    "$sdse_missionComplete": {
-      "en": "Mission completed",
-      "zh": "任务已完成"
-    },
-    "$sdse_stage": {
-      "en": "Mission stage variable",
-      "zh": "任务阶段变量"
-    },
-    "$sdse_foundPerseus": {
-      "en": "Location of Perseus confirmed",
-      "zh": "已确认 珀尔修斯 的下落"
-    },
-    "$sdse_foundHercules": {
-      "en": "Location of Hercules confirmed",
-      "zh": "已确认 赫拉克勒斯 的下落"
-    },
-    "$sdse_foundJason": {
-      "en": "Location of Jason confirmed",
-      "zh": "已确认 杰森 的下落"
-    },
-    "$sdse_foundAchilles": {
-      "en": "Location of Achilles confirmed",
-      "zh": "已确认 阿喀琉斯 的下落"
-    },
-    "$sdse_foundHector": {
-      "en": "Location of Hector confirmed",
-      "zh": "已确认 赫克托耳 的下落"
-    },
-    "$sdse_foundLeonidas": {
-      "en": "Location of Leonidas confirmed",
-      "zh": "已确认 列奥尼达 的下落"
-    },
-    "$sdse_foundPericles": {
-      "en": "Location of Pericles confirmed",
-      "zh": "已确认 伯里克利 的下落"
-    },
-    "$sdse_decryptViaGargoyle": {
-      "en": "Files decrypted via Gargoyle",
-      "zh": "已通过 Gargoyle 解密文件"
-    },
-    "$sdse_decryptViaArroyo": {
-      "en": "Files decrypted via Arroyo",
-      "zh": "已通过 Arroyo 解密文件"
-    },
-    "$sdse_decryptViaInesis": {
-      "en": "Files decrypted via Inesis",
-      "zh": "已通过 Inesis 解密文件"
-    },
-    "$sdse_decryptViaSiyavong": {
-      "en": "Files decrypted via Siyavong",
-      "zh": "已通过 Siyavong 解密文件"
-    },
-    "$sdse_decryptViaOrcusRao": {
-      "en": "Files decrypted via Orcus Rao",
-      "zh": "已通过 Orcus Rao 解密文件"
-    },
-    "$sdse_decryptViaOwnAI": {
-      "en": "Files decrypted via your own AI",
-      "zh": "已通过 your own AI 解密文件"
-    },
-    "$sdse_proAchilles": {
-      "en": "Backing Achilles",
-      "zh": "支持 Achilles 阵营"
-    },
-    "$sdse_proHector": {
-      "en": "Backing Hector",
-      "zh": "支持 Hector 阵营"
-    },
-    "$sdse_antiMacario": {
-      "en": "Working against Macario",
-      "zh": "正在对付 Macario"
-    },
-    "$sdse_proKato": {
-      "en": "Backed by the Kato family",
-      "zh": "获得 Kato 家族支持"
-    },
-    "$sdse_backingFortuna": {
-      "en": "Backed by Fortuna Kato",
-      "zh": "获得 Fortuna Kato 支持"
-    },
-    "$sdse_talkFirstMacario": {
-      "en": "Macario contacted first",
-      "zh": "已先行联系 Macario"
-    }
-  },
   "scenes": [
     {
       "id": "misc_other",
       "stage": null,
       "speaker": null,
-      "title": {
-        "en": "misc_other",
-        "zh": "misc_other"
-      },
-      "location": null,
       "roots": [
         "r:bairdIntroHubWhyShouldPost2AC",
         "r:SD7SmacarioFoundSons",
@@ -391,14 +228,6 @@
       "id": "misc_conv_standfast",
       "stage": null,
       "speaker": "standfast",
-      "title": {
-        "en": "Conversations: standfast",
-        "zh": "对话：standfast"
-      },
-      "location": {
-        "en": "Comm / bar conversations with standfast",
-        "zh": "与 standfast 的通讯 / 交谈"
-      },
       "roots": [
         "r:SDRgreetingStandfastFromOrcus",
         "r:DEVstandfastVSDCoffersReset",
@@ -410,14 +239,6 @@
       "id": "misc_conv_rao",
       "stage": null,
       "speaker": "rao",
-      "title": {
-        "en": "Conversations: rao",
-        "zh": "对话：rao"
-      },
-      "location": {
-        "en": "Comm / bar conversations with rao",
-        "zh": "与 rao 的通讯 / 交谈"
-      },
       "roots": [
         "r:defaultRaoGreetingAgreed",
         "r:raoGreetingFastOne",
@@ -444,14 +265,6 @@
       "id": "talk_to_achilles_talk_fortuna_kato",
       "stage": "TALK_TO_ACHILLES",
       "speaker": "fortuna_kato",
-      "title": {
-        "en": "Talk: fortuna_kato",
-        "zh": "与 fortuna_kato 交谈"
-      },
-      "location": {
-        "en": "Comm conversation with fortuna_kato",
-        "zh": "与 fortuna_kato 的通讯"
-      },
       "roots": [
         "r:SDSEFortunaKatoGreetingToAchilles"
       ]
@@ -460,14 +273,6 @@
       "id": "misc_conv_imoinu_kato",
       "stage": null,
       "speaker": "imoinu_kato",
-      "title": {
-        "en": "Conversations: imoinu_kato",
-        "zh": "对话：imoinu_kato"
-      },
-      "location": {
-        "en": "Comm / bar conversations with imoinu_kato",
-        "zh": "与 imoinu_kato 的通讯 / 交谈"
-      },
       "roots": [
         "r:ImoinuKatoUmbraSayAndrada"
       ]
@@ -476,11 +281,6 @@
       "id": "talk_to_achilles_other",
       "stage": "TALK_TO_ACHILLES",
       "speaker": null,
-      "title": {
-        "en": "talk_to_achilles_other",
-        "zh": "talk_to_achilles_other"
-      },
-      "location": null,
       "roots": [
         "r:ReynardLeavePLcheckSDSEb",
         "r:AchillesSupportPledgeViaPatron"
@@ -490,14 +290,6 @@
       "id": "misc_conv_ko_jove",
       "stage": null,
       "speaker": "ko_jove",
-      "title": {
-        "en": "Conversations: ko_jove",
-        "zh": "对话：ko_jove"
-      },
-      "location": {
-        "en": "Comm / bar conversations with ko_jove",
-        "zh": "与 ko_jove 的通讯 / 交谈"
-      },
       "roots": [
         "r:KOjoveSD7SpostAgent",
         "r:KOjoveSD7SpostAgentSD",
@@ -509,14 +301,6 @@
       "id": "misc_talk_rao",
       "stage": null,
       "speaker": "rao",
-      "title": {
-        "en": "Quest start: Talk: rao",
-        "zh": "任务开始：与 rao 交谈"
-      },
-      "location": {
-        "en": "Comm conversation with rao",
-        "zh": "与 rao 的通讯"
-      },
       "roots": [
         "r:SD7SraoPostFindOption"
       ]
@@ -525,14 +309,6 @@
       "id": "misc_talk_siyavong",
       "stage": null,
       "speaker": "siyavong",
-      "title": {
-        "en": "Quest start: Talk: siyavong",
-        "zh": "任务开始：与 siyavong 交谈"
-      },
-      "location": {
-        "en": "Comm conversation with siyavong",
-        "zh": "与 siyavong 的通讯"
-      },
       "roots": [
         "r:SD7SsiyavongSonsAfter",
         "r:PostSD7SsiyavongFortunaOpt"
@@ -542,14 +318,6 @@
       "id": "misc_mkt_kantas_den",
       "stage": null,
       "speaker": null,
-      "title": {
-        "en": "Market: kantas_den",
-        "zh": "市场：kantas_den"
-      },
-      "location": {
-        "en": "Docked at kantas_den",
-        "zh": "靠港 kantas_den"
-      },
       "roots": [
         "r:SD7SkantasDenVIPcydoniaAlt"
       ]
@@ -558,14 +326,6 @@
       "id": "misc_conv_fortuna_kato",
       "stage": null,
       "speaker": "fortuna_kato",
-      "title": {
-        "en": "Conversations: fortuna_kato",
-        "zh": "对话：fortuna_kato"
-      },
-      "location": {
-        "en": "Comm / bar conversations with fortuna_kato",
-        "zh": "与 fortuna_kato 的通讯 / 交谈"
-      },
       "roots": [
         "r:PostSD7SfortunaFromHorusOpt",
         "r:PostSD7SfortunaSupportOpt",
@@ -581,14 +341,6 @@
       "id": "misc_talk_horus_yaribay",
       "stage": null,
       "speaker": "horus_yaribay",
-      "title": {
-        "en": "Quest start: Talk: horus_yaribay",
-        "zh": "任务开始：与 horus_yaribay 交谈"
-      },
-      "location": {
-        "en": "Comm conversation with horus_yaribay",
-        "zh": "与 horus_yaribay 的通讯"
-      },
       "roots": [
         "r:preSDSEtalkToHorus"
       ]
@@ -597,14 +349,6 @@
       "id": "misc_conv_nortia",
       "stage": null,
       "speaker": "nortia",
-      "title": {
-        "en": "Conversations: nortia",
-        "zh": "对话：nortia"
-      },
-      "location": {
-        "en": "Comm / bar conversations with nortia",
-        "zh": "与 nortia 的通讯 / 交谈"
-      },
       "roots": [
         "r:DEVnortiaOptions"
       ]
@@ -613,14 +357,6 @@
       "id": "talk_to_contact_talk_arroyo",
       "stage": "TALK_TO_CONTACT",
       "speaker": "arroyo",
-      "title": {
-        "en": "Talk: arroyo",
-        "zh": "与 arroyo 交谈"
-      },
-      "location": {
-        "en": "Comm conversation with arroyo",
-        "zh": "与 arroyo 的通讯"
-      },
       "roots": [
         "r:SDSEtalkArroyo"
       ]
@@ -629,14 +365,6 @@
       "id": "talk_to_contact_talk_faro_inesis",
       "stage": "TALK_TO_CONTACT",
       "speaker": "faro_inesis",
-      "title": {
-        "en": "Talk: faro_inesis",
-        "zh": "与 faro_inesis 交谈"
-      },
-      "location": {
-        "en": "Comm conversation with faro_inesis",
-        "zh": "与 faro_inesis 的通讯"
-      },
       "roots": [
         "r:SDSEtalkInesis"
       ]
@@ -645,14 +373,6 @@
       "id": "misc_conv_faro_inesis",
       "stage": null,
       "speaker": "faro_inesis",
-      "title": {
-        "en": "Conversations: faro_inesis",
-        "zh": "对话：faro_inesis"
-      },
-      "location": {
-        "en": "Comm / bar conversations with faro_inesis",
-        "zh": "与 faro_inesis 的通讯 / 交谈"
-      },
       "roots": [
         "r:SDSEtalkInesisNotFirst",
         "r:SDRtalkInesisTalkHelpLaterSDR",
@@ -666,14 +386,6 @@
       "id": "misc_conv_siyavong",
       "stage": null,
       "speaker": "siyavong",
-      "title": {
-        "en": "Conversations: siyavong",
-        "zh": "对话：siyavong"
-      },
-      "location": {
-        "en": "Comm / bar conversations with siyavong",
-        "zh": "与 siyavong 的通讯 / 交谈"
-      },
       "roots": [
         "r:SDSEtalkToSiyavongGenProAch",
         "r:SDSEtalkToSiyavongGenProHec",
@@ -686,14 +398,6 @@
       "id": "wait_for_opening_talk_siyavong",
       "stage": "WAIT_FOR_OPENING",
       "speaker": "siyavong",
-      "title": {
-        "en": "Talk: siyavong",
-        "zh": "与 siyavong 交谈"
-      },
-      "location": {
-        "en": "Comm conversation with siyavong",
-        "zh": "与 siyavong 的通讯"
-      },
       "roots": [
         "r:SDSEtalkToSiyavongFromHorus"
       ]
@@ -702,14 +406,6 @@
       "id": "hector_revealed_talk_siyavong",
       "stage": "HECTOR_REVEALED",
       "speaker": "siyavong",
-      "title": {
-        "en": "Talk: siyavong",
-        "zh": "与 siyavong 交谈"
-      },
-      "location": {
-        "en": "Comm conversation with siyavong",
-        "zh": "与 siyavong 的通讯"
-      },
       "roots": [
         "r:SDSEtalkToSiyavongFromHorusB"
       ]
@@ -718,14 +414,6 @@
       "id": "talk_to_achilles_talk_siyavong",
       "stage": "TALK_TO_ACHILLES",
       "speaker": "siyavong",
-      "title": {
-        "en": "Talk: siyavong",
-        "zh": "与 siyavong 交谈"
-      },
-      "location": {
-        "en": "Comm conversation with siyavong",
-        "zh": "与 siyavong 的通讯"
-      },
       "roots": [
         "r:SDSEtalkToSiyavongToAchillesOpt"
       ]
@@ -734,14 +422,6 @@
       "id": "talk_to_contact_talk_horus_yaribay",
       "stage": "TALK_TO_CONTACT",
       "speaker": "horus_yaribay",
-      "title": {
-        "en": "Talk: horus_yaribay",
-        "zh": "与 horus_yaribay 交谈"
-      },
-      "location": {
-        "en": "Comm conversation with horus_yaribay",
-        "zh": "与 horus_yaribay 的通讯"
-      },
       "roots": [
         "r:SDSEtalkToHorus"
       ]
@@ -750,14 +430,6 @@
       "id": "misc_conv_horus_yaribay",
       "stage": null,
       "speaker": "horus_yaribay",
-      "title": {
-        "en": "Conversations: horus_yaribay",
-        "zh": "对话：horus_yaribay"
-      },
-      "location": {
-        "en": "Comm / bar conversations with horus_yaribay",
-        "zh": "与 horus_yaribay 的通讯 / 交谈"
-      },
       "roots": [
         "r:SDSEtalkToHorusAgainOpt",
         "r:SD7ShYaribayAchillesAsk",
@@ -768,11 +440,6 @@
       "id": "hector_revealed_other",
       "stage": "HECTOR_REVEALED",
       "speaker": null,
-      "title": {
-        "en": "hector_revealed_other",
-        "zh": "hector_revealed_other"
-      },
-      "location": null,
       "roots": [
         "r:SDSEhorusTalkBackSelC",
         "r:SDSEhorusTalkDeclineSelD",
@@ -783,11 +450,6 @@
       "id": "visit_relay_other",
       "stage": "VISIT_RELAY",
       "speaker": null,
-      "title": {
-        "en": "visit_relay_other",
-        "zh": "visit_relay_other"
-      },
-      "location": null,
       "roots": [
         "r:SDSEtalkToFortunaPledgeYesRelay",
         "r:SDSErelayCheckHector2",
@@ -799,11 +461,6 @@
       "id": "misc_dock",
       "stage": null,
       "speaker": null,
-      "title": {
-        "en": "Docked flavor text",
-        "zh": "靠港见闻"
-      },
-      "location": null,
       "roots": [
         "r:SDRraoMessage",
         "r:SDRfortunaMessageEarly",
@@ -816,14 +473,6 @@
       "id": "visit_relay_talk_rao",
       "stage": "VISIT_RELAY",
       "speaker": "rao",
-      "title": {
-        "en": "Talk: rao",
-        "zh": "与 rao 交谈"
-      },
-      "location": {
-        "en": "Comm conversation with rao",
-        "zh": "与 rao 的通讯"
-      },
       "roots": [
         "r:SDSEorcusRemindToRelay"
       ]
@@ -832,14 +481,6 @@
       "id": "visit_relay_talk_sindria_relay",
       "stage": "VISIT_RELAY",
       "speaker": "sindria_relay",
-      "title": {
-        "en": "Talk: sindria_relay",
-        "zh": "与 sindria_relay 交谈"
-      },
-      "location": {
-        "en": "Comm conversation with sindria_relay",
-        "zh": "与 sindria_relay 的通讯"
-      },
       "roots": [
         "r:SDSEvisitRelay",
         "r:SDSEvisitRelayHack"
@@ -849,11 +490,6 @@
       "id": "wait_for_opening_other",
       "stage": "WAIT_FOR_OPENING",
       "speaker": null,
-      "title": {
-        "en": "wait_for_opening_other",
-        "zh": "wait_for_opening_other"
-      },
-      "location": null,
       "roots": [
         "r:SDSEandraDeathStart"
       ]
@@ -862,14 +498,6 @@
       "id": "misc_conv_hyder",
       "stage": null,
       "speaker": "hyder",
-      "title": {
-        "en": "Conversations: hyder",
-        "zh": "对话：hyder"
-      },
-      "location": {
-        "en": "Comm / bar conversations with hyder",
-        "zh": "与 hyder 的通讯 / 交谈"
-      },
       "roots": [
         "r:SDSEhyderTalkFilesOpt",
         "r:SDSEhyderTalkFilesOptAgain",
@@ -883,14 +511,6 @@
       "id": "misc_conv_caden",
       "stage": null,
       "speaker": "caden",
-      "title": {
-        "en": "Conversations: caden",
-        "zh": "对话：caden"
-      },
-      "location": {
-        "en": "Comm / bar conversations with caden",
-        "zh": "与 caden 的通讯 / 交谈"
-      },
       "roots": [
         "r:SDSEcadenOfferIntel",
         "r:SDSEcadenOfferIntelAgain",
@@ -910,14 +530,6 @@
       "id": "visit_relay_talk_caden",
       "stage": "VISIT_RELAY",
       "speaker": "caden",
-      "title": {
-        "en": "Talk: caden",
-        "zh": "与 caden 交谈"
-      },
-      "location": {
-        "en": "Comm conversation with caden",
-        "zh": "与 caden 的通讯"
-      },
       "roots": [
         "r:SDSECadenRelayHint"
       ]
@@ -926,14 +538,6 @@
       "id": "misc_conv_achilles_andrada",
       "stage": null,
       "speaker": "achilles_andrada",
-      "title": {
-        "en": "Conversations: achilles_andrada",
-        "zh": "对话：achilles_andrada"
-      },
-      "location": {
-        "en": "Comm / bar conversations with achilles_andrada",
-        "zh": "与 achilles_andrada 的通讯 / 交谈"
-      },
       "roots": [
         "r:AchillesGreetingPreSDR",
         "r:PostSDRachillesGreetingStartPL"
@@ -943,14 +547,6 @@
       "id": "visit_relay_talk_achilles_andrada",
       "stage": "VISIT_RELAY",
       "speaker": "achilles_andrada",
-      "title": {
-        "en": "Talk: achilles_andrada",
-        "zh": "与 achilles_andrada 交谈"
-      },
-      "location": {
-        "en": "Comm conversation with achilles_andrada",
-        "zh": "与 achilles_andrada 的通讯"
-      },
       "roots": [
         "r:AchillesGreetingPreSDRpreRelay"
       ]
@@ -959,14 +555,6 @@
       "id": "misc_conv_ga_recruiter",
       "stage": null,
       "speaker": "ga_recruiter",
-      "title": {
-        "en": "Conversations: ga_recruiter",
-        "zh": "对话：ga_recruiter"
-      },
-      "location": {
-        "en": "Comm / bar conversations with ga_recruiter",
-        "zh": "与 ga_recruiter 的通讯 / 交谈"
-      },
       "roots": [
         "r:PostSDRIscareCommentStart",
         "r:DEVIscareFulfillAllACAoffers",
@@ -980,14 +568,6 @@
       "id": "misc_conv_reynard_hannan",
       "stage": null,
       "speaker": "reynard_hannan",
-      "title": {
-        "en": "Conversations: reynard_hannan",
-        "zh": "对话：reynard_hannan"
-      },
-      "location": {
-        "en": "Comm / bar conversations with reynard_hannan",
-        "zh": "与 reynard_hannan 的通讯 / 交谈"
-      },
       "roots": [
         "r:SDRreynardGotHorusSupportOpt",
         "r:SD7SreyAndradaFilesFromHorus",
@@ -999,14 +579,6 @@
       "id": "misc_talk_reynard_hannan",
       "stage": null,
       "speaker": "reynard_hannan",
-      "title": {
-        "en": "Quest start: Talk: reynard_hannan",
-        "zh": "任务开始：与 reynard_hannan 交谈"
-      },
-      "location": {
-        "en": "Comm conversation with reynard_hannan",
-        "zh": "与 reynard_hannan 的通讯"
-      },
       "roots": [
         "r:SD7SreyAndradaFilesDiscussOptB"
       ]
@@ -1015,11 +587,6 @@
       "id": "talk_to_contact_other",
       "stage": "TALK_TO_CONTACT",
       "speaker": null,
-      "title": {
-        "en": "talk_to_contact_other",
-        "zh": "talk_to_contact_other"
-      },
-      "location": null,
       "roots": [
         "r:SDSEreyDenialMissionCheck",
         "r:ArroyoAskForHelpSDdoneNextStage"
@@ -1029,14 +596,6 @@
       "id": "misc_conv_arroyo",
       "stage": null,
       "speaker": "arroyo",
-      "title": {
-        "en": "Conversations: arroyo",
-        "zh": "对话：arroyo"
-      },
-      "location": {
-        "en": "Comm / bar conversations with arroyo",
-        "zh": "与 arroyo 的通讯 / 交谈"
-      },
       "roots": [
         "r:SDSEarroyoAskForHelp",
         "r:SDRarroyoAskForHelp",
@@ -1048,11 +607,6 @@
       "id": "misc_ent_transponderOffConv",
       "stage": null,
       "speaker": null,
-      "title": {
-        "en": "Fleet encounter",
-        "zh": "舰队遭遇"
-      },
-      "location": null,
       "roots": [
         "r:SDRraoTOffPatrolOpenComm"
       ]
@@ -1061,11 +615,6 @@
       "id": "misc_orphan_hectorsdroptions",
       "stage": null,
       "speaker": null,
-      "title": {
-        "en": "Event: hectorsdroptions",
-        "zh": "事件：hectorsdroptions"
-      },
-      "location": null,
       "roots": [
         "t:HectorSDROptions"
       ]
@@ -1074,11 +623,6 @@
       "id": "misc_orphan_diktatsuppliedmerchail",
       "stage": null,
       "speaker": null,
-      "title": {
-        "en": "Event: diktatsuppliedmerchail",
-        "zh": "事件：diktatsuppliedmerchail"
-      },
-      "location": null,
       "roots": [
         "t:DiktatSuppliedMercHail"
       ]
@@ -1093,6 +637,14 @@
     "ZGRacknowledgeDiktatB"
   ],
   "ignoreRulePatterns": [
+    "^DEV",
+    "^dev[A-Z]",
+    "test",
+    "Test",
+    "TEST",
+    "^relLevel",
+    "^flavorText",
+    "^bar_desc",
     "^sdtu",
     "^SDTU",
     "^PostSDTU",
@@ -1107,15 +659,7 @@
     "^PostSDSW",
     "^postSDSW",
     "^sdr[A-Z]",
-    "^SDR[A-Z]",
-    "^DEV",
-    "^dev[A-Z]",
-    "^relLevel",
-    "^flavorText",
-    "^bar_desc",
-    "test",
-    "Test",
-    "TEST"
+    "^SDR[A-Z]"
   ],
   "icon": "graphics/icons/missions/heir_to_andrada.png"
 }

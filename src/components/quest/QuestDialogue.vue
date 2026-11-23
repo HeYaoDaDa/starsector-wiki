@@ -9,6 +9,7 @@ import {
   Quest,
   QuestScene,
 } from 'src/classes/model/Quest';
+import { flagGlossary } from 'src/questEditorial';
 
 defineOptions({
   name: 'QuestDialogue',
@@ -289,11 +290,11 @@ function describeCondition(raw: string): CondChip {
     return { label: c, known: false };
   }
 
-  // 单一 flag：查任务术语表
+  // 单一 flag：查前端编辑层术语表（数据层零手写政策）
   const flagM = body.match(NEG_FLAG_RE);
   if (flagM) {
     const flag = '$' + flagM[2];
-    const gloss = props.quest.flags[flag];
+    const gloss = flagGlossary(props.quest.id, flag);
     if (gloss) {
       return applyNeg(primary(gloss));
     }

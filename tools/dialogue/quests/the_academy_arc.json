@@ -22,14 +22,6 @@
     "gaDHO",
     "zgr"
   ],
-  "name": {
-    "en": "The Galatia Academy Arc",
-    "zh": "Galatia 学院主线"
-  },
-  "summary": {
-    "en": "The Galatia Academy storyline: from the tutorial through \"A People's History of Collapse\", finding Coureuse, Project Ziggurat, and At the Gates.",
-    "zh": "Galatia 学院主线：从新手任务到《大崩塌人民史》、寻找 Coureuse、Ziggurat 计划，直至\"群星之门\"。"
-  },
   "factionId": null,
   "icon": "graphics/icons/missions/ga_intro.png",
   "stages": [
@@ -190,26 +182,16 @@
     {
       "id": "glamor_rotanev",
       "name": {
-        "en": "glamor_rotanev",
-        "zh": "glamor_rotanev"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
+        "en": "Zunya Glamor-Rotanev",
+        "zh": "Zunya Glamor-Rotanev"
       }
     }
   ],
-  "flags": {},
   "scenes": [
     {
       "id": "gaProbe_go_to_probe_ent_gaProbe_scavenger",
       "stage": "GO_TO_PROBE",
       "speaker": null,
-      "title": {
-        "en": "Fleet encounter",
-        "zh": "舰队遭遇"
-      },
-      "location": null,
       "roots": [
         "r:gaProbeScavCommBefore"
       ],
@@ -219,11 +201,6 @@
       "id": "gaProbe_find_scavenger_ent_gaProbe_scavenger",
       "stage": "FIND_SCAVENGER",
       "speaker": null,
-      "title": {
-        "en": "Fleet encounter",
-        "zh": "舰队遭遇"
-      },
-      "location": null,
       "roots": [
         "r:gaProbeScavCommAfter"
       ],
@@ -233,11 +210,6 @@
       "id": "gaFC_investigate_fikenhild_talk_baird",
       "stage": "INVESTIGATE_FIKENHILD",
       "speaker": "baird",
-      "title": {
-        "en": "Talk: baird",
-        "zh": "与 baird 交谈"
-      },
-      "location": null,
       "roots": [
         "r:GAFCBairdGreeting_INVESTIGATE_FIKENHILD"
       ],
@@ -247,11 +219,6 @@
       "id": "gaFC_follow_the_experiments_talk_baird",
       "stage": "FOLLOW_THE_EXPERIMENTS",
       "speaker": "baird",
-      "title": {
-        "en": "Talk: baird",
-        "zh": "与 baird 交谈"
-      },
-      "location": null,
       "roots": [
         "r:GAFCBairdGreeting_FOLLOW_THE_EXPERIMENTS"
       ],
@@ -261,11 +228,6 @@
       "id": "gaFC_investigate_fikenhild_talk_siyavong",
       "stage": "INVESTIGATE_FIKENHILD",
       "speaker": "siyavong",
-      "title": {
-        "en": "Talk: siyavong",
-        "zh": "与 siyavong 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaFCsiyavongGreeting"
       ],
@@ -275,11 +237,6 @@
       "id": "gaFC_follow_the_experiments_other",
       "stage": "FOLLOW_THE_EXPERIMENTS",
       "speaker": null,
-      "title": {
-        "en": "follow_the_experiments_other",
-        "zh": "follow_the_experiments_other"
-      },
-      "location": null,
       "roots": [
         "r:gaFCScavengerDefeated"
       ],
@@ -289,11 +246,6 @@
       "id": "gaFC_follow_the_experiments_ent_gaFCProbe_scavengerPermanentFlag",
       "stage": "FOLLOW_THE_EXPERIMENTS",
       "speaker": null,
-      "title": {
-        "en": "Fleet encounter",
-        "zh": "舰队遭遇"
-      },
-      "location": null,
       "roots": [
         "r:gaFCScavengerGreeting"
       ],
@@ -303,11 +255,6 @@
       "id": "gaFC_search_isirah_talk_baird",
       "stage": "SEARCH_ISIRAH",
       "speaker": "baird",
-      "title": {
-        "en": "Talk: baird",
-        "zh": "与 baird 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaFCBaird_SEARCH_ISIRAH"
       ],
@@ -317,11 +264,6 @@
       "id": "gaFC_search_isirah_mkt_station_kapteyn",
       "stage": "SEARCH_ISIRAH",
       "speaker": null,
-      "title": {
-        "en": "Market: station_kapteyn",
-        "zh": "市场：station_kapteyn"
-      },
-      "location": null,
       "roots": [
         "r:gaFCKapteynBotherAdministrator"
       ],
@@ -331,11 +273,6 @@
       "id": "gaFC_search_isirah_other",
       "stage": "SEARCH_ISIRAH",
       "speaker": null,
-      "title": {
-        "en": "search_isirah_other",
-        "zh": "search_isirah_other"
-      },
-      "location": null,
       "roots": [
         "r:RHannanGreetingRealGAFCnope",
         "r:RHannanMsgGAFC"
@@ -346,11 +283,6 @@
       "id": "gaPZ_get_kelise_lead_talk_gargoyle",
       "stage": "GET_KELISE_LEAD",
       "speaker": "gargoyle",
-      "title": {
-        "en": "Talk: gargoyle",
-        "zh": "与 gargoyle 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaPZAskGargoyleKelise",
         "r:gaPZAskGargoyleZig"
@@ -361,11 +293,6 @@
       "id": "gaPZ_get_kelise_lead_talk_arroyo",
       "stage": "GET_KELISE_LEAD",
       "speaker": "arroyo",
-      "title": {
-        "en": "Talk: arroyo",
-        "zh": "与 arroyo 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaPZAskArroyoKelise"
       ],
@@ -375,11 +302,6 @@
       "id": "gaPZ_sell_blackmail_material_other",
       "stage": "SELL_BLACKMAIL_MATERIAL",
       "speaker": null,
-      "title": {
-        "en": "sell_blackmail_material_other",
-        "zh": "sell_blackmail_material_other"
-      },
-      "location": null,
       "roots": [
         "r:gaPZSellBlackmailOptionA",
         "r:gaPZSellBlackmailOptionB",
@@ -391,11 +313,6 @@
       "id": "gaPZ_sold_blackmail_material_talk_arroyo",
       "stage": "SOLD_BLACKMAIL_MATERIAL",
       "speaker": "arroyo",
-      "title": {
-        "en": "Talk: arroyo",
-        "zh": "与 arroyo 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaPZReturnToArroyo"
       ],
@@ -405,11 +322,6 @@
       "id": "gaPZ_get_kelise_lead_other",
       "stage": "GET_KELISE_LEAD",
       "speaker": null,
-      "title": {
-        "en": "get_kelise_lead_other",
-        "zh": "get_kelise_lead_other"
-      },
-      "location": null,
       "roots": [
         "r:gaPZTalkCulannAdmin"
       ],
@@ -419,11 +331,6 @@
       "id": "gaPZ_talk_to_callisto_talk_ibrahim",
       "stage": "TALK_TO_CALLISTO",
       "speaker": "ibrahim",
-      "title": {
-        "en": "Talk: ibrahim",
-        "zh": "与 ibrahim 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaPZCallistoTalk"
       ],
@@ -433,11 +340,6 @@
       "id": "gaPZ_go_to_relay_system_talk_baird",
       "stage": "GO_TO_RELAY_SYSTEM",
       "speaker": "baird",
-      "title": {
-        "en": "Talk: baird",
-        "zh": "与 baird 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaPZ_tellBairdAstraia",
         "r:gaPZ_bairdHurryUp"
@@ -448,11 +350,6 @@
       "id": "gaPZ_go_to_relay_system_talk_coureuse",
       "stage": "GO_TO_RELAY_SYSTEM",
       "speaker": "coureuse",
-      "title": {
-        "en": "Talk: coureuse",
-        "zh": "与 coureuse 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaPZ_tellCoureuseHamatsu"
       ],
@@ -462,11 +359,6 @@
       "id": "gaPZ_misc_conv_glamor_rotanev",
       "stage": "gaPZ",
       "speaker": "glamor_rotanev",
-      "title": {
-        "en": "Conversations: glamor_rotanev",
-        "zh": "对话：glamor_rotanev"
-      },
-      "location": null,
       "roots": [
         "r:ZGRdevGive",
         "r:ZGRpostGADHOconfrontOpt",
@@ -482,11 +374,6 @@
       "id": "gaKA_get_hack_hardware_talk_arroyo",
       "stage": "GET_HACK_HARDWARE",
       "speaker": "arroyo",
-      "title": {
-        "en": "Talk: arroyo",
-        "zh": "与 arroyo 交谈"
-      },
-      "location": null,
       "roots": [
         "r:GAKAarroyoGetHackHardware"
       ],
@@ -496,11 +383,6 @@
       "id": "gaKA_install_hack_talk_arroyo",
       "stage": "INSTALL_HACK",
       "speaker": "arroyo",
-      "title": {
-        "en": "Talk: arroyo",
-        "zh": "与 arroyo 交谈"
-      },
-      "location": null,
       "roots": [
         "r:GAKAarroyoInstallHack"
       ],
@@ -510,11 +392,6 @@
       "id": "gaKA_get_hack_hardware_talk_gargoyle",
       "stage": "GET_HACK_HARDWARE",
       "speaker": "gargoyle",
-      "title": {
-        "en": "Talk: gargoyle",
-        "zh": "与 gargoyle 交谈"
-      },
-      "location": null,
       "roots": [
         "r:GAKAGargoyleGreeting_GET_HACK_HARDWARE"
       ],
@@ -524,11 +401,6 @@
       "id": "gaKA_install_hack_talk_gargoyle",
       "stage": "INSTALL_HACK",
       "speaker": "gargoyle",
-      "title": {
-        "en": "Talk: gargoyle",
-        "zh": "与 gargoyle 交谈"
-      },
-      "location": null,
       "roots": [
         "r:GAKAGargoyleGreeting_INSTALL_HACK"
       ],
@@ -538,11 +410,6 @@
       "id": "gaKA_get_hack_hardware_talk_baird",
       "stage": "GET_HACK_HARDWARE",
       "speaker": "baird",
-      "title": {
-        "en": "Talk: baird",
-        "zh": "与 baird 交谈"
-      },
-      "location": null,
       "roots": [
         "r:GAKABairdGreeting_GET_HACK_HARDWARE"
       ],
@@ -552,11 +419,6 @@
       "id": "gaKA_install_hack_talk_baird",
       "stage": "INSTALL_HACK",
       "speaker": "baird",
-      "title": {
-        "en": "Talk: baird",
-        "zh": "与 baird 交谈"
-      },
-      "location": null,
       "roots": [
         "r:GAKABairdGreeting_INSTALL_HACK"
       ],
@@ -566,11 +428,6 @@
       "id": "gaKA_retreive_archive_talk_baird",
       "stage": "RETREIVE_ARCHIVE",
       "speaker": "baird",
-      "title": {
-        "en": "Talk: baird",
-        "zh": "与 baird 交谈"
-      },
-      "location": null,
       "roots": [
         "r:GAKABairdGreeting_RETREIVE_ARCHIVE"
       ],
@@ -580,11 +437,6 @@
       "id": "gaATG_do_scans_talk_coureuse",
       "stage": "DO_SCANS",
       "speaker": "coureuse",
-      "title": {
-        "en": "Talk: coureuse",
-        "zh": "与 coureuse 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaATGreturnSomeScansToCoureuse"
       ],
@@ -594,11 +446,6 @@
       "id": "gaATG_return_with_deal_and_scans_talk_coureuse",
       "stage": "RETURN_WITH_DEAL_AND_SCANS",
       "speaker": "coureuse",
-      "title": {
-        "en": "Talk: coureuse",
-        "zh": "与 coureuse 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaATGreturnScansToCoureuseStart"
       ],
@@ -608,11 +455,6 @@
       "id": "gaATG_return_with_deal_and_scans_talk_baird",
       "stage": "RETURN_WITH_DEAL_AND_SCANS",
       "speaker": "baird",
-      "title": {
-        "en": "Talk: baird",
-        "zh": "与 baird 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaATGtalkToBairdGotScansAndDeal"
       ],
@@ -622,11 +464,6 @@
       "id": "gaATG_go_to_magec_gate_mkt_kantas_den",
       "stage": "GO_TO_MAGEC_GATE",
       "speaker": null,
-      "title": {
-        "en": "Market: kantas_den",
-        "zh": "市场：kantas_den"
-      },
-      "location": null,
       "roots": [
         "r:gaATGkantasDenHostileOverride1"
       ],
@@ -636,11 +473,6 @@
       "id": "gaDHO_visit_elek_talk_station_galatia_academy",
       "stage": "VISIT_ELEK",
       "speaker": "station_galatia_academy",
-      "title": {
-        "en": "Talk: station_galatia_academy",
-        "zh": "与 station_galatia_academy 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaDHOvisitElekStart"
       ],
@@ -650,11 +482,6 @@
       "id": "gaDHO_visit_elek_talk_elek",
       "stage": "VISIT_ELEK",
       "speaker": "elek",
-      "title": {
-        "en": "Talk: elek",
-        "zh": "与 elek 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaDHOvisitElekAgain"
       ],
@@ -664,11 +491,6 @@
       "id": "gaDHO_go_to_array_other",
       "stage": "GO_TO_ARRAY",
       "speaker": null,
-      "title": {
-        "en": "go_to_array_other",
-        "zh": "go_to_array_other"
-      },
-      "location": null,
       "roots": [
         "r:gaDHOarrayStart"
       ],
@@ -678,11 +500,6 @@
       "id": "gaDHO_array_then_abyss_other",
       "stage": "ARRAY_THEN_ABYSS",
       "speaker": null,
-      "title": {
-        "en": "array_then_abyss_other",
-        "zh": "array_then_abyss_other"
-      },
-      "location": null,
       "roots": [
         "r:gaDHO_mk1explore8interrupt2b"
       ],
@@ -692,11 +509,6 @@
       "id": "gaDHO_abyss_no_elek_other",
       "stage": "ABYSS_NO_ELEK",
       "speaker": null,
-      "title": {
-        "en": "abyss_no_elek_other",
-        "zh": "abyss_no_elek_other"
-      },
-      "location": null,
       "roots": [
         "r:gaDHO_mk1explore8interruptC",
         "r:gaDHO_mk1explore8interruptCalt"
@@ -707,11 +519,6 @@
       "id": "gaDHO_return_to_elek_talk_elek",
       "stage": "RETURN_TO_ELEK",
       "speaker": "elek",
-      "title": {
-        "en": "Talk: elek",
-        "zh": "与 elek 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaDHOendingStart"
       ],
@@ -721,11 +528,6 @@
       "id": "gaDHO_array_then_elek_talk_elek",
       "stage": "ARRAY_THEN_ELEK",
       "speaker": "elek",
-      "title": {
-        "en": "Talk: elek",
-        "zh": "与 elek 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaDHOabyssEndElekStartComms",
         "r:gaDHOabyssEndElekStartCommsB"
@@ -736,11 +538,6 @@
       "id": "gaDHO_return_to_elek_talk_station_galatia_academy",
       "stage": "RETURN_TO_ELEK",
       "speaker": "station_galatia_academy",
-      "title": {
-        "en": "Talk: station_galatia_academy",
-        "zh": "与 station_galatia_academy 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaDHOabyssEndElekStart"
       ],
@@ -750,11 +547,6 @@
       "id": "gaDHO_return_to_elek_other",
       "stage": "RETURN_TO_ELEK",
       "speaker": null,
-      "title": {
-        "en": "return_to_elek_other",
-        "zh": "return_to_elek_other"
-      },
-      "location": null,
       "roots": [
         "r:gaDHOabyssEndElekIntro",
         "r:gaDHOabyssEndElekIntro2",
@@ -766,11 +558,6 @@
       "id": "gaDHO_array_then_elek_talk_station_galatia_academy",
       "stage": "ARRAY_THEN_ELEK",
       "speaker": "station_galatia_academy",
-      "title": {
-        "en": "Talk: station_galatia_academy",
-        "zh": "与 station_galatia_academy 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaDHOvisitElekStartB"
       ],
@@ -780,11 +567,6 @@
       "id": "gaDHO_array_then_elek_other",
       "stage": "ARRAY_THEN_ELEK",
       "speaker": null,
-      "title": {
-        "en": "array_then_elek_other",
-        "zh": "array_then_elek_other"
-      },
-      "location": null,
       "roots": [
         "r:gaDHOvisitElekIntroMetz",
         "r:gaDHOvisitElekIntroRejected",
@@ -796,11 +578,6 @@
       "id": "gaDHO_go_to_array_talk_elek",
       "stage": "GO_TO_ARRAY",
       "speaker": "elek",
-      "title": {
-        "en": "Talk: elek",
-        "zh": "与 elek 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaDHOtalkElekGoToArray"
       ],
@@ -810,11 +587,6 @@
       "id": "gaDHO_go_to_location_talk_elek",
       "stage": "GO_TO_LOCATION",
       "speaker": "elek",
-      "title": {
-        "en": "Talk: elek",
-        "zh": "与 elek 交谈"
-      },
-      "location": null,
       "roots": [
         "r:gaDHOtalkElekGoToLocation"
       ],

@@ -25,6 +25,7 @@ from typing import Dict, List, Optional
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib_rules import BiRule, RuleIndex, GENERIC_TRIGGERS, load_bilingual  # noqa: E402
 from extract_java import read_utf8_constants  # noqa: E402
+from official_names import OFFICIAL_NAMES, PERSON_NAMES  # noqa: E402
 
 DATA_FILES = [
     'data/campaign/rules.csv',
@@ -54,93 +55,22 @@ CONTACT_NEEDLES = ['seco', 'dcom', 'extr', 'smug', 'tabo', 'ssat', 'mcb', 'ucb',
                    'locrlf']
 
 SERIES = [
+    # 名称/简介政策：
+    # - 单任务包：名字来自 official_names.py（jar 常量池提取，构建时校验）
+    # - 聚合包：数据里不写名字/简介，由前端 wiki 编辑层（questEditorial.ts）提供
     {
         'id': 'the_academy_arc',
-        'name': {'en': 'The Galatia Academy Arc', 'zh': 'Galatia 学院主线'},
-        'summary': {
-            'en': 'The Galatia Academy storyline: from the tutorial through '
-                  '"A People\'s History of Collapse", finding Coureuse, '
-                  'Project Ziggurat, and At the Gates.',
-            'zh': 'Galatia 学院主线：从新手任务到《大崩塌人民史》、寻找 Coureuse、'
-                  'Ziggurat 计划，直至"群星之门"。',
-        },
         'missions': ACADEMY_MISSIONS,
         'extra_needles': {'gaPZ': ['zgr']},
-        'class_for': lambda m: f'academy.GA{m[2:].replace("ga", "", 1) if False else m[2:].capitalize()}' if False else None,
     },
-    {
-        'id': 'luddic_pilgrims_path',
-        'name': {'en': "Luddic Pilgrim's Path", 'zh': '路德朝圣之路'},
-        'summary': {
-            'en': 'Escort the pilgrims of the Luddic Church on their sacred path.',
-            'zh': '护送路德教会的朝圣者踏上他们的朝圣之路。',
-        },
-        'missions': ['lpp'],
-    },
-    {
-        'id': 'luddic_knight_errant',
-        'name': {'en': 'Luddic Knight Errant', 'zh': '路德游侠骑士'},
-        'summary': {
-            'en': 'A knight of the Luddic Church seeks a champion for her cause.',
-            'zh': '一位路德教会的骑士在为她的信仰寻找一位支持者。',
-        },
-        'missions': ['lke'],
-    },
-    {
-        'id': 'bornanew_files',
-        'name': {'en': 'Born Anew: Files of False Idols', 'zh': '新生：伪神档案'},
-        'summary': {
-            'en': "The Luddic Church's inner secrets: the Files of False Idols and the man called Ulmus Pond.",
-            'zh': '路德教会的内部秘辛：伪神档案，以及那个被称为 Ulmus Pond 的男人。',
-        },
-        'missions': ['bffi'],
-    },
-    {
-        'id': 'recover_a_planetkiller',
-        'name': {'en': 'Recover a Planetkiller', 'zh': '回收行星杀手'},
-        'summary': {
-            'en': 'A Hegemony officer wants a piece of forbidden history recovered.',
-            'zh': '一位霸主军官想要回收一段被禁忌的历史。',
-        },
-        'missions': ['pk'],
-    },
-    {
-        'id': 'sword_of_eventide',
-        'name': {'en': 'Sword of Eventide', 'zh': '暮光之剑'},
-        'summary': {
-            'en': 'An ancient weapon, a dead fleet, and a story that refuses to end.',
-            'zh': '一件古代兵器、一支死去已久的舰队，和一个不肯结束的故事。',
-        },
-        'missions': ['soe'],
-    },
-    {
-        'id': 'a_new_hope',
-        'name': {'en': 'A New Hope', 'zh': '新的希望'},
-        'summary': {
-            'en': 'Help a desperate soul find a new beginning.',
-            'zh': '帮助一个绝望的人寻找新的开始。',
-        },
-        'missions': ['anh'],
-    },
-    {
-        'id': 'contact_missions',
-        'name': {'en': 'Contact Missions', 'zh': '接触任务合集'},
-        'summary': {
-            'en': 'The smaller jobs offered by contacts: security codes, disruptions, '
-                  'extractions, smuggling and the like.',
-            'zh': '接触人提供的中小任务：安全码、破坏行动、营救、走私等等。',
-        },
-        'missions': CONTACT_NEEDLES,
-    },
-    {
-        'id': 'misc_stories',
-        'name': {'en': 'Miscellany', 'zh': '杂项剧情'},
-        'summary': {
-            'en': 'Tutorial guidance, the Historian\'s tales, and other odds and ends.',
-            'zh': '新手引导、历史学家的讲述，以及其他零散剧情。',
-        },
-        'missions': ['tutorial', 'historian', 'affk'],
-    },
+    {'id': 'luddic_pilgrims_path', 'missions': ['lpp']},
+    {'id': 'luddic_knight_errant', 'missions': ['lke']},
+    {'id': 'bornanew_files', 'missions': ['bffi']},
+    {'id': 'recover_a_planetkiller', 'missions': ['pk']},
+    {'id': 'sword_of_eventide', 'missions': ['soe']},
+    {'id': 'a_new_hope', 'missions': ['anh']},
+    {'id': 'contact_missions', 'missions': CONTACT_NEEDLES},
+    {'id': 'misc_stories', 'missions': ['tutorial', 'historian', 'affk']},
 ]
 
 
@@ -256,7 +186,6 @@ def sweep(rules, idx: RuleIndex, needles: List[str], stage_var: Optional[str]):
                 return
         key = scene_key(stage, ctx)
         scenes[key] = {'id': key, 'stage': stage, 'speaker': speaker,
-                       'title': {'en': '', 'zh': ''}, 'location': None,
                        'roots': [root], '_ctx': ctx}
 
     def rule_ctx(r):
@@ -314,27 +243,9 @@ def sweep(rules, idx: RuleIndex, needles: List[str], stage_var: Optional[str]):
     for trig in orphans:
         add(None, None, 'orphan_' + trig[:24].lower(), None, root=f't:{trig}')
 
-    # formulaic titles
+    # formulaic titles —— 不再写入数据；场景标题由前端按 kind/ref 渲染
     for sc in scenes.values():
-        ctx = sc['_ctx']
-        if ctx.startswith('conv_'):
-            who = ctx[5:]
-            sc['title'] = {'en': f'Conversations: {who}', 'zh': f'对话：{who}'}
-        elif ctx.startswith('talk_'):
-            who = ctx[5:]
-            sc['title'] = {'en': f'Talk: {who}', 'zh': f'与 {who} 交谈'}
-        elif ctx.startswith('mkt_'):
-            sc['title'] = {'en': f'Market: {ctx[4:]}', 'zh': f'市场：{ctx[4:]}'}
-        elif ctx.startswith('ent_'):
-            sc['title'] = {'en': 'Fleet encounter', 'zh': '舰队遭遇'}
-        elif ctx == 'bar':
-            sc['title'] = {'en': 'Bar event', 'zh': '酒吧事件'}
-        elif ctx == 'dock':
-            sc['title'] = {'en': 'Docked flavor text', 'zh': '靠港见闻'}
-        elif ctx.startswith('orphan_'):
-            sc['title'] = {'en': f'Event: {ctx[7:]}', 'zh': f'事件：{ctx[7:]}'}
-        else:
-            sc['title'] = {'en': sc['id'], 'zh': sc['id']}
+        pass
     return scenes, sorted(quest_persons)
 
 
@@ -365,7 +276,6 @@ def main() -> None:
                 if sc_out['stage'] is None:
                     sc_out['stage'] = mission
                 sc_out['id'] = f"{mission}_{sc['id']}"
-                sc_out['title'] = sc_out['title'] or {'en': sc_out['id'], 'zh': sc_out['id']}
                 all_scenes.append(sc_out)
             all_persons.extend(p for p in persons if p not in all_persons)
 
@@ -396,20 +306,31 @@ def main() -> None:
                                      'zh': (cn_prose[0] if cn_prose else '') or (en_prose[0] if en_prose else '')},
                     })
 
-        characters = [
-            {'id': p, 'name': {'en': p, 'zh': p}, 'title': {'en': '', 'zh': ''}}
-            for p in all_persons
-        ]
+        characters = []
+        for p in all_persons:
+            known = PERSON_NAMES.get(p)
+            entry = {
+                'id': p,
+                'name': {'en': known[0], 'zh': known[1] or known[0]} if known
+                        else {'en': p, 'zh': p},
+            }
+            characters.append(entry)
+
+        # 名称政策：单任务包取官方提取名（official_names 校验过），
+        # 聚合包不写 name/summary（前端 wiki 编辑层提供）
+        pkg_name = None
+        pkg_summary = None
+        if len(missions) == 1 and missions[0] in OFFICIAL_NAMES:
+            en_name, zh_name = OFFICIAL_NAMES[missions[0]]
+            pkg_name = {'en': en_name, 'zh': zh_name or en_name}
+
         out = {
             'id': spec['id'],
             'gameId': missions + spec.get('extra_needles', {}).get('gaPZ', []),
-            'name': spec['name'],
-            'summary': spec['summary'],
             'factionId': None,
             'icon': icon_for(missions[0]),
             'stages': stages_out,
             'characters': characters,
-            'flags': {},
             'scenes': all_scenes,
             'excludeRules': [],
             'ignoreRules': [],
@@ -418,6 +339,8 @@ def main() -> None:
                                     '^sd7s', '^SD7S', '^sdse', '^SDSE', '^sdtu', '^SDTU',
                                     '^sdsw', '^SDSW', '^sdr', '^SDR'],
         }
+        if pkg_name:
+            out['name'] = pkg_name
         dest = os.path.join(QUESTS, spec['id'] + '.json')
         with open(dest, 'w', encoding='utf-8') as f:
             json.dump(out, f, ensure_ascii=False, indent=2)

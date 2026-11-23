@@ -3,14 +3,6 @@
   "gameId": [
     "lpp"
   ],
-  "name": {
-    "en": "Luddic Pilgrim's Path",
-    "zh": "路德朝圣之路"
-  },
-  "summary": {
-    "en": "Escort the pilgrims of the Luddic Church on their sacred path.",
-    "zh": "护送路德教会的朝圣者踏上他们的朝圣之路。"
-  },
   "factionId": null,
   "icon": "graphics/icons/missions/pilgrims_path.png",
   "stages": [
@@ -117,10 +109,6 @@
       "name": {
         "en": "beholder_station",
         "zh": "beholder_station"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
       }
     },
     {
@@ -128,10 +116,6 @@
       "name": {
         "en": "killa",
         "zh": "killa"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
       }
     },
     {
@@ -139,10 +123,6 @@
       "name": {
         "en": "oak",
         "zh": "oak"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
       }
     },
     {
@@ -150,24 +130,14 @@
       "name": {
         "en": "standfast",
         "zh": "standfast"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
       }
     }
   ],
-  "flags": {},
   "scenes": [
     {
       "id": "lpp_misc_conv_standfast",
       "stage": "lpp",
       "speaker": "standfast",
-      "title": {
-        "en": "Conversations: standfast",
-        "zh": "对话：standfast"
-      },
-      "location": null,
       "roots": [
         "r:lppVolturnShrineCandleOpt",
         "r:standfastShrineLeave"
@@ -178,11 +148,6 @@
       "id": "lpp_misc_conv_oak",
       "stage": "lpp",
       "speaker": "oak",
-      "title": {
-        "en": "Conversations: oak",
-        "zh": "对话：oak"
-      },
-      "location": null,
       "roots": [
         "r:lppExcubitorResponseAsk",
         "r:lppExcubitorResponseWhy",
@@ -214,5 +179,9 @@
     "^SDSW",
     "^sdr",
     "^SDR"
-  ]
+  ],
+  "name": {
+    "en": "The Pilgrim's Path",
+    "zh": "朝圣者之路"
+  }
 }

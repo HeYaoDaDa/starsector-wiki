@@ -26,14 +26,6 @@
     "hmdf",
     "locrlf"
   ],
-  "name": {
-    "en": "Contact Missions",
-    "zh": "接触任务合集"
-  },
-  "summary": {
-    "en": "The smaller jobs offered by contacts: security codes, disruptions, extractions, smuggling and the like.",
-    "zh": "接触人提供的中小任务：安全码、破坏行动、营救、走私等等。"
-  },
   "factionId": null,
   "icon": "graphics/icons/missions/security_codes.png",
   "stages": [
@@ -231,17 +223,11 @@
     }
   ],
   "characters": [],
-  "flags": {},
   "scenes": [
     {
       "id": "seco_misc_orphan_seco_blurb",
       "stage": "seco",
       "speaker": null,
-      "title": {
-        "en": "Event: seco_blurb",
-        "zh": "事件：seco_blurb"
-      },
-      "location": null,
       "roots": [
         "t:seco_blurb"
       ],
@@ -251,11 +237,6 @@
       "id": "seco_misc_orphan_seco_option",
       "stage": "seco",
       "speaker": null,
-      "title": {
-        "en": "Event: seco_option",
-        "zh": "事件：seco_option"
-      },
-      "location": null,
       "roots": [
         "t:seco_option"
       ],
@@ -265,11 +246,6 @@
       "id": "seco_misc_orphan_seco_blurbbar",
       "stage": "seco",
       "speaker": null,
-      "title": {
-        "en": "Event: seco_blurbbar",
-        "zh": "事件：seco_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:seco_blurbBar"
       ],
@@ -279,11 +255,6 @@
       "id": "seco_misc_orphan_seco_optionbar",
       "stage": "seco",
       "speaker": null,
-      "title": {
-        "en": "Event: seco_optionbar",
-        "zh": "事件：seco_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:seco_optionBar"
       ],
@@ -293,11 +264,6 @@
       "id": "dcom_misc_orphan_dcom_blurb",
       "stage": "dcom",
       "speaker": null,
-      "title": {
-        "en": "Event: dcom_blurb",
-        "zh": "事件：dcom_blurb"
-      },
-      "location": null,
       "roots": [
         "t:dcom_blurb"
       ],
@@ -307,11 +273,6 @@
       "id": "dcom_misc_orphan_dcom_option",
       "stage": "dcom",
       "speaker": null,
-      "title": {
-        "en": "Event: dcom_option",
-        "zh": "事件：dcom_option"
-      },
-      "location": null,
       "roots": [
         "t:dcom_option"
       ],
@@ -321,11 +282,6 @@
       "id": "dcom_misc_orphan_dcom_blurbbar",
       "stage": "dcom",
       "speaker": null,
-      "title": {
-        "en": "Event: dcom_blurbbar",
-        "zh": "事件：dcom_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:dcom_blurbBar"
       ],
@@ -335,11 +291,6 @@
       "id": "dcom_misc_orphan_dcom_optionbar",
       "stage": "dcom",
       "speaker": null,
-      "title": {
-        "en": "Event: dcom_optionbar",
-        "zh": "事件：dcom_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:dcom_optionBar"
       ],
@@ -349,11 +300,6 @@
       "id": "extr_misc_orphan_extr_blurb",
       "stage": "extr",
       "speaker": null,
-      "title": {
-        "en": "Event: extr_blurb",
-        "zh": "事件：extr_blurb"
-      },
-      "location": null,
       "roots": [
         "t:extr_blurb"
       ],
@@ -363,11 +309,6 @@
       "id": "extr_misc_orphan_extr_option",
       "stage": "extr",
       "speaker": null,
-      "title": {
-        "en": "Event: extr_option",
-        "zh": "事件：extr_option"
-      },
-      "location": null,
       "roots": [
         "t:extr_option"
       ],
@@ -377,11 +318,6 @@
       "id": "extr_misc_orphan_extr_blurbbar",
       "stage": "extr",
       "speaker": null,
-      "title": {
-        "en": "Event: extr_blurbbar",
-        "zh": "事件：extr_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:extr_blurbBar"
       ],
@@ -391,11 +327,6 @@
       "id": "extr_misc_orphan_extr_optionbar",
       "stage": "extr",
       "speaker": null,
-      "title": {
-        "en": "Event: extr_optionbar",
-        "zh": "事件：extr_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:extr_optionBar"
       ],
@@ -405,11 +336,6 @@
       "id": "extr_misc_orphan_extrraidfinished",
       "stage": "extr",
       "speaker": null,
-      "title": {
-        "en": "Event: extrraidfinished",
-        "zh": "事件：extrraidfinished"
-      },
-      "location": null,
       "roots": [
         "t:extrRaidFinished"
       ],
@@ -419,11 +345,6 @@
       "id": "smug_misc_dock",
       "stage": "smug",
       "speaker": null,
-      "title": {
-        "en": "Docked flavor text",
-        "zh": "靠港见闻"
-      },
-      "location": null,
       "roots": [
         "r:smug_checkCompletion",
         "r:smug_checkCompletionNotSneaking",
@@ -435,11 +356,6 @@
       "id": "smug_misc_orphan_smug_blurb",
       "stage": "smug",
       "speaker": null,
-      "title": {
-        "en": "Event: smug_blurb",
-        "zh": "事件：smug_blurb"
-      },
-      "location": null,
       "roots": [
         "t:smug_blurb"
       ],
@@ -449,11 +365,6 @@
       "id": "smug_misc_orphan_smug_option",
       "stage": "smug",
       "speaker": null,
-      "title": {
-        "en": "Event: smug_option",
-        "zh": "事件：smug_option"
-      },
-      "location": null,
       "roots": [
         "t:smug_option"
       ],
@@ -463,11 +374,6 @@
       "id": "smug_misc_orphan_smug_blurbbar",
       "stage": "smug",
       "speaker": null,
-      "title": {
-        "en": "Event: smug_blurbbar",
-        "zh": "事件：smug_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:smug_blurbBar"
       ],
@@ -477,11 +383,6 @@
       "id": "smug_misc_orphan_smug_optionbar",
       "stage": "smug",
       "speaker": null,
-      "title": {
-        "en": "Event: smug_optionbar",
-        "zh": "事件：smug_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:smug_optionBar"
       ],
@@ -491,11 +392,6 @@
       "id": "tabo_misc_orphan_tabo_blurb",
       "stage": "tabo",
       "speaker": null,
-      "title": {
-        "en": "Event: tabo_blurb",
-        "zh": "事件：tabo_blurb"
-      },
-      "location": null,
       "roots": [
         "t:tabo_blurb"
       ],
@@ -505,11 +401,6 @@
       "id": "tabo_misc_orphan_tabo_option",
       "stage": "tabo",
       "speaker": null,
-      "title": {
-        "en": "Event: tabo_option",
-        "zh": "事件：tabo_option"
-      },
-      "location": null,
       "roots": [
         "t:tabo_option"
       ],
@@ -519,11 +410,6 @@
       "id": "tabo_misc_orphan_tabo_blurbbar",
       "stage": "tabo",
       "speaker": null,
-      "title": {
-        "en": "Event: tabo_blurbbar",
-        "zh": "事件：tabo_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:tabo_blurbBar"
       ],
@@ -533,11 +419,6 @@
       "id": "tabo_misc_orphan_tabo_optionbar",
       "stage": "tabo",
       "speaker": null,
-      "title": {
-        "en": "Event: tabo_optionbar",
-        "zh": "事件：tabo_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:tabo_optionBar"
       ],
@@ -547,11 +428,6 @@
       "id": "ssat_misc_orphan_ssat_blurb",
       "stage": "ssat",
       "speaker": null,
-      "title": {
-        "en": "Event: ssat_blurb",
-        "zh": "事件：ssat_blurb"
-      },
-      "location": null,
       "roots": [
         "t:ssat_blurb"
       ],
@@ -561,11 +437,6 @@
       "id": "ssat_misc_orphan_ssat_option",
       "stage": "ssat",
       "speaker": null,
-      "title": {
-        "en": "Event: ssat_option",
-        "zh": "事件：ssat_option"
-      },
-      "location": null,
       "roots": [
         "t:ssat_option"
       ],
@@ -575,11 +446,6 @@
       "id": "ssat_misc_orphan_ssat_blurbbar",
       "stage": "ssat",
       "speaker": null,
-      "title": {
-        "en": "Event: ssat_blurbbar",
-        "zh": "事件：ssat_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:ssat_blurbBar"
       ],
@@ -589,11 +455,6 @@
       "id": "ssat_misc_orphan_ssat_optionbar",
       "stage": "ssat",
       "speaker": null,
-      "title": {
-        "en": "Event: ssat_optionbar",
-        "zh": "事件：ssat_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:ssat_optionBar"
       ],
@@ -603,11 +464,6 @@
       "id": "mcb_misc_orphan_mcb_blurb",
       "stage": "mcb",
       "speaker": null,
-      "title": {
-        "en": "Event: mcb_blurb",
-        "zh": "事件：mcb_blurb"
-      },
-      "location": null,
       "roots": [
         "t:mcb_blurb"
       ],
@@ -617,11 +473,6 @@
       "id": "mcb_misc_orphan_mcb_option",
       "stage": "mcb",
       "speaker": null,
-      "title": {
-        "en": "Event: mcb_option",
-        "zh": "事件：mcb_option"
-      },
-      "location": null,
       "roots": [
         "t:mcb_option"
       ],
@@ -631,11 +482,6 @@
       "id": "mcb_misc_orphan_mcb_blurbbar",
       "stage": "mcb",
       "speaker": null,
-      "title": {
-        "en": "Event: mcb_blurbbar",
-        "zh": "事件：mcb_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:mcb_blurbBar"
       ],
@@ -645,11 +491,6 @@
       "id": "mcb_misc_orphan_mcb_optionbar",
       "stage": "mcb",
       "speaker": null,
-      "title": {
-        "en": "Event: mcb_optionbar",
-        "zh": "事件：mcb_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:mcb_optionBar"
       ],
@@ -659,11 +500,6 @@
       "id": "ucb_misc_orphan_ucb_blurb",
       "stage": "ucb",
       "speaker": null,
-      "title": {
-        "en": "Event: ucb_blurb",
-        "zh": "事件：ucb_blurb"
-      },
-      "location": null,
       "roots": [
         "t:ucb_blurb"
       ],
@@ -673,11 +509,6 @@
       "id": "ucb_misc_orphan_ucb_option",
       "stage": "ucb",
       "speaker": null,
-      "title": {
-        "en": "Event: ucb_option",
-        "zh": "事件：ucb_option"
-      },
-      "location": null,
       "roots": [
         "t:ucb_option"
       ],
@@ -687,11 +518,6 @@
       "id": "ucb_misc_orphan_ucb_blurbbar",
       "stage": "ucb",
       "speaker": null,
-      "title": {
-        "en": "Event: ucb_blurbbar",
-        "zh": "事件：ucb_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:ucb_blurbBar"
       ],
@@ -701,11 +527,6 @@
       "id": "ucb_misc_orphan_ucb_optionbar",
       "stage": "ucb",
       "speaker": null,
-      "title": {
-        "en": "Event: ucb_optionbar",
-        "zh": "事件：ucb_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:ucb_optionBar"
       ],
@@ -715,11 +536,6 @@
       "id": "hijack_misc_orphan_hijack_blurb",
       "stage": "hijack",
       "speaker": null,
-      "title": {
-        "en": "Event: hijack_blurb",
-        "zh": "事件：hijack_blurb"
-      },
-      "location": null,
       "roots": [
         "t:hijack_blurb"
       ],
@@ -729,11 +545,6 @@
       "id": "hijack_misc_orphan_hijack_option",
       "stage": "hijack",
       "speaker": null,
-      "title": {
-        "en": "Event: hijack_option",
-        "zh": "事件：hijack_option"
-      },
-      "location": null,
       "roots": [
         "t:hijack_option"
       ],
@@ -743,11 +554,6 @@
       "id": "hijack_misc_orphan_hijack_blurbbar",
       "stage": "hijack",
       "speaker": null,
-      "title": {
-        "en": "Event: hijack_blurbbar",
-        "zh": "事件：hijack_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:hijack_blurbBar"
       ],
@@ -757,11 +563,6 @@
       "id": "hijack_misc_orphan_hijack_optionbar",
       "stage": "hijack",
       "speaker": null,
-      "title": {
-        "en": "Event: hijack_optionbar",
-        "zh": "事件：hijack_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:hijack_optionBar"
       ],
@@ -771,11 +572,6 @@
       "id": "jabr_misc_orphan_jabr_blurb",
       "stage": "jabr",
       "speaker": null,
-      "title": {
-        "en": "Event: jabr_blurb",
-        "zh": "事件：jabr_blurb"
-      },
-      "location": null,
       "roots": [
         "t:jabr_blurb"
       ],
@@ -785,11 +581,6 @@
       "id": "jabr_misc_orphan_jabr_option",
       "stage": "jabr",
       "speaker": null,
-      "title": {
-        "en": "Event: jabr_option",
-        "zh": "事件：jabr_option"
-      },
-      "location": null,
       "roots": [
         "t:jabr_option"
       ],
@@ -799,11 +590,6 @@
       "id": "jabr_misc_orphan_jabr_blurbbar",
       "stage": "jabr",
       "speaker": null,
-      "title": {
-        "en": "Event: jabr_blurbbar",
-        "zh": "事件：jabr_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:jabr_blurbBar"
       ],
@@ -813,11 +599,6 @@
       "id": "jabr_misc_orphan_jabr_optionbar",
       "stage": "jabr",
       "speaker": null,
-      "title": {
-        "en": "Event: jabr_optionbar",
-        "zh": "事件：jabr_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:jabr_optionBar"
       ],
@@ -827,11 +608,6 @@
       "id": "ddro_misc_orphan_ddro_blurb",
       "stage": "ddro",
       "speaker": null,
-      "title": {
-        "en": "Event: ddro_blurb",
-        "zh": "事件：ddro_blurb"
-      },
-      "location": null,
       "roots": [
         "t:ddro_blurb"
       ],
@@ -841,11 +617,6 @@
       "id": "ddro_misc_orphan_ddro_option",
       "stage": "ddro",
       "speaker": null,
-      "title": {
-        "en": "Event: ddro_option",
-        "zh": "事件：ddro_option"
-      },
-      "location": null,
       "roots": [
         "t:ddro_option"
       ],
@@ -855,11 +626,6 @@
       "id": "ddro_misc_orphan_ddro_blurbbar",
       "stage": "ddro",
       "speaker": null,
-      "title": {
-        "en": "Event: ddro_blurbbar",
-        "zh": "事件：ddro_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:ddro_blurbBar"
       ],
@@ -869,11 +635,6 @@
       "id": "ddro_misc_orphan_ddro_optionbar",
       "stage": "ddro",
       "speaker": null,
-      "title": {
-        "en": "Event: ddro_optionbar",
-        "zh": "事件：ddro_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:ddro_optionBar"
       ],
@@ -883,11 +644,6 @@
       "id": "sitm_misc_orphan_sitm_blurb",
       "stage": "sitm",
       "speaker": null,
-      "title": {
-        "en": "Event: sitm_blurb",
-        "zh": "事件：sitm_blurb"
-      },
-      "location": null,
       "roots": [
         "t:sitm_blurb"
       ],
@@ -897,11 +653,6 @@
       "id": "sitm_misc_orphan_sitm_option",
       "stage": "sitm",
       "speaker": null,
-      "title": {
-        "en": "Event: sitm_option",
-        "zh": "事件：sitm_option"
-      },
-      "location": null,
       "roots": [
         "t:sitm_option"
       ],
@@ -911,11 +662,6 @@
       "id": "sitm_misc_orphan_sitm_blurbbar",
       "stage": "sitm",
       "speaker": null,
-      "title": {
-        "en": "Event: sitm_blurbbar",
-        "zh": "事件：sitm_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:sitm_blurbBar"
       ],
@@ -925,11 +671,6 @@
       "id": "sitm_misc_orphan_sitm_optionbar",
       "stage": "sitm",
       "speaker": null,
-      "title": {
-        "en": "Event: sitm_optionbar",
-        "zh": "事件：sitm_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:sitm_optionBar"
       ],
@@ -939,11 +680,6 @@
       "id": "rdsm_return_other",
       "stage": "RETURN",
       "speaker": null,
-      "title": {
-        "en": "return_other",
-        "zh": "return_other"
-      },
-      "location": null,
       "roots": [
         "r:rdsmreturnToContact"
       ],
@@ -953,11 +689,6 @@
       "id": "rdsm_misc_orphan_rdsm_blurb",
       "stage": "rdsm",
       "speaker": null,
-      "title": {
-        "en": "Event: rdsm_blurb",
-        "zh": "事件：rdsm_blurb"
-      },
-      "location": null,
       "roots": [
         "t:rdsm_blurb"
       ],
@@ -967,11 +698,6 @@
       "id": "rdsm_misc_orphan_rdsm_option",
       "stage": "rdsm",
       "speaker": null,
-      "title": {
-        "en": "Event: rdsm_option",
-        "zh": "事件：rdsm_option"
-      },
-      "location": null,
       "roots": [
         "t:rdsm_option"
       ],
@@ -981,11 +707,6 @@
       "id": "rdsm_misc_orphan_rdsmraidfinished",
       "stage": "rdsm",
       "speaker": null,
-      "title": {
-        "en": "Event: rdsmraidfinished",
-        "zh": "事件：rdsmraidfinished"
-      },
-      "location": null,
       "roots": [
         "t:rdsmraidFinished"
       ],
@@ -995,11 +716,6 @@
       "id": "rsom_misc_orphan_rsom_blurb",
       "stage": "rsom",
       "speaker": null,
-      "title": {
-        "en": "Event: rsom_blurb",
-        "zh": "事件：rsom_blurb"
-      },
-      "location": null,
       "roots": [
         "t:rsom_blurb"
       ],
@@ -1009,11 +725,6 @@
       "id": "rsom_misc_orphan_rsom_option",
       "stage": "rsom",
       "speaker": null,
-      "title": {
-        "en": "Event: rsom_option",
-        "zh": "事件：rsom_option"
-      },
-      "location": null,
       "roots": [
         "t:rsom_option"
       ],
@@ -1023,11 +734,6 @@
       "id": "cpm_misc_orphan_cpm_blurb",
       "stage": "cpm",
       "speaker": null,
-      "title": {
-        "en": "Event: cpm_blurb",
-        "zh": "事件：cpm_blurb"
-      },
-      "location": null,
       "roots": [
         "t:cpm_blurb"
       ],
@@ -1037,11 +743,6 @@
       "id": "cpm_misc_orphan_cpm_option",
       "stage": "cpm",
       "speaker": null,
-      "title": {
-        "en": "Event: cpm_option",
-        "zh": "事件：cpm_option"
-      },
-      "location": null,
       "roots": [
         "t:cpm_option"
       ],
@@ -1051,11 +752,6 @@
       "id": "cpm_misc_orphan_cpm_blurbbar",
       "stage": "cpm",
       "speaker": null,
-      "title": {
-        "en": "Event: cpm_blurbbar",
-        "zh": "事件：cpm_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:cpm_blurbBar"
       ],
@@ -1065,11 +761,6 @@
       "id": "cpm_misc_orphan_cpm_optionbar",
       "stage": "cpm",
       "speaker": null,
-      "title": {
-        "en": "Event: cpm_optionbar",
-        "zh": "事件：cpm_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:cpm_optionBar"
       ],
@@ -1079,11 +770,6 @@
       "id": "cpc_misc_orphan_cpc_blurb",
       "stage": "cpc",
       "speaker": null,
-      "title": {
-        "en": "Event: cpc_blurb",
-        "zh": "事件：cpc_blurb"
-      },
-      "location": null,
       "roots": [
         "t:cpc_blurb"
       ],
@@ -1093,11 +779,6 @@
       "id": "cpc_misc_orphan_cpc_option",
       "stage": "cpc",
       "speaker": null,
-      "title": {
-        "en": "Event: cpc_option",
-        "zh": "事件：cpc_option"
-      },
-      "location": null,
       "roots": [
         "t:cpc_option"
       ],
@@ -1107,11 +788,6 @@
       "id": "cpc_misc_orphan_cpc_blurbbar",
       "stage": "cpc",
       "speaker": null,
-      "title": {
-        "en": "Event: cpc_blurbbar",
-        "zh": "事件：cpc_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:cpc_blurbBar"
       ],
@@ -1121,11 +797,6 @@
       "id": "cpc_misc_orphan_cpc_optionbar",
       "stage": "cpc",
       "speaker": null,
-      "title": {
-        "en": "Event: cpc_optionbar",
-        "zh": "事件：cpc_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:cpc_optionBar"
       ],
@@ -1135,11 +806,6 @@
       "id": "psb_misc_orphan_psb_blurb",
       "stage": "psb",
       "speaker": null,
-      "title": {
-        "en": "Event: psb_blurb",
-        "zh": "事件：psb_blurb"
-      },
-      "location": null,
       "roots": [
         "t:psb_blurb"
       ],
@@ -1149,11 +815,6 @@
       "id": "psb_misc_orphan_psb_option",
       "stage": "psb",
       "speaker": null,
-      "title": {
-        "en": "Event: psb_option",
-        "zh": "事件：psb_option"
-      },
-      "location": null,
       "roots": [
         "t:psb_option"
       ],
@@ -1163,11 +824,6 @@
       "id": "psb_misc_orphan_psb_blurbbar",
       "stage": "psb",
       "speaker": null,
-      "title": {
-        "en": "Event: psb_blurbbar",
-        "zh": "事件：psb_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:psb_blurbBar"
       ],
@@ -1177,11 +833,6 @@
       "id": "psb_misc_orphan_psb_optionbar",
       "stage": "psb",
       "speaker": null,
-      "title": {
-        "en": "Event: psb_optionbar",
-        "zh": "事件：psb_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:psb_optionBar"
       ],
@@ -1191,11 +842,6 @@
       "id": "dhi_misc_orphan_dhi_blurb",
       "stage": "dhi",
       "speaker": null,
-      "title": {
-        "en": "Event: dhi_blurb",
-        "zh": "事件：dhi_blurb"
-      },
-      "location": null,
       "roots": [
         "t:dhi_blurb"
       ],
@@ -1205,11 +851,6 @@
       "id": "dhi_misc_orphan_dhi_option",
       "stage": "dhi",
       "speaker": null,
-      "title": {
-        "en": "Event: dhi_option",
-        "zh": "事件：dhi_option"
-      },
-      "location": null,
       "roots": [
         "t:dhi_option"
       ],
@@ -1219,11 +860,6 @@
       "id": "dhi_misc_orphan_dhi_blurbbar",
       "stage": "dhi",
       "speaker": null,
-      "title": {
-        "en": "Event: dhi_blurbbar",
-        "zh": "事件：dhi_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:dhi_blurbBar"
       ],
@@ -1233,11 +869,6 @@
       "id": "dhi_misc_orphan_dhi_optionbar",
       "stage": "dhi",
       "speaker": null,
-      "title": {
-        "en": "Event: dhi_optionbar",
-        "zh": "事件：dhi_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:dhi_optionBar"
       ],
@@ -1247,11 +878,6 @@
       "id": "dsp_misc_orphan_dsp_blurb",
       "stage": "dsp",
       "speaker": null,
-      "title": {
-        "en": "Event: dsp_blurb",
-        "zh": "事件：dsp_blurb"
-      },
-      "location": null,
       "roots": [
         "t:dsp_blurb"
       ],
@@ -1261,11 +887,6 @@
       "id": "dsp_misc_orphan_dsp_option",
       "stage": "dsp",
       "speaker": null,
-      "title": {
-        "en": "Event: dsp_option",
-        "zh": "事件：dsp_option"
-      },
-      "location": null,
       "roots": [
         "t:dsp_option"
       ],
@@ -1275,11 +896,6 @@
       "id": "dsp_misc_orphan_dsp_blurbbar",
       "stage": "dsp",
       "speaker": null,
-      "title": {
-        "en": "Event: dsp_blurbbar",
-        "zh": "事件：dsp_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:dsp_blurbBar"
       ],
@@ -1289,11 +905,6 @@
       "id": "dsp_misc_orphan_dsp_optionbar",
       "stage": "dsp",
       "speaker": null,
-      "title": {
-        "en": "Event: dsp_optionbar",
-        "zh": "事件：dsp_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:dsp_optionBar"
       ],
@@ -1303,11 +914,6 @@
       "id": "hmdf_misc_orphan_hmdf_blurb",
       "stage": "hmdf",
       "speaker": null,
-      "title": {
-        "en": "Event: hmdf_blurb",
-        "zh": "事件：hmdf_blurb"
-      },
-      "location": null,
       "roots": [
         "t:hmdf_blurb"
       ],
@@ -1317,11 +923,6 @@
       "id": "hmdf_misc_orphan_hmdf_option",
       "stage": "hmdf",
       "speaker": null,
-      "title": {
-        "en": "Event: hmdf_option",
-        "zh": "事件：hmdf_option"
-      },
-      "location": null,
       "roots": [
         "t:hmdf_option"
       ],
@@ -1331,11 +932,6 @@
       "id": "hmdf_misc_orphan_hmdf_blurbbar",
       "stage": "hmdf",
       "speaker": null,
-      "title": {
-        "en": "Event: hmdf_blurbbar",
-        "zh": "事件：hmdf_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:hmdf_blurbBar"
       ],
@@ -1345,11 +941,6 @@
       "id": "hmdf_misc_orphan_hmdf_optionbar",
       "stage": "hmdf",
       "speaker": null,
-      "title": {
-        "en": "Event: hmdf_optionbar",
-        "zh": "事件：hmdf_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:hmdf_optionBar"
       ],
@@ -1359,11 +950,6 @@
       "id": "locrlf_misc_dock",
       "stage": "locrlf",
       "speaker": null,
-      "title": {
-        "en": "Docked flavor text",
-        "zh": "靠港见闻"
-      },
-      "location": null,
       "roots": [
         "r:LOCRLoffloadToChurch",
         "r:LOCRLoffloadToChurchSecular",
@@ -1375,11 +961,6 @@
       "id": "locrlf_misc_orphan_locrlf_blurb",
       "stage": "locrlf",
       "speaker": null,
-      "title": {
-        "en": "Event: locrlf_blurb",
-        "zh": "事件：locrlf_blurb"
-      },
-      "location": null,
       "roots": [
         "t:locrlf_blurb"
       ],
@@ -1389,11 +970,6 @@
       "id": "locrlf_misc_orphan_locrlf_option",
       "stage": "locrlf",
       "speaker": null,
-      "title": {
-        "en": "Event: locrlf_option",
-        "zh": "事件：locrlf_option"
-      },
-      "location": null,
       "roots": [
         "t:locrlf_option"
       ],
@@ -1403,11 +979,6 @@
       "id": "locrlf_misc_orphan_locrlf_blurbbar",
       "stage": "locrlf",
       "speaker": null,
-      "title": {
-        "en": "Event: locrlf_blurbbar",
-        "zh": "事件：locrlf_blurbbar"
-      },
-      "location": null,
       "roots": [
         "t:locrlf_blurbBar"
       ],
@@ -1417,11 +988,6 @@
       "id": "locrlf_misc_orphan_locrlf_optionbar",
       "stage": "locrlf",
       "speaker": null,
-      "title": {
-        "en": "Event: locrlf_optionbar",
-        "zh": "事件：locrlf_optionbar"
-      },
-      "location": null,
       "roots": [
         "t:locrlf_optionBar"
       ],

@@ -3,14 +3,6 @@
   "gameId": [
     "pk"
   ],
-  "name": {
-    "en": "Recover a Planetkiller",
-    "zh": "回收行星杀手"
-  },
-  "summary": {
-    "en": "A Hegemony officer wants a piece of forbidden history recovered.",
-    "zh": "一位霸主军官想要回收一段被禁忌的历史。"
-  },
   "factionId": null,
   "icon": "graphics/icons/missions/planetkiller.png",
   "stages": [
@@ -91,37 +83,23 @@
     {
       "id": "arroyo",
       "name": {
-        "en": "arroyo",
-        "zh": "arroyo"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
+        "en": "Rayan Arroyo",
+        "zh": "Rayan Arroyo"
       }
     },
     {
       "id": "rao",
       "name": {
-        "en": "rao",
-        "zh": "rao"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
+        "en": "Orcus Rao",
+        "zh": "Orcus Rao"
       }
     }
   ],
-  "flags": {},
   "scenes": [
     {
       "id": "pk_go_to_nexus_other",
       "stage": "GO_TO_NEXUS",
       "speaker": null,
-      "title": {
-        "en": "go_to_nexus_other",
-        "zh": "go_to_nexus_other"
-      },
-      "location": null,
       "roots": [
         "r:PKCommRelayOpt"
       ],
@@ -131,11 +109,6 @@
       "id": "pk_misc_conv_arroyo",
       "stage": "pk",
       "speaker": "arroyo",
-      "title": {
-        "en": "Conversations: arroyo",
-        "zh": "对话：arroyo"
-      },
-      "location": null,
       "roots": [
         "r:PKGiveToArroyo"
       ],
@@ -145,11 +118,6 @@
       "id": "pk_misc_orphan_pknexusdefeated",
       "stage": "pk",
       "speaker": null,
-      "title": {
-        "en": "Event: pknexusdefeated",
-        "zh": "事件：pknexusdefeated"
-      },
-      "location": null,
       "roots": [
         "t:PKNexusDefeated"
       ],
@@ -159,11 +127,6 @@
       "id": "pk_misc_orphan_pk14thdefeated",
       "stage": "pk",
       "speaker": null,
-      "title": {
-        "en": "Event: pk14thdefeated",
-        "zh": "事件：pk14thdefeated"
-      },
-      "location": null,
       "roots": [
         "t:PK14thDefeated"
       ],
@@ -191,5 +154,9 @@
     "^SDSW",
     "^sdr",
     "^SDR"
-  ]
+  ],
+  "name": {
+    "en": "The Scythe of Orion",
+    "zh": "猎户座之镰"
+  }
 }

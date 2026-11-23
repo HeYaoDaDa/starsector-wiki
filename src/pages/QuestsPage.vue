@@ -2,6 +2,8 @@
 import { computed, onMounted, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { appData } from 'src/AppData';
+import { questMeta } from 'src/questEditorial';
+import { Bilingual } from 'src/classes/model/Quest';
 
 defineOptions({
   name: 'QuestsPage',
@@ -23,8 +25,31 @@ watch(() => appData.selectedVersion.value, load);
 
 const quests = computed(() => appData.questIndex?.quests ?? []);
 
-function primary(text: { en: string; zh: string }): string {
+function primary(text: Bilingual): string {
   return isZh.value ? text.zh : text.en;
+}
+
+/** 官方名优先；无官方名（聚合包/未翻译任务名）用 wiki 编辑层标签 */
+function questName(quest: { id: string; name?: Bilingual }): {
+  text: string;
+  isWiki: boolean;
+} {
+  if (quest.name) {
+    return { text: primary(quest.name), isWiki: false };
+  }
+  const meta = questMeta(quest.id);
+  if (meta) {
+    return { text: primary(meta.name), isWiki: true };
+  }
+  return { text: quest.id, isWiki: true };
+}
+
+function questSummary(quest: { id: string; summary?: Bilingual }): string {
+  if (quest.summary) {
+    return primary(quest.summary);
+  }
+  const meta = questMeta(quest.id);
+  return meta?.summary ? primary(meta.summary) : '';
 }
 
 function factionName(factionId: string | null): string {
@@ -57,7 +82,10 @@ function factionName(factionId: string | null): string {
           >
             <div class="quest-card-content">
               <div class="quest-card-title">
-                <span class="quest-card-name">{{ primary(quest.name) }}</span>
+                <span class="quest-card-name">{{ questName(quest).text }}</span>
+                <q-chip v-if="questName(quest).isWiki" dense size="sm" outline>
+                  {{ $t('quest.wikiLabel') }}
+                </q-chip>
                 <span
                   v-if="factionName(quest.factionId)"
                   class="quest-card-faction"
@@ -65,7 +93,9 @@ function factionName(factionId: string | null): string {
                   {{ factionName(quest.factionId) }}
                 </span>
               </div>
-              <div class="quest-card-summary">{{ primary(quest.summary) }}</div>
+              <div v-if="questSummary(quest)" class="quest-card-summary">
+                {{ questSummary(quest) }}
+              </div>
               <div class="quest-card-meta">
                 <q-chip dense size="sm">
                   {{ $t('quest.stages') }}: {{ quest.stageCount }}

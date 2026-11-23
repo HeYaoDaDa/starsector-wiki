@@ -53,13 +53,18 @@
 
 ## 任务与对话 / Quests & Dialogue
 
-对话数据不走游戏内导出——直接离线解析游戏目录里的 `rules.csv`（中英双语言按规则 ID 对齐），
-产出按"任务 → 阶段 → 场景 → 对话树"组织的 JSON，前端提供交互式对话浏览（中英对照、
-条件标注、分支跳转）。
+**零手写政策**：`quests/*.json` 与 `dialogues/*.json` 里的游戏文本（任务名/简报/台词/头衔）
+一律来自提取（rules.csv 双语、EN/CN jar 常量池），不含任何人工翻译；
+`tools/dialogue/enforce_extracted.py` 构建后逐条校验全部中文字符串可溯源 CN 语料，不命中即构建失败。
+手写内容只允许存在于前端编辑层 `src/questEditorial.ts`（聚合包名、flag 条件注解等 wiki 注释，
+UI 上带"Wiki 标签"标记区分）。
 
 ```bash
 # 读取 ~/Games/starsector-0985a-{en,cn}，生成 public/data/{version}/dialogues/
-python3 tools/dialogue/build_quests.py
+python3 tools/dialogue/build_series.py        # 多任务系列包（官方名自动提取）
+python3 tools/dialogue/build_quests.py       # 全部任务包 → 对话树
+python3 tools/dialogue/build_dictionary.py    # 全库对话词典
+python3 tools/dialogue/enforce_extracted.py   # 零手写校验（构建门禁）
 ```
 
 详见 [tools/dialogue/README.md](tools/dialogue/README.md)。工具链：
@@ -67,13 +72,15 @@ python3 tools/dialogue/build_quests.py
 - `draft_quest.py` —— 按 `$xxx_stage ==` 条件自动聚类场景草稿（大任务线用）
 - `extract_java.py` —— 双 jar（EN/CN）常量池提取，任务简报官方双语
 - `build_dictionary.py` —— 全库对话词典（14,255 条，懒加载 + 前端全文搜索）
+- `official_names.py` —— 官方任务名/头衔配置（构建时对 jar 常量池校验，防手写漂移）
+- `enforce_extracted.py` —— 零手写执法（CN 语料逐条溯源）
 
 当前收录（12 个任务包）：
 
-- 篡夺者 / 七子 / 最高元首 —— Askonia 弧线三步曲，覆盖率已迭代收敛
+- 篡位者们（The Usurpers，官方中文名）/ Andrada 的继承人（Heir to Andrada）/ 七子（wiki 标签）
 - Galatia 学院主线 —— 19 个任务（教程后续 → Coureuse → Ziggurat 计划 → 群星之门）
-- 路德朝圣之路 / 路德游侠骑士 / 新生：伪神档案 —— Luddic 三条线
-- 回收行星杀手 / 暮光之剑 / 新的希望 —— 独立故事任务
+- 朝圣者之路（The Pilgrim's Path）/ 骑士迷途（Knight Errant）/ 伪像（False Idols）
+- 猎户座之镰（The Scythe of Orion）/ 暮光之剑（wiki 标签）/ Volturn 之旅
 - 接触任务合集 —— 24 个中小接触任务（安全码、破坏、营救、走私等）
 - 杂项剧情 —— 教程、历史学家碎碎念等
 - 对话词典（`#/dialogue_dict`）—— rules.csv 全部带文本规则，中英检索

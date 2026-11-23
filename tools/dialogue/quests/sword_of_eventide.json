@@ -3,14 +3,6 @@
   "gameId": [
     "soe"
   ],
-  "name": {
-    "en": "Sword of Eventide",
-    "zh": "暮光之剑"
-  },
-  "summary": {
-    "en": "An ancient weapon, a dead fleet, and a story that refuses to end.",
-    "zh": "一件古代兵器、一支死去已久的舰队，和一个不肯结束的故事。"
-  },
   "factionId": null,
   "icon": "graphics/icons/missions/eventide.png",
   "stages": [
@@ -112,17 +104,11 @@
     }
   ],
   "characters": [],
-  "flags": {},
   "scenes": [
     {
       "id": "soe_misc_dock",
       "stage": "soe",
       "speaker": null,
-      "title": {
-        "en": "Docked flavor text",
-        "zh": "靠港见闻"
-      },
-      "location": null,
       "roots": [
         "r:soeArriveEventide"
       ],
@@ -132,11 +118,6 @@
       "id": "soe_misc_orphan_soeduelfinished",
       "stage": "soe",
       "speaker": null,
-      "title": {
-        "en": "Event: soeduelfinished",
-        "zh": "事件：soeduelfinished"
-      },
-      "location": null,
       "roots": [
         "t:SOEDuelFinished"
       ],

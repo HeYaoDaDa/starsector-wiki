@@ -207,6 +207,9 @@ def parse_options_cell(cell: str) -> List[Option]:
         if m:
             num = m.group(1)
             line = line[m.end():]
+        if line.startswith('#'):
+            # 注释/禁用行（如 "#cutCommLink:..."）——不折叠进上一条
+            continue
         # split trigger id from label at first ':'
         if ':' not in line:
             # continuation of previous label

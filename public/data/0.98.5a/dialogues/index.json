@@ -3,183 +3,163 @@
   "quests": [
     {
       "id": "a_new_hope",
-      "name": {
-        "en": "A New Hope",
-        "zh": "新的希望"
-      },
-      "summary": {
-        "en": "Help a desperate soul find a new beginning.",
-        "zh": "帮助一个绝望的人寻找新的开始。"
-      },
       "factionId": null,
       "icon": "graphics/icons/missions/anh.png",
       "stageCount": 9,
-      "sceneCount": 44
+      "sceneCount": 44,
+      "name": {
+        "en": "Passage To Volturn",
+        "zh": "Volturn 之旅"
+      },
+      "summary": {
+        "en": "Deliver the mysterious old man, the kid, and their robot to Volturn in the Askonia system. Avoid patrols; they may be wanted by the authorities.",
+        "zh": "把神秘老人，小伙子，以及他们的机器人送到位于 Askonia 星系的 Volturn 行星上。避开巡逻队，你的乘客可能已被通缉。"
+      }
     },
     {
       "id": "bornanew_files",
-      "name": {
-        "en": "Born Anew: Files of False Idols",
-        "zh": "新生：伪神档案"
-      },
-      "summary": {
-        "en": "The Luddic Church's inner secrets: the Files of False Idols and the man called Ulmus Pond.",
-        "zh": "路德教会的内部秘辛：伪神档案，以及那个被称为 Ulmus Pond 的男人。"
-      },
       "factionId": null,
       "icon": "graphics/icons/missions/false_idols.png",
       "stageCount": 12,
-      "sceneCount": 109
+      "sceneCount": 109,
+      "name": {
+        "en": "False Idols",
+        "zh": "伪像"
+      },
+      "summary": {
+        "en": "Pick up Jethro Bornanew from Gilead.",
+        "zh": "从 Gilead 接走 Jethro Bornanew。"
+      }
     },
     {
       "id": "contact_missions",
-      "name": {
-        "en": "Contact Missions",
-        "zh": "接触任务合集"
-      },
-      "summary": {
-        "en": "The smaller jobs offered by contacts: security codes, disruptions, extractions, smuggling and the like.",
-        "zh": "接触人提供的中小任务：安全码、破坏行动、营救、走私等等。"
-      },
       "factionId": null,
       "icon": "graphics/icons/missions/security_codes.png",
       "stageCount": 24,
-      "sceneCount": 165
+      "sceneCount": 165,
+      "summary": {
+        "en": "You've acquired ground-forces security codes for %s. Having these allows for much better raid planning and will reduce marine casualties by %s.",
+        "zh": "你已获得 %s 地面部队的安全码，这意味着你可更好地制定劫掠计划，从而降低 %s 陆战队员的伤亡。"
+      }
     },
     {
       "id": "luddic_knight_errant",
-      "name": {
-        "en": "Luddic Knight Errant",
-        "zh": "路德游侠骑士"
-      },
-      "summary": {
-        "en": "A knight of the Luddic Church seeks a champion for her cause.",
-        "zh": "一位路德教会的骑士在为她的信仰寻找一位支持者。"
-      },
       "factionId": null,
       "icon": "graphics/icons/missions/knight_errant.png",
       "stageCount": 12,
-      "sceneCount": 409
+      "sceneCount": 409,
+      "name": {
+        "en": "Knight Errant",
+        "zh": "骑士迷途"
+      },
+      "summary": {
+        "en": "Find Bornanew. His last mission was the infiltration of a Pather cell; someone must known something about where he is.",
+        "zh": "袭击了 Mazalot 并且引发了卢德教徒起义"
+      }
     },
     {
       "id": "luddic_pilgrims_path",
-      "name": {
-        "en": "Luddic Pilgrim's Path",
-        "zh": "路德朝圣之路"
-      },
-      "summary": {
-        "en": "Escort the pilgrims of the Luddic Church on their sacred path.",
-        "zh": "护送路德教会的朝圣者踏上他们的朝圣之路。"
-      },
       "factionId": null,
       "icon": "graphics/icons/missions/pilgrims_path.png",
       "stageCount": 12,
-      "sceneCount": 444
+      "sceneCount": 444,
+      "name": {
+        "en": "The Pilgrim's Path",
+        "zh": "朝圣者之路"
+      },
+      "summary": {
+        "en": "Visit the six shrines of the Pilgrim's Path. The pilgrimage is traditionally completed by returning to Gilead, in the Canaan system.",
+        "zh": "拜访 朝圣者之路 上的六处 圣地。朝圣之道的传统终点是回到 Canaan 星系的 Gilead。"
+      }
     },
     {
       "id": "misc_stories",
-      "name": {
-        "en": "Miscellany",
-        "zh": "杂项剧情"
-      },
-      "summary": {
-        "en": "Tutorial guidance, the Historian's tales, and other odds and ends.",
-        "zh": "新手引导、历史学家的讲述，以及其他零散剧情。"
-      },
       "factionId": null,
       "icon": null,
       "stageCount": 3,
-      "sceneCount": 4
+      "sceneCount": 4,
+      "summary": {
+        "en": "",
+        "zh": ""
+      }
     },
     {
       "id": "recover_a_planetkiller",
-      "name": {
-        "en": "Recover a Planetkiller",
-        "zh": "回收行星杀手"
-      },
-      "summary": {
-        "en": "A Hegemony officer wants a piece of forbidden history recovered.",
-        "zh": "一位霸主军官想要回收一段被禁忌的历史。"
-      },
       "factionId": null,
       "icon": "graphics/icons/missions/planetkiller.png",
       "stageCount": 9,
-      "sceneCount": 155
+      "sceneCount": 155,
+      "name": {
+        "en": "The Scythe of Orion",
+        "zh": "猎户座之镰"
+      },
+      "summary": {
+        "en": "Recover information about a Hegemony fleet last seen in a Tri-Tachyon held system during the first AI War, more than a hundred cycles ago. The fleet is rumored to have been carrying a planetkiller weapon.",
+        "zh": "收集关于 一百多星历年前，在 第一次 AI 战争中 消失在 速子科技 控制区域的 霸主 舰队的信息。传言该舰队携带着一枚 行星杀手。"
+      }
     },
     {
       "id": "sword_of_eventide",
-      "name": {
-        "en": "Sword of Eventide",
-        "zh": "暮光之剑"
-      },
-      "summary": {
-        "en": "An ancient weapon, a dead fleet, and a story that refuses to end.",
-        "zh": "一件古代兵器、一支死去已久的舰队，和一个不肯结束的故事。"
-      },
       "factionId": null,
       "icon": "graphics/icons/missions/eventide.png",
       "stageCount": 12,
-      "sceneCount": 39
+      "sceneCount": 39,
+      "summary": {
+        "en": "Go to Eventide in the Samarra system.",
+        "zh": "去 Samarra 星系内的 Eventide。"
+      }
     },
     {
       "id": "the_academy_arc",
-      "name": {
-        "en": "The Galatia Academy Arc",
-        "zh": "Galatia 学院主线"
-      },
-      "summary": {
-        "en": "The Galatia Academy storyline: from the tutorial through \"A People's History of Collapse\", finding Coureuse, Project Ziggurat, and At the Gates.",
-        "zh": "Galatia 学院主线：从新手任务到《大崩塌人民史》、寻找 Coureuse、Ziggurat 计划，直至\"群星之门\"。"
-      },
       "factionId": null,
       "icon": "graphics/icons/missions/ga_intro.png",
       "stageCount": 19,
-      "sceneCount": 150
+      "sceneCount": 150,
+      "summary": {
+        "en": "",
+        "zh": "前往 Galatia 学院，并与新任院长 "
+      }
     },
     {
       "id": "the_seven_sons",
-      "name": {
-        "en": "The Seven Sons",
-        "zh": "七子"
-      },
-      "summary": {
-        "en": "With Macario's files in hand, find a way to decrypt the ANDRADA dossier, then hunt down the seven clone-sons of Supreme Executor Philip Andrada - each a potential heir to the Sindrian Diktat.",
-        "zh": "带着 Macario 的文件，设法解密 ANDRADA 档案，再找出最高元首 Philip Andrada 的七名克隆子嗣——每一个都是辛达强权王座的潜在继承人。"
-      },
       "factionId": "sindrian_diktat",
       "icon": "graphics/icons/missions/seven_sons.png",
       "stageCount": 11,
-      "sceneCount": 419
+      "sceneCount": 419,
+      "summary": {
+        "en": "Find a way to decrypt the ANDRADA files.",
+        "zh": "设法解密 ANDRADA 文件。"
+      }
     },
     {
       "id": "the_supreme_executor",
-      "name": {
-        "en": "The Supreme Executor",
-        "zh": "最高元首"
-      },
-      "summary": {
-        "en": "Hector and Achilles Andrada - and their backers - maneuver to declare themselves Supreme Executor of the Sindrian Diktat. Choose a side, or play them all.",
-        "zh": "Hector 与 Achilles Andrada——以及他们背后的支持者——正为登上辛达强权的最高元首之位各显神通。选边站，或者，把每一方都玩弄于股掌之间。"
-      },
       "factionId": "sindrian_diktat",
       "icon": "graphics/icons/missions/heir_to_andrada.png",
       "stageCount": 9,
-      "sceneCount": 305
+      "sceneCount": 305,
+      "name": {
+        "en": "Heir to Andrada",
+        "zh": "Andrada 的继承人"
+      },
+      "summary": {
+        "en": "Dolos Macario has made the first move. You must choose how to respond.",
+        "zh": "Dolos Macario 已经先出手了。你必须决定如何应对。"
+      }
     },
     {
       "id": "the_usurpers",
-      "name": {
-        "en": "The Usurpers",
-        "zh": "篡夺者"
-      },
-      "summary": {
-        "en": "A mysterious 'concerned citizen' named Yannick Ram contacts you with a plan to save the Sindrian Diktat from itself — and introduces you to Chief High Inspector Dolos Macario, the 'Spider of Sindria', who has designs on the throne of Supreme Executor Philip Andrada.",
-        "zh": "一位神秘的'忧国之士' Yannick Ram 联系上了你，声称有一个'把辛达强权从它自己手里拯救出来'的计划 —— 并把你引荐给了辛德里亚之蛛、首席督察长 Dolos Macario，一个对最高元首 Philip Andrada 的宝座有所图谋的人。"
-      },
       "factionId": "sindrian_diktat",
       "icon": "graphics/icons/missions/the_usurpers.png",
       "stageCount": 10,
-      "sceneCount": 19
+      "sceneCount": 19,
+      "name": {
+        "en": "The Usurpers",
+        "zh": "篡位者们"
+      },
+      "summary": {
+        "en": "Meet Yannick Ram at his safehouse on Volturn. He has a plan to save the Sindrian Diktat from itself.",
+        "zh": "在 Volturn 的安全屋会见 Yannick Ram。他有一个让辛达强权免于自我毁灭的计划。"
+      }
     }
   ]
 }

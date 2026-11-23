@@ -3,14 +3,6 @@
   "gameId": [
     "bffi"
   ],
-  "name": {
-    "en": "Born Anew: Files of False Idols",
-    "zh": "新生：伪神档案"
-  },
-  "summary": {
-    "en": "The Luddic Church's inner secrets: the Files of False Idols and the man called Ulmus Pond.",
-    "zh": "路德教会的内部秘辛：伪神档案，以及那个被称为 Ulmus Pond 的男人。"
-  },
   "factionId": null,
   "icon": "graphics/icons/missions/false_idols.png",
   "stages": [
@@ -115,12 +107,8 @@
     {
       "id": "horus_yaribay",
       "name": {
-        "en": "horus_yaribay",
-        "zh": "horus_yaribay"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
+        "en": "Horus Yaribay",
+        "zh": "Horus Yaribay"
       }
     },
     {
@@ -128,10 +116,6 @@
       "name": {
         "en": "jaspis",
         "zh": "jaspis"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
       }
     },
     {
@@ -139,10 +123,6 @@
       "name": {
         "en": "menes_yaribay",
         "zh": "menes_yaribay"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
       }
     },
     {
@@ -150,10 +130,6 @@
       "name": {
         "en": "oak",
         "zh": "oak"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
       }
     },
     {
@@ -161,24 +137,14 @@
       "name": {
         "en": "ulmus_pond",
         "zh": "ulmus_pond"
-      },
-      "title": {
-        "en": "",
-        "zh": ""
       }
     }
   ],
-  "flags": {},
   "scenes": [
     {
       "id": "bffi_misc_conv_menes_yaribay",
       "stage": "bffi",
       "speaker": "menes_yaribay",
-      "title": {
-        "en": "Conversations: menes_yaribay",
-        "zh": "对话：menes_yaribay"
-      },
-      "location": null,
       "roots": [
         "r:BFFImeetMenesStart",
         "r:BFFImenesPostPartyTalk",
@@ -190,11 +156,6 @@
       "id": "bffi_talk_to_horus_talk_horus_yaribay",
       "stage": "TALK_TO_HORUS",
       "speaker": "horus_yaribay",
-      "title": {
-        "en": "Talk: horus_yaribay",
-        "zh": "与 horus_yaribay 交谈"
-      },
-      "location": null,
       "roots": [
         "r:BFFItalkHorusParty"
       ],
@@ -204,11 +165,6 @@
       "id": "bffi_attend_a_party_mkt_olinadu",
       "stage": "ATTEND_A_PARTY",
       "speaker": null,
-      "title": {
-        "en": "Market: olinadu",
-        "zh": "市场：olinadu"
-      },
-      "location": null,
       "roots": [
         "r:BFFIattendPartyStartOption",
         "r:BFFIapHorusStartOption"
@@ -219,11 +175,6 @@
       "id": "bffi_talk_to_engineer_talk_menes_yaribay",
       "stage": "TALK_TO_ENGINEER",
       "speaker": "menes_yaribay",
-      "title": {
-        "en": "Talk: menes_yaribay",
-        "zh": "与 menes_yaribay 交谈"
-      },
-      "location": null,
       "roots": [
         "r:BFFImenesPostPartyBought",
         "r:BFFImenesPostPartyBoughtAgain",
@@ -235,11 +186,6 @@
       "id": "bffi_talk_to_ulmus_pond_other",
       "stage": "TALK_TO_ULMUS_POND",
       "speaker": null,
-      "title": {
-        "en": "talk_to_ulmus_pond_other",
-        "zh": "talk_to_ulmus_pond_other"
-      },
-      "location": null,
       "roots": [
         "r:BFFImenesPPtalkOptE"
       ],
@@ -249,11 +195,6 @@
       "id": "bffi_talk_to_engineer_other",
       "stage": "TALK_TO_ENGINEER",
       "speaker": null,
-      "title": {
-        "en": "talk_to_engineer_other",
-        "zh": "talk_to_engineer_other"
-      },
-      "location": null,
       "roots": [
         "r:BFFItalkToEngineerOpt"
       ],
@@ -263,11 +204,6 @@
       "id": "bffi_talk_to_ulmus_pond_talk_ulmus_pond",
       "stage": "TALK_TO_ULMUS_POND",
       "speaker": "ulmus_pond",
-      "title": {
-        "en": "Talk: ulmus_pond",
-        "zh": "与 ulmus_pond 交谈"
-      },
-      "location": null,
       "roots": [
         "r:BFFIulmusPondGreeting"
       ],
@@ -277,11 +213,6 @@
       "id": "bffi_go_to_chalcedon_other",
       "stage": "GO_TO_CHALCEDON",
       "speaker": null,
-      "title": {
-        "en": "go_to_chalcedon_other",
-        "zh": "go_to_chalcedon_other"
-      },
-      "location": null,
       "roots": [
         "r:BFFIulmusStartOption"
       ],
@@ -291,11 +222,6 @@
       "id": "bffi_investigate_pather_station_other",
       "stage": "INVESTIGATE_PATHER_STATION",
       "speaker": null,
-      "title": {
-        "en": "investigate_pather_station_other",
-        "zh": "investigate_pather_station_other"
-      },
-      "location": null,
       "roots": [
         "r:BFFIstationApproach",
         "r:BFFIpatherStationDefeated",
@@ -307,11 +233,6 @@
       "id": "bffi_investigate_pather_station_ent_bffi_patherStationTarget",
       "stage": "INVESTIGATE_PATHER_STATION",
       "speaker": null,
-      "title": {
-        "en": "Fleet encounter",
-        "zh": "舰队遭遇"
-      },
-      "location": null,
       "roots": [
         "r:BFFIpatherStationTalkBuyer",
         "r:BFFIpatherStationTalkConfront",
@@ -324,11 +245,6 @@
       "id": "bffi_arrest_the_curate_other",
       "stage": "ARREST_THE_CURATE",
       "speaker": null,
-      "title": {
-        "en": "arrest_the_curate_other",
-        "zh": "arrest_the_curate_other"
-      },
-      "location": null,
       "roots": [
         "r:BFFIarrestOptionDev",
         "r:BFFIarrestOptionDev2",
@@ -340,11 +256,6 @@
       "id": "bffi_deliver_keepfaith_talk_oak",
       "stage": "DELIVER_KEEPFAITH",
       "speaker": "oak",
-      "title": {
-        "en": "Talk: oak",
-        "zh": "与 oak 交谈"
-      },
-      "location": null,
       "roots": [
         "r:BFFIdeliverOakOption"
       ],
@@ -354,11 +265,6 @@
       "id": "bffi_return_to_hesperus_early_talk_oak",
       "stage": "RETURN_TO_HESPERUS_EARLY",
       "speaker": "oak",
-      "title": {
-        "en": "Talk: oak",
-        "zh": "与 oak 交谈"
-      },
-      "location": null,
       "roots": [
         "r:BFFIoakDestroyedEarly"
       ],
@@ -368,11 +274,6 @@
       "id": "bffi_go_to_hesperus_talk_oak",
       "stage": "GO_TO_HESPERUS",
       "speaker": "oak",
-      "title": {
-        "en": "Talk: oak",
-        "zh": "与 oak 交谈"
-      },
-      "location": null,
       "roots": [
         "r:BFFIoakKeepfaithEscape",
         "r:BFFIoakBornanewDead",
@@ -385,11 +286,6 @@
       "id": "bffi_return_to_hesperus_early_other",
       "stage": "RETURN_TO_HESPERUS_EARLY",
       "speaker": null,
-      "title": {
-        "en": "return_to_hesperus_early_other",
-        "zh": "return_to_hesperus_early_other"
-      },
-      "location": null,
       "roots": [
         "r:BFFIdeliverOakRespNoKF"
       ],
@@ -399,11 +295,6 @@
       "id": "bffi_deliver_keepfaith_other",
       "stage": "DELIVER_KEEPFAITH",
       "speaker": null,
-      "title": {
-        "en": "deliver_keepfaith_other",
-        "zh": "deliver_keepfaith_other"
-      },
-      "location": null,
       "roots": [
         "r:BFFIdeliverOptionKeepfaith"
       ],
@@ -413,11 +304,6 @@
       "id": "bffi_return_to_hesperus_early_mkt_hesperus",
       "stage": "RETURN_TO_HESPERUS_EARLY",
       "speaker": null,
-      "title": {
-        "en": "Market: hesperus",
-        "zh": "市场：hesperus"
-      },
-      "location": null,
       "roots": [
         "r:BFFIdeliverOptionReturnEarly"
       ],
@@ -427,11 +313,6 @@
       "id": "bffi_go_to_hesperus_mkt_hesperus",
       "stage": "GO_TO_HESPERUS",
       "speaker": null,
-      "title": {
-        "en": "Market: hesperus",
-        "zh": "市场：hesperus"
-      },
-      "location": null,
       "roots": [
         "r:BFFIdeliverOptionBornAliveEscaped",
         "r:BFFIdeliverOptionBornDeadEscaped",
@@ -444,11 +325,6 @@
       "id": "bffi_misc_conv_jaspis",
       "stage": "bffi",
       "speaker": "jaspis",
-      "title": {
-        "en": "Conversations: jaspis",
-        "zh": "对话：jaspis"
-      },
-      "location": null,
       "roots": [
         "r:BFFIaskJaspisOpt"
       ],
@@ -458,11 +334,6 @@
       "id": "bffi_misc_mkt_olinadu",
       "stage": "bffi",
       "speaker": null,
-      "title": {
-        "en": "Market: olinadu",
-        "zh": "市场：olinadu"
-      },
-      "location": null,
       "roots": [
         "r:MenesPettyRevenge"
       ],
@@ -472,11 +343,6 @@
       "id": "bffi_misc_orphan_bffipatherstationraiddes",
       "stage": "bffi",
       "speaker": null,
-      "title": {
-        "en": "Event: bffipatherstationraiddes",
-        "zh": "事件：bffipatherstationraiddes"
-      },
-      "location": null,
       "roots": [
         "t:BFFIpatherStationRaidDescription"
       ],
@@ -504,5 +370,9 @@
     "^SDSW",
     "^sdr",
     "^SDR"
-  ]
+  ],
+  "name": {
+    "en": "False Idols",
+    "zh": "伪像"
+  }
 }

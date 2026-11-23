@@ -17,10 +17,11 @@ export interface QuestStage {
   briefing: Bilingual;
 }
 
+/** wiki 注解可留空：无官方来源的头衔不写（零手写政策） */
 export interface QuestCharacter {
   id: string;
   name: Bilingual;
-  title: Bilingual;
+  title?: Bilingual;
 }
 
 export interface QuestFlagGlossary {
@@ -70,12 +71,14 @@ export interface DialogueStep {
 
 export interface QuestScene {
   id: string;
-  title: Bilingual;
-  location: Bilingual | null;
   /** 所属任务阶段 id，null 表示阶段外（如任务开始前） */
   stage: string | null;
   speaker: string | null;
   speakerOverrides: Record<string, string>;
+  /** 场景类型：标题由前端按 kind 用 i18n 模板渲染（数据不含手写标题） */
+  kind: 'conv' | 'market' | 'bar' | 'dock' | 'entity' | 'event' | 'other';
+  /** kind 的参照（人物 id / 市场 id / 实体 flag / 触发器名） */
+  ref: string | null;
   /** 入口步骤 id 列表 */
   entries: string[];
   /** 场景包含的步骤 id（内容在 quest.steps 中全局共享） */
@@ -84,13 +87,14 @@ export interface QuestScene {
 
 export interface Quest {
   id: string;
-  name: Bilingual;
-  summary: Bilingual;
+  /** 官方提取名；缺省 = 无官方名，由前端 wiki 编辑层（questEditorial.ts）兜底 */
+  name?: Bilingual;
+  /** 官方提取简介（缺省取第一阶段简报）；聚合包无简介 */
+  summary?: Bilingual;
   factionId: string | null;
   icon: string | null;
   stages: QuestStage[];
   characters: QuestCharacter[];
-  flags: QuestFlagGlossary;
   /** 全部对话步骤（按 id 全局共享） */
   steps: Record<string, DialogueStep>;
   scenes: QuestScene[];
@@ -98,8 +102,9 @@ export interface Quest {
 
 export interface QuestIndexEntry {
   id: string;
-  name: Bilingual;
-  summary: Bilingual;
+  /** 官方提取名（可选）；缺省时前端用 wiki 编辑层标签 */
+  name?: Bilingual;
+  summary?: Bilingual;
   factionId: string | null;
   icon: string | null;
   stageCount: number;

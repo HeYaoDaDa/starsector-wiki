@@ -47,6 +47,34 @@ _ADDTEXT_RE = re.compile(r'^(AddText|AddTextSmall)\s+"(.*)"\s*$')
 # ---------------------------------------------------------------------------
 # quest graph builder
 
+def derive_scene_kind(scene: dict):
+    """从场景 ctx 命名规律派生 kind/ref（前端按 kind 用 i18n 模板渲染标题）"""
+    if scene.get('kind'):
+        return scene['kind'], scene.get('ref')
+    sid = scene['id'].lower()
+    roots = scene.get('roots', [])
+    if '_conv_' in sid:
+        return 'conv', sid.split('_conv_', 1)[1]
+    if '_greet_talk_' in sid:
+        return 'conv', sid.split('_greet_talk_', 1)[1].split('_')[0]
+    if '_talk_' in sid:
+        return 'conv', sid.split('_talk_', 1)[1].split('_')[0]
+    if '_mkt_' in sid:
+        return 'market', sid.split('_mkt_', 1)[1].split('_')[0]
+    if '_ent_' in sid:
+        return 'entity', sid.split('_ent_', 1)[1].split('_')[0]
+    if sid.endswith('_bar') or '_bar_' in sid:
+        return 'bar', None
+    if '_dock' in sid:
+        return 'dock', None
+    if '_orphan_' in sid:
+        for r in roots:
+            if r.startswith('t:'):
+                return 'event', r[2:]
+        return 'event', sid.split('_orphan_', 1)[1]
+    return 'other', None
+
+
 class QuestBuilder:
     def __init__(self, index: RuleIndex, order: List[str], quest: dict):
         self.idx = index
@@ -392,13 +420,14 @@ class QuestBuilder:
                     scene_id, step_id, self.idx.hub_rules(rest))
             else:
                 raise ValueError(f"bad root spec: {root}")
+        kind, ref = derive_scene_kind(scene)
         return {
             'id': scene_id,
-            'title': scene['title'],
-            'location': scene.get('location'),
             'stage': scene.get('stage'),
             'speaker': scene.get('speaker'),
             'speakerOverrides': scene.get('speakerOverrides', {}),
+            'kind': kind,
+            'ref': ref,
             'entries': entries,
             'steps': self.scene_steps[scene_id],
         }
@@ -481,18 +510,28 @@ class QuestBuilder:
             scene['stepIds'] = list(steps.keys())
             for sid, st in steps.items():
                 quest_steps.setdefault(sid, st)
-        return {
+
+        # 名称/简介政策：数据里只放提取内容；无官方名的包不写 name，
+        # 由前端 wiki 编辑层兜底；简介缺省取第一阶段官方简报
+        name = self.quest.get('name')
+        summary = self.quest.get('summary')
+        if summary is None and self.quest.get('stages'):
+            summary = self.quest['stages'][0].get('briefing')
+
+        out = {
             'id': self.quest['id'],
-            'name': self.quest['name'],
-            'summary': self.quest['summary'],
             'factionId': self.quest.get('factionId'),
             'icon': self.quest.get('icon'),
             'stages': self.quest['stages'],
             'characters': self.quest['characters'],
-            'flags': self.quest.get('flags', {}),
             'steps': quest_steps,
             'scenes': scenes_out,
         }
+        if name:
+            out['name'] = name
+        if summary:
+            out['summary'] = summary
+        return out
 
     def _uncovered_rules(self, needles) -> List[str]:
         if isinstance(needles, str):
@@ -608,15 +647,19 @@ def main():
             for fl in rep['unglossed_flags']:
                 f.write(f"- `{fl}`\n")
 
-        index_quests.append({
+        # index 条目：无官方名/简介的包省略字段（前端编辑层兜底）
+        entry = {
             'id': out['id'],
-            'name': out['name'],
-            'summary': out['summary'],
             'factionId': out.get('factionId'),
             'icon': out.get('icon'),
             'stageCount': len(out['stages']),
             'sceneCount': len(out['scenes']),
-        })
+        }
+        if out.get('name'):
+            entry['name'] = out['name']
+        if out.get('summary'):
+            entry['summary'] = out['summary']
+        index_quests.append(entry)
         print(f"  wrote {os.path.join(out_dir, quest['id'] + '.json')} + {rep_path}")
 
 

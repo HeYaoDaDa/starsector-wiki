@@ -3,14 +3,6 @@
   "gameId": [
     "anh"
   ],
-  "name": {
-    "en": "A New Hope",
-    "zh": "新的希望"
-  },
-  "summary": {
-    "en": "Help a desperate soul find a new beginning.",
-    "zh": "帮助一个绝望的人寻找新的开始。"
-  },
   "factionId": null,
   "icon": "graphics/icons/missions/anh.png",
   "stages": [
@@ -88,17 +80,11 @@
     }
   ],
   "characters": [],
-  "flags": {},
   "scenes": [
     {
       "id": "anh_misc_dock",
       "stage": "anh",
       "speaker": null,
-      "title": {
-        "en": "Docked flavor text",
-        "zh": "靠港见闻"
-      },
-      "location": null,
       "roots": [
         "r:anhCheckCompletionCont"
       ],
@@ -126,5 +112,9 @@
     "^SDSW",
     "^sdr",
     "^SDR"
-  ]
+  ],
+  "name": {
+    "en": "Passage To Volturn",
+    "zh": "Volturn 之旅"
+  }
 }

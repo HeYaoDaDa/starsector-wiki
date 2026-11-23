@@ -3,15 +3,16 @@ import { computed, onMounted, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { onBeforeRouteUpdate, useRoute } from 'vue-router';
 import { appData } from 'src/AppData';
-import { Quest, QuestScene } from 'src/classes/model/Quest';
+import { Bilingual, Quest, QuestScene } from 'src/classes/model/Quest';
 import QuestDialogue from 'src/components/quest/QuestDialogue.vue';
+import { questMeta } from 'src/questEditorial';
 
 defineOptions({
   name: 'QuestPage',
 });
 
 const route = useRoute();
-const { locale } = useI18n();
+const { locale, t } = useI18n();
 
 const id = ref(route.params.id as string);
 const quest = ref<Quest | undefined>(undefined);
@@ -54,12 +55,67 @@ function secondary(text: { en: string; zh: string }): string {
   return isZh.value ? text.en : text.zh;
 }
 
+/** 官方名优先；无官方名用 wiki 编辑层标签 */
+const questName = computed<{ text: string; isWiki: boolean }>(() => {
+  const q = quest.value;
+  if (!q) {
+    return { text: '', isWiki: false };
+  }
+  if (q.name) {
+    return { text: primary(q.name), isWiki: false };
+  }
+  const meta = questMeta(q.id);
+  return { text: meta ? primary(meta.name) : q.id, isWiki: true };
+});
+
+const questSummary = computed<{ primary: string; secondary: string }>(() => {
+  const q = quest.value;
+  if (!q) {
+    return { primary: '', secondary: '' };
+  }
+  let s = q.summary;
+  if (!s) {
+    const meta = questMeta(q.id);
+    s = meta?.summary;
+  }
+  return s
+    ? { primary: primary(s), secondary: secondary(s) }
+    : { primary: '', secondary: '' };
+});
+
 const faction = computed(() => {
   if (!quest.value?.factionId) {
     return undefined;
   }
   return appData.getFactionById(quest.value.factionId);
 });
+
+/** 场景标题：数据只存 kind/ref，前端按 i18n 模板渲染 */
+function sceneTitle(scene: QuestScene): string {
+  switch (scene.kind) {
+    case 'conv': {
+      const c = quest.value?.characters.find((it) => it.id === scene.ref);
+      const who = c ? primary(c.name) : scene.ref ?? '';
+      return t('quest.sceneKind.conv', { who });
+    }
+    case 'market': {
+      const planet = appData
+        .sortdPlanet()
+        .find((p) => !p.isSubStation && p.market && p.market.id === scene.ref);
+      return t('quest.sceneKind.market', { name: planet?.name ?? scene.ref ?? '' });
+    }
+    case 'bar':
+      return t('quest.sceneKind.bar');
+    case 'dock':
+      return t('quest.sceneKind.dock');
+    case 'entity':
+      return t('quest.sceneKind.entity', { ref: scene.ref ?? '' });
+    case 'event':
+      return t('quest.sceneKind.event', { ref: scene.ref ?? '' });
+    default:
+      return t('quest.sceneKind.other');
+  }
+}
 
 /** 按任务阶段分组场景；无阶段的场景排在最前 */
 const stageGroups = computed(() => {
@@ -131,7 +187,10 @@ function selectScene(sceneId: string) {
       <template v-else>
         <!-- 头部 -->
         <div class="quest-header">
-          <h4 class="quest-title">{{ primary(quest.name) }}</h4>
+          <h4 class="quest-title">{{ questName.text }}</h4>
+          <q-chip v-if="questName.isWiki" dense size="sm" outline>
+            {{ $t('quest.wikiLabel') }}
+          </q-chip>
           <div v-if="faction" class="quest-faction">
             <img :src="faction.logo" />
             <span :style="{ color: '#' + faction.color }">{{
@@ -139,15 +198,21 @@ function selectScene(sceneId: string) {
             }}</span>
           </div>
         </div>
-        <div class="quest-summary">{{ primary(quest.summary) }}</div>
-        <div class="quest-summary-en">{{ secondary(quest.summary) }}</div>
+        <div v-if="questSummary.primary" class="quest-summary">
+          {{ questSummary.primary }}
+        </div>
+        <div v-if="questSummary.secondary" class="quest-summary-en">
+          {{ questSummary.secondary }}
+        </div>
 
         <!-- 人物 -->
         <h5>{{ $t('quest.characters') }}</h5>
         <div class="quest-characters">
           <div v-for="c in quest.characters" :key="c.id" class="quest-character">
             <div class="quest-character-name">{{ primary(c.name) }}</div>
-            <div class="quest-character-title">{{ primary(c.title) }}</div>
+            <div v-if="c.title" class="quest-character-title">
+              {{ primary(c.title) }}
+            </div>
           </div>
         </div>
 
@@ -206,13 +271,7 @@ function selectScene(sceneId: string) {
                 @click="selectScene(scene.id)"
               >
                 <div class="quest-scene-content">
-                  <div class="quest-scene-title">{{ primary(scene.title) }}</div>
-                  <div
-                    v-if="scene.location"
-                    class="quest-scene-location"
-                  >
-                    {{ primary(scene.location) }}
-                  </div>
+                  <div class="quest-scene-title">{{ sceneTitle(scene) }}</div>
                 </div>
               </q-btn>
             </div>
@@ -238,7 +297,7 @@ function selectScene(sceneId: string) {
                 @click="selectScene(scene.id)"
               >
                 <div class="quest-scene-content">
-                  <div class="quest-scene-title">{{ primary(scene.title) }}</div>
+                  <div class="quest-scene-title">{{ sceneTitle(scene) }}</div>
                 </div>
               </q-btn>
             </div>
@@ -247,9 +306,8 @@ function selectScene(sceneId: string) {
 
         <template v-else>
           <div class="quest-scene-active-header">
-            <div class="quest-scene-title-lg">{{ primary(selectedScene.title) }}</div>
-            <div v-if="selectedScene.location" class="quest-scene-location">
-              {{ primary(selectedScene.location) }}
+            <div class="quest-scene-title-lg">
+              {{ sceneTitle(selectedScene) }}
             </div>
           </div>
           <QuestDialogue :quest="quest" :scene="selectedScene" />
