@@ -105,6 +105,12 @@ python3 tools/dialogue/extract_java.py ~/Games/starsector-0985a-en askonia.TheUs
 - **External triggers**：被 Fire 但规则表里不存在的 trigger（Java 侧或原版笔误）
 - **Flags without glossary**：出现在条件里但术语表没收录的 flag——补进任务包 `flags` 即可提升可读性
 
+## 剧情人物总表（characters.md）
+
+[characters.md](characters.md) 整理 vanilla 全部剧情人物（66 条档案，按剧情线分组）。
+档案数据提取自 `ids/People.java` 与 `SDSevenSons.addLargeSons()` 的字节码（方法见其附录 B），
+头衔中英对照取自官方 `default_ranks.json`；"剧情角色"注解为 wiki 编辑层手写内容。
+
 ## 新增一个任务
 
 1. `python3 extract_java.py <en_game_root> askonia.<MissionClass>` 拿到阶段与简报（英文），人工补中文简报
